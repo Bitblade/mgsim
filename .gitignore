@@ -19,3 +19,10 @@ config.status
 *.orig
 *#*#
 sys_config.h.in
+.dirstamp
+*.Po
+*.7
+/mgsim
+/mgsim.1
+/stamp-h1
+/sys_config.h
