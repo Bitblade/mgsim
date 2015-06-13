@@ -1,0 +1,180 @@
+\hypertarget{class_simulator_1_1drisc_1_1_r_a_unit}{\section{Simulator\+:\+:drisc\+:\+:R\+A\+Unit Class Reference}
+\label{class_simulator_1_1drisc_1_1_r_a_unit}\index{Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}}
+}
+
+
+{\ttfamily \#include $<$R\+A\+Unit.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:drisc\+:\+:R\+A\+Unit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_simulator_1_1drisc_1_1_r_a_unit}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ std\+::pair\\*
+$<$ \hyperlink{namespace_simulator_a7c5ca3b196c951c92b8159e54e76075f}{Reg\+Size}, \hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} $>$ $>$ \hyperlink{class_simulator_1_1drisc_1_1_r_a_unit_abd48271d9597ddbe20207e2a4e66d425}{List}
+\item 
+typedef \hyperlink{namespace_simulator_a7c5ca3b196c951c92b8159e54e76075f}{Reg\+Size} \hyperlink{class_simulator_1_1drisc_1_1_r_a_unit_aa5b30133d4961a3b8e06e4fda505ea3d}{Block\+Size}
+\item 
+typedef \hyperlink{namespace_simulator_ab00c9033de4c9a17db7b53d6c292515c}{Reg\+Index} \hyperlink{class_simulator_1_1drisc_1_1_r_a_unit_a8a53a5257420a14753fa3f205c17a01c}{Block\+Index}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_r_a_unit_a124f0250c01c5c02c5a15b6b3e14b5d9}{R\+A\+Unit} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock, const std\+::array$<$ \hyperlink{namespace_simulator_a7c5ca3b196c951c92b8159e54e76075f}{Reg\+Size}, N\+U\+M\+\_\+\+R\+E\+G\+\_\+\+T\+Y\+P\+E\+S $>$ \&reg\+File\+Sizes, \hyperlink{class_config}{Config} \&config)
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_r_a_unit_a3487a99ce34f5f8144a6b64dcb5129a8}{Alloc} (const std\+::array$<$ \hyperlink{namespace_simulator_a7c5ca3b196c951c92b8159e54e76075f}{Reg\+Size}, N\+U\+M\+\_\+\+R\+E\+G\+\_\+\+T\+Y\+P\+E\+S $>$ \&size, \hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} fid, \hyperlink{namespace_simulator_ab3233bd11b43e37322a8111dc7eec133}{Context\+Type} context, std\+::array$<$ \hyperlink{namespace_simulator_ab00c9033de4c9a17db7b53d6c292515c}{Reg\+Index}, N\+U\+M\+\_\+\+R\+E\+G\+\_\+\+T\+Y\+P\+E\+S $>$ \&\hyperlink{breaknegindex_8c_a885a361f3b999997d4942f3554ee311a}{indices})
+\begin{DoxyCompactList}\small\item\em Allocates registers. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_r_a_unit_aaedc9069d7a19cab490e53263a5d3ccf}{Free} (const std\+::array$<$ \hyperlink{namespace_simulator_ab00c9033de4c9a17db7b53d6c292515c}{Reg\+Index}, N\+U\+M\+\_\+\+R\+E\+G\+\_\+\+T\+Y\+P\+E\+S $>$ \&\hyperlink{breaknegindex_8c_a885a361f3b999997d4942f3554ee311a}{indices}, \hyperlink{namespace_simulator_ab3233bd11b43e37322a8111dc7eec133}{Context\+Type} context)
+\begin{DoxyCompactList}\small\item\em Frees the allocated registers. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_1_1drisc_1_1_r_a_unit_aa5b30133d4961a3b8e06e4fda505ea3d}{Block\+Size} \hyperlink{class_simulator_1_1drisc_1_1_r_a_unit_ac96c53a78ddfdd1d5e78911d982055a8}{Get\+Num\+Free\+Contexts} (\hyperlink{namespace_simulator_ab3233bd11b43e37322a8111dc7eec133}{Context\+Type} type) const 
+\begin{DoxyCompactList}\small\item\em Returns the maximum number of contexts still available. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_r_a_unit_ad2c6e2610c782925f7525e145fd1f3a3}{Reserve\+Context} ()
+\begin{DoxyCompactList}\small\item\em Reserves a context for future allocation. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_r_a_unit_a64dc874e33743c25f0948a50d33b77e3}{Unreserve\+Context} ()
+\begin{DoxyCompactList}\small\item\em Unreserves a reserved context. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_r_a_unit_a7c8481d4829a30c6761f3596ef8f9c92}{Cmd\+\_\+\+Info} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const override
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_r_a_unit_abdee8c221cc3f0130f415eb5077133db}{Cmd\+\_\+\+Read} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const override
+\item 
+std\+::vector$<$ \hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} $>$ \hyperlink{class_simulator_1_1drisc_1_1_r_a_unit_a9e6a938d7009c5c05bbd543768c60378}{Get\+Block\+Info} (\hyperlink{namespace_simulator_ab86b74f4b95732ea63178d829b189acb}{Reg\+Type} type) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_r_a_unit_a8a53a5257420a14753fa3f205c17a01c}{\index{Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}!Block\+Index@{Block\+Index}}
+\index{Block\+Index@{Block\+Index}!Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}}
+\subsubsection[{Block\+Index}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Reg\+Index} {\bf Simulator\+::drisc\+::\+R\+A\+Unit\+::\+Block\+Index}}}\label{class_simulator_1_1drisc_1_1_r_a_unit_a8a53a5257420a14753fa3f205c17a01c}
+\hypertarget{class_simulator_1_1drisc_1_1_r_a_unit_aa5b30133d4961a3b8e06e4fda505ea3d}{\index{Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}!Block\+Size@{Block\+Size}}
+\index{Block\+Size@{Block\+Size}!Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}}
+\subsubsection[{Block\+Size}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Reg\+Size} {\bf Simulator\+::drisc\+::\+R\+A\+Unit\+::\+Block\+Size}}}\label{class_simulator_1_1drisc_1_1_r_a_unit_aa5b30133d4961a3b8e06e4fda505ea3d}
+\hypertarget{class_simulator_1_1drisc_1_1_r_a_unit_abd48271d9597ddbe20207e2a4e66d425}{\index{Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}!List@{List}}
+\index{List@{List}!Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}}
+\subsubsection[{List}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::vector$<$std\+::pair$<${\bf Reg\+Size}, {\bf L\+F\+I\+D}$>$ $>$ {\bf Simulator\+::drisc\+::\+R\+A\+Unit\+::\+List}}}\label{class_simulator_1_1drisc_1_1_r_a_unit_abd48271d9597ddbe20207e2a4e66d425}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_r_a_unit_a124f0250c01c5c02c5a15b6b3e14b5d9}{\index{Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}!R\+A\+Unit@{R\+A\+Unit}}
+\index{R\+A\+Unit@{R\+A\+Unit}!Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}}
+\subsubsection[{R\+A\+Unit}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+R\+A\+Unit\+::\+R\+A\+Unit (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock, }
+\item[{const std\+::array$<$ {\bf Reg\+Size}, N\+U\+M\+\_\+\+R\+E\+G\+\_\+\+T\+Y\+P\+E\+S $>$ \&}]{reg\+File\+Sizes, }
+\item[{{\bf Config} \&}]{config}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_r_a_unit_a124f0250c01c5c02c5a15b6b3e14b5d9}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_r_a_unit_a3487a99ce34f5f8144a6b64dcb5129a8}{\index{Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}!Alloc@{Alloc}}
+\index{Alloc@{Alloc}!Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}}
+\subsubsection[{Alloc}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+R\+A\+Unit\+::\+Alloc (
+\begin{DoxyParamCaption}
+\item[{const std\+::array$<$ {\bf Reg\+Size}, N\+U\+M\+\_\+\+R\+E\+G\+\_\+\+T\+Y\+P\+E\+S $>$ \&}]{size, }
+\item[{{\bf L\+F\+I\+D}}]{fid, }
+\item[{{\bf Context\+Type}}]{context, }
+\item[{std\+::array$<$ {\bf Reg\+Index}, N\+U\+M\+\_\+\+R\+E\+G\+\_\+\+T\+Y\+P\+E\+S $>$ \&}]{indices}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_r_a_unit_a3487a99ce34f5f8144a6b64dcb5129a8}
+
+
+Allocates registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\mbox{[}in\mbox{]}} & Number of registers to allocate for each register type. \\
+\hline
+{\em fid\mbox{[}in\mbox{]}} & \hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} that makes the request. For debugging purposes only. \\
+\hline
+{\em reserved\mbox{[}in\mbox{]}} & Whether we're allocating a reserved context at least. \\
+\hline
+{\em indices\mbox{[}out\mbox{]}} & Array that will receive the base indices of the allocated registers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if not enough register were available
+\end{DoxyReturn}
+A context can be reserved with Reserve\+Context. Allocating registers with reserved false will only allocate the registers if all reserved contexts can remain available. If reserved is true, at least one reserved context worth of register is considered for allocation as well. \hypertarget{class_simulator_1_1drisc_1_1_r_a_unit_a7c8481d4829a30c6761f3596ef8f9c92}{\index{Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}!Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}}
+\index{Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}!Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}}
+\subsubsection[{Cmd\+\_\+\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+R\+A\+Unit\+::\+Cmd\+\_\+\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}}}\label{class_simulator_1_1drisc_1_1_r_a_unit_a7c8481d4829a30c6761f3596ef8f9c92}
+\hypertarget{class_simulator_1_1drisc_1_1_r_a_unit_abdee8c221cc3f0130f415eb5077133db}{\index{Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}!Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}}
+\index{Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}!Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}}
+\subsubsection[{Cmd\+\_\+\+Read}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+R\+A\+Unit\+::\+Cmd\+\_\+\+Read (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}}}\label{class_simulator_1_1drisc_1_1_r_a_unit_abdee8c221cc3f0130f415eb5077133db}
+\hypertarget{class_simulator_1_1drisc_1_1_r_a_unit_aaedc9069d7a19cab490e53263a5d3ccf}{\index{Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}!Free@{Free}}
+\index{Free@{Free}!Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}}
+\subsubsection[{Free}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+R\+A\+Unit\+::\+Free (
+\begin{DoxyParamCaption}
+\item[{const std\+::array$<$ {\bf Reg\+Index}, N\+U\+M\+\_\+\+R\+E\+G\+\_\+\+T\+Y\+P\+E\+S $>$ \&}]{indices, }
+\item[{{\bf Context\+Type}}]{context}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_r_a_unit_aaedc9069d7a19cab490e53263a5d3ccf}
+
+
+Frees the allocated registers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indices\mbox{[}in\mbox{]}} & the base address of the allocate registers, as returned from Alloc. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_simulator_1_1drisc_1_1_r_a_unit_a9e6a938d7009c5c05bbd543768c60378}{\index{Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}!Get\+Block\+Info@{Get\+Block\+Info}}
+\index{Get\+Block\+Info@{Get\+Block\+Info}!Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}}
+\subsubsection[{Get\+Block\+Info}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf L\+F\+I\+D} $>$ Simulator\+::drisc\+::\+R\+A\+Unit\+::\+Get\+Block\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Reg\+Type}}]{type}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_r_a_unit_a9e6a938d7009c5c05bbd543768c60378}
+\hypertarget{class_simulator_1_1drisc_1_1_r_a_unit_ac96c53a78ddfdd1d5e78911d982055a8}{\index{Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}!Get\+Num\+Free\+Contexts@{Get\+Num\+Free\+Contexts}}
+\index{Get\+Num\+Free\+Contexts@{Get\+Num\+Free\+Contexts}!Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}}
+\subsubsection[{Get\+Num\+Free\+Contexts}]{\setlength{\rightskip}{0pt plus 5cm}{\bf R\+A\+Unit\+::\+Block\+Size} Simulator\+::drisc\+::\+R\+A\+Unit\+::\+Get\+Num\+Free\+Contexts (
+\begin{DoxyParamCaption}
+\item[{{\bf Context\+Type}}]{type}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_r_a_unit_ac96c53a78ddfdd1d5e78911d982055a8}
+
+
+Returns the maximum number of contexts still available. 
+
+\hypertarget{class_simulator_1_1drisc_1_1_r_a_unit_ad2c6e2610c782925f7525e145fd1f3a3}{\index{Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}!Reserve\+Context@{Reserve\+Context}}
+\index{Reserve\+Context@{Reserve\+Context}!Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}}
+\subsubsection[{Reserve\+Context}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+R\+A\+Unit\+::\+Reserve\+Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_r_a_unit_ad2c6e2610c782925f7525e145fd1f3a3}
+
+
+Reserves a context for future allocation. 
+
+\hypertarget{class_simulator_1_1drisc_1_1_r_a_unit_a64dc874e33743c25f0948a50d33b77e3}{\index{Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}!Unreserve\+Context@{Unreserve\+Context}}
+\index{Unreserve\+Context@{Unreserve\+Context}!Simulator\+::drisc\+::\+R\+A\+Unit@{Simulator\+::drisc\+::\+R\+A\+Unit}}
+\subsubsection[{Unreserve\+Context}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+R\+A\+Unit\+::\+Unreserve\+Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_r_a_unit_a64dc874e33743c25f0948a50d33b77e3}
+
+
+Unreserves a reserved context. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/drisc/\hyperlink{_r_a_unit_8h}{R\+A\+Unit.\+h}\item 
+arch/drisc/\hyperlink{_r_a_unit_8cpp}{R\+A\+Unit.\+cpp}\end{DoxyCompactItemize}

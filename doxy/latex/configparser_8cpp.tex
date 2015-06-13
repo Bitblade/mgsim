@@ -1,0 +1,69 @@
+\hypertarget{configparser_8cpp}{\section{sim/configparser.cpp File Reference}
+\label{configparser_8cpp}\index{sim/configparser.\+cpp@{sim/configparser.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}configparser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}except.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$cctype$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{configparser_8cpp_aa1a3c7042c8dd913b6d1aed69cc89fac}{N\+E\+X\+T\+L\+I\+N\+E}()~do \{ while ($\ast$m\+\_\+lookahead \&\& $\ast$m\+\_\+lookahead != '\textbackslash{}n') ++m\+\_\+lookahead; \} while(0)
+\item 
+\#define \hyperlink{configparser_8cpp_a783404100d5c3cd139e65675ce394d8d}{W\+H\+I\+T\+E\+S\+P\+A\+C\+E}()~do \{ while ($\ast$m\+\_\+lookahead \&\& ($\ast$m\+\_\+lookahead == ' ' $\vert$$\vert$ $\ast$m\+\_\+lookahead == '\textbackslash{}t')) ++m\+\_\+lookahead; \} while(0)
+\item 
+\#define \hyperlink{configparser_8cpp_a06f9aa10150cb48ef336be2bb004e4e6}{M\+L\+W\+H\+I\+T\+E\+S\+P\+A\+C\+E}()~do \{ while ($\ast$m\+\_\+lookahead \&\& isspace($\ast$m\+\_\+lookahead)) \{ if ($\ast$m\+\_\+lookahead == '\textbackslash{}n') ++m\+\_\+linenr; ++m\+\_\+lookahead; \} \} while(0)
+\item 
+\#define \hyperlink{configparser_8cpp_a45b86ad0f42d14149fac81f83af74a95}{E\+X\+P\+E\+C\+T}(Char)
+\item 
+\#define \hyperlink{configparser_8cpp_a21ee839a039fdd91850c246923f5bb2c}{M\+A\+T\+C\+H}(Char)~do \{ \hyperlink{configparser_8cpp_a45b86ad0f42d14149fac81f83af74a95}{E\+X\+P\+E\+C\+T}(Char); ++m\+\_\+lookahead; \} while(0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{configparser_8cpp_a45b86ad0f42d14149fac81f83af74a95}{\index{configparser.\+cpp@{configparser.\+cpp}!E\+X\+P\+E\+C\+T@{E\+X\+P\+E\+C\+T}}
+\index{E\+X\+P\+E\+C\+T@{E\+X\+P\+E\+C\+T}!configparser.\+cpp@{configparser.\+cpp}}
+\subsubsection[{E\+X\+P\+E\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+X\+P\+E\+C\+T(
+\begin{DoxyParamCaption}
+\item[{}]{Char}
+\end{DoxyParamCaption}
+)}}\label{configparser_8cpp_a45b86ad0f42d14149fac81f83af74a95}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                                                \(\backslash\)
+        if (*m\_lookahead != Char)                                       \(\backslash\)
+            throw exceptf<runtime\_error>(\textcolor{stringliteral}{"Syntax error in configuration: line %d, found '%c' (%d), expected
+       '%c' (%d)"}, \(\backslash\)
+                                         m\_linenr, isprint(*m\_lookahead) ? *m\_lookahead : \textcolor{charliteral}{'?'}, (int)*
+      m\_lookahead, isprint(Char) ? Char : \textcolor{charliteral}{'?'}, (int)Char); \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+\hypertarget{configparser_8cpp_a21ee839a039fdd91850c246923f5bb2c}{\index{configparser.\+cpp@{configparser.\+cpp}!M\+A\+T\+C\+H@{M\+A\+T\+C\+H}}
+\index{M\+A\+T\+C\+H@{M\+A\+T\+C\+H}!configparser.\+cpp@{configparser.\+cpp}}
+\subsubsection[{M\+A\+T\+C\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+T\+C\+H(
+\begin{DoxyParamCaption}
+\item[{}]{Char}
+\end{DoxyParamCaption}
+)~do \{ {\bf E\+X\+P\+E\+C\+T}(Char); ++m\+\_\+lookahead; \} while(0)}}\label{configparser_8cpp_a21ee839a039fdd91850c246923f5bb2c}
+\hypertarget{configparser_8cpp_a06f9aa10150cb48ef336be2bb004e4e6}{\index{configparser.\+cpp@{configparser.\+cpp}!M\+L\+W\+H\+I\+T\+E\+S\+P\+A\+C\+E@{M\+L\+W\+H\+I\+T\+E\+S\+P\+A\+C\+E}}
+\index{M\+L\+W\+H\+I\+T\+E\+S\+P\+A\+C\+E@{M\+L\+W\+H\+I\+T\+E\+S\+P\+A\+C\+E}!configparser.\+cpp@{configparser.\+cpp}}
+\subsubsection[{M\+L\+W\+H\+I\+T\+E\+S\+P\+A\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+L\+W\+H\+I\+T\+E\+S\+P\+A\+C\+E(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~do \{ while ($\ast$m\+\_\+lookahead \&\& isspace($\ast$m\+\_\+lookahead)) \{ if ($\ast$m\+\_\+lookahead == '\textbackslash{}n') ++m\+\_\+linenr; ++m\+\_\+lookahead; \} \} while(0)}}\label{configparser_8cpp_a06f9aa10150cb48ef336be2bb004e4e6}
+\hypertarget{configparser_8cpp_aa1a3c7042c8dd913b6d1aed69cc89fac}{\index{configparser.\+cpp@{configparser.\+cpp}!N\+E\+X\+T\+L\+I\+N\+E@{N\+E\+X\+T\+L\+I\+N\+E}}
+\index{N\+E\+X\+T\+L\+I\+N\+E@{N\+E\+X\+T\+L\+I\+N\+E}!configparser.\+cpp@{configparser.\+cpp}}
+\subsubsection[{N\+E\+X\+T\+L\+I\+N\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+E\+X\+T\+L\+I\+N\+E(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~do \{ while ($\ast$m\+\_\+lookahead \&\& $\ast$m\+\_\+lookahead != '\textbackslash{}n') ++m\+\_\+lookahead; \} while(0)}}\label{configparser_8cpp_aa1a3c7042c8dd913b6d1aed69cc89fac}
+\hypertarget{configparser_8cpp_a783404100d5c3cd139e65675ce394d8d}{\index{configparser.\+cpp@{configparser.\+cpp}!W\+H\+I\+T\+E\+S\+P\+A\+C\+E@{W\+H\+I\+T\+E\+S\+P\+A\+C\+E}}
+\index{W\+H\+I\+T\+E\+S\+P\+A\+C\+E@{W\+H\+I\+T\+E\+S\+P\+A\+C\+E}!configparser.\+cpp@{configparser.\+cpp}}
+\subsubsection[{W\+H\+I\+T\+E\+S\+P\+A\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+H\+I\+T\+E\+S\+P\+A\+C\+E(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~do \{ while ($\ast$m\+\_\+lookahead \&\& ($\ast$m\+\_\+lookahead == ' ' $\vert$$\vert$ $\ast$m\+\_\+lookahead == '\textbackslash{}t')) ++m\+\_\+lookahead; \} while(0)}}\label{configparser_8cpp_a783404100d5c3cd139e65675ce394d8d}

@@ -1,0 +1,104 @@
+\hypertarget{class_simulator_1_1_i_memory_callback}{\section{Simulator\+:\+:I\+Memory\+Callback Class Reference}
+\label{class_simulator_1_1_i_memory_callback}\index{Simulator\+::\+I\+Memory\+Callback@{Simulator\+::\+I\+Memory\+Callback}}
+}
+
+
+{\ttfamily \#include $<$Memory.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:I\+Memory\+Callback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.568627cm]{class_simulator_1_1_i_memory_callback}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_simulator_1_1_i_memory_callback_a5519817c435767dab3b4c063e601d9f7}{On\+Memory\+Read\+Completed} (Mem\+Addr addr, const char $\ast$data)=0
+\item 
+virtual bool \hyperlink{class_simulator_1_1_i_memory_callback_a3821e2dbf7f4d77053c04fc58d2fdcc8}{On\+Memory\+Write\+Completed} (\hyperlink{namespace_simulator_a0de605c35951a450d074222efcef6359}{W\+Client\+I\+D} wid)=0
+\item 
+virtual bool \hyperlink{class_simulator_1_1_i_memory_callback_a8a50686620585ffe62e754a9e96b79a8}{On\+Memory\+Invalidated} (Mem\+Addr addr)=0
+\item 
+virtual bool \hyperlink{class_simulator_1_1_i_memory_callback_a41e84f41d39e538c2ab0c056d8c1b0e2}{On\+Memory\+Snooped} (Mem\+Addr, const char $\ast$, const bool $\ast$)
+\item 
+virtual \hyperlink{class_simulator_1_1_i_memory_callback_a01c8ff9e80ab7d6e578d160716ab0643}{$\sim$\+I\+Memory\+Callback} ()
+\item 
+virtual \hyperlink{class_simulator_1_1_object}{Object} \& \hyperlink{class_simulator_1_1_i_memory_callback_ab378a4b6ce2df8e4a38bb3e8f116a064}{Get\+Memory\+Peer} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_i_memory_callback_a01c8ff9e80ab7d6e578d160716ab0643}{\index{Simulator\+::\+I\+Memory\+Callback@{Simulator\+::\+I\+Memory\+Callback}!````~I\+Memory\+Callback@{$\sim$\+I\+Memory\+Callback}}
+\index{````~I\+Memory\+Callback@{$\sim$\+I\+Memory\+Callback}!Simulator\+::\+I\+Memory\+Callback@{Simulator\+::\+I\+Memory\+Callback}}
+\subsubsection[{$\sim$\+I\+Memory\+Callback}]{\setlength{\rightskip}{0pt plus 5cm}virtual Simulator\+::\+I\+Memory\+Callback\+::$\sim$\+I\+Memory\+Callback (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_i_memory_callback_a01c8ff9e80ab7d6e578d160716ab0643}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_i_memory_callback_ab378a4b6ce2df8e4a38bb3e8f116a064}{\index{Simulator\+::\+I\+Memory\+Callback@{Simulator\+::\+I\+Memory\+Callback}!Get\+Memory\+Peer@{Get\+Memory\+Peer}}
+\index{Get\+Memory\+Peer@{Get\+Memory\+Peer}!Simulator\+::\+I\+Memory\+Callback@{Simulator\+::\+I\+Memory\+Callback}}
+\subsubsection[{Get\+Memory\+Peer}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Object}\& Simulator\+::\+I\+Memory\+Callback\+::\+Get\+Memory\+Peer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_simulator_1_1_i_memory_callback_ab378a4b6ce2df8e4a38bb3e8f116a064}
+
+
+Implemented in \hyperlink{class_simulator_1_1drisc_1_1_d_cache_a0ee619a4930f7b92e450fc1b6f9c08cd}{Simulator\+::drisc\+::\+D\+Cache}, \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a389ebf0f8eec8d1f07752e97fda96176}{Simulator\+::drisc\+::\+I\+Cache}, and \hyperlink{class_simulator_1_1drisc_1_1_i_o_direct_cache_access_ab73a53f8a39a0485399420a65911df97}{Simulator\+::drisc\+::\+I\+O\+Direct\+Cache\+Access}.
+
+\hypertarget{class_simulator_1_1_i_memory_callback_a8a50686620585ffe62e754a9e96b79a8}{\index{Simulator\+::\+I\+Memory\+Callback@{Simulator\+::\+I\+Memory\+Callback}!On\+Memory\+Invalidated@{On\+Memory\+Invalidated}}
+\index{On\+Memory\+Invalidated@{On\+Memory\+Invalidated}!Simulator\+::\+I\+Memory\+Callback@{Simulator\+::\+I\+Memory\+Callback}}
+\subsubsection[{On\+Memory\+Invalidated}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Simulator\+::\+I\+Memory\+Callback\+::\+On\+Memory\+Invalidated (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{addr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_simulator_1_1_i_memory_callback_a8a50686620585ffe62e754a9e96b79a8}
+
+
+Implemented in \hyperlink{class_simulator_1_1drisc_1_1_d_cache_a583fdc1194fffefec8a12bcbc32e2fc3}{Simulator\+::drisc\+::\+D\+Cache}, \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a53d755323405ba6efab15371ba95a435}{Simulator\+::drisc\+::\+I\+Cache}, and \hyperlink{class_simulator_1_1drisc_1_1_i_o_direct_cache_access_a586420dc80106909e9be0a6e1e5f4b43}{Simulator\+::drisc\+::\+I\+O\+Direct\+Cache\+Access}.
+
+\hypertarget{class_simulator_1_1_i_memory_callback_a5519817c435767dab3b4c063e601d9f7}{\index{Simulator\+::\+I\+Memory\+Callback@{Simulator\+::\+I\+Memory\+Callback}!On\+Memory\+Read\+Completed@{On\+Memory\+Read\+Completed}}
+\index{On\+Memory\+Read\+Completed@{On\+Memory\+Read\+Completed}!Simulator\+::\+I\+Memory\+Callback@{Simulator\+::\+I\+Memory\+Callback}}
+\subsubsection[{On\+Memory\+Read\+Completed}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Simulator\+::\+I\+Memory\+Callback\+::\+On\+Memory\+Read\+Completed (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{addr, }
+\item[{const char $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_simulator_1_1_i_memory_callback_a5519817c435767dab3b4c063e601d9f7}
+
+
+Implemented in \hyperlink{class_simulator_1_1drisc_1_1_d_cache_ae1cb74d2ac87cd7ffddd081c0da3ce15}{Simulator\+::drisc\+::\+D\+Cache}, \hyperlink{class_simulator_1_1drisc_1_1_i_cache_aef4cb1f1456f90f644dd4697eeca2bb4}{Simulator\+::drisc\+::\+I\+Cache}, and \hyperlink{class_simulator_1_1drisc_1_1_i_o_direct_cache_access_a3417d5dc8d5c1d7f62e90bf2b494e4ed}{Simulator\+::drisc\+::\+I\+O\+Direct\+Cache\+Access}.
+
+\hypertarget{class_simulator_1_1_i_memory_callback_a41e84f41d39e538c2ab0c056d8c1b0e2}{\index{Simulator\+::\+I\+Memory\+Callback@{Simulator\+::\+I\+Memory\+Callback}!On\+Memory\+Snooped@{On\+Memory\+Snooped}}
+\index{On\+Memory\+Snooped@{On\+Memory\+Snooped}!Simulator\+::\+I\+Memory\+Callback@{Simulator\+::\+I\+Memory\+Callback}}
+\subsubsection[{On\+Memory\+Snooped}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Simulator\+::\+I\+Memory\+Callback\+::\+On\+Memory\+Snooped (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{, }
+\item[{const char $\ast$}]{, }
+\item[{const bool $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_i_memory_callback_a41e84f41d39e538c2ab0c056d8c1b0e2}
+
+
+Reimplemented in \hyperlink{class_simulator_1_1drisc_1_1_d_cache_a8229d5f73ccd678b27b2086168620f79}{Simulator\+::drisc\+::\+D\+Cache}, \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a8d4a3d21efa066f6d624ec2bc3a8b370}{Simulator\+::drisc\+::\+I\+Cache}, and \hyperlink{class_simulator_1_1drisc_1_1_i_o_direct_cache_access_aa53e4c80409dcdc612f3a861ffa3b689}{Simulator\+::drisc\+::\+I\+O\+Direct\+Cache\+Access}.
+
+\hypertarget{class_simulator_1_1_i_memory_callback_a3821e2dbf7f4d77053c04fc58d2fdcc8}{\index{Simulator\+::\+I\+Memory\+Callback@{Simulator\+::\+I\+Memory\+Callback}!On\+Memory\+Write\+Completed@{On\+Memory\+Write\+Completed}}
+\index{On\+Memory\+Write\+Completed@{On\+Memory\+Write\+Completed}!Simulator\+::\+I\+Memory\+Callback@{Simulator\+::\+I\+Memory\+Callback}}
+\subsubsection[{On\+Memory\+Write\+Completed}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Simulator\+::\+I\+Memory\+Callback\+::\+On\+Memory\+Write\+Completed (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+Client\+I\+D}}]{wid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_simulator_1_1_i_memory_callback_a3821e2dbf7f4d77053c04fc58d2fdcc8}
+
+
+Implemented in \hyperlink{class_simulator_1_1drisc_1_1_d_cache_a5f642cb471c08f5056f7bc3a93b8312d}{Simulator\+::drisc\+::\+D\+Cache}, \hyperlink{class_simulator_1_1drisc_1_1_i_cache_ad07b2819c8bdf6a286eb484647d75d98}{Simulator\+::drisc\+::\+I\+Cache}, and \hyperlink{class_simulator_1_1drisc_1_1_i_o_direct_cache_access_a472d68272a889a901d2055deb75e84f7}{Simulator\+::drisc\+::\+I\+O\+Direct\+Cache\+Access}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+arch/\hyperlink{_memory_8h}{Memory.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,271 @@
+\hypertarget{_r_p_c_service_database_8h}{\section{arch/dev/\+R\+P\+C\+Service\+Database.h File Reference}
+\label{_r_p_c_service_database_8h}\index{arch/dev/\+R\+P\+C\+Service\+Database.\+h@{arch/dev/\+R\+P\+C\+Service\+Database.\+h}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structvstat}{vstat}
+\item 
+struct \hyperlink{structvdirent}{vdirent}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a1bf2838934ac077a268f90467926224c}{R\+P\+C\+\_\+nop}~0
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a5387193dc6a8ef89e759d79540c837e2}{R\+P\+C\+\_\+read}~3
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_ae4991a16f9d5e573897f3de6cfd884b2}{R\+P\+C\+\_\+write}~4
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a878003899cdc7c886ee03587e0769b17}{R\+P\+C\+\_\+open}~5
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a1f26b04f2d6e710cbc544874813dd74e}{R\+P\+C\+\_\+close}~6
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a62ba85a6fcd3e32d2ae8855656ac3b6c}{R\+P\+C\+\_\+link}~9
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_ad5cb1939a5abccfd435237148039c305}{R\+P\+C\+\_\+unlink}~10
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_ad8cd775b9cf5645722a6628e7fda313d}{R\+P\+C\+\_\+sync}~36
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_ade614aeb618ac68df2f6ce0cb75fe3f6}{R\+P\+C\+\_\+dup}~41
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a0f986f5a5ba7011bccffa02e4b5532e5}{R\+P\+C\+\_\+symlink}~57
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a59434fe4293a636fb530d2cafa0626f9}{R\+P\+C\+\_\+readlink}~58
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_af6b6739e295b9a7e78a99a5c8723535b}{R\+P\+C\+\_\+getdtablesize}~89
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a1879ac3b93ec15a4f1cf807d095fde15}{R\+P\+C\+\_\+dup2}~90
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a6d59ff92cbc05ecd0376e816de3d4bb4}{R\+P\+C\+\_\+fcntl}~92
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a42f476e55dd00167038ac70434315efe}{R\+P\+C\+\_\+fsync}~95
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a12912903d5a3cfc8040380202eb78fe4}{R\+P\+C\+\_\+rename}~128
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_ab85b4c4885a734485b75cf7000387339}{R\+P\+C\+\_\+mkdir}~136
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_ab0130da1eebf5a20abefab0788f82c8b}{R\+P\+C\+\_\+rmdir}~137
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_ac6f5e68c52d5e046eb5ee7edf992691b}{R\+P\+C\+\_\+pread}~153
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_afe3c63f0d6f247be86e1d938e62336af}{R\+P\+C\+\_\+pwrite}~154
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_ae5d44b9ca3f30dcc6136f144f1fb1abb}{R\+P\+C\+\_\+stat}~188
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a43f00d795bb24775da5bcfbac7e858b4}{R\+P\+C\+\_\+fstat}~189
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_ae6d8292e41cae591b2de99ca2a88b46a}{R\+P\+C\+\_\+lstat}~190
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a288a4087b7f0927edb5061ccfac1c4ff}{R\+P\+C\+\_\+lseek}~199
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a250ea2b161d2374ae066189e907a3dd7}{R\+P\+C\+\_\+truncate}~200
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a5c11b4abaa5a90624b522b1c05419f61}{R\+P\+C\+\_\+ftruncate}~201
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_ab839b9d04d5fe8a0d5819ccd8c9c5afd}{R\+P\+C\+\_\+opendir}~300
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a958ee084e819f8f3aa48c0c7946a7340}{R\+P\+C\+\_\+fdopendir}~301
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_ae3d266a7304013ace37591afd15d17dd}{R\+P\+C\+\_\+readdir}~302
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a465eb4a7eb7ed41d785a2af99a0229d4}{R\+P\+C\+\_\+telldir}~303
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_ad9ae031716c1f58d52870d9f1f1cc4eb}{R\+P\+C\+\_\+seekdir}~304
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a4eed7ca10fdd333a3cd4134bdfe396d7}{R\+P\+C\+\_\+rewinddir}~305
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a3627dc49b68735462e3aa28722c83dc2}{R\+P\+C\+\_\+closedir}~306
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_afa510074962a85a417e41df75614e966}{V\+O\+\_\+\+R\+D\+O\+N\+L\+Y}~1
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_ac372f3574f6c457df40b51509a8f643a}{V\+O\+\_\+\+W\+R\+O\+N\+L\+Y}~2
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a7414382425346e350e4a9a317639cd9e}{V\+O\+\_\+\+R\+D\+W\+R}~3
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_aa7f800adc4f6229a57ee068cb08fa560}{V\+O\+\_\+\+A\+C\+C\+M\+O\+D\+E}~3
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_aba4ebcac0e43f4f9649298c7dc4ac6eb}{V\+O\+\_\+\+A\+P\+P\+E\+N\+D}~8
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_af56c970fbe0627d32f6478e3164679ac}{V\+O\+\_\+\+N\+O\+F\+O\+L\+L\+O\+W}~0x100
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a798217571bb14b5e07fc52c9b443d90c}{V\+O\+\_\+\+C\+R\+E\+A\+T}~0x200
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a07cf2699cc67742f0141611d1080a6e2}{V\+O\+\_\+\+T\+R\+U\+N\+C}~0x400
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_ada362eb0b09d67d20bf6e559d84a2b6f}{V\+O\+\_\+\+E\+X\+C\+L}~0x800
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_ac9609df5f1914c0cb48d3cec07734707}{V\+S\+\_\+\+I\+F\+M\+T}~0170000  /$\ast$ type of file mask $\ast$/
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a4cb3be44bf01a622d04576dc2307407b}{V\+S\+\_\+\+I\+F\+U\+N\+K\+N\+O\+W\+N}~0000000  /$\ast$ unknown $\ast$/
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a7958aeb83f60d3deaed72e2d2593e36f}{V\+S\+\_\+\+I\+F\+D\+I\+R}~0040000  /$\ast$ directory $\ast$/
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_ae2ed764b674c9b84c187f96094182ab0}{V\+S\+\_\+\+I\+F\+R\+E\+G}~0100000  /$\ast$ regular $\ast$/
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a4e0e7c5e621762aaa80481e7e0e56372}{V\+S\+\_\+\+I\+F\+L\+N\+K}~0120000  /$\ast$ symbolic link $\ast$/
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a1c06c74c7afd76ca37a992f66d4a299d}{V\+D\+T\+\_\+\+U\+N\+K\+N\+O\+W\+N}~0
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a701b67edde82d56faf4a75736117068c}{V\+D\+T\+\_\+\+D\+I\+R}~4
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_aa895fe6ca81795dd014641da3f7e2c6b}{V\+D\+T\+\_\+\+R\+E\+G}~8
+\item 
+\#define \hyperlink{_r_p_c_service_database_8h_a926bf78c3c9863395ac42ce154f4017f}{V\+D\+T\+\_\+\+L\+N\+K}~10
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_r_p_c_service_database_8h_a1f26b04f2d6e710cbc544874813dd74e}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+close@{R\+P\+C\+\_\+close}}
+\index{R\+P\+C\+\_\+close@{R\+P\+C\+\_\+close}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+close}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+close~6}}\label{_r_p_c_service_database_8h_a1f26b04f2d6e710cbc544874813dd74e}
+\hypertarget{_r_p_c_service_database_8h_a3627dc49b68735462e3aa28722c83dc2}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+closedir@{R\+P\+C\+\_\+closedir}}
+\index{R\+P\+C\+\_\+closedir@{R\+P\+C\+\_\+closedir}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+closedir}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+closedir~306}}\label{_r_p_c_service_database_8h_a3627dc49b68735462e3aa28722c83dc2}
+\hypertarget{_r_p_c_service_database_8h_ade614aeb618ac68df2f6ce0cb75fe3f6}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+dup@{R\+P\+C\+\_\+dup}}
+\index{R\+P\+C\+\_\+dup@{R\+P\+C\+\_\+dup}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+dup}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+dup~41}}\label{_r_p_c_service_database_8h_ade614aeb618ac68df2f6ce0cb75fe3f6}
+\hypertarget{_r_p_c_service_database_8h_a1879ac3b93ec15a4f1cf807d095fde15}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+dup2@{R\+P\+C\+\_\+dup2}}
+\index{R\+P\+C\+\_\+dup2@{R\+P\+C\+\_\+dup2}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+dup2}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+dup2~90}}\label{_r_p_c_service_database_8h_a1879ac3b93ec15a4f1cf807d095fde15}
+\hypertarget{_r_p_c_service_database_8h_a6d59ff92cbc05ecd0376e816de3d4bb4}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+fcntl@{R\+P\+C\+\_\+fcntl}}
+\index{R\+P\+C\+\_\+fcntl@{R\+P\+C\+\_\+fcntl}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+fcntl}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+fcntl~92}}\label{_r_p_c_service_database_8h_a6d59ff92cbc05ecd0376e816de3d4bb4}
+\hypertarget{_r_p_c_service_database_8h_a958ee084e819f8f3aa48c0c7946a7340}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+fdopendir@{R\+P\+C\+\_\+fdopendir}}
+\index{R\+P\+C\+\_\+fdopendir@{R\+P\+C\+\_\+fdopendir}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+fdopendir}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+fdopendir~301}}\label{_r_p_c_service_database_8h_a958ee084e819f8f3aa48c0c7946a7340}
+\hypertarget{_r_p_c_service_database_8h_a43f00d795bb24775da5bcfbac7e858b4}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+fstat@{R\+P\+C\+\_\+fstat}}
+\index{R\+P\+C\+\_\+fstat@{R\+P\+C\+\_\+fstat}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+fstat}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+fstat~189}}\label{_r_p_c_service_database_8h_a43f00d795bb24775da5bcfbac7e858b4}
+\hypertarget{_r_p_c_service_database_8h_a42f476e55dd00167038ac70434315efe}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+fsync@{R\+P\+C\+\_\+fsync}}
+\index{R\+P\+C\+\_\+fsync@{R\+P\+C\+\_\+fsync}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+fsync}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+fsync~95}}\label{_r_p_c_service_database_8h_a42f476e55dd00167038ac70434315efe}
+\hypertarget{_r_p_c_service_database_8h_a5c11b4abaa5a90624b522b1c05419f61}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+ftruncate@{R\+P\+C\+\_\+ftruncate}}
+\index{R\+P\+C\+\_\+ftruncate@{R\+P\+C\+\_\+ftruncate}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+ftruncate}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+ftruncate~201}}\label{_r_p_c_service_database_8h_a5c11b4abaa5a90624b522b1c05419f61}
+\hypertarget{_r_p_c_service_database_8h_af6b6739e295b9a7e78a99a5c8723535b}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+getdtablesize@{R\+P\+C\+\_\+getdtablesize}}
+\index{R\+P\+C\+\_\+getdtablesize@{R\+P\+C\+\_\+getdtablesize}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+getdtablesize}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+getdtablesize~89}}\label{_r_p_c_service_database_8h_af6b6739e295b9a7e78a99a5c8723535b}
+\hypertarget{_r_p_c_service_database_8h_a62ba85a6fcd3e32d2ae8855656ac3b6c}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+link@{R\+P\+C\+\_\+link}}
+\index{R\+P\+C\+\_\+link@{R\+P\+C\+\_\+link}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+link}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+link~9}}\label{_r_p_c_service_database_8h_a62ba85a6fcd3e32d2ae8855656ac3b6c}
+\hypertarget{_r_p_c_service_database_8h_a288a4087b7f0927edb5061ccfac1c4ff}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+lseek@{R\+P\+C\+\_\+lseek}}
+\index{R\+P\+C\+\_\+lseek@{R\+P\+C\+\_\+lseek}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+lseek}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+lseek~199}}\label{_r_p_c_service_database_8h_a288a4087b7f0927edb5061ccfac1c4ff}
+\hypertarget{_r_p_c_service_database_8h_ae6d8292e41cae591b2de99ca2a88b46a}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+lstat@{R\+P\+C\+\_\+lstat}}
+\index{R\+P\+C\+\_\+lstat@{R\+P\+C\+\_\+lstat}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+lstat}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+lstat~190}}\label{_r_p_c_service_database_8h_ae6d8292e41cae591b2de99ca2a88b46a}
+\hypertarget{_r_p_c_service_database_8h_ab85b4c4885a734485b75cf7000387339}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+mkdir@{R\+P\+C\+\_\+mkdir}}
+\index{R\+P\+C\+\_\+mkdir@{R\+P\+C\+\_\+mkdir}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+mkdir}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+mkdir~136}}\label{_r_p_c_service_database_8h_ab85b4c4885a734485b75cf7000387339}
+\hypertarget{_r_p_c_service_database_8h_a1bf2838934ac077a268f90467926224c}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+nop@{R\+P\+C\+\_\+nop}}
+\index{R\+P\+C\+\_\+nop@{R\+P\+C\+\_\+nop}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+nop}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+nop~0}}\label{_r_p_c_service_database_8h_a1bf2838934ac077a268f90467926224c}
+\hypertarget{_r_p_c_service_database_8h_a878003899cdc7c886ee03587e0769b17}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+open@{R\+P\+C\+\_\+open}}
+\index{R\+P\+C\+\_\+open@{R\+P\+C\+\_\+open}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+open}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+open~5}}\label{_r_p_c_service_database_8h_a878003899cdc7c886ee03587e0769b17}
+\hypertarget{_r_p_c_service_database_8h_ab839b9d04d5fe8a0d5819ccd8c9c5afd}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+opendir@{R\+P\+C\+\_\+opendir}}
+\index{R\+P\+C\+\_\+opendir@{R\+P\+C\+\_\+opendir}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+opendir}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+opendir~300}}\label{_r_p_c_service_database_8h_ab839b9d04d5fe8a0d5819ccd8c9c5afd}
+\hypertarget{_r_p_c_service_database_8h_ac6f5e68c52d5e046eb5ee7edf992691b}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+pread@{R\+P\+C\+\_\+pread}}
+\index{R\+P\+C\+\_\+pread@{R\+P\+C\+\_\+pread}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+pread}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+pread~153}}\label{_r_p_c_service_database_8h_ac6f5e68c52d5e046eb5ee7edf992691b}
+\hypertarget{_r_p_c_service_database_8h_afe3c63f0d6f247be86e1d938e62336af}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+pwrite@{R\+P\+C\+\_\+pwrite}}
+\index{R\+P\+C\+\_\+pwrite@{R\+P\+C\+\_\+pwrite}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+pwrite}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+pwrite~154}}\label{_r_p_c_service_database_8h_afe3c63f0d6f247be86e1d938e62336af}
+\hypertarget{_r_p_c_service_database_8h_a5387193dc6a8ef89e759d79540c837e2}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+read@{R\+P\+C\+\_\+read}}
+\index{R\+P\+C\+\_\+read@{R\+P\+C\+\_\+read}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+read}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+read~3}}\label{_r_p_c_service_database_8h_a5387193dc6a8ef89e759d79540c837e2}
+\hypertarget{_r_p_c_service_database_8h_ae3d266a7304013ace37591afd15d17dd}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+readdir@{R\+P\+C\+\_\+readdir}}
+\index{R\+P\+C\+\_\+readdir@{R\+P\+C\+\_\+readdir}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+readdir}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+readdir~302}}\label{_r_p_c_service_database_8h_ae3d266a7304013ace37591afd15d17dd}
+\hypertarget{_r_p_c_service_database_8h_a59434fe4293a636fb530d2cafa0626f9}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+readlink@{R\+P\+C\+\_\+readlink}}
+\index{R\+P\+C\+\_\+readlink@{R\+P\+C\+\_\+readlink}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+readlink}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+readlink~58}}\label{_r_p_c_service_database_8h_a59434fe4293a636fb530d2cafa0626f9}
+\hypertarget{_r_p_c_service_database_8h_a12912903d5a3cfc8040380202eb78fe4}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+rename@{R\+P\+C\+\_\+rename}}
+\index{R\+P\+C\+\_\+rename@{R\+P\+C\+\_\+rename}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+rename}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+rename~128}}\label{_r_p_c_service_database_8h_a12912903d5a3cfc8040380202eb78fe4}
+\hypertarget{_r_p_c_service_database_8h_a4eed7ca10fdd333a3cd4134bdfe396d7}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+rewinddir@{R\+P\+C\+\_\+rewinddir}}
+\index{R\+P\+C\+\_\+rewinddir@{R\+P\+C\+\_\+rewinddir}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+rewinddir}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+rewinddir~305}}\label{_r_p_c_service_database_8h_a4eed7ca10fdd333a3cd4134bdfe396d7}
+\hypertarget{_r_p_c_service_database_8h_ab0130da1eebf5a20abefab0788f82c8b}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+rmdir@{R\+P\+C\+\_\+rmdir}}
+\index{R\+P\+C\+\_\+rmdir@{R\+P\+C\+\_\+rmdir}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+rmdir}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+rmdir~137}}\label{_r_p_c_service_database_8h_ab0130da1eebf5a20abefab0788f82c8b}
+\hypertarget{_r_p_c_service_database_8h_ad9ae031716c1f58d52870d9f1f1cc4eb}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+seekdir@{R\+P\+C\+\_\+seekdir}}
+\index{R\+P\+C\+\_\+seekdir@{R\+P\+C\+\_\+seekdir}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+seekdir}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+seekdir~304}}\label{_r_p_c_service_database_8h_ad9ae031716c1f58d52870d9f1f1cc4eb}
+\hypertarget{_r_p_c_service_database_8h_ae5d44b9ca3f30dcc6136f144f1fb1abb}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+stat@{R\+P\+C\+\_\+stat}}
+\index{R\+P\+C\+\_\+stat@{R\+P\+C\+\_\+stat}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+stat}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+stat~188}}\label{_r_p_c_service_database_8h_ae5d44b9ca3f30dcc6136f144f1fb1abb}
+\hypertarget{_r_p_c_service_database_8h_a0f986f5a5ba7011bccffa02e4b5532e5}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+symlink@{R\+P\+C\+\_\+symlink}}
+\index{R\+P\+C\+\_\+symlink@{R\+P\+C\+\_\+symlink}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+symlink}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+symlink~57}}\label{_r_p_c_service_database_8h_a0f986f5a5ba7011bccffa02e4b5532e5}
+\hypertarget{_r_p_c_service_database_8h_ad8cd775b9cf5645722a6628e7fda313d}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+sync@{R\+P\+C\+\_\+sync}}
+\index{R\+P\+C\+\_\+sync@{R\+P\+C\+\_\+sync}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+sync}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+sync~36}}\label{_r_p_c_service_database_8h_ad8cd775b9cf5645722a6628e7fda313d}
+\hypertarget{_r_p_c_service_database_8h_a465eb4a7eb7ed41d785a2af99a0229d4}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+telldir@{R\+P\+C\+\_\+telldir}}
+\index{R\+P\+C\+\_\+telldir@{R\+P\+C\+\_\+telldir}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+telldir}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+telldir~303}}\label{_r_p_c_service_database_8h_a465eb4a7eb7ed41d785a2af99a0229d4}
+\hypertarget{_r_p_c_service_database_8h_a250ea2b161d2374ae066189e907a3dd7}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+truncate@{R\+P\+C\+\_\+truncate}}
+\index{R\+P\+C\+\_\+truncate@{R\+P\+C\+\_\+truncate}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+truncate}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+truncate~200}}\label{_r_p_c_service_database_8h_a250ea2b161d2374ae066189e907a3dd7}
+\hypertarget{_r_p_c_service_database_8h_ad5cb1939a5abccfd435237148039c305}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+unlink@{R\+P\+C\+\_\+unlink}}
+\index{R\+P\+C\+\_\+unlink@{R\+P\+C\+\_\+unlink}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+unlink}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+unlink~10}}\label{_r_p_c_service_database_8h_ad5cb1939a5abccfd435237148039c305}
+\hypertarget{_r_p_c_service_database_8h_ae4991a16f9d5e573897f3de6cfd884b2}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!R\+P\+C\+\_\+write@{R\+P\+C\+\_\+write}}
+\index{R\+P\+C\+\_\+write@{R\+P\+C\+\_\+write}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{R\+P\+C\+\_\+write}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+P\+C\+\_\+write~4}}\label{_r_p_c_service_database_8h_ae4991a16f9d5e573897f3de6cfd884b2}
+\hypertarget{_r_p_c_service_database_8h_a701b67edde82d56faf4a75736117068c}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+D\+T\+\_\+\+D\+I\+R@{V\+D\+T\+\_\+\+D\+I\+R}}
+\index{V\+D\+T\+\_\+\+D\+I\+R@{V\+D\+T\+\_\+\+D\+I\+R}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+D\+T\+\_\+\+D\+I\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+D\+T\+\_\+\+D\+I\+R~4}}\label{_r_p_c_service_database_8h_a701b67edde82d56faf4a75736117068c}
+\hypertarget{_r_p_c_service_database_8h_a926bf78c3c9863395ac42ce154f4017f}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+D\+T\+\_\+\+L\+N\+K@{V\+D\+T\+\_\+\+L\+N\+K}}
+\index{V\+D\+T\+\_\+\+L\+N\+K@{V\+D\+T\+\_\+\+L\+N\+K}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+D\+T\+\_\+\+L\+N\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+D\+T\+\_\+\+L\+N\+K~10}}\label{_r_p_c_service_database_8h_a926bf78c3c9863395ac42ce154f4017f}
+\hypertarget{_r_p_c_service_database_8h_aa895fe6ca81795dd014641da3f7e2c6b}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+D\+T\+\_\+\+R\+E\+G@{V\+D\+T\+\_\+\+R\+E\+G}}
+\index{V\+D\+T\+\_\+\+R\+E\+G@{V\+D\+T\+\_\+\+R\+E\+G}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+D\+T\+\_\+\+R\+E\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+D\+T\+\_\+\+R\+E\+G~8}}\label{_r_p_c_service_database_8h_aa895fe6ca81795dd014641da3f7e2c6b}
+\hypertarget{_r_p_c_service_database_8h_a1c06c74c7afd76ca37a992f66d4a299d}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+D\+T\+\_\+\+U\+N\+K\+N\+O\+W\+N@{V\+D\+T\+\_\+\+U\+N\+K\+N\+O\+W\+N}}
+\index{V\+D\+T\+\_\+\+U\+N\+K\+N\+O\+W\+N@{V\+D\+T\+\_\+\+U\+N\+K\+N\+O\+W\+N}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+D\+T\+\_\+\+U\+N\+K\+N\+O\+W\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+D\+T\+\_\+\+U\+N\+K\+N\+O\+W\+N~0}}\label{_r_p_c_service_database_8h_a1c06c74c7afd76ca37a992f66d4a299d}
+\hypertarget{_r_p_c_service_database_8h_aa7f800adc4f6229a57ee068cb08fa560}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+O\+\_\+\+A\+C\+C\+M\+O\+D\+E@{V\+O\+\_\+\+A\+C\+C\+M\+O\+D\+E}}
+\index{V\+O\+\_\+\+A\+C\+C\+M\+O\+D\+E@{V\+O\+\_\+\+A\+C\+C\+M\+O\+D\+E}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+O\+\_\+\+A\+C\+C\+M\+O\+D\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+O\+\_\+\+A\+C\+C\+M\+O\+D\+E~3}}\label{_r_p_c_service_database_8h_aa7f800adc4f6229a57ee068cb08fa560}
+\hypertarget{_r_p_c_service_database_8h_aba4ebcac0e43f4f9649298c7dc4ac6eb}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+O\+\_\+\+A\+P\+P\+E\+N\+D@{V\+O\+\_\+\+A\+P\+P\+E\+N\+D}}
+\index{V\+O\+\_\+\+A\+P\+P\+E\+N\+D@{V\+O\+\_\+\+A\+P\+P\+E\+N\+D}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+O\+\_\+\+A\+P\+P\+E\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+O\+\_\+\+A\+P\+P\+E\+N\+D~8}}\label{_r_p_c_service_database_8h_aba4ebcac0e43f4f9649298c7dc4ac6eb}
+\hypertarget{_r_p_c_service_database_8h_a798217571bb14b5e07fc52c9b443d90c}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+O\+\_\+\+C\+R\+E\+A\+T@{V\+O\+\_\+\+C\+R\+E\+A\+T}}
+\index{V\+O\+\_\+\+C\+R\+E\+A\+T@{V\+O\+\_\+\+C\+R\+E\+A\+T}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+O\+\_\+\+C\+R\+E\+A\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+O\+\_\+\+C\+R\+E\+A\+T~0x200}}\label{_r_p_c_service_database_8h_a798217571bb14b5e07fc52c9b443d90c}
+\hypertarget{_r_p_c_service_database_8h_ada362eb0b09d67d20bf6e559d84a2b6f}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+O\+\_\+\+E\+X\+C\+L@{V\+O\+\_\+\+E\+X\+C\+L}}
+\index{V\+O\+\_\+\+E\+X\+C\+L@{V\+O\+\_\+\+E\+X\+C\+L}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+O\+\_\+\+E\+X\+C\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+O\+\_\+\+E\+X\+C\+L~0x800}}\label{_r_p_c_service_database_8h_ada362eb0b09d67d20bf6e559d84a2b6f}
+\hypertarget{_r_p_c_service_database_8h_af56c970fbe0627d32f6478e3164679ac}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+O\+\_\+\+N\+O\+F\+O\+L\+L\+O\+W@{V\+O\+\_\+\+N\+O\+F\+O\+L\+L\+O\+W}}
+\index{V\+O\+\_\+\+N\+O\+F\+O\+L\+L\+O\+W@{V\+O\+\_\+\+N\+O\+F\+O\+L\+L\+O\+W}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+O\+\_\+\+N\+O\+F\+O\+L\+L\+O\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+O\+\_\+\+N\+O\+F\+O\+L\+L\+O\+W~0x100}}\label{_r_p_c_service_database_8h_af56c970fbe0627d32f6478e3164679ac}
+\hypertarget{_r_p_c_service_database_8h_afa510074962a85a417e41df75614e966}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+O\+\_\+\+R\+D\+O\+N\+L\+Y@{V\+O\+\_\+\+R\+D\+O\+N\+L\+Y}}
+\index{V\+O\+\_\+\+R\+D\+O\+N\+L\+Y@{V\+O\+\_\+\+R\+D\+O\+N\+L\+Y}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+O\+\_\+\+R\+D\+O\+N\+L\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+O\+\_\+\+R\+D\+O\+N\+L\+Y~1}}\label{_r_p_c_service_database_8h_afa510074962a85a417e41df75614e966}
+\hypertarget{_r_p_c_service_database_8h_a7414382425346e350e4a9a317639cd9e}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+O\+\_\+\+R\+D\+W\+R@{V\+O\+\_\+\+R\+D\+W\+R}}
+\index{V\+O\+\_\+\+R\+D\+W\+R@{V\+O\+\_\+\+R\+D\+W\+R}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+O\+\_\+\+R\+D\+W\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+O\+\_\+\+R\+D\+W\+R~3}}\label{_r_p_c_service_database_8h_a7414382425346e350e4a9a317639cd9e}
+\hypertarget{_r_p_c_service_database_8h_a07cf2699cc67742f0141611d1080a6e2}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+O\+\_\+\+T\+R\+U\+N\+C@{V\+O\+\_\+\+T\+R\+U\+N\+C}}
+\index{V\+O\+\_\+\+T\+R\+U\+N\+C@{V\+O\+\_\+\+T\+R\+U\+N\+C}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+O\+\_\+\+T\+R\+U\+N\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+O\+\_\+\+T\+R\+U\+N\+C~0x400}}\label{_r_p_c_service_database_8h_a07cf2699cc67742f0141611d1080a6e2}
+\hypertarget{_r_p_c_service_database_8h_ac372f3574f6c457df40b51509a8f643a}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+O\+\_\+\+W\+R\+O\+N\+L\+Y@{V\+O\+\_\+\+W\+R\+O\+N\+L\+Y}}
+\index{V\+O\+\_\+\+W\+R\+O\+N\+L\+Y@{V\+O\+\_\+\+W\+R\+O\+N\+L\+Y}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+O\+\_\+\+W\+R\+O\+N\+L\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+O\+\_\+\+W\+R\+O\+N\+L\+Y~2}}\label{_r_p_c_service_database_8h_ac372f3574f6c457df40b51509a8f643a}
+\hypertarget{_r_p_c_service_database_8h_a7958aeb83f60d3deaed72e2d2593e36f}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+S\+\_\+\+I\+F\+D\+I\+R@{V\+S\+\_\+\+I\+F\+D\+I\+R}}
+\index{V\+S\+\_\+\+I\+F\+D\+I\+R@{V\+S\+\_\+\+I\+F\+D\+I\+R}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+S\+\_\+\+I\+F\+D\+I\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+S\+\_\+\+I\+F\+D\+I\+R~0040000  /$\ast$ directory $\ast$/}}\label{_r_p_c_service_database_8h_a7958aeb83f60d3deaed72e2d2593e36f}
+\hypertarget{_r_p_c_service_database_8h_a4e0e7c5e621762aaa80481e7e0e56372}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+S\+\_\+\+I\+F\+L\+N\+K@{V\+S\+\_\+\+I\+F\+L\+N\+K}}
+\index{V\+S\+\_\+\+I\+F\+L\+N\+K@{V\+S\+\_\+\+I\+F\+L\+N\+K}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+S\+\_\+\+I\+F\+L\+N\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+S\+\_\+\+I\+F\+L\+N\+K~0120000  /$\ast$ symbolic link $\ast$/}}\label{_r_p_c_service_database_8h_a4e0e7c5e621762aaa80481e7e0e56372}
+\hypertarget{_r_p_c_service_database_8h_ac9609df5f1914c0cb48d3cec07734707}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+S\+\_\+\+I\+F\+M\+T@{V\+S\+\_\+\+I\+F\+M\+T}}
+\index{V\+S\+\_\+\+I\+F\+M\+T@{V\+S\+\_\+\+I\+F\+M\+T}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+S\+\_\+\+I\+F\+M\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+S\+\_\+\+I\+F\+M\+T~0170000  /$\ast$ type of file mask $\ast$/}}\label{_r_p_c_service_database_8h_ac9609df5f1914c0cb48d3cec07734707}
+\hypertarget{_r_p_c_service_database_8h_ae2ed764b674c9b84c187f96094182ab0}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+S\+\_\+\+I\+F\+R\+E\+G@{V\+S\+\_\+\+I\+F\+R\+E\+G}}
+\index{V\+S\+\_\+\+I\+F\+R\+E\+G@{V\+S\+\_\+\+I\+F\+R\+E\+G}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+S\+\_\+\+I\+F\+R\+E\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+S\+\_\+\+I\+F\+R\+E\+G~0100000  /$\ast$ regular $\ast$/}}\label{_r_p_c_service_database_8h_ae2ed764b674c9b84c187f96094182ab0}
+\hypertarget{_r_p_c_service_database_8h_a4cb3be44bf01a622d04576dc2307407b}{\index{R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}!V\+S\+\_\+\+I\+F\+U\+N\+K\+N\+O\+W\+N@{V\+S\+\_\+\+I\+F\+U\+N\+K\+N\+O\+W\+N}}
+\index{V\+S\+\_\+\+I\+F\+U\+N\+K\+N\+O\+W\+N@{V\+S\+\_\+\+I\+F\+U\+N\+K\+N\+O\+W\+N}!R\+P\+C\+Service\+Database.\+h@{R\+P\+C\+Service\+Database.\+h}}
+\subsubsection[{V\+S\+\_\+\+I\+F\+U\+N\+K\+N\+O\+W\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+S\+\_\+\+I\+F\+U\+N\+K\+N\+O\+W\+N~0000000  /$\ast$ unknown $\ast$/}}\label{_r_p_c_service_database_8h_a4cb3be44bf01a622d04576dc2307407b}

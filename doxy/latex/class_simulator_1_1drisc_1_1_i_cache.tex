@@ -1,0 +1,285 @@
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache}{\section{Simulator\+:\+:drisc\+:\+:I\+Cache Class Reference}
+\label{class_simulator_1_1drisc_1_1_i_cache}\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+}
+
+
+{\ttfamily \#include $<$I\+Cache.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:drisc\+:\+:I\+Cache\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.289281cm]{class_simulator_1_1drisc_1_1_i_cache}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_i_cache_abccbf70d026fcd78e099fe46941ee1ef}{I\+Cache} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_d_r_i_s_c}{D\+R\+I\+S\+C} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock, \hyperlink{class_config}{Config} \&config)
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_i_cache_a5da34e6e93ff85df68fef014b318792c}{I\+Cache} (const \hyperlink{class_simulator_1_1drisc_1_1_i_cache}{I\+Cache} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_i_cache}{I\+Cache} \& \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a1c8adc5c5595fac4b6cdb00f9ae990cc}{operator=} (const \hyperlink{class_simulator_1_1drisc_1_1_i_cache}{I\+Cache} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_i_cache_a432627a76862df4755a991d5fe34a307}{$\sim$\+I\+Cache} ()
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a4d67069af1ac468ddc91e9b5eee096c8}{Connect\+Memory} (\hyperlink{class_simulator_1_1_i_memory}{I\+Memory} $\ast$memory)
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a662072b848e493954869c6cf35384368}{Fetch} (Mem\+Addr address, Mem\+Size size, \hyperlink{namespace_simulator_a97f45fafcb1aafc0f269a19608b39d60}{C\+I\+D} \&cid)
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1drisc_1_1_i_cache_ad30934eac15d9722ad5947c33368d47b}{Fetch} (Mem\+Addr address, Mem\+Size size, \hyperlink{namespace_simulator_a483cc4ecee1736e895054617672cded5}{T\+I\+D} \&tid, \hyperlink{namespace_simulator_a97f45fafcb1aafc0f269a19608b39d60}{C\+I\+D} \&cid)
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a5e1200c1c47897335d9a492b6f4dd664}{Read} (\hyperlink{namespace_simulator_a97f45fafcb1aafc0f269a19608b39d60}{C\+I\+D} cid, Mem\+Addr address, void $\ast$data, Mem\+Size size) const 
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_i_cache_ad92a2d648a3b0aa97baff394c1751944}{Release\+Cache\+Line} (\hyperlink{namespace_simulator_a97f45fafcb1aafc0f269a19608b39d60}{C\+I\+D} bid)
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a235db7340ebe82220a35410cd61ce08c}{Is\+Empty} () const 
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_i_cache_aef4cb1f1456f90f644dd4697eeca2bb4}{On\+Memory\+Read\+Completed} (Mem\+Addr addr, const char $\ast$data) override
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_i_cache_ad07b2819c8bdf6a286eb484647d75d98}{On\+Memory\+Write\+Completed} (\hyperlink{namespace_simulator_a483cc4ecee1736e895054617672cded5}{T\+I\+D} tid) override
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a8d4a3d21efa066f6d624ec2bc3a8b370}{On\+Memory\+Snooped} (Mem\+Addr addr, const char $\ast$data, const bool $\ast$mask) override
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a53d755323405ba6efab15371ba95a435}{On\+Memory\+Invalidated} (Mem\+Addr addr) override
+\item 
+\hyperlink{class_simulator_1_1_object}{Object} \& \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a389ebf0f8eec8d1f07752e97fda96176}{Get\+Memory\+Peer} () override
+\item 
+size\+\_\+t \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a30b7686fc0988c3e40706ba58f2e17d2}{Get\+Line\+Size} () const 
+\item 
+size\+\_\+t \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a720cfa1806d5676ab282e9fe2eb78f36}{Get\+Associativity} () const 
+\item 
+size\+\_\+t \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a46cb90cbdd79699ba749b91be730a5d8}{Get\+Num\+Lines} () const 
+\item 
+size\+\_\+t \hyperlink{class_simulator_1_1drisc_1_1_i_cache_aaeb3d54075721320f8a553116c0b379f}{Get\+Num\+Sets} () const 
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a64a13ee6d0ebcb28774f8443f140377c}{Cmd\+\_\+\+Info} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const override
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a3da79bb809b6d825c00aac432ae0b8b0}{Cmd\+\_\+\+Read} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const override
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_process}{Process} \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a42bdcd5c4c51aa0aa20ccfc1ee7fa8f4}{p\+\_\+\+Outgoing}
+\item 
+\hyperlink{class_simulator_1_1_process}{Process} \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a8cb7be6c13ade7c94c86776ec50b8057}{p\+\_\+\+Incoming}
+\item 
+\hyperlink{class_simulator_1_1_arbitrated_service}{Arbitrated\+Service} \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a4dffa2890e3dcb4a447c3d3a108f9d2c}{p\+\_\+service}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_simulator_1_1drisc_1_1_i_cache_a14f94eb83e17d9d8841f39b37431d673}{Simulator\+::\+D\+R\+I\+S\+C}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_abccbf70d026fcd78e099fe46941ee1ef}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!I\+Cache@{I\+Cache}}
+\index{I\+Cache@{I\+Cache}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{I\+Cache}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+I\+Cache\+::\+I\+Cache (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf D\+R\+I\+S\+C} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock, }
+\item[{{\bf Config} \&}]{config}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_cache_abccbf70d026fcd78e099fe46941ee1ef}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a5da34e6e93ff85df68fef014b318792c}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!I\+Cache@{I\+Cache}}
+\index{I\+Cache@{I\+Cache}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{I\+Cache}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+I\+Cache\+::\+I\+Cache (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+Cache} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1drisc_1_1_i_cache_a5da34e6e93ff85df68fef014b318792c}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a432627a76862df4755a991d5fe34a307}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!````~I\+Cache@{$\sim$\+I\+Cache}}
+\index{````~I\+Cache@{$\sim$\+I\+Cache}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{$\sim$\+I\+Cache}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+I\+Cache\+::$\sim$\+I\+Cache (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_cache_a432627a76862df4755a991d5fe34a307}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a64a13ee6d0ebcb28774f8443f140377c}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}}
+\index{Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{Cmd\+\_\+\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+I\+Cache\+::\+Cmd\+\_\+\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}}}\label{class_simulator_1_1drisc_1_1_i_cache_a64a13ee6d0ebcb28774f8443f140377c}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a3da79bb809b6d825c00aac432ae0b8b0}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}}
+\index{Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{Cmd\+\_\+\+Read}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+I\+Cache\+::\+Cmd\+\_\+\+Read (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}}}\label{class_simulator_1_1drisc_1_1_i_cache_a3da79bb809b6d825c00aac432ae0b8b0}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a4d67069af1ac468ddc91e9b5eee096c8}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!Connect\+Memory@{Connect\+Memory}}
+\index{Connect\+Memory@{Connect\+Memory}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{Connect\+Memory}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+I\+Cache\+::\+Connect\+Memory (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Memory} $\ast$}]{memory}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_cache_a4d67069af1ac468ddc91e9b5eee096c8}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a662072b848e493954869c6cf35384368}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!Fetch@{Fetch}}
+\index{Fetch@{Fetch}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{Fetch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::drisc\+::\+I\+Cache\+::\+Fetch (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{Mem\+Size}]{size, }
+\item[{{\bf C\+I\+D} \&}]{cid}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_cache_a662072b848e493954869c6cf35384368}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_ad30934eac15d9722ad5947c33368d47b}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!Fetch@{Fetch}}
+\index{Fetch@{Fetch}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{Fetch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::drisc\+::\+I\+Cache\+::\+Fetch (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{Mem\+Size}]{size, }
+\item[{{\bf T\+I\+D} \&}]{tid, }
+\item[{{\bf C\+I\+D} \&}]{cid}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_cache_ad30934eac15d9722ad5947c33368d47b}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a720cfa1806d5676ab282e9fe2eb78f36}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!Get\+Associativity@{Get\+Associativity}}
+\index{Get\+Associativity@{Get\+Associativity}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{Get\+Associativity}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Simulator\+::drisc\+::\+I\+Cache\+::\+Get\+Associativity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_i_cache_a720cfa1806d5676ab282e9fe2eb78f36}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a30b7686fc0988c3e40706ba58f2e17d2}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!Get\+Line\+Size@{Get\+Line\+Size}}
+\index{Get\+Line\+Size@{Get\+Line\+Size}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{Get\+Line\+Size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Simulator\+::drisc\+::\+I\+Cache\+::\+Get\+Line\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_i_cache_a30b7686fc0988c3e40706ba58f2e17d2}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a389ebf0f8eec8d1f07752e97fda96176}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!Get\+Memory\+Peer@{Get\+Memory\+Peer}}
+\index{Get\+Memory\+Peer@{Get\+Memory\+Peer}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{Get\+Memory\+Peer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object} \& Simulator\+::drisc\+::\+I\+Cache\+::\+Get\+Memory\+Peer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1drisc_1_1_i_cache_a389ebf0f8eec8d1f07752e97fda96176}
+
+
+Implements \hyperlink{class_simulator_1_1_i_memory_callback_ab378a4b6ce2df8e4a38bb3e8f116a064}{Simulator\+::\+I\+Memory\+Callback}.
+
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a46cb90cbdd79699ba749b91be730a5d8}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!Get\+Num\+Lines@{Get\+Num\+Lines}}
+\index{Get\+Num\+Lines@{Get\+Num\+Lines}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{Get\+Num\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Simulator\+::drisc\+::\+I\+Cache\+::\+Get\+Num\+Lines (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_i_cache_a46cb90cbdd79699ba749b91be730a5d8}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_aaeb3d54075721320f8a553116c0b379f}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!Get\+Num\+Sets@{Get\+Num\+Sets}}
+\index{Get\+Num\+Sets@{Get\+Num\+Sets}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{Get\+Num\+Sets}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Simulator\+::drisc\+::\+I\+Cache\+::\+Get\+Num\+Sets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_i_cache_aaeb3d54075721320f8a553116c0b379f}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a235db7340ebe82220a35410cd61ce08c}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!Is\+Empty@{Is\+Empty}}
+\index{Is\+Empty@{Is\+Empty}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{Is\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+I\+Cache\+::\+Is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_i_cache_a235db7340ebe82220a35410cd61ce08c}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a53d755323405ba6efab15371ba95a435}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!On\+Memory\+Invalidated@{On\+Memory\+Invalidated}}
+\index{On\+Memory\+Invalidated@{On\+Memory\+Invalidated}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{On\+Memory\+Invalidated}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+I\+Cache\+::\+On\+Memory\+Invalidated (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{addr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1drisc_1_1_i_cache_a53d755323405ba6efab15371ba95a435}
+
+
+Implements \hyperlink{class_simulator_1_1_i_memory_callback_a8a50686620585ffe62e754a9e96b79a8}{Simulator\+::\+I\+Memory\+Callback}.
+
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_aef4cb1f1456f90f644dd4697eeca2bb4}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!On\+Memory\+Read\+Completed@{On\+Memory\+Read\+Completed}}
+\index{On\+Memory\+Read\+Completed@{On\+Memory\+Read\+Completed}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{On\+Memory\+Read\+Completed}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+I\+Cache\+::\+On\+Memory\+Read\+Completed (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{addr, }
+\item[{const char $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1drisc_1_1_i_cache_aef4cb1f1456f90f644dd4697eeca2bb4}
+
+
+Implements \hyperlink{class_simulator_1_1_i_memory_callback_a5519817c435767dab3b4c063e601d9f7}{Simulator\+::\+I\+Memory\+Callback}.
+
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a8d4a3d21efa066f6d624ec2bc3a8b370}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!On\+Memory\+Snooped@{On\+Memory\+Snooped}}
+\index{On\+Memory\+Snooped@{On\+Memory\+Snooped}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{On\+Memory\+Snooped}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+I\+Cache\+::\+On\+Memory\+Snooped (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{addr, }
+\item[{const char $\ast$}]{data, }
+\item[{const bool $\ast$}]{mask}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1drisc_1_1_i_cache_a8d4a3d21efa066f6d624ec2bc3a8b370}
+
+
+Reimplemented from \hyperlink{class_simulator_1_1_i_memory_callback_a41e84f41d39e538c2ab0c056d8c1b0e2}{Simulator\+::\+I\+Memory\+Callback}.
+
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_ad07b2819c8bdf6a286eb484647d75d98}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!On\+Memory\+Write\+Completed@{On\+Memory\+Write\+Completed}}
+\index{On\+Memory\+Write\+Completed@{On\+Memory\+Write\+Completed}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{On\+Memory\+Write\+Completed}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+I\+Cache\+::\+On\+Memory\+Write\+Completed (
+\begin{DoxyParamCaption}
+\item[{{\bf T\+I\+D}}]{tid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1drisc_1_1_i_cache_ad07b2819c8bdf6a286eb484647d75d98}
+
+
+Implements \hyperlink{class_simulator_1_1_i_memory_callback_a3821e2dbf7f4d77053c04fc58d2fdcc8}{Simulator\+::\+I\+Memory\+Callback}.
+
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a1c8adc5c5595fac4b6cdb00f9ae990cc}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!operator=@{operator=}}
+\index{operator=@{operator=}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Cache}\& Simulator\+::drisc\+::\+I\+Cache\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+Cache} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1drisc_1_1_i_cache_a1c8adc5c5595fac4b6cdb00f9ae990cc}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a5e1200c1c47897335d9a492b6f4dd664}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!Read@{Read}}
+\index{Read@{Read}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+I\+Cache\+::\+Read (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+I\+D}}]{cid, }
+\item[{Mem\+Addr}]{address, }
+\item[{void $\ast$}]{data, }
+\item[{Mem\+Size}]{size}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_i_cache_a5e1200c1c47897335d9a492b6f4dd664}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_ad92a2d648a3b0aa97baff394c1751944}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!Release\+Cache\+Line@{Release\+Cache\+Line}}
+\index{Release\+Cache\+Line@{Release\+Cache\+Line}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{Release\+Cache\+Line}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+I\+Cache\+::\+Release\+Cache\+Line (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+I\+D}}]{bid}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_cache_ad92a2d648a3b0aa97baff394c1751944}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a14f94eb83e17d9d8841f39b37431d673}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!Simulator\+::\+D\+R\+I\+S\+C@{Simulator\+::\+D\+R\+I\+S\+C}}
+\index{Simulator\+::\+D\+R\+I\+S\+C@{Simulator\+::\+D\+R\+I\+S\+C}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{Simulator\+::\+D\+R\+I\+S\+C}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Simulator\+::\+D\+R\+I\+S\+C}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_simulator_1_1drisc_1_1_i_cache_a14f94eb83e17d9d8841f39b37431d673}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a8cb7be6c13ade7c94c86776ec50b8057}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!p\+\_\+\+Incoming@{p\+\_\+\+Incoming}}
+\index{p\+\_\+\+Incoming@{p\+\_\+\+Incoming}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{p\+\_\+\+Incoming}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process} Simulator\+::drisc\+::\+I\+Cache\+::p\+\_\+\+Incoming}}\label{class_simulator_1_1drisc_1_1_i_cache_a8cb7be6c13ade7c94c86776ec50b8057}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a42bdcd5c4c51aa0aa20ccfc1ee7fa8f4}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!p\+\_\+\+Outgoing@{p\+\_\+\+Outgoing}}
+\index{p\+\_\+\+Outgoing@{p\+\_\+\+Outgoing}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{p\+\_\+\+Outgoing}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process} Simulator\+::drisc\+::\+I\+Cache\+::p\+\_\+\+Outgoing}}\label{class_simulator_1_1drisc_1_1_i_cache_a42bdcd5c4c51aa0aa20ccfc1ee7fa8f4}
+\hypertarget{class_simulator_1_1drisc_1_1_i_cache_a4dffa2890e3dcb4a447c3d3a108f9d2c}{\index{Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}!p\+\_\+service@{p\+\_\+service}}
+\index{p\+\_\+service@{p\+\_\+service}!Simulator\+::drisc\+::\+I\+Cache@{Simulator\+::drisc\+::\+I\+Cache}}
+\subsubsection[{p\+\_\+service}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Arbitrated\+Service} Simulator\+::drisc\+::\+I\+Cache\+::p\+\_\+service}}\label{class_simulator_1_1drisc_1_1_i_cache_a4dffa2890e3dcb4a447c3d3a108f9d2c}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/drisc/\hyperlink{_i_cache_8h}{I\+Cache.\+h}\item 
+arch/drisc/\hyperlink{_i_cache_8cpp}{I\+Cache.\+cpp}\end{DoxyCompactItemize}

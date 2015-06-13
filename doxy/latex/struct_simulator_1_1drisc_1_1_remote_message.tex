@@ -1,0 +1,331 @@
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message}{\section{Simulator\+:\+:drisc\+:\+:Remote\+Message Struct Reference}
+\label{struct_simulator_1_1drisc_1_1_remote_message}\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+}
+
+
+{\ttfamily \#include $<$Network.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cd}{Type} \{ \\*
+\hyperlink{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cda1db1fc6165c801b6943b73a71a02a018}{M\+S\+G\+\_\+\+N\+O\+N\+E}, 
+\hyperlink{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cdadb9937d16ae721c6b3b9a6074b388ac8}{M\+S\+G\+\_\+\+A\+L\+L\+O\+C\+A\+T\+E}, 
+\hyperlink{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cda876bdb668cc5423180bde2918897a3ce}{M\+S\+G\+\_\+\+S\+E\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y}, 
+\hyperlink{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cda1e1c578107a0d1e89a5947e8ce6048a4}{M\+S\+G\+\_\+\+C\+R\+E\+A\+T\+E}, 
+\\*
+\hyperlink{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cda56d7cdbfbe0fead3f90d774f29a2d2d1}{M\+S\+G\+\_\+\+S\+Y\+N\+C}, 
+\hyperlink{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cda50c4d17a1c399b056d597ee2a17b99ac}{M\+S\+G\+\_\+\+D\+E\+T\+A\+C\+H}, 
+\hyperlink{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cdaf1faf89903a9ebaab393ba0ad42860f1}{M\+S\+G\+\_\+\+B\+R\+E\+A\+K}, 
+\hyperlink{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cdabc5b1579f5d83678c28eaf876cbe5eec}{M\+S\+G\+\_\+\+R\+A\+W\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R}, 
+\\*
+\hyperlink{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cdab4ca6f401e08885024d7e923521cd320}{M\+S\+G\+\_\+\+F\+A\+M\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a2c8e9626c5c9e1b8bce5de6d897dd49f}{str} () const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cd}{Type} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_ae0467d25479dbd711495bb3ca0f6ff8a}{type}
+\begin{DoxyCompactList}\small\item\em Type of the message. \end{DoxyCompactList}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>\hyperlink{struct_simulator_1_1_place_i_d}{PlaceID} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a20a7c7b765b7ef4cea77a5c9c0053c80}{place}\\
+\>\>\>{\em The place to allocate at. }\\
+\>\>\hyperlink{namespace_simulator_aa671021151c047ae2da6dce4e6303476}{PID} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a3dc58c833ef1f767e8f791cacf79a46e}{completion\_pid}\\
+\>\>\>{\em PID where the thread runs that issued the allocate. }\\
+\>\>\hyperlink{namespace_simulator_ab00c9033de4c9a17db7b53d6c292515c}{RegIndex} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a0158ce09683551c7056bb825c6ed8fdd}{completion\_reg}\\
+\>\>\>{\em \hyperlink{class_simulator_1_1_register}{Register} to write \hyperlink{struct_simulator_1_1_f_i_d}{FID} back to. }\\
+\>\>\hyperlink{namespace_simulator_a5c7d556007e11ed2e93f9fe53c60128b}{AllocationType} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a8faf3a1acf68adcc2270ae60f2951d64}{type}\\
+\>\>\>{\em Type of the allocation. }\\
+\>\>bool \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a31c40f3c6dc9ab17bfb6c4de1e5aeb01}{suspend}\\
+\>\>\>{\em Queue request if no context available? }\\
+\>\>bool \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a2cf06cb16814e2e30416e415e2b83290}{exclusive}\\
+\>\>\>{\em Allocate the exclusive context? }\\
+\>\>bool \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_adace3d7ed13a825769fe6386bbb27a7f}{bundle}\\
+\>\>\>{\em Is this allocation also bundling a create? }\\
+\>\>MemAddr \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a7d4d33039c1bcfc0d1389b4cbe80b171}{pc}\\
+\>\>\>{\em Bundled program counter. }\\
+\>\>Integer \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_ad6e21967b6abf3825b9cfa06826a334f}{parameter}\\
+\>\>\>{\em Bundled program-\/specified parameter. }\\
+\>\>SInteger \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_afa8aa04d7663225415db9840dee4b163}{index}\\
+\>\>\>{\em Bundled table-\/specified parameter. }\\
+\>\} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_ac1f0c0d53b39afd8da77fde36bcda284}{allocate}\\
+\>struct \{\\
+\>\>Integer \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_afdb82bab9cf2c0abd0c7b8a822dd36e0}{value}\\
+\>\>\>{\em The new value of the property. }\\
+\>\>\hyperlink{struct_simulator_1_1_f_i_d}{FID} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_ab2c43fd4c7a851a6802ffe2d090b3f8c}{fid}\\
+\>\>\>{\em \hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} to set the property of. }\\
+\>\>\hyperlink{namespace_simulator_a5fbe5f4a5800f7bb940fa2fa4c737d99}{FamilyProperty} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_ae600eb66d54b645fea8991beec04c7aa}{type}\\
+\>\>\>{\em The property to set. }\\
+\>\} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a6a1dccfe02ba7d58393c9b332ed89f80}{property}\\
+\>struct \{\\
+\>\>MemAddr \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a2ded3519deb2fd4a161154f9504d20b9}{address}\\
+\>\>\>{\em Address of the thread program. }\\
+\>\>\hyperlink{struct_simulator_1_1_f_i_d}{FID} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_ab2c43fd4c7a851a6802ffe2d090b3f8c}{fid}\\
+\>\>\>{\em \hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} to start creation of. }\\
+\>\>\hyperlink{namespace_simulator_aa671021151c047ae2da6dce4e6303476}{PID} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a3dc58c833ef1f767e8f791cacf79a46e}{completion\_pid}\\
+\>\>\>{\em PID where the thread that issued the request is running. }\\
+\>\>\hyperlink{namespace_simulator_ab00c9033de4c9a17db7b53d6c292515c}{RegIndex} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a0158ce09683551c7056bb825c6ed8fdd}{completion\_reg}\\
+\>\>\>{\em \hyperlink{class_simulator_1_1_register}{Register} to write create-\/completion to. }\\
+\>\>bool \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_adace3d7ed13a825769fe6386bbb27a7f}{bundle}\\
+\>\>\>{\em Whether this is a create resulting from a bundle. }\\
+\>\>Integer \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_ad6e21967b6abf3825b9cfa06826a334f}{parameter}\\
+\>\>\>{\em Bundled program-\/specified parameter. }\\
+\>\>SInteger \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_afa8aa04d7663225415db9840dee4b163}{index}\\
+\>\>\>{\em Bundled table-\/specified parameter. }\\
+\>\} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a635aa879fb98a022efdd9fe4c484c649}{create}\\
+\>struct \{\\
+\>\>\hyperlink{struct_simulator_1_1_f_i_d}{FID} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_ab2c43fd4c7a851a6802ffe2d090b3f8c}{fid}\\
+\>\>\>{\em \hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} to sync on. }\\
+\>\>\hyperlink{namespace_simulator_ab00c9033de4c9a17db7b53d6c292515c}{RegIndex} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a0158ce09683551c7056bb825c6ed8fdd}{completion\_reg}\\
+\>\>\>{\em \hyperlink{class_simulator_1_1_register}{Register} to write sync-\/completion to. }\\
+\>\} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a20c530eecb6a1f23880732de5ccdcb1f}{sync}\\
+\>struct \{\\
+\>\>\hyperlink{struct_simulator_1_1_f_i_d}{FID} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_ab2c43fd4c7a851a6802ffe2d090b3f8c}{fid}\\
+\>\>\>{\em \hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} to detach. }\\
+\>\} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_af9cc8012c879c68781a40b76d9498d48}{detach}\\
+\>struct \{\\
+\>\>\hyperlink{namespace_simulator_aa671021151c047ae2da6dce4e6303476}{PID} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a4d83820ebc69ab411553e33cdf06546c}{pid}\\
+\>\>\>{\em Core to send break to. }\\
+\>\>\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{LFID} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a5cbdd7d5433c9e926eb4c24d480deb9e}{fid}\\
+\>\>\>{\em \hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} to break. }\\
+\>\} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a413e01a7328bd0ba5458ae8173602042}{brk}\\
+\>struct \{\\
+\>\>\hyperlink{struct_simulator_1_1_reg_value}{RegValue} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a0604f1ed4e7d3f84c99822ca3339bddd}{value}\\
+\>\>\hyperlink{struct_simulator_1_1_reg_addr}{RegAddr} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a1c5b05a5ac533c711dabcfd4461e5f0f}{addr}\\
+\>\>\hyperlink{namespace_simulator_aa671021151c047ae2da6dce4e6303476}{PID} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a4d83820ebc69ab411553e33cdf06546c}{pid}\\
+\>\} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a4276cf5cfa195344962429b00e4bd5ef}{rawreg}\\
+\>struct \{\\
+\>\>\hyperlink{struct_simulator_1_1_reg_addr}{RegAddr} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a1c5b05a5ac533c711dabcfd4461e5f0f}{addr}\\
+\>\>union \{\\
+\>\>\>\hyperlink{struct_simulator_1_1_reg_value}{RegValue} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a0604f1ed4e7d3f84c99822ca3339bddd}{value}\\
+\>\>\>\hyperlink{namespace_simulator_ab00c9033de4c9a17db7b53d6c292515c}{RegIndex} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a0158ce09683551c7056bb825c6ed8fdd}{completion\_reg}\\
+\>\>\} \\
+\>\>\hyperlink{struct_simulator_1_1_f_i_d}{FID} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_ab2c43fd4c7a851a6802ffe2d090b3f8c}{fid}\\
+\>\>\hyperlink{namespace_simulator_aac96aab43eac55fb7f08383889feb2d8}{RemoteRegType} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a598ebc063f7e66677a3259541beec4ee}{kind}\\
+\>\>bool \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_a47e9a8987951bc258cee7480d94205d6}{write}\\
+\>\} \hyperlink{struct_simulator_1_1drisc_1_1_remote_message_aa2636de44b434fcb73e66afe20b95162}{famreg}\\
+\}; \\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em The message contents. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cd}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!Type@{Type}}
+\index{Type@{Type}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Simulator\+::drisc\+::\+Remote\+Message\+::\+Type}}}\label{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cd}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+S\+G\+\_\+\+N\+O\+N\+E@{M\+S\+G\+\_\+\+N\+O\+N\+E}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!M\+S\+G\+\_\+\+N\+O\+N\+E@{M\+S\+G\+\_\+\+N\+O\+N\+E}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cda1db1fc6165c801b6943b73a71a02a018}{M\+S\+G\+\_\+\+N\+O\+N\+E}\label{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cda1db1fc6165c801b6943b73a71a02a018}
+}]No message. \index{M\+S\+G\+\_\+\+A\+L\+L\+O\+C\+A\+T\+E@{M\+S\+G\+\_\+\+A\+L\+L\+O\+C\+A\+T\+E}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!M\+S\+G\+\_\+\+A\+L\+L\+O\+C\+A\+T\+E@{M\+S\+G\+\_\+\+A\+L\+L\+O\+C\+A\+T\+E}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cdadb9937d16ae721c6b3b9a6074b388ac8}{M\+S\+G\+\_\+\+A\+L\+L\+O\+C\+A\+T\+E}\label{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cdadb9937d16ae721c6b3b9a6074b388ac8}
+}]Allocate family. \index{M\+S\+G\+\_\+\+S\+E\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y@{M\+S\+G\+\_\+\+S\+E\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!M\+S\+G\+\_\+\+S\+E\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y@{M\+S\+G\+\_\+\+S\+E\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cda876bdb668cc5423180bde2918897a3ce}{M\+S\+G\+\_\+\+S\+E\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y}\label{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cda876bdb668cc5423180bde2918897a3ce}
+}]Set family property. \index{M\+S\+G\+\_\+\+C\+R\+E\+A\+T\+E@{M\+S\+G\+\_\+\+C\+R\+E\+A\+T\+E}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!M\+S\+G\+\_\+\+C\+R\+E\+A\+T\+E@{M\+S\+G\+\_\+\+C\+R\+E\+A\+T\+E}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cda1e1c578107a0d1e89a5947e8ce6048a4}{M\+S\+G\+\_\+\+C\+R\+E\+A\+T\+E}\label{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cda1e1c578107a0d1e89a5947e8ce6048a4}
+}]Create family. \index{M\+S\+G\+\_\+\+S\+Y\+N\+C@{M\+S\+G\+\_\+\+S\+Y\+N\+C}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!M\+S\+G\+\_\+\+S\+Y\+N\+C@{M\+S\+G\+\_\+\+S\+Y\+N\+C}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cda56d7cdbfbe0fead3f90d774f29a2d2d1}{M\+S\+G\+\_\+\+S\+Y\+N\+C}\label{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cda56d7cdbfbe0fead3f90d774f29a2d2d1}
+}]Synchronise on family. \index{M\+S\+G\+\_\+\+D\+E\+T\+A\+C\+H@{M\+S\+G\+\_\+\+D\+E\+T\+A\+C\+H}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!M\+S\+G\+\_\+\+D\+E\+T\+A\+C\+H@{M\+S\+G\+\_\+\+D\+E\+T\+A\+C\+H}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cda50c4d17a1c399b056d597ee2a17b99ac}{M\+S\+G\+\_\+\+D\+E\+T\+A\+C\+H}\label{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cda50c4d17a1c399b056d597ee2a17b99ac}
+}]Detach family. \index{M\+S\+G\+\_\+\+B\+R\+E\+A\+K@{M\+S\+G\+\_\+\+B\+R\+E\+A\+K}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!M\+S\+G\+\_\+\+B\+R\+E\+A\+K@{M\+S\+G\+\_\+\+B\+R\+E\+A\+K}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cdaf1faf89903a9ebaab393ba0ad42860f1}{M\+S\+G\+\_\+\+B\+R\+E\+A\+K}\label{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cdaf1faf89903a9ebaab393ba0ad42860f1}
+}]Break. \index{M\+S\+G\+\_\+\+R\+A\+W\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R@{M\+S\+G\+\_\+\+R\+A\+W\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!M\+S\+G\+\_\+\+R\+A\+W\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R@{M\+S\+G\+\_\+\+R\+A\+W\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cdabc5b1579f5d83678c28eaf876cbe5eec}{M\+S\+G\+\_\+\+R\+A\+W\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R}\label{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cdabc5b1579f5d83678c28eaf876cbe5eec}
+}]Raw register response. \index{M\+S\+G\+\_\+\+F\+A\+M\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R@{M\+S\+G\+\_\+\+F\+A\+M\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!M\+S\+G\+\_\+\+F\+A\+M\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R@{M\+S\+G\+\_\+\+F\+A\+M\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cdab4ca6f401e08885024d7e923521cd320}{M\+S\+G\+\_\+\+F\+A\+M\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R}\label{struct_simulator_1_1drisc_1_1_remote_message_aa6920cd59d9069d038eeb3ddfa9fd7cdab4ca6f401e08885024d7e923521cd320}
+}]\hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} register request or response. \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a2c8e9626c5c9e1b8bce5de6d897dd49f}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!str@{str}}
+\index{str@{str}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{str}]{\setlength{\rightskip}{0pt plus 5cm}string Simulator\+::drisc\+::\+Remote\+Message\+::str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{struct_simulator_1_1drisc_1_1_remote_message_a2c8e9626c5c9e1b8bce5de6d897dd49f}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_adcecf1541f4185e72a99492016cd4d31}{\subsubsection[{"@32}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{struct_simulator_1_1drisc_1_1_remote_message_adcecf1541f4185e72a99492016cd4d31}
+
+
+The message contents. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a1c5b05a5ac533c711dabcfd4461e5f0f}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!addr@{addr}}
+\index{addr@{addr}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{addr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reg\+Addr} Simulator\+::drisc\+::\+Remote\+Message\+::addr}}\label{struct_simulator_1_1drisc_1_1_remote_message_a1c5b05a5ac533c711dabcfd4461e5f0f}
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a2ded3519deb2fd4a161154f9504d20b9}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!address@{address}}
+\index{address@{address}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{address}]{\setlength{\rightskip}{0pt plus 5cm}Mem\+Addr Simulator\+::drisc\+::\+Remote\+Message\+::address}}\label{struct_simulator_1_1drisc_1_1_remote_message_a2ded3519deb2fd4a161154f9504d20b9}
+
+
+Address of the thread program. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_ac1f0c0d53b39afd8da77fde36bcda284}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!allocate@{allocate}}
+\index{allocate@{allocate}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{allocate}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Simulator\+::drisc\+::\+Remote\+Message\+::allocate}}\label{struct_simulator_1_1drisc_1_1_remote_message_ac1f0c0d53b39afd8da77fde36bcda284}
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a413e01a7328bd0ba5458ae8173602042}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!brk@{brk}}
+\index{brk@{brk}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{brk}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Simulator\+::drisc\+::\+Remote\+Message\+::brk}}\label{struct_simulator_1_1drisc_1_1_remote_message_a413e01a7328bd0ba5458ae8173602042}
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_adace3d7ed13a825769fe6386bbb27a7f}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!bundle@{bundle}}
+\index{bundle@{bundle}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{bundle}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Remote\+Message\+::bundle}}\label{struct_simulator_1_1drisc_1_1_remote_message_adace3d7ed13a825769fe6386bbb27a7f}
+
+
+Is this allocation also bundling a create? 
+
+Whether this is a create resulting from a bundle. \hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a3dc58c833ef1f767e8f791cacf79a46e}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!completion\+\_\+pid@{completion\+\_\+pid}}
+\index{completion\+\_\+pid@{completion\+\_\+pid}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{completion\+\_\+pid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+I\+D} Simulator\+::drisc\+::\+Remote\+Message\+::completion\+\_\+pid}}\label{struct_simulator_1_1drisc_1_1_remote_message_a3dc58c833ef1f767e8f791cacf79a46e}
+
+
+P\+I\+D where the thread runs that issued the allocate. 
+
+P\+I\+D where the thread that issued the request is running. \hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a0158ce09683551c7056bb825c6ed8fdd}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!completion\+\_\+reg@{completion\+\_\+reg}}
+\index{completion\+\_\+reg@{completion\+\_\+reg}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{completion\+\_\+reg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reg\+Index} Simulator\+::drisc\+::\+Remote\+Message\+::completion\+\_\+reg}}\label{struct_simulator_1_1drisc_1_1_remote_message_a0158ce09683551c7056bb825c6ed8fdd}
+
+
+\hyperlink{class_simulator_1_1_register}{Register} to write \hyperlink{struct_simulator_1_1_f_i_d}{F\+I\+D} back to. 
+
+\hyperlink{class_simulator_1_1_register}{Register} to write sync-\/completion to.
+
+\hyperlink{class_simulator_1_1_register}{Register} to write create-\/completion to. \hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a635aa879fb98a022efdd9fe4c484c649}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!create@{create}}
+\index{create@{create}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Simulator\+::drisc\+::\+Remote\+Message\+::create}}\label{struct_simulator_1_1drisc_1_1_remote_message_a635aa879fb98a022efdd9fe4c484c649}
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_af9cc8012c879c68781a40b76d9498d48}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!detach@{detach}}
+\index{detach@{detach}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{detach}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Simulator\+::drisc\+::\+Remote\+Message\+::detach}}\label{struct_simulator_1_1drisc_1_1_remote_message_af9cc8012c879c68781a40b76d9498d48}
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a2cf06cb16814e2e30416e415e2b83290}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!exclusive@{exclusive}}
+\index{exclusive@{exclusive}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{exclusive}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Remote\+Message\+::exclusive}}\label{struct_simulator_1_1drisc_1_1_remote_message_a2cf06cb16814e2e30416e415e2b83290}
+
+
+Allocate the exclusive context? 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_aa2636de44b434fcb73e66afe20b95162}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!famreg@{famreg}}
+\index{famreg@{famreg}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{famreg}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Simulator\+::drisc\+::\+Remote\+Message\+::famreg}}\label{struct_simulator_1_1drisc_1_1_remote_message_aa2636de44b434fcb73e66afe20b95162}
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_ab2c43fd4c7a851a6802ffe2d090b3f8c}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!fid@{fid}}
+\index{fid@{fid}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{fid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+I\+D} Simulator\+::drisc\+::\+Remote\+Message\+::fid}}\label{struct_simulator_1_1drisc_1_1_remote_message_ab2c43fd4c7a851a6802ffe2d090b3f8c}
+
+
+\hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} to set the property of. 
+
+\hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} to detach.
+
+\hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} to sync on.
+
+\hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} to start creation of. \hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a5cbdd7d5433c9e926eb4c24d480deb9e}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!fid@{fid}}
+\index{fid@{fid}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{fid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+F\+I\+D} Simulator\+::drisc\+::\+Remote\+Message\+::fid}}\label{struct_simulator_1_1drisc_1_1_remote_message_a5cbdd7d5433c9e926eb4c24d480deb9e}
+
+
+\hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} to break. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_afa8aa04d7663225415db9840dee4b163}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!index@{index}}
+\index{index@{index}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}S\+Integer Simulator\+::drisc\+::\+Remote\+Message\+::index}}\label{struct_simulator_1_1drisc_1_1_remote_message_afa8aa04d7663225415db9840dee4b163}
+
+
+Bundled table-\/specified parameter. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a598ebc063f7e66677a3259541beec4ee}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!kind@{kind}}
+\index{kind@{kind}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{kind}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Remote\+Reg\+Type} Simulator\+::drisc\+::\+Remote\+Message\+::kind}}\label{struct_simulator_1_1drisc_1_1_remote_message_a598ebc063f7e66677a3259541beec4ee}
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_ad6e21967b6abf3825b9cfa06826a334f}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!parameter@{parameter}}
+\index{parameter@{parameter}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{parameter}]{\setlength{\rightskip}{0pt plus 5cm}Integer Simulator\+::drisc\+::\+Remote\+Message\+::parameter}}\label{struct_simulator_1_1drisc_1_1_remote_message_ad6e21967b6abf3825b9cfa06826a334f}
+
+
+Bundled program-\/specified parameter. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a7d4d33039c1bcfc0d1389b4cbe80b171}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!pc@{pc}}
+\index{pc@{pc}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{pc}]{\setlength{\rightskip}{0pt plus 5cm}Mem\+Addr Simulator\+::drisc\+::\+Remote\+Message\+::pc}}\label{struct_simulator_1_1drisc_1_1_remote_message_a7d4d33039c1bcfc0d1389b4cbe80b171}
+
+
+Bundled program counter. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a4d83820ebc69ab411553e33cdf06546c}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!pid@{pid}}
+\index{pid@{pid}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{pid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+I\+D} Simulator\+::drisc\+::\+Remote\+Message\+::pid}}\label{struct_simulator_1_1drisc_1_1_remote_message_a4d83820ebc69ab411553e33cdf06546c}
+
+
+Core to send break to. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a20a7c7b765b7ef4cea77a5c9c0053c80}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!place@{place}}
+\index{place@{place}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{place}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Place\+I\+D} Simulator\+::drisc\+::\+Remote\+Message\+::place}}\label{struct_simulator_1_1drisc_1_1_remote_message_a20a7c7b765b7ef4cea77a5c9c0053c80}
+
+
+The place to allocate at. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a6a1dccfe02ba7d58393c9b332ed89f80}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!property@{property}}
+\index{property@{property}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{property}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Simulator\+::drisc\+::\+Remote\+Message\+::property}}\label{struct_simulator_1_1drisc_1_1_remote_message_a6a1dccfe02ba7d58393c9b332ed89f80}
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a4276cf5cfa195344962429b00e4bd5ef}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!rawreg@{rawreg}}
+\index{rawreg@{rawreg}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{rawreg}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Simulator\+::drisc\+::\+Remote\+Message\+::rawreg}}\label{struct_simulator_1_1drisc_1_1_remote_message_a4276cf5cfa195344962429b00e4bd5ef}
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a31c40f3c6dc9ab17bfb6c4de1e5aeb01}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!suspend@{suspend}}
+\index{suspend@{suspend}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{suspend}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Remote\+Message\+::suspend}}\label{struct_simulator_1_1drisc_1_1_remote_message_a31c40f3c6dc9ab17bfb6c4de1e5aeb01}
+
+
+Queue request if no context available? 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a20c530eecb6a1f23880732de5ccdcb1f}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!sync@{sync}}
+\index{sync@{sync}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{sync}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Simulator\+::drisc\+::\+Remote\+Message\+::sync}}\label{struct_simulator_1_1drisc_1_1_remote_message_a20c530eecb6a1f23880732de5ccdcb1f}
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_ae0467d25479dbd711495bb3ca0f6ff8a}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!type@{type}}
+\index{type@{type}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Type} Simulator\+::drisc\+::\+Remote\+Message\+::type}}\label{struct_simulator_1_1drisc_1_1_remote_message_ae0467d25479dbd711495bb3ca0f6ff8a}
+
+
+Type of the message. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a8faf3a1acf68adcc2270ae60f2951d64}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!type@{type}}
+\index{type@{type}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Allocation\+Type} Simulator\+::drisc\+::\+Remote\+Message\+::type}}\label{struct_simulator_1_1drisc_1_1_remote_message_a8faf3a1acf68adcc2270ae60f2951d64}
+
+
+Type of the allocation. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_ae600eb66d54b645fea8991beec04c7aa}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!type@{type}}
+\index{type@{type}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Family\+Property} Simulator\+::drisc\+::\+Remote\+Message\+::type}}\label{struct_simulator_1_1drisc_1_1_remote_message_ae600eb66d54b645fea8991beec04c7aa}
+
+
+The property to set. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_afdb82bab9cf2c0abd0c7b8a822dd36e0}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!value@{value}}
+\index{value@{value}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}Integer Simulator\+::drisc\+::\+Remote\+Message\+::value}}\label{struct_simulator_1_1drisc_1_1_remote_message_afdb82bab9cf2c0abd0c7b8a822dd36e0}
+
+
+The new value of the property. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a0604f1ed4e7d3f84c99822ca3339bddd}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!value@{value}}
+\index{value@{value}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reg\+Value} Simulator\+::drisc\+::\+Remote\+Message\+::value}}\label{struct_simulator_1_1drisc_1_1_remote_message_a0604f1ed4e7d3f84c99822ca3339bddd}
+\hypertarget{struct_simulator_1_1drisc_1_1_remote_message_a47e9a8987951bc258cee7480d94205d6}{\index{Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}!write@{write}}
+\index{write@{write}!Simulator\+::drisc\+::\+Remote\+Message@{Simulator\+::drisc\+::\+Remote\+Message}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Remote\+Message\+::write}}\label{struct_simulator_1_1drisc_1_1_remote_message_a47e9a8987951bc258cee7480d94205d6}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/drisc/\hyperlink{_network_8h}{Network.\+h}\item 
+arch/drisc/\hyperlink{_network_8cpp}{Network.\+cpp}\end{DoxyCompactItemize}

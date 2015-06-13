@@ -1,0 +1,51 @@
+\hypertarget{_r_p_c__unix_8cpp}{\section{arch/dev/\+R\+P\+C\+\_\+unix.cpp File Reference}
+\label{_r_p_c__unix_8cpp}\index{arch/dev/\+R\+P\+C\+\_\+unix.\+cpp@{arch/dev/\+R\+P\+C\+\_\+unix.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}R\+P\+C\+\_\+unix.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}R\+P\+C\+Service\+Database.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$cerrno$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$fcntl.\+h$>$}\\*
+{\ttfamily \#include $<$sys/stat.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_simulator}{Simulator}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_r_p_c__unix_8cpp_a0178cc795ce3c95118c59c995bd6e254}{Require\+Args}(Arg1\+Size, Arg2\+Size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_r_p_c__unix_8cpp_a0178cc795ce3c95118c59c995bd6e254}{\index{R\+P\+C\+\_\+unix.\+cpp@{R\+P\+C\+\_\+unix.\+cpp}!Require\+Args@{Require\+Args}}
+\index{Require\+Args@{Require\+Args}!R\+P\+C\+\_\+unix.\+cpp@{R\+P\+C\+\_\+unix.\+cpp}}
+\subsubsection[{Require\+Args}]{\setlength{\rightskip}{0pt plus 5cm}\#define Require\+Args(
+\begin{DoxyParamCaption}
+\item[{}]{Arg1\+Size, }
+\item[{}]{Arg2\+Size}
+\end{DoxyParamCaption}
+)}}\label{_r_p_c__unix_8cpp_a0178cc795ce3c95118c59c995bd6e254}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                                                \(\backslash\)
+        if ((Arg1Size) && (\textcolor{keywordtype}{int})arg1.size() < (Arg1Size))                \(\backslash\)
+            throw exceptf<SimulationException>(\textcolor{stringliteral}{"Procedure %u requires at least %zu bytes in 1st memory
+       argument, %zu were provided"}, \(\backslash\)
+                                               (unsigned)procedure\_id,  \(\backslash\)
+                                               (\textcolor{keywordtype}{size\_t})(Arg1Size),      \(\backslash\)
+                                               arg1.size());            \(\backslash\)
+        if ((Arg2Size) && (\textcolor{keywordtype}{int})arg2.size() < (Arg2Size))                \(\backslash\)
+            throw exceptf<SimulationException>(\textcolor{stringliteral}{"Procedure %u requires at least %zu bytes in 2nd memory
+       argument, %zu were provided"}, \(\backslash\)
+                                               (unsigned)procedure\_id,  \(\backslash\)
+                                               (\textcolor{keywordtype}{size\_t})(Arg2Size),      \(\backslash\)
+                                               arg2.size());            \(\backslash\)
+    \} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}

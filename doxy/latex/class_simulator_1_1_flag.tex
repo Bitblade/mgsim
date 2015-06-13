@@ -1,0 +1,156 @@
+\hypertarget{class_simulator_1_1_flag}{\section{Simulator\+:\+:Flag Class Reference}
+\label{class_simulator_1_1_flag}\index{Simulator\+::\+Flag@{Simulator\+::\+Flag}}
+}
+
+
+A single-\/bit storage element.  
+
+
+
+
+{\ttfamily \#include $<$storage.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:Flag\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_simulator_1_1_flag}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_simulator_1_1_flag_a51c8be3e44d72d11f733d2c90d70159f}{Is\+Set} () const 
+\item 
+bool \hyperlink{class_simulator_1_1_flag_a86125744ef8bff9a985413d093791aee}{Set} ()
+\item 
+bool \hyperlink{class_simulator_1_1_flag_a3972501a9392a9a08812a08b1c3a802d}{Clear} ()
+\item 
+\hyperlink{class_simulator_1_1_flag_a6f0399913e7ca717817b5adb00974ffd}{Flag} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock, bool set)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_simulator_1_1_flag_a3edbc0d4d4e12e0c425cbb05381c60ad}{Update} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_simulator_1_1_flag_a60f78dd6656e2604ca110664c9c93afe}{m\+\_\+set}
+\item 
+bool \hyperlink{class_simulator_1_1_flag_a55920339c74aba5925837e4374d54c9a}{m\+\_\+updated}
+\item 
+bool \hyperlink{class_simulator_1_1_flag_a996f9430e3c53ad4b1ffe7e5dab05bd6}{m\+\_\+new}
+\item 
+uint64\+\_\+t \hyperlink{class_simulator_1_1_flag_aa341af9a7119e56d6e56340d0f6dcd72}{m\+\_\+stalls}
+\begin{DoxyCompactList}\small\item\em Number of stalls so far. \end{DoxyCompactList}\item 
+\hyperlink{namespace_simulator_a928f1e2101eba21bb0fe409e8c9ce573}{Cycle\+No} \hyperlink{class_simulator_1_1_flag_a036d407f68f820d78ecb30072af3c429}{m\+\_\+lastcycle}
+\begin{DoxyCompactList}\small\item\em Cycle no of last event. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{class_simulator_1_1_flag_a21873c168122e7ec34d5e4cfe9ba7c1f}{m\+\_\+totalsize}
+\begin{DoxyCompactList}\small\item\em Cumulated current size $\ast$ cycle no. \end{DoxyCompactList}\item 
+\hyperlink{namespace_simulator_a5ca279f926485be2d0554e41275a3305}{Buffer\+Size} \hyperlink{class_simulator_1_1_flag_ad7d35060575d980cd0532240fc61d177}{m\+\_\+maxsize}
+\begin{DoxyCompactList}\small\item\em Maximum effective queue size reached. \end{DoxyCompactList}\item 
+\hyperlink{namespace_simulator_a5ca279f926485be2d0554e41275a3305}{Buffer\+Size} \hyperlink{class_simulator_1_1_flag_a67bdcf6e60428f27966068a8d472c868}{m\+\_\+cursize}
+\begin{DoxyCompactList}\small\item\em Current size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A single-\/bit storage element. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_flag_a6f0399913e7ca717817b5adb00974ffd}{\index{Simulator\+::\+Flag@{Simulator\+::\+Flag}!Flag@{Flag}}
+\index{Flag@{Flag}!Simulator\+::\+Flag@{Simulator\+::\+Flag}}
+\subsubsection[{Flag}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Flag\+::\+Flag (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock, }
+\item[{bool}]{set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_flag_a6f0399913e7ca717817b5adb00974ffd}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_flag_a3972501a9392a9a08812a08b1c3a802d}{\index{Simulator\+::\+Flag@{Simulator\+::\+Flag}!Clear@{Clear}}
+\index{Clear@{Clear}!Simulator\+::\+Flag@{Simulator\+::\+Flag}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+Flag\+::\+Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_flag_a3972501a9392a9a08812a08b1c3a802d}
+\hypertarget{class_simulator_1_1_flag_a51c8be3e44d72d11f733d2c90d70159f}{\index{Simulator\+::\+Flag@{Simulator\+::\+Flag}!Is\+Set@{Is\+Set}}
+\index{Is\+Set@{Is\+Set}!Simulator\+::\+Flag@{Simulator\+::\+Flag}}
+\subsubsection[{Is\+Set}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+Flag\+::\+Is\+Set (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_flag_a51c8be3e44d72d11f733d2c90d70159f}
+\hypertarget{class_simulator_1_1_flag_a86125744ef8bff9a985413d093791aee}{\index{Simulator\+::\+Flag@{Simulator\+::\+Flag}!Set@{Set}}
+\index{Set@{Set}!Simulator\+::\+Flag@{Simulator\+::\+Flag}}
+\subsubsection[{Set}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+Flag\+::\+Set (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_flag_a86125744ef8bff9a985413d093791aee}
+\hypertarget{class_simulator_1_1_flag_a3edbc0d4d4e12e0c425cbb05381c60ad}{\index{Simulator\+::\+Flag@{Simulator\+::\+Flag}!Update@{Update}}
+\index{Update@{Update}!Simulator\+::\+Flag@{Simulator\+::\+Flag}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Flag\+::\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_flag_a3edbc0d4d4e12e0c425cbb05381c60ad}
+
+
+Implements \hyperlink{class_simulator_1_1_storage_abea2bd330384970436228e1a759b9239}{Simulator\+::\+Storage}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simulator_1_1_flag_a67bdcf6e60428f27966068a8d472c868}{\index{Simulator\+::\+Flag@{Simulator\+::\+Flag}!m\+\_\+cursize@{m\+\_\+cursize}}
+\index{m\+\_\+cursize@{m\+\_\+cursize}!Simulator\+::\+Flag@{Simulator\+::\+Flag}}
+\subsubsection[{m\+\_\+cursize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Buffer\+Size} Simulator\+::\+Flag\+::m\+\_\+cursize\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_flag_a67bdcf6e60428f27966068a8d472c868}
+
+
+Current size. 
+
+\hypertarget{class_simulator_1_1_flag_a036d407f68f820d78ecb30072af3c429}{\index{Simulator\+::\+Flag@{Simulator\+::\+Flag}!m\+\_\+lastcycle@{m\+\_\+lastcycle}}
+\index{m\+\_\+lastcycle@{m\+\_\+lastcycle}!Simulator\+::\+Flag@{Simulator\+::\+Flag}}
+\subsubsection[{m\+\_\+lastcycle}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cycle\+No} Simulator\+::\+Flag\+::m\+\_\+lastcycle\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_flag_a036d407f68f820d78ecb30072af3c429}
+
+
+Cycle no of last event. 
+
+\hypertarget{class_simulator_1_1_flag_ad7d35060575d980cd0532240fc61d177}{\index{Simulator\+::\+Flag@{Simulator\+::\+Flag}!m\+\_\+maxsize@{m\+\_\+maxsize}}
+\index{m\+\_\+maxsize@{m\+\_\+maxsize}!Simulator\+::\+Flag@{Simulator\+::\+Flag}}
+\subsubsection[{m\+\_\+maxsize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Buffer\+Size} Simulator\+::\+Flag\+::m\+\_\+maxsize\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_flag_ad7d35060575d980cd0532240fc61d177}
+
+
+Maximum effective queue size reached. 
+
+\hypertarget{class_simulator_1_1_flag_a996f9430e3c53ad4b1ffe7e5dab05bd6}{\index{Simulator\+::\+Flag@{Simulator\+::\+Flag}!m\+\_\+new@{m\+\_\+new}}
+\index{m\+\_\+new@{m\+\_\+new}!Simulator\+::\+Flag@{Simulator\+::\+Flag}}
+\subsubsection[{m\+\_\+new}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+Flag\+::m\+\_\+new\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_flag_a996f9430e3c53ad4b1ffe7e5dab05bd6}
+\hypertarget{class_simulator_1_1_flag_a60f78dd6656e2604ca110664c9c93afe}{\index{Simulator\+::\+Flag@{Simulator\+::\+Flag}!m\+\_\+set@{m\+\_\+set}}
+\index{m\+\_\+set@{m\+\_\+set}!Simulator\+::\+Flag@{Simulator\+::\+Flag}}
+\subsubsection[{m\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+Flag\+::m\+\_\+set\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_flag_a60f78dd6656e2604ca110664c9c93afe}
+\hypertarget{class_simulator_1_1_flag_aa341af9a7119e56d6e56340d0f6dcd72}{\index{Simulator\+::\+Flag@{Simulator\+::\+Flag}!m\+\_\+stalls@{m\+\_\+stalls}}
+\index{m\+\_\+stalls@{m\+\_\+stalls}!Simulator\+::\+Flag@{Simulator\+::\+Flag}}
+\subsubsection[{m\+\_\+stalls}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Simulator\+::\+Flag\+::m\+\_\+stalls\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_flag_aa341af9a7119e56d6e56340d0f6dcd72}
+
+
+Number of stalls so far. 
+
+\hypertarget{class_simulator_1_1_flag_a21873c168122e7ec34d5e4cfe9ba7c1f}{\index{Simulator\+::\+Flag@{Simulator\+::\+Flag}!m\+\_\+totalsize@{m\+\_\+totalsize}}
+\index{m\+\_\+totalsize@{m\+\_\+totalsize}!Simulator\+::\+Flag@{Simulator\+::\+Flag}}
+\subsubsection[{m\+\_\+totalsize}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Simulator\+::\+Flag\+::m\+\_\+totalsize\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_flag_a21873c168122e7ec34d5e4cfe9ba7c1f}
+
+
+Cumulated current size $\ast$ cycle no. 
+
+\hypertarget{class_simulator_1_1_flag_a55920339c74aba5925837e4374d54c9a}{\index{Simulator\+::\+Flag@{Simulator\+::\+Flag}!m\+\_\+updated@{m\+\_\+updated}}
+\index{m\+\_\+updated@{m\+\_\+updated}!Simulator\+::\+Flag@{Simulator\+::\+Flag}}
+\subsubsection[{m\+\_\+updated}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+Flag\+::m\+\_\+updated\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_flag_a55920339c74aba5925837e4374d54c9a}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{storage_8h}{storage.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,20 @@
+  cd sl-installer-3.7.7-d157/
+  541  ls
+  542  whereis mgsim
+  543  cd build
+  544  ls
+  545  cd ..
+  546  ls
+  547  cat config.status 
+  548  cat config.status | grep prefix
+  549  cd /opt/svp
+  550  ls
+  551  eval `./slenv`
+  552  cd 
+  553  mkdir mgsim
+  554  nano main.c
+  555  slc -b mta
+  556  slc -b mta main.c
+  557  slr a.out -Ws,-i
+  
+  -Ws,-i maakt simulator interactief. 

@@ -5,11 +5,11 @@
 #include <sim/inspect.h>
 #include <sim/storage.h>
 #include <arch/Memory.h>
-#include "IOMatchUnit.h"
 #include "IOResponseMultiplexer.h"
 #include "IONotificationMultiplexer.h"
 #include "IOBusInterface.h"
 #include "IODirectCacheAccess.h"
+#include "mmu/MMIOComponent.h"
 
 namespace Simulator
 {

@@ -1,0 +1,178 @@
+\hypertarget{class_simulator_1_1drisc_1_1_family_table}{\section{Simulator\+:\+:drisc\+:\+:Family\+Table Class Reference}
+\label{class_simulator_1_1drisc_1_1_family_table}\index{Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}}
+}
+
+
+{\ttfamily \#include $<$Family\+Table.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:drisc\+:\+:Family\+Table\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_simulator_1_1drisc_1_1_family_table}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_family_table_a9029aa5cf735e64452314e50193d37ee}{Family\+Table} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_d_r_i_s_c}{D\+R\+I\+S\+C} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock, \hyperlink{class_config}{Config} \&config)
+\item 
+\hyperlink{namespace_simulator_a06544009313d7c13d411b1c074e5acff}{F\+Size} \hyperlink{class_simulator_1_1drisc_1_1_family_table_a77f3dfaf607e6409fbd336f11e72642a}{Get\+Num\+Families} () const 
+\item 
+\hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} \& \hyperlink{class_simulator_1_1drisc_1_1_family_table_ae72d1b32cd0ceaa4d5a8a82829d4998d}{operator\mbox{[}$\,$\mbox{]}} (\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} fid)
+\item 
+const \hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} \& \hyperlink{class_simulator_1_1drisc_1_1_family_table_a3623787209fd99307ac0670f255b0f67}{operator\mbox{[}$\,$\mbox{]}} (\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} fid) const 
+\item 
+\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} \hyperlink{class_simulator_1_1drisc_1_1_family_table_a79281183526d6db39fab77082005e85e}{Allocate\+Family} (\hyperlink{namespace_simulator_ab3233bd11b43e37322a8111dc7eec133}{Context\+Type} type)
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_family_table_a74de0961e3e56b837507393a14e306ac}{Free\+Family} (\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} fid, \hyperlink{namespace_simulator_ab3233bd11b43e37322a8111dc7eec133}{Context\+Type} context)
+\item 
+\hyperlink{namespace_simulator_a06544009313d7c13d411b1c074e5acff}{F\+Size} \hyperlink{class_simulator_1_1drisc_1_1_family_table_a2719dc5cde15360afd11d0850bb1513d}{Get\+Num\+Free\+Families} (\hyperlink{namespace_simulator_ab3233bd11b43e37322a8111dc7eec133}{Context\+Type} type) const 
+\item 
+\hyperlink{namespace_simulator_a06544009313d7c13d411b1c074e5acff}{F\+Size} \hyperlink{class_simulator_1_1drisc_1_1_family_table_abc24fed55692d4fce7415132c929727a}{Get\+Num\+Used\+Families} (\hyperlink{namespace_simulator_ab3233bd11b43e37322a8111dc7eec133}{Context\+Type} type) const 
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_family_table_a30e77e62cca306ea12bfc557ea1cb189}{Is\+Empty} () const 
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_family_table_a11f78b7368ecf0a79061cf88bfb35927}{Is\+Exclusive} (\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} fid) const 
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_family_table_a266eb35a74ef4afa9e99c0c22fadafb3}{Is\+Exclusive\+Used} () const 
+\item 
+const std\+::vector$<$ \hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} $>$ \& \hyperlink{class_simulator_1_1drisc_1_1_family_table_a1e6f3447d6b28a2938cde2dd51bb9f75}{Get\+Families} () const 
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_family_table_af1058666685d0c97c4e8e3852c8f9764}{Cmd\+\_\+\+Info} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const 
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_family_table_a3fb1dc90878fd079c167007660839303}{Cmd\+\_\+\+Read} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const 
+\item 
+\hyperlink{namespace_simulator_a06544009313d7c13d411b1c074e5acff}{F\+Size} \hyperlink{class_simulator_1_1drisc_1_1_family_table_a1439abbba05d016e7c204d96833ae161}{Get\+Total\+Allocated} ()
+\item 
+\hyperlink{namespace_simulator_aefe00209f3ea9f8e24874de522c3c3e7}{T\+Size} \hyperlink{class_simulator_1_1drisc_1_1_family_table_a9a0f3e894b86ea07373f169090a3291a}{Get\+Max\+Allocated} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_family_table_a9029aa5cf735e64452314e50193d37ee}{\index{Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}!Family\+Table@{Family\+Table}}
+\index{Family\+Table@{Family\+Table}!Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}}
+\subsubsection[{Family\+Table}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+Family\+Table\+::\+Family\+Table (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf D\+R\+I\+S\+C} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock, }
+\item[{{\bf Config} \&}]{config}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_family_table_a9029aa5cf735e64452314e50193d37ee}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_family_table_a79281183526d6db39fab77082005e85e}{\index{Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}!Allocate\+Family@{Allocate\+Family}}
+\index{Allocate\+Family@{Allocate\+Family}!Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}}
+\subsubsection[{Allocate\+Family}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+F\+I\+D} Simulator\+::drisc\+::\+Family\+Table\+::\+Allocate\+Family (
+\begin{DoxyParamCaption}
+\item[{{\bf Context\+Type}}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_family_table_a79281183526d6db39fab77082005e85e}
+\hypertarget{class_simulator_1_1drisc_1_1_family_table_af1058666685d0c97c4e8e3852c8f9764}{\index{Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}!Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}}
+\index{Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}!Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}}
+\subsubsection[{Cmd\+\_\+\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+Family\+Table\+::\+Cmd\+\_\+\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_family_table_af1058666685d0c97c4e8e3852c8f9764}
+\hypertarget{class_simulator_1_1drisc_1_1_family_table_a3fb1dc90878fd079c167007660839303}{\index{Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}!Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}}
+\index{Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}!Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}}
+\subsubsection[{Cmd\+\_\+\+Read}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+Family\+Table\+::\+Cmd\+\_\+\+Read (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_family_table_a3fb1dc90878fd079c167007660839303}
+\hypertarget{class_simulator_1_1drisc_1_1_family_table_a74de0961e3e56b837507393a14e306ac}{\index{Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}!Free\+Family@{Free\+Family}}
+\index{Free\+Family@{Free\+Family}!Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}}
+\subsubsection[{Free\+Family}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+Family\+Table\+::\+Free\+Family (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+F\+I\+D}}]{fid, }
+\item[{{\bf Context\+Type}}]{context}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_family_table_a74de0961e3e56b837507393a14e306ac}
+\hypertarget{class_simulator_1_1drisc_1_1_family_table_a1e6f3447d6b28a2938cde2dd51bb9f75}{\index{Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}!Get\+Families@{Get\+Families}}
+\index{Get\+Families@{Get\+Families}!Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}}
+\subsubsection[{Get\+Families}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::vector$<${\bf Family}$>$\& Simulator\+::drisc\+::\+Family\+Table\+::\+Get\+Families (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_family_table_a1e6f3447d6b28a2938cde2dd51bb9f75}
+\hypertarget{class_simulator_1_1drisc_1_1_family_table_a9a0f3e894b86ea07373f169090a3291a}{\index{Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}!Get\+Max\+Allocated@{Get\+Max\+Allocated}}
+\index{Get\+Max\+Allocated@{Get\+Max\+Allocated}!Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}}
+\subsubsection[{Get\+Max\+Allocated}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\+Size} Simulator\+::drisc\+::\+Family\+Table\+::\+Get\+Max\+Allocated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_family_table_a9a0f3e894b86ea07373f169090a3291a}
+\hypertarget{class_simulator_1_1drisc_1_1_family_table_a77f3dfaf607e6409fbd336f11e72642a}{\index{Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}!Get\+Num\+Families@{Get\+Num\+Families}}
+\index{Get\+Num\+Families@{Get\+Num\+Families}!Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}}
+\subsubsection[{Get\+Num\+Families}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+Size} Simulator\+::drisc\+::\+Family\+Table\+::\+Get\+Num\+Families (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_family_table_a77f3dfaf607e6409fbd336f11e72642a}
+\hypertarget{class_simulator_1_1drisc_1_1_family_table_a2719dc5cde15360afd11d0850bb1513d}{\index{Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}!Get\+Num\+Free\+Families@{Get\+Num\+Free\+Families}}
+\index{Get\+Num\+Free\+Families@{Get\+Num\+Free\+Families}!Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}}
+\subsubsection[{Get\+Num\+Free\+Families}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+Size} Simulator\+::drisc\+::\+Family\+Table\+::\+Get\+Num\+Free\+Families (
+\begin{DoxyParamCaption}
+\item[{{\bf Context\+Type}}]{type}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_family_table_a2719dc5cde15360afd11d0850bb1513d}
+\hypertarget{class_simulator_1_1drisc_1_1_family_table_abc24fed55692d4fce7415132c929727a}{\index{Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}!Get\+Num\+Used\+Families@{Get\+Num\+Used\+Families}}
+\index{Get\+Num\+Used\+Families@{Get\+Num\+Used\+Families}!Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}}
+\subsubsection[{Get\+Num\+Used\+Families}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+Size} Simulator\+::drisc\+::\+Family\+Table\+::\+Get\+Num\+Used\+Families (
+\begin{DoxyParamCaption}
+\item[{{\bf Context\+Type}}]{type}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_family_table_abc24fed55692d4fce7415132c929727a}
+\hypertarget{class_simulator_1_1drisc_1_1_family_table_a1439abbba05d016e7c204d96833ae161}{\index{Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}!Get\+Total\+Allocated@{Get\+Total\+Allocated}}
+\index{Get\+Total\+Allocated@{Get\+Total\+Allocated}!Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}}
+\subsubsection[{Get\+Total\+Allocated}]{\setlength{\rightskip}{0pt plus 5cm}{\bf F\+Size} Simulator\+::drisc\+::\+Family\+Table\+::\+Get\+Total\+Allocated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_family_table_a1439abbba05d016e7c204d96833ae161}
+\hypertarget{class_simulator_1_1drisc_1_1_family_table_a30e77e62cca306ea12bfc557ea1cb189}{\index{Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}!Is\+Empty@{Is\+Empty}}
+\index{Is\+Empty@{Is\+Empty}!Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}}
+\subsubsection[{Is\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Family\+Table\+::\+Is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_family_table_a30e77e62cca306ea12bfc557ea1cb189}
+\hypertarget{class_simulator_1_1drisc_1_1_family_table_a11f78b7368ecf0a79061cf88bfb35927}{\index{Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}!Is\+Exclusive@{Is\+Exclusive}}
+\index{Is\+Exclusive@{Is\+Exclusive}!Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}}
+\subsubsection[{Is\+Exclusive}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Family\+Table\+::\+Is\+Exclusive (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+F\+I\+D}}]{fid}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_family_table_a11f78b7368ecf0a79061cf88bfb35927}
+\hypertarget{class_simulator_1_1drisc_1_1_family_table_a266eb35a74ef4afa9e99c0c22fadafb3}{\index{Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}!Is\+Exclusive\+Used@{Is\+Exclusive\+Used}}
+\index{Is\+Exclusive\+Used@{Is\+Exclusive\+Used}!Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}}
+\subsubsection[{Is\+Exclusive\+Used}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Family\+Table\+::\+Is\+Exclusive\+Used (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_family_table_a266eb35a74ef4afa9e99c0c22fadafb3}
+\hypertarget{class_simulator_1_1drisc_1_1_family_table_ae72d1b32cd0ceaa4d5a8a82829d4998d}{\index{Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Family}\& Simulator\+::drisc\+::\+Family\+Table\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+F\+I\+D}}]{fid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_family_table_ae72d1b32cd0ceaa4d5a8a82829d4998d}
+\hypertarget{class_simulator_1_1drisc_1_1_family_table_a3623787209fd99307ac0670f255b0f67}{\index{Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Simulator\+::drisc\+::\+Family\+Table@{Simulator\+::drisc\+::\+Family\+Table}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Family}\& Simulator\+::drisc\+::\+Family\+Table\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+F\+I\+D}}]{fid}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_family_table_a3623787209fd99307ac0670f255b0f67}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/drisc/\hyperlink{_family_table_8h}{Family\+Table.\+h}\item 
+arch/drisc/\hyperlink{_family_table_8cpp}{Family\+Table.\+cpp}\end{DoxyCompactItemize}

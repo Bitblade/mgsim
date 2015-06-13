@@ -1,0 +1,80 @@
+\hypertarget{struct_simulator_1_1drisc_1_1_alloc_response}{\section{Simulator\+:\+:drisc\+:\+:Alloc\+Response Struct Reference}
+\label{struct_simulator_1_1drisc_1_1_alloc_response}\index{Simulator\+::drisc\+::\+Alloc\+Response@{Simulator\+::drisc\+::\+Alloc\+Response}}
+}
+
+
+Allocation response (going backwards)  
+
+
+
+
+{\ttfamily \#include $<$Network.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_simulator_aa671021151c047ae2da6dce4e6303476}{P\+I\+D} \hyperlink{struct_simulator_1_1drisc_1_1_alloc_response_ac071b34bcd711f8819bba0d9d01a5cad}{completion\+\_\+pid}
+\begin{DoxyCompactList}\small\item\em P\+I\+D where the thread runs that issued the allocate. \end{DoxyCompactList}\item 
+\hyperlink{namespace_simulator_ab00c9033de4c9a17db7b53d6c292515c}{Reg\+Index} \hyperlink{struct_simulator_1_1drisc_1_1_alloc_response_a93fbecda50acbeb731af9b81bbbc82bb}{completion\+\_\+reg}
+\begin{DoxyCompactList}\small\item\em Reg on parent\+\_\+pid of the completion register. \end{DoxyCompactList}\item 
+\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} \hyperlink{struct_simulator_1_1drisc_1_1_alloc_response_a75a1c47e8373c49d9b6b50f8ea683dee}{prev\+\_\+fid}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_simulator_1_1_f_i_d}{F\+I\+D} of the family on the previous (receiver) core. \end{DoxyCompactList}\item 
+\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} \hyperlink{struct_simulator_1_1drisc_1_1_alloc_response_a0f4a4d54a9d59adb1bebd90b8b2fab8e}{next\+\_\+fid}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_simulator_1_1_f_i_d}{F\+I\+D} of the family on the next (sender) core if !failed. \end{DoxyCompactList}\item 
+\hyperlink{namespace_simulator_a4aa07bee2f34beac11abf48a8ccc47c4}{P\+Size} \hyperlink{struct_simulator_1_1drisc_1_1_alloc_response_a4e5ebf0f9fa1e8c87270468ab10eba8e}{num\+Cores}
+\begin{DoxyCompactList}\small\item\em Number of cores actually allocated (0 for failed) \end{DoxyCompactList}\item 
+bool \hyperlink{struct_simulator_1_1drisc_1_1_alloc_response_a83d3c98ad20acd712266852db84b5918}{exact}
+\begin{DoxyCompactList}\small\item\em If the allocate was exact, unwind all the way. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Allocation response (going backwards) 
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_simulator_1_1drisc_1_1_alloc_response_ac071b34bcd711f8819bba0d9d01a5cad}{\index{Simulator\+::drisc\+::\+Alloc\+Response@{Simulator\+::drisc\+::\+Alloc\+Response}!completion\+\_\+pid@{completion\+\_\+pid}}
+\index{completion\+\_\+pid@{completion\+\_\+pid}!Simulator\+::drisc\+::\+Alloc\+Response@{Simulator\+::drisc\+::\+Alloc\+Response}}
+\subsubsection[{completion\+\_\+pid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+I\+D} Simulator\+::drisc\+::\+Alloc\+Response\+::completion\+\_\+pid}}\label{struct_simulator_1_1drisc_1_1_alloc_response_ac071b34bcd711f8819bba0d9d01a5cad}
+
+
+P\+I\+D where the thread runs that issued the allocate. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_alloc_response_a93fbecda50acbeb731af9b81bbbc82bb}{\index{Simulator\+::drisc\+::\+Alloc\+Response@{Simulator\+::drisc\+::\+Alloc\+Response}!completion\+\_\+reg@{completion\+\_\+reg}}
+\index{completion\+\_\+reg@{completion\+\_\+reg}!Simulator\+::drisc\+::\+Alloc\+Response@{Simulator\+::drisc\+::\+Alloc\+Response}}
+\subsubsection[{completion\+\_\+reg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reg\+Index} Simulator\+::drisc\+::\+Alloc\+Response\+::completion\+\_\+reg}}\label{struct_simulator_1_1drisc_1_1_alloc_response_a93fbecda50acbeb731af9b81bbbc82bb}
+
+
+Reg on parent\+\_\+pid of the completion register. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_alloc_response_a83d3c98ad20acd712266852db84b5918}{\index{Simulator\+::drisc\+::\+Alloc\+Response@{Simulator\+::drisc\+::\+Alloc\+Response}!exact@{exact}}
+\index{exact@{exact}!Simulator\+::drisc\+::\+Alloc\+Response@{Simulator\+::drisc\+::\+Alloc\+Response}}
+\subsubsection[{exact}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Alloc\+Response\+::exact}}\label{struct_simulator_1_1drisc_1_1_alloc_response_a83d3c98ad20acd712266852db84b5918}
+
+
+If the allocate was exact, unwind all the way. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_alloc_response_a0f4a4d54a9d59adb1bebd90b8b2fab8e}{\index{Simulator\+::drisc\+::\+Alloc\+Response@{Simulator\+::drisc\+::\+Alloc\+Response}!next\+\_\+fid@{next\+\_\+fid}}
+\index{next\+\_\+fid@{next\+\_\+fid}!Simulator\+::drisc\+::\+Alloc\+Response@{Simulator\+::drisc\+::\+Alloc\+Response}}
+\subsubsection[{next\+\_\+fid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+F\+I\+D} Simulator\+::drisc\+::\+Alloc\+Response\+::next\+\_\+fid}}\label{struct_simulator_1_1drisc_1_1_alloc_response_a0f4a4d54a9d59adb1bebd90b8b2fab8e}
+
+
+\hyperlink{struct_simulator_1_1_f_i_d}{F\+I\+D} of the family on the next (sender) core if !failed. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_alloc_response_a4e5ebf0f9fa1e8c87270468ab10eba8e}{\index{Simulator\+::drisc\+::\+Alloc\+Response@{Simulator\+::drisc\+::\+Alloc\+Response}!num\+Cores@{num\+Cores}}
+\index{num\+Cores@{num\+Cores}!Simulator\+::drisc\+::\+Alloc\+Response@{Simulator\+::drisc\+::\+Alloc\+Response}}
+\subsubsection[{num\+Cores}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+Size} Simulator\+::drisc\+::\+Alloc\+Response\+::num\+Cores}}\label{struct_simulator_1_1drisc_1_1_alloc_response_a4e5ebf0f9fa1e8c87270468ab10eba8e}
+
+
+Number of cores actually allocated (0 for failed) 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_alloc_response_a75a1c47e8373c49d9b6b50f8ea683dee}{\index{Simulator\+::drisc\+::\+Alloc\+Response@{Simulator\+::drisc\+::\+Alloc\+Response}!prev\+\_\+fid@{prev\+\_\+fid}}
+\index{prev\+\_\+fid@{prev\+\_\+fid}!Simulator\+::drisc\+::\+Alloc\+Response@{Simulator\+::drisc\+::\+Alloc\+Response}}
+\subsubsection[{prev\+\_\+fid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+F\+I\+D} Simulator\+::drisc\+::\+Alloc\+Response\+::prev\+\_\+fid}}\label{struct_simulator_1_1drisc_1_1_alloc_response_a75a1c47e8373c49d9b6b50f8ea683dee}
+
+
+\hyperlink{struct_simulator_1_1_f_i_d}{F\+I\+D} of the family on the previous (receiver) core. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+arch/drisc/\hyperlink{_network_8h}{Network.\+h}\end{DoxyCompactItemize}

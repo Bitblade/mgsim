@@ -1,0 +1,150 @@
+\hypertarget{class_simulator_1_1_c_d_m_a_1_1_root_directory}{\section{Simulator\+:\+:C\+D\+M\+A\+:\+:Root\+Directory Class Reference}
+\label{class_simulator_1_1_c_d_m_a_1_1_root_directory}\index{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}}
+}
+
+
+{\ttfamily \#include $<$Root\+Directory.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:C\+D\+M\+A\+:\+:Root\+Directory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.111601cm]{class_simulator_1_1_c_d_m_a_1_1_root_directory}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_simulator_1_1_c_d_m_a_1_1_root_directory_1_1_line}{Line}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_simulator_1_1_c_d_m_a_1_1_root_directory_a54079b84b63737f0a28b9a28dbd5f1ee}{Line\+State} \{ \hyperlink{class_simulator_1_1_c_d_m_a_1_1_root_directory_a54079b84b63737f0a28b9a28dbd5f1eea6f76a2a737d4dad0557095188c84901a}{L\+I\+N\+E\+\_\+\+E\+M\+P\+T\+Y}, 
+\hyperlink{class_simulator_1_1_c_d_m_a_1_1_root_directory_a54079b84b63737f0a28b9a28dbd5f1eea047b0bc37b08f6d1139983bfbb1b7e53}{L\+I\+N\+E\+\_\+\+L\+O\+A\+D\+I\+N\+G}, 
+\hyperlink{class_simulator_1_1_c_d_m_a_1_1_root_directory_a54079b84b63737f0a28b9a28dbd5f1eeaf8cbde22d20259276a0bea66bfc54db7}{L\+I\+N\+E\+\_\+\+F\+U\+L\+L}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_c_d_m_a_1_1_root_directory_a73a9740b23319f7a01d5d2de6f1f37bb}{Root\+Directory} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_c_d_m_a}{C\+D\+M\+A} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock, size\+\_\+t \hyperlink{mtconf_8c_aa3185401f04d30bd505daebf48c39cc5}{id}, const \hyperlink{class_simulator_1_1_d_d_r_channel_registry}{D\+D\+R\+Channel\+Registry} \&ddr, \hyperlink{class_config}{Config} \&config)
+\item 
+\hyperlink{class_simulator_1_1_c_d_m_a_1_1_root_directory_ae8ab21eca82819518d6c09b7bda21d29}{Root\+Directory} (const \hyperlink{class_simulator_1_1_c_d_m_a_1_1_root_directory}{Root\+Directory} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1_c_d_m_a_1_1_root_directory}{Root\+Directory} \& \hyperlink{class_simulator_1_1_c_d_m_a_1_1_root_directory_af5cb75c63f84a1d8c990a164b66eaebc}{operator=} (const \hyperlink{class_simulator_1_1_c_d_m_a_1_1_root_directory}{Root\+Directory} \&)=delete
+\item 
+void \hyperlink{class_simulator_1_1_c_d_m_a_1_1_root_directory_afc85eee93daa53d2df9dced6c5d7c83c}{Initialize} ()
+\item 
+void \hyperlink{class_simulator_1_1_c_d_m_a_1_1_root_directory_aa2fab98759e782db370ce410c80df8fa}{Cmd\+\_\+\+Info} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const 
+\item 
+void \hyperlink{class_simulator_1_1_c_d_m_a_1_1_root_directory_a5820cbcd28feccc409102e0b1c60c8a2}{Cmd\+\_\+\+Read} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const 
+\item 
+size\+\_\+t \hyperlink{class_simulator_1_1_c_d_m_a_1_1_root_directory_a1f99f51d930acbee8d8067c0ffa62316}{Get\+Max\+Num\+Lines} () const 
+\item 
+void \hyperlink{class_simulator_1_1_c_d_m_a_1_1_root_directory_a7ac44ab2531825b00887568e525d75dd}{Get\+Memory\+Statistics} (uint64\+\_\+t \&nreads\+\_\+ext, uint64\+\_\+t \&nwrites\+\_\+ext) const 
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_simulator_1_1_c_d_m_a_1_1_root_directory_add415c7c29b0f2d422db4e084c6688e3}{C\+D\+M\+A}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_simulator_1_1_c_d_m_a_1_1_root_directory_a54079b84b63737f0a28b9a28dbd5f1ee}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}!Line\+State@{Line\+State}}
+\index{Line\+State@{Line\+State}!Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}}
+\subsubsection[{Line\+State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory\+::\+Line\+State}}}\label{class_simulator_1_1_c_d_m_a_1_1_root_directory_a54079b84b63737f0a28b9a28dbd5f1ee}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{L\+I\+N\+E\+\_\+\+E\+M\+P\+T\+Y@{L\+I\+N\+E\+\_\+\+E\+M\+P\+T\+Y}!Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}}\index{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}!L\+I\+N\+E\+\_\+\+E\+M\+P\+T\+Y@{L\+I\+N\+E\+\_\+\+E\+M\+P\+T\+Y}}\item[{\em 
+\hypertarget{class_simulator_1_1_c_d_m_a_1_1_root_directory_a54079b84b63737f0a28b9a28dbd5f1eea6f76a2a737d4dad0557095188c84901a}{L\+I\+N\+E\+\_\+\+E\+M\+P\+T\+Y}\label{class_simulator_1_1_c_d_m_a_1_1_root_directory_a54079b84b63737f0a28b9a28dbd5f1eea6f76a2a737d4dad0557095188c84901a}
+}]\index{L\+I\+N\+E\+\_\+\+L\+O\+A\+D\+I\+N\+G@{L\+I\+N\+E\+\_\+\+L\+O\+A\+D\+I\+N\+G}!Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}}\index{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}!L\+I\+N\+E\+\_\+\+L\+O\+A\+D\+I\+N\+G@{L\+I\+N\+E\+\_\+\+L\+O\+A\+D\+I\+N\+G}}\item[{\em 
+\hypertarget{class_simulator_1_1_c_d_m_a_1_1_root_directory_a54079b84b63737f0a28b9a28dbd5f1eea047b0bc37b08f6d1139983bfbb1b7e53}{L\+I\+N\+E\+\_\+\+L\+O\+A\+D\+I\+N\+G}\label{class_simulator_1_1_c_d_m_a_1_1_root_directory_a54079b84b63737f0a28b9a28dbd5f1eea047b0bc37b08f6d1139983bfbb1b7e53}
+}]\index{L\+I\+N\+E\+\_\+\+F\+U\+L\+L@{L\+I\+N\+E\+\_\+\+F\+U\+L\+L}!Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}}\index{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}!L\+I\+N\+E\+\_\+\+F\+U\+L\+L@{L\+I\+N\+E\+\_\+\+F\+U\+L\+L}}\item[{\em 
+\hypertarget{class_simulator_1_1_c_d_m_a_1_1_root_directory_a54079b84b63737f0a28b9a28dbd5f1eeaf8cbde22d20259276a0bea66bfc54db7}{L\+I\+N\+E\+\_\+\+F\+U\+L\+L}\label{class_simulator_1_1_c_d_m_a_1_1_root_directory_a54079b84b63737f0a28b9a28dbd5f1eeaf8cbde22d20259276a0bea66bfc54db7}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_c_d_m_a_1_1_root_directory_a73a9740b23319f7a01d5d2de6f1f37bb}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}!Root\+Directory@{Root\+Directory}}
+\index{Root\+Directory@{Root\+Directory}!Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}}
+\subsubsection[{Root\+Directory}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory\+::\+Root\+Directory (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf C\+D\+M\+A} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock, }
+\item[{size\+\_\+t}]{id, }
+\item[{const {\bf D\+D\+R\+Channel\+Registry} \&}]{ddr, }
+\item[{{\bf Config} \&}]{config}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_c_d_m_a_1_1_root_directory_a73a9740b23319f7a01d5d2de6f1f37bb}
+\hypertarget{class_simulator_1_1_c_d_m_a_1_1_root_directory_ae8ab21eca82819518d6c09b7bda21d29}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}!Root\+Directory@{Root\+Directory}}
+\index{Root\+Directory@{Root\+Directory}!Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}}
+\subsubsection[{Root\+Directory}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory\+::\+Root\+Directory (
+\begin{DoxyParamCaption}
+\item[{const {\bf Root\+Directory} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_c_d_m_a_1_1_root_directory_ae8ab21eca82819518d6c09b7bda21d29}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_c_d_m_a_1_1_root_directory_aa2fab98759e782db370ce410c80df8fa}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}!Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}}
+\index{Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}!Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}}
+\subsubsection[{Cmd\+\_\+\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory\+::\+Cmd\+\_\+\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_c_d_m_a_1_1_root_directory_aa2fab98759e782db370ce410c80df8fa}
+\hypertarget{class_simulator_1_1_c_d_m_a_1_1_root_directory_a5820cbcd28feccc409102e0b1c60c8a2}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}!Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}}
+\index{Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}!Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}}
+\subsubsection[{Cmd\+\_\+\+Read}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory\+::\+Cmd\+\_\+\+Read (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_c_d_m_a_1_1_root_directory_a5820cbcd28feccc409102e0b1c60c8a2}
+\hypertarget{class_simulator_1_1_c_d_m_a_1_1_root_directory_a1f99f51d930acbee8d8067c0ffa62316}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}!Get\+Max\+Num\+Lines@{Get\+Max\+Num\+Lines}}
+\index{Get\+Max\+Num\+Lines@{Get\+Max\+Num\+Lines}!Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}}
+\subsubsection[{Get\+Max\+Num\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory\+::\+Get\+Max\+Num\+Lines (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_c_d_m_a_1_1_root_directory_a1f99f51d930acbee8d8067c0ffa62316}
+\hypertarget{class_simulator_1_1_c_d_m_a_1_1_root_directory_a7ac44ab2531825b00887568e525d75dd}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}!Get\+Memory\+Statistics@{Get\+Memory\+Statistics}}
+\index{Get\+Memory\+Statistics@{Get\+Memory\+Statistics}!Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}}
+\subsubsection[{Get\+Memory\+Statistics}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory\+::\+Get\+Memory\+Statistics (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t \&}]{nreads\+\_\+ext, }
+\item[{uint64\+\_\+t \&}]{nwrites\+\_\+ext}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_c_d_m_a_1_1_root_directory_a7ac44ab2531825b00887568e525d75dd}
+\hypertarget{class_simulator_1_1_c_d_m_a_1_1_root_directory_afc85eee93daa53d2df9dced6c5d7c83c}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory\+::\+Initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_c_d_m_a_1_1_root_directory_afc85eee93daa53d2df9dced6c5d7c83c}
+\hypertarget{class_simulator_1_1_c_d_m_a_1_1_root_directory_af5cb75c63f84a1d8c990a164b66eaebc}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}!operator=@{operator=}}
+\index{operator=@{operator=}!Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Root\+Directory}\& Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Root\+Directory} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_c_d_m_a_1_1_root_directory_af5cb75c63f84a1d8c990a164b66eaebc}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_simulator_1_1_c_d_m_a_1_1_root_directory_add415c7c29b0f2d422db4e084c6688e3}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}!C\+D\+M\+A@{C\+D\+M\+A}}
+\index{C\+D\+M\+A@{C\+D\+M\+A}!Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory@{Simulator\+::\+C\+D\+M\+A\+::\+Root\+Directory}}
+\subsubsection[{C\+D\+M\+A}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf C\+D\+M\+A}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_simulator_1_1_c_d_m_a_1_1_root_directory_add415c7c29b0f2d422db4e084c6688e3}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/mem/cdma/\hyperlink{cdma_2_root_directory_8h}{Root\+Directory.\+h}\item 
+arch/mem/cdma/\hyperlink{cdma_2_root_directory_8cpp}{Root\+Directory.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,233 @@
+\hypertarget{class_simulator_1_1_virtual_memory}{\section{Simulator\+:\+:Virtual\+Memory Class Reference}
+\label{class_simulator_1_1_virtual_memory}\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+}
+
+
+{\ttfamily \#include $<$Virtual\+Memory.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:Virtual\+Memory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.964912cm]{class_simulator_1_1_virtual_memory}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_simulator_1_1_virtual_memory_1_1_block}{Block}
+\item 
+struct \hyperlink{struct_simulator_1_1_virtual_memory_1_1_range}{Range}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ Mem\+Addr, \hyperlink{struct_simulator_1_1_virtual_memory_1_1_block}{Block} $>$ \hyperlink{class_simulator_1_1_virtual_memory_ada38033e776f02935cf46de8b0ce7615}{Block\+Map}
+\item 
+typedef std\+::map$<$ Mem\+Addr, \hyperlink{struct_simulator_1_1_virtual_memory_1_1_range}{Range} $>$ \hyperlink{class_simulator_1_1_virtual_memory_ac7a5d13c3ba7bfcc6729bc4ccbe8bc7e}{Range\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_simulator_1_1_virtual_memory_a40315600da5a22633c0f4215bba22c74}{Reserve} (Mem\+Addr address, Mem\+Size size, \hyperlink{namespace_simulator_a62ef2d2c77bd54a16c39881f6266875e}{Process\+I\+D} pid, int perm) override
+\item 
+void \hyperlink{class_simulator_1_1_virtual_memory_ab509dcc17a390021d082424335c400de}{Unreserve} (Mem\+Addr address, Mem\+Size size) override
+\item 
+void \hyperlink{class_simulator_1_1_virtual_memory_aae5d9c5c0d2751e8d816231c8b9c7c7e}{Unreserve\+All} (\hyperlink{namespace_simulator_a62ef2d2c77bd54a16c39881f6266875e}{Process\+I\+D} pid) override
+\item 
+void \hyperlink{class_simulator_1_1_virtual_memory_a70bfd5a3e806d033ccee7b1e95de6a04}{Read} (Mem\+Addr address, void $\ast$data, Mem\+Size size) const override
+\item 
+void \hyperlink{class_simulator_1_1_virtual_memory_a67ed4e5b7292e633bc3d62f8995f81a1}{Write} (Mem\+Addr address, const void $\ast$data, const bool $\ast$mask, Mem\+Size size) override
+\item 
+bool \hyperlink{class_simulator_1_1_virtual_memory_ae4fb1aa425a6593a0a4973c846d21740}{Check\+Permissions} (Mem\+Addr address, Mem\+Size size, int access) const override
+\item 
+\hyperlink{class_simulator_1_1_virtual_memory_a35414c1541b76d82fc67ac6aa28f8691}{Virtual\+Memory} ()
+\item 
+\hyperlink{class_simulator_1_1_virtual_memory_ab0c8680a6c5eab7a9c44c87a55127405}{Virtual\+Memory} (const \hyperlink{class_simulator_1_1_virtual_memory}{Virtual\+Memory} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1_virtual_memory}{Virtual\+Memory} \& \hyperlink{class_simulator_1_1_virtual_memory_a691b3f8ff903c2d8b2ca1f79e45436a5}{operator=} (const \hyperlink{class_simulator_1_1_virtual_memory}{Virtual\+Memory} \&)=delete
+\item 
+virtual \hyperlink{class_simulator_1_1_virtual_memory_a3557283bed40f0375381b4204fa04722}{$\sim$\+Virtual\+Memory} ()
+\item 
+void \hyperlink{class_simulator_1_1_virtual_memory_ad4d404ecffae173e02714747a5917b20}{Cmd\+\_\+\+Info} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const override
+\item 
+void \hyperlink{class_simulator_1_1_virtual_memory_a5280eee601bbcd4885b6c5343b4bb935}{Cmd\+\_\+\+Read} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const override
+\item 
+void \hyperlink{class_simulator_1_1_virtual_memory_ae2433822a32553ec6f1dd8d371e164bd}{Set\+Symbol\+Table} (\hyperlink{class_simulator_1_1_symbol_table}{Symbol\+Table} \&symtable) override
+\item 
+\hyperlink{class_simulator_1_1_symbol_table}{Symbol\+Table} \& \hyperlink{class_simulator_1_1_virtual_memory_ac7a1f11d68444825e86236484984ca44}{Get\+Symbol\+Table} () const override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_simulator_1_1_virtual_memory_a84e20b875917ceb9a44d32cfb2d59246}{B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E} = (1 $<$$<$ 12)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_simulator_1_1_virtual_memory_ada38033e776f02935cf46de8b0ce7615}{\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}!Block\+Map@{Block\+Map}}
+\index{Block\+Map@{Block\+Map}!Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+\subsubsection[{Block\+Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$Mem\+Addr, {\bf Block}$>$ {\bf Simulator\+::\+Virtual\+Memory\+::\+Block\+Map}}}\label{class_simulator_1_1_virtual_memory_ada38033e776f02935cf46de8b0ce7615}
+\hypertarget{class_simulator_1_1_virtual_memory_ac7a5d13c3ba7bfcc6729bc4ccbe8bc7e}{\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}!Range\+Map@{Range\+Map}}
+\index{Range\+Map@{Range\+Map}!Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+\subsubsection[{Range\+Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$Mem\+Addr, {\bf Range}$>$ {\bf Simulator\+::\+Virtual\+Memory\+::\+Range\+Map}}}\label{class_simulator_1_1_virtual_memory_ac7a5d13c3ba7bfcc6729bc4ccbe8bc7e}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_virtual_memory_a35414c1541b76d82fc67ac6aa28f8691}{\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}!Virtual\+Memory@{Virtual\+Memory}}
+\index{Virtual\+Memory@{Virtual\+Memory}!Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+\subsubsection[{Virtual\+Memory}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Virtual\+Memory\+::\+Virtual\+Memory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_virtual_memory_a35414c1541b76d82fc67ac6aa28f8691}
+\hypertarget{class_simulator_1_1_virtual_memory_ab0c8680a6c5eab7a9c44c87a55127405}{\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}!Virtual\+Memory@{Virtual\+Memory}}
+\index{Virtual\+Memory@{Virtual\+Memory}!Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+\subsubsection[{Virtual\+Memory}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Virtual\+Memory\+::\+Virtual\+Memory (
+\begin{DoxyParamCaption}
+\item[{const {\bf Virtual\+Memory} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_virtual_memory_ab0c8680a6c5eab7a9c44c87a55127405}
+\hypertarget{class_simulator_1_1_virtual_memory_a3557283bed40f0375381b4204fa04722}{\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}!````~Virtual\+Memory@{$\sim$\+Virtual\+Memory}}
+\index{````~Virtual\+Memory@{$\sim$\+Virtual\+Memory}!Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+\subsubsection[{$\sim$\+Virtual\+Memory}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Virtual\+Memory\+::$\sim$\+Virtual\+Memory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1_virtual_memory_a3557283bed40f0375381b4204fa04722}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_virtual_memory_ae4fb1aa425a6593a0a4973c846d21740}{\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}!Check\+Permissions@{Check\+Permissions}}
+\index{Check\+Permissions@{Check\+Permissions}!Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+\subsubsection[{Check\+Permissions}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+Virtual\+Memory\+::\+Check\+Permissions (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{Mem\+Size}]{size, }
+\item[{int}]{access}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_virtual_memory_ae4fb1aa425a6593a0a4973c846d21740}
+
+
+Implements \hyperlink{class_simulator_1_1_i_memory_admin_af3841786e45aa1ce6cddd03f881481fa}{Simulator\+::\+I\+Memory\+Admin}.
+
+\hypertarget{class_simulator_1_1_virtual_memory_ad4d404ecffae173e02714747a5917b20}{\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}!Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}}
+\index{Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}!Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+\subsubsection[{Cmd\+\_\+\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Virtual\+Memory\+::\+Cmd\+\_\+\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}}}\label{class_simulator_1_1_virtual_memory_ad4d404ecffae173e02714747a5917b20}
+\hypertarget{class_simulator_1_1_virtual_memory_a5280eee601bbcd4885b6c5343b4bb935}{\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}!Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}}
+\index{Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}!Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+\subsubsection[{Cmd\+\_\+\+Read}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Virtual\+Memory\+::\+Cmd\+\_\+\+Read (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}}}\label{class_simulator_1_1_virtual_memory_a5280eee601bbcd4885b6c5343b4bb935}
+\hypertarget{class_simulator_1_1_virtual_memory_ac7a1f11d68444825e86236484984ca44}{\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}!Get\+Symbol\+Table@{Get\+Symbol\+Table}}
+\index{Get\+Symbol\+Table@{Get\+Symbol\+Table}!Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+\subsubsection[{Get\+Symbol\+Table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Symbol\+Table} \& Simulator\+::\+Virtual\+Memory\+::\+Get\+Symbol\+Table (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_virtual_memory_ac7a1f11d68444825e86236484984ca44}
+
+
+Implements \hyperlink{class_simulator_1_1_i_memory_admin_a5c78bb38973e9a786f197383985f45d7}{Simulator\+::\+I\+Memory\+Admin}.
+
+\hypertarget{class_simulator_1_1_virtual_memory_a691b3f8ff903c2d8b2ca1f79e45436a5}{\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}!operator=@{operator=}}
+\index{operator=@{operator=}!Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Virtual\+Memory}\& Simulator\+::\+Virtual\+Memory\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Virtual\+Memory} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_virtual_memory_a691b3f8ff903c2d8b2ca1f79e45436a5}
+\hypertarget{class_simulator_1_1_virtual_memory_a70bfd5a3e806d033ccee7b1e95de6a04}{\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}!Read@{Read}}
+\index{Read@{Read}!Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Virtual\+Memory\+::\+Read (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{void $\ast$}]{data, }
+\item[{Mem\+Size}]{size}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_virtual_memory_a70bfd5a3e806d033ccee7b1e95de6a04}
+
+
+Implements \hyperlink{class_simulator_1_1_i_memory_admin_a70a61237c0d486e61ffa3a9d102041e2}{Simulator\+::\+I\+Memory\+Admin}.
+
+\hypertarget{class_simulator_1_1_virtual_memory_a40315600da5a22633c0f4215bba22c74}{\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}!Reserve@{Reserve}}
+\index{Reserve@{Reserve}!Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+\subsubsection[{Reserve}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Virtual\+Memory\+::\+Reserve (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{Mem\+Size}]{size, }
+\item[{{\bf Process\+I\+D}}]{pid, }
+\item[{int}]{perm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_virtual_memory_a40315600da5a22633c0f4215bba22c74}
+
+
+Implements \hyperlink{class_simulator_1_1_i_memory_admin_a3d05616b22c17888237fb6729faefbee}{Simulator\+::\+I\+Memory\+Admin}.
+
+\hypertarget{class_simulator_1_1_virtual_memory_ae2433822a32553ec6f1dd8d371e164bd}{\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}!Set\+Symbol\+Table@{Set\+Symbol\+Table}}
+\index{Set\+Symbol\+Table@{Set\+Symbol\+Table}!Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+\subsubsection[{Set\+Symbol\+Table}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Virtual\+Memory\+::\+Set\+Symbol\+Table (
+\begin{DoxyParamCaption}
+\item[{{\bf Symbol\+Table} \&}]{symtable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_virtual_memory_ae2433822a32553ec6f1dd8d371e164bd}
+
+
+Implements \hyperlink{class_simulator_1_1_i_memory_admin_ae07fadcfb78b83dfff1be6f7befb21fd}{Simulator\+::\+I\+Memory\+Admin}.
+
+\hypertarget{class_simulator_1_1_virtual_memory_ab509dcc17a390021d082424335c400de}{\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}!Unreserve@{Unreserve}}
+\index{Unreserve@{Unreserve}!Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+\subsubsection[{Unreserve}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Virtual\+Memory\+::\+Unreserve (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{Mem\+Size}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_virtual_memory_ab509dcc17a390021d082424335c400de}
+
+
+Implements \hyperlink{class_simulator_1_1_i_memory_admin_a6907084c07b1447c5dfd826ca43bd151}{Simulator\+::\+I\+Memory\+Admin}.
+
+\hypertarget{class_simulator_1_1_virtual_memory_aae5d9c5c0d2751e8d816231c8b9c7c7e}{\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}!Unreserve\+All@{Unreserve\+All}}
+\index{Unreserve\+All@{Unreserve\+All}!Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+\subsubsection[{Unreserve\+All}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Virtual\+Memory\+::\+Unreserve\+All (
+\begin{DoxyParamCaption}
+\item[{{\bf Process\+I\+D}}]{pid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_virtual_memory_aae5d9c5c0d2751e8d816231c8b9c7c7e}
+
+
+Implements \hyperlink{class_simulator_1_1_i_memory_admin_a5da26ac320d81da2adb92d0f62cf00a6}{Simulator\+::\+I\+Memory\+Admin}.
+
+\hypertarget{class_simulator_1_1_virtual_memory_a67ed4e5b7292e633bc3d62f8995f81a1}{\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}!Write@{Write}}
+\index{Write@{Write}!Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Virtual\+Memory\+::\+Write (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{const void $\ast$}]{data, }
+\item[{const bool $\ast$}]{mask, }
+\item[{Mem\+Size}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_virtual_memory_a67ed4e5b7292e633bc3d62f8995f81a1}
+
+
+Implements \hyperlink{class_simulator_1_1_i_memory_admin_a35e57b8855fc2b99c86979d7fea43995}{Simulator\+::\+I\+Memory\+Admin}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simulator_1_1_virtual_memory_a84e20b875917ceb9a44d32cfb2d59246}{\index{Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}!B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E@{B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}}
+\index{B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E@{B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}!Simulator\+::\+Virtual\+Memory@{Simulator\+::\+Virtual\+Memory}}
+\subsubsection[{B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}const int Simulator\+::\+Virtual\+Memory\+::\+B\+L\+O\+C\+K\+\_\+\+S\+I\+Z\+E = (1 $<$$<$ 12)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_simulator_1_1_virtual_memory_a84e20b875917ceb9a44d32cfb2d59246}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/\hyperlink{_virtual_memory_8h}{Virtual\+Memory.\+h}\item 
+arch/\hyperlink{_virtual_memory_8cpp}{Virtual\+Memory.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,49 @@
+\hypertarget{zlcdma_2_node_8h}{\section{arch/mem/zlcdma/\+Node.h File Reference}
+\label{zlcdma_2_node_8h}\index{arch/mem/zlcdma/\+Node.\+h@{arch/mem/zlcdma/\+Node.\+h}}
+}
+{\ttfamily \#include \char`\"{}C\+D\+M\+A.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_simulator_1_1_z_l_c_d_m_a_1_1_node}{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}
+\item 
+union \hyperlink{union_simulator_1_1_z_l_c_d_m_a_1_1_node_1_1_message}{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node\+::\+Message}
+\begin{DoxyCompactList}\small\item\em This is the message that gets sent around. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_simulator}{Simulator}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{zlcdma_2_node_8h_ad93de7c404d9e379ef5923c1635611e5}{Trace\+Write}(addr, fmt,...)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{zlcdma_2_node_8h_ad93de7c404d9e379ef5923c1635611e5}{\index{zlcdma/\+Node.\+h@{zlcdma/\+Node.\+h}!Trace\+Write@{Trace\+Write}}
+\index{Trace\+Write@{Trace\+Write}!zlcdma/\+Node.\+h@{zlcdma/\+Node.\+h}}
+\subsubsection[{Trace\+Write}]{\setlength{\rightskip}{0pt plus 5cm}\#define Trace\+Write(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{zlcdma_2_node_8h_ad93de7c404d9e379ef5923c1635611e5}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+        const ZLCDMA::TraceMap& traces = m\_parent.GetTraces(); \(\backslash\)
+        MemAddr \_\_addr = (addr) / m\_lineSize * m\_lineSize; \(\backslash\)
+        if (!traces.empty() && traces.find((\_\_addr)) != traces.end()) \{ \hyperlink{kernel_8h_a1aa076cb66400e957bca5d441ee803c5}{\(\backslash\)}
+\hyperlink{kernel_8h_a1aa076cb66400e957bca5d441ee803c5}{            OutputWrite}((\textcolor{stringliteral}{"0x%llx: "} fmt), (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long})(\_\_addr), ##
+      \_\_VA\_ARGS\_\_); \(\backslash\)
+        \} \(\backslash\)
+    \} \textcolor{keywordflow}{while} (\textcolor{keyword}{false})
+\end{DoxyCode}
+void Trace\+Write(Mem\+Addr address, const char$\ast$ fmt, ...);
+
+Note\+: The argument for 'fmt' has to be a string literal.
+
+For use in Z\+L\+C\+D\+M\+A\+::\+Object instances. Writes out a message if the specified address is being traced. 

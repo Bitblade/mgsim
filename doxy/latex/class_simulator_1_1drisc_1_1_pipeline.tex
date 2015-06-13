@@ -1,0 +1,220 @@
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline}{\section{Simulator\+:\+:drisc\+:\+:Pipeline Class Reference}
+\label{class_simulator_1_1drisc_1_1_pipeline}\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+}
+
+
+{\ttfamily \#include $<$Pipeline.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:drisc\+:\+:Pipeline\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_simulator_1_1drisc_1_1_pipeline}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_pipeline_a007d966d68bf82350940a787aadb5351}{Pipeline} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_d_r_i_s_c}{D\+R\+I\+S\+C} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock, \hyperlink{class_config}{Config} \&config)
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_pipeline_a8f78a2335b3e93aa6a12ed3f3a661e12}{Pipeline} (const \hyperlink{class_simulator_1_1drisc_1_1_pipeline}{Pipeline} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_pipeline}{Pipeline} \& \hyperlink{class_simulator_1_1drisc_1_1_pipeline_adbe94f3125321db796eea7ea960e209c}{operator=} (const \hyperlink{class_simulator_1_1drisc_1_1_pipeline}{Pipeline} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_pipeline_a8d7774ca024866651bf485e3f7c713e0}{$\sim$\+Pipeline} ()
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_pipeline_abef0fa17d5853df152deacdcd38ce1be}{Connect\+F\+P\+U} (\hyperlink{class_simulator_1_1_f_p_u}{F\+P\+U} $\ast$fpu)
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1drisc_1_1_pipeline_a9ba3d40e233e7bc12490cb8da71b0aea}{Do\+Pipeline} ()
+\item 
+\hyperlink{class_simulator_1_1_object}{Object} \& \hyperlink{class_simulator_1_1drisc_1_1_pipeline_a3421cbb42460afcdea6ce2ecb48722c8}{Get\+D\+R\+I\+S\+C\+Parent} () const 
+\item 
+uint64\+\_\+t \hyperlink{class_simulator_1_1drisc_1_1_pipeline_ad07087499cdd1bd41d21f1e541efdd5c}{Get\+Total\+Busy\+Time} () const 
+\item 
+uint64\+\_\+t \hyperlink{class_simulator_1_1drisc_1_1_pipeline_a00dfcfc6a05eee988c05d7730caeb5f2}{Get\+Stalls} () const 
+\item 
+uint64\+\_\+t \hyperlink{class_simulator_1_1drisc_1_1_pipeline_a09919a6b3b09ac3992d20e34e4b2aaf8}{Get\+N\+Stages} () const 
+\item 
+uint64\+\_\+t \hyperlink{class_simulator_1_1drisc_1_1_pipeline_a089f1301fa977a5fe3713efe38dea5ad}{Get\+Stages\+Run} () const 
+\item 
+size\+\_\+t \hyperlink{class_simulator_1_1drisc_1_1_pipeline_a3660d8be36349968761a766d9b027cc3}{Get\+F\+P\+U\+Source} () const 
+\item 
+float \hyperlink{class_simulator_1_1drisc_1_1_pipeline_a80e9f42ed14efdba58e03d49e875eafb}{Get\+Efficiency} () const 
+\item 
+uint64\+\_\+t \hyperlink{class_simulator_1_1drisc_1_1_pipeline_a839844dca9aa93ba88b77b928d20c69b}{Get\+Flop} () const 
+\item 
+uint64\+\_\+t \hyperlink{class_simulator_1_1drisc_1_1_pipeline_ac44d38986e5b968980fb549edca8fdee}{Get\+Op} () const 
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_pipeline_ae3aafb7a00022b7591cec9c72fad7994}{Collect\+Mem\+Op\+Statistics} (uint64\+\_\+t \&nr, uint64\+\_\+t \&nw, uint64\+\_\+t \&nrb, uint64\+\_\+t \&nwb) const 
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_pipeline_af347f4ab392dea1ab099aae04f3c9d3c}{Cmd\+\_\+\+Info} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const 
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_pipeline_a153fbb2d9ff31a3a0fbcbe3176a77f99}{Cmd\+\_\+\+Read} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_process}{Process} \hyperlink{class_simulator_1_1drisc_1_1_pipeline_ae7f3b00d54d8325d4a7354e7348c15f6}{p\+\_\+\+Pipeline}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_simulator_1_1drisc_1_1_pipeline_a14f94eb83e17d9d8841f39b37431d673}{Simulator\+::\+D\+R\+I\+S\+C}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_a007d966d68bf82350940a787aadb5351}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!Pipeline@{Pipeline}}
+\index{Pipeline@{Pipeline}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{Pipeline}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+Pipeline\+::\+Pipeline (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf D\+R\+I\+S\+C} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock, }
+\item[{{\bf Config} \&}]{config}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_pipeline_a007d966d68bf82350940a787aadb5351}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_a8f78a2335b3e93aa6a12ed3f3a661e12}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!Pipeline@{Pipeline}}
+\index{Pipeline@{Pipeline}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{Pipeline}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+Pipeline\+::\+Pipeline (
+\begin{DoxyParamCaption}
+\item[{const {\bf Pipeline} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1drisc_1_1_pipeline_a8f78a2335b3e93aa6a12ed3f3a661e12}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_a8d7774ca024866651bf485e3f7c713e0}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!````~Pipeline@{$\sim$\+Pipeline}}
+\index{````~Pipeline@{$\sim$\+Pipeline}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{$\sim$\+Pipeline}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+Pipeline\+::$\sim$\+Pipeline (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_pipeline_a8d7774ca024866651bf485e3f7c713e0}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_af347f4ab392dea1ab099aae04f3c9d3c}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}}
+\index{Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{Cmd\+\_\+\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+Pipeline\+::\+Cmd\+\_\+\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_pipeline_af347f4ab392dea1ab099aae04f3c9d3c}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_a153fbb2d9ff31a3a0fbcbe3176a77f99}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}}
+\index{Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{Cmd\+\_\+\+Read}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+Pipeline\+::\+Cmd\+\_\+\+Read (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_pipeline_a153fbb2d9ff31a3a0fbcbe3176a77f99}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_ae3aafb7a00022b7591cec9c72fad7994}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!Collect\+Mem\+Op\+Statistics@{Collect\+Mem\+Op\+Statistics}}
+\index{Collect\+Mem\+Op\+Statistics@{Collect\+Mem\+Op\+Statistics}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{Collect\+Mem\+Op\+Statistics}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+Pipeline\+::\+Collect\+Mem\+Op\+Statistics (
+\begin{DoxyParamCaption}
+\item[{uint64\+\_\+t \&}]{nr, }
+\item[{uint64\+\_\+t \&}]{nw, }
+\item[{uint64\+\_\+t \&}]{nrb, }
+\item[{uint64\+\_\+t \&}]{nwb}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_pipeline_ae3aafb7a00022b7591cec9c72fad7994}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_abef0fa17d5853df152deacdcd38ce1be}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!Connect\+F\+P\+U@{Connect\+F\+P\+U}}
+\index{Connect\+F\+P\+U@{Connect\+F\+P\+U}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{Connect\+F\+P\+U}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+Pipeline\+::\+Connect\+F\+P\+U (
+\begin{DoxyParamCaption}
+\item[{{\bf F\+P\+U} $\ast$}]{fpu}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_pipeline_abef0fa17d5853df152deacdcd38ce1be}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_a9ba3d40e233e7bc12490cb8da71b0aea}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!Do\+Pipeline@{Do\+Pipeline}}
+\index{Do\+Pipeline@{Do\+Pipeline}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{Do\+Pipeline}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::drisc\+::\+Pipeline\+::\+Do\+Pipeline (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_pipeline_a9ba3d40e233e7bc12490cb8da71b0aea}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_a3421cbb42460afcdea6ce2ecb48722c8}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!Get\+D\+R\+I\+S\+C\+Parent@{Get\+D\+R\+I\+S\+C\+Parent}}
+\index{Get\+D\+R\+I\+S\+C\+Parent@{Get\+D\+R\+I\+S\+C\+Parent}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{Get\+D\+R\+I\+S\+C\+Parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}\& Simulator\+::drisc\+::\+Pipeline\+::\+Get\+D\+R\+I\+S\+C\+Parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_pipeline_a3421cbb42460afcdea6ce2ecb48722c8}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_a80e9f42ed14efdba58e03d49e875eafb}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!Get\+Efficiency@{Get\+Efficiency}}
+\index{Get\+Efficiency@{Get\+Efficiency}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{Get\+Efficiency}]{\setlength{\rightskip}{0pt plus 5cm}float Simulator\+::drisc\+::\+Pipeline\+::\+Get\+Efficiency (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_pipeline_a80e9f42ed14efdba58e03d49e875eafb}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_a839844dca9aa93ba88b77b928d20c69b}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!Get\+Flop@{Get\+Flop}}
+\index{Get\+Flop@{Get\+Flop}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{Get\+Flop}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Simulator\+::drisc\+::\+Pipeline\+::\+Get\+Flop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_pipeline_a839844dca9aa93ba88b77b928d20c69b}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_a3660d8be36349968761a766d9b027cc3}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!Get\+F\+P\+U\+Source@{Get\+F\+P\+U\+Source}}
+\index{Get\+F\+P\+U\+Source@{Get\+F\+P\+U\+Source}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{Get\+F\+P\+U\+Source}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Simulator\+::drisc\+::\+Pipeline\+::\+Get\+F\+P\+U\+Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_pipeline_a3660d8be36349968761a766d9b027cc3}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_a09919a6b3b09ac3992d20e34e4b2aaf8}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!Get\+N\+Stages@{Get\+N\+Stages}}
+\index{Get\+N\+Stages@{Get\+N\+Stages}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{Get\+N\+Stages}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Simulator\+::drisc\+::\+Pipeline\+::\+Get\+N\+Stages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_pipeline_a09919a6b3b09ac3992d20e34e4b2aaf8}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_ac44d38986e5b968980fb549edca8fdee}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!Get\+Op@{Get\+Op}}
+\index{Get\+Op@{Get\+Op}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{Get\+Op}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Simulator\+::drisc\+::\+Pipeline\+::\+Get\+Op (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_pipeline_ac44d38986e5b968980fb549edca8fdee}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_a089f1301fa977a5fe3713efe38dea5ad}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!Get\+Stages\+Run@{Get\+Stages\+Run}}
+\index{Get\+Stages\+Run@{Get\+Stages\+Run}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{Get\+Stages\+Run}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Simulator\+::drisc\+::\+Pipeline\+::\+Get\+Stages\+Run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_pipeline_a089f1301fa977a5fe3713efe38dea5ad}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_a00dfcfc6a05eee988c05d7730caeb5f2}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!Get\+Stalls@{Get\+Stalls}}
+\index{Get\+Stalls@{Get\+Stalls}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{Get\+Stalls}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Simulator\+::drisc\+::\+Pipeline\+::\+Get\+Stalls (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_pipeline_a00dfcfc6a05eee988c05d7730caeb5f2}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_ad07087499cdd1bd41d21f1e541efdd5c}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!Get\+Total\+Busy\+Time@{Get\+Total\+Busy\+Time}}
+\index{Get\+Total\+Busy\+Time@{Get\+Total\+Busy\+Time}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{Get\+Total\+Busy\+Time}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Simulator\+::drisc\+::\+Pipeline\+::\+Get\+Total\+Busy\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_pipeline_ad07087499cdd1bd41d21f1e541efdd5c}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_adbe94f3125321db796eea7ea960e209c}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!operator=@{operator=}}
+\index{operator=@{operator=}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pipeline}\& Simulator\+::drisc\+::\+Pipeline\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Pipeline} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1drisc_1_1_pipeline_adbe94f3125321db796eea7ea960e209c}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_a14f94eb83e17d9d8841f39b37431d673}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!Simulator\+::\+D\+R\+I\+S\+C@{Simulator\+::\+D\+R\+I\+S\+C}}
+\index{Simulator\+::\+D\+R\+I\+S\+C@{Simulator\+::\+D\+R\+I\+S\+C}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{Simulator\+::\+D\+R\+I\+S\+C}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Simulator\+::\+D\+R\+I\+S\+C}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_simulator_1_1drisc_1_1_pipeline_a14f94eb83e17d9d8841f39b37431d673}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_pipeline_ae7f3b00d54d8325d4a7354e7348c15f6}{\index{Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}!p\+\_\+\+Pipeline@{p\+\_\+\+Pipeline}}
+\index{p\+\_\+\+Pipeline@{p\+\_\+\+Pipeline}!Simulator\+::drisc\+::\+Pipeline@{Simulator\+::drisc\+::\+Pipeline}}
+\subsubsection[{p\+\_\+\+Pipeline}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process} Simulator\+::drisc\+::\+Pipeline\+::p\+\_\+\+Pipeline}}\label{class_simulator_1_1drisc_1_1_pipeline_ae7f3b00d54d8325d4a7354e7348c15f6}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/drisc/\hyperlink{_pipeline_8h}{Pipeline.\+h}\item 
+arch/drisc/\hyperlink{_pipeline_8cpp}{Pipeline.\+cpp}\end{DoxyCompactItemize}

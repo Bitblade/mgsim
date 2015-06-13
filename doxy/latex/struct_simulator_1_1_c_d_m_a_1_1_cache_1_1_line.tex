@@ -1,0 +1,90 @@
+\hypertarget{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line}{\section{Simulator\+:\+:C\+D\+M\+A\+:\+:Cache\+:\+:Line Struct Reference}
+\label{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line}\index{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line@{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line}}
+}
+
+
+{\ttfamily \#include $<$Cache.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_c_d_m_a_1_1_cache_a77855c6e5bb01a9ab1da0e1cb5e80a3f}{Line\+State} \hyperlink{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_af60d88ab961b6019c76cd66ef0b6c23a}{state}
+\begin{DoxyCompactList}\small\item\em State of the line. \end{DoxyCompactList}\item 
+Mem\+Addr \hyperlink{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_a6c21618c9cdde8b05c0bb29d79b85575}{tag}
+\begin{DoxyCompactList}\small\item\em Tag of the line. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_ab7fed1d8d57d1346a8aec0f4da72e8f7}{data}
+\begin{DoxyCompactList}\small\item\em Data of the line. \end{DoxyCompactList}\item 
+\hyperlink{namespace_simulator_a928f1e2101eba21bb0fe409e8c9ce573}{Cycle\+No} \hyperlink{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_a8ff21723afff19b77f205320c3beb774}{access}
+\begin{DoxyCompactList}\small\item\em Last access time (for L\+R\+U replacement) \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_a3b8c12dfbaee09b77c1cf58c75fc475c}{tokens}
+\begin{DoxyCompactList}\small\item\em Number of tokens in this line. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_aab45844e3f59e09ead680535185949f7}{dirty}
+\begin{DoxyCompactList}\small\item\em Dirty\+: line has been written to. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_a69897df58e274ca6b725235039354f09}{updating}
+\begin{DoxyCompactList}\small\item\em Number of R\+E\+Q\+U\+E\+S\+T\+\_\+\+U\+P\+D\+A\+T\+Es pending on this line. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_a2d54eb0d7314994bf848a36f462b0bf4}{valid} \mbox{[}M\+A\+X\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+S\+I\+Z\+E\mbox{]}
+\begin{DoxyCompactList}\small\item\em Validity bitmask. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_a8ff21723afff19b77f205320c3beb774}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line@{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line}!access@{access}}
+\index{access@{access}!Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line@{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line}}
+\subsubsection[{access}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cycle\+No} Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line\+::access}}\label{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_a8ff21723afff19b77f205320c3beb774}
+
+
+Last access time (for L\+R\+U replacement) 
+
+\hypertarget{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_ab7fed1d8d57d1346a8aec0f4da72e8f7}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line@{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line}!data@{data}}
+\index{data@{data}!Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line@{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line\+::data}}\label{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_ab7fed1d8d57d1346a8aec0f4da72e8f7}
+
+
+Data of the line. 
+
+\hypertarget{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_aab45844e3f59e09ead680535185949f7}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line@{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line}!dirty@{dirty}}
+\index{dirty@{dirty}!Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line@{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line}}
+\subsubsection[{dirty}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line\+::dirty}}\label{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_aab45844e3f59e09ead680535185949f7}
+
+
+Dirty\+: line has been written to. 
+
+\hypertarget{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_af60d88ab961b6019c76cd66ef0b6c23a}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line@{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line}!state@{state}}
+\index{state@{state}!Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line@{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Line\+State} Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line\+::state}}\label{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_af60d88ab961b6019c76cd66ef0b6c23a}
+
+
+State of the line. 
+
+\hypertarget{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_a6c21618c9cdde8b05c0bb29d79b85575}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line@{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line}!tag@{tag}}
+\index{tag@{tag}!Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line@{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line}}
+\subsubsection[{tag}]{\setlength{\rightskip}{0pt plus 5cm}Mem\+Addr Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line\+::tag}}\label{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_a6c21618c9cdde8b05c0bb29d79b85575}
+
+
+Tag of the line. 
+
+\hypertarget{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_a3b8c12dfbaee09b77c1cf58c75fc475c}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line@{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line}!tokens@{tokens}}
+\index{tokens@{tokens}!Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line@{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line}}
+\subsubsection[{tokens}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line\+::tokens}}\label{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_a3b8c12dfbaee09b77c1cf58c75fc475c}
+
+
+Number of tokens in this line. 
+
+\hypertarget{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_a69897df58e274ca6b725235039354f09}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line@{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line}!updating@{updating}}
+\index{updating@{updating}!Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line@{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line}}
+\subsubsection[{updating}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line\+::updating}}\label{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_a69897df58e274ca6b725235039354f09}
+
+
+Number of R\+E\+Q\+U\+E\+S\+T\+\_\+\+U\+P\+D\+A\+T\+Es pending on this line. 
+
+\hypertarget{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_a2d54eb0d7314994bf848a36f462b0bf4}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line@{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line}!valid@{valid}}
+\index{valid@{valid}!Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line@{Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line}}
+\subsubsection[{valid}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+C\+D\+M\+A\+::\+Cache\+::\+Line\+::valid\mbox{[}M\+A\+X\+\_\+\+M\+E\+M\+O\+R\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+S\+I\+Z\+E\mbox{]}}}\label{struct_simulator_1_1_c_d_m_a_1_1_cache_1_1_line_a2d54eb0d7314994bf848a36f462b0bf4}
+
+
+Validity bitmask. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+arch/mem/cdma/\hyperlink{cdma_2_cache_8h}{Cache.\+h}\end{DoxyCompactItemize}

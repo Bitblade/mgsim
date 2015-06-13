@@ -1,0 +1,110 @@
+\hypertarget{class_simulator_1_1_i_structure}{\section{Simulator\+:\+:I\+Structure Class Reference}
+\label{class_simulator_1_1_i_structure}\index{Simulator\+::\+I\+Structure@{Simulator\+::\+I\+Structure}}
+}
+
+
+Base class for all structures.  
+
+
+
+
+{\ttfamily \#include $<$ports.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:I\+Structure\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.849873cm]{class_simulator_1_1_i_structure}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_simulator_1_1_i_structure_acd894fd5a5b02d8b761e6662ee273568}{Request\+Arbitration} ()
+\item 
+\hyperlink{class_simulator_1_1_i_structure_aacc76ecbb5919e67e7eab2945755baee}{I\+Structure} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock)
+\begin{DoxyCompactList}\small\item\em Constructs the structure. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulator_1_1_i_structure_a6d9880a8bb84047caead1c3705f2348f}{Register\+Read\+Port} (\hyperlink{class_simulator_1_1_arbitrated_read_port}{Arbitrated\+Read\+Port} \&port)
+\item 
+void \hyperlink{class_simulator_1_1_i_structure_a603f33493b3f81c1e105bd78c7f12a75}{Unregister\+Read\+Port} (\hyperlink{class_simulator_1_1_arbitrated_read_port}{Arbitrated\+Read\+Port} \&port)
+\item 
+std\+::string \hyperlink{class_simulator_1_1_i_structure_a54b5688c43dbe1b361d5e11705132fff}{Get\+F\+Q\+N} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_simulator_1_1_i_structure_afeef99d6a5ca7959b9052af2c281ee1f}{Arbitrate\+Read\+Ports} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for all structures. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_i_structure_aacc76ecbb5919e67e7eab2945755baee}{\index{Simulator\+::\+I\+Structure@{Simulator\+::\+I\+Structure}!I\+Structure@{I\+Structure}}
+\index{I\+Structure@{I\+Structure}!Simulator\+::\+I\+Structure@{Simulator\+::\+I\+Structure}}
+\subsubsection[{I\+Structure}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+I\+Structure\+::\+I\+Structure (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_i_structure_aacc76ecbb5919e67e7eab2945755baee}
+
+
+Constructs the structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & parent object. \\
+\hline
+{\em name} & name of the object. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_i_structure_afeef99d6a5ca7959b9052af2c281ee1f}{\index{Simulator\+::\+I\+Structure@{Simulator\+::\+I\+Structure}!Arbitrate\+Read\+Ports@{Arbitrate\+Read\+Ports}}
+\index{Arbitrate\+Read\+Ports@{Arbitrate\+Read\+Ports}!Simulator\+::\+I\+Structure@{Simulator\+::\+I\+Structure}}
+\subsubsection[{Arbitrate\+Read\+Ports}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+I\+Structure\+::\+Arbitrate\+Read\+Ports (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_i_structure_afeef99d6a5ca7959b9052af2c281ee1f}
+\hypertarget{class_simulator_1_1_i_structure_a54b5688c43dbe1b361d5e11705132fff}{\index{Simulator\+::\+I\+Structure@{Simulator\+::\+I\+Structure}!Get\+F\+Q\+N@{Get\+F\+Q\+N}}
+\index{Get\+F\+Q\+N@{Get\+F\+Q\+N}!Simulator\+::\+I\+Structure@{Simulator\+::\+I\+Structure}}
+\subsubsection[{Get\+F\+Q\+N}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Simulator\+::\+I\+Structure\+::\+Get\+F\+Q\+N (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_i_structure_a54b5688c43dbe1b361d5e11705132fff}
+
+
+Implements \hyperlink{class_simulator_1_1_arbitrator_af4942847f33bb218ad9a37fd4cb515ba}{Simulator\+::\+Arbitrator}.
+
+\hypertarget{class_simulator_1_1_i_structure_a6d9880a8bb84047caead1c3705f2348f}{\index{Simulator\+::\+I\+Structure@{Simulator\+::\+I\+Structure}!Register\+Read\+Port@{Register\+Read\+Port}}
+\index{Register\+Read\+Port@{Register\+Read\+Port}!Simulator\+::\+I\+Structure@{Simulator\+::\+I\+Structure}}
+\subsubsection[{Register\+Read\+Port}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+I\+Structure\+::\+Register\+Read\+Port (
+\begin{DoxyParamCaption}
+\item[{{\bf Arbitrated\+Read\+Port} \&}]{port}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_i_structure_a6d9880a8bb84047caead1c3705f2348f}
+\hypertarget{class_simulator_1_1_i_structure_acd894fd5a5b02d8b761e6662ee273568}{\index{Simulator\+::\+I\+Structure@{Simulator\+::\+I\+Structure}!Request\+Arbitration@{Request\+Arbitration}}
+\index{Request\+Arbitration@{Request\+Arbitration}!Simulator\+::\+I\+Structure@{Simulator\+::\+I\+Structure}}
+\subsubsection[{Request\+Arbitration}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+I\+Structure\+::\+Request\+Arbitration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_i_structure_acd894fd5a5b02d8b761e6662ee273568}
+\hypertarget{class_simulator_1_1_i_structure_a603f33493b3f81c1e105bd78c7f12a75}{\index{Simulator\+::\+I\+Structure@{Simulator\+::\+I\+Structure}!Unregister\+Read\+Port@{Unregister\+Read\+Port}}
+\index{Unregister\+Read\+Port@{Unregister\+Read\+Port}!Simulator\+::\+I\+Structure@{Simulator\+::\+I\+Structure}}
+\subsubsection[{Unregister\+Read\+Port}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+I\+Structure\+::\+Unregister\+Read\+Port (
+\begin{DoxyParamCaption}
+\item[{{\bf Arbitrated\+Read\+Port} \&}]{port}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_i_structure_a603f33493b3f81c1e105bd78c7f12a75}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{ports_8h}{ports.\+h}\item 
+sim/\hyperlink{ports_8cpp}{ports.\+cpp}\end{DoxyCompactItemize}

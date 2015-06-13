@@ -1,0 +1,48 @@
+\hypertarget{_pipeline_8h}{\section{arch/drisc/\+Pipeline.h File Reference}
+\label{_pipeline_8h}\index{arch/drisc/\+Pipeline.\+h@{arch/drisc/\+Pipeline.\+h}}
+}
+{\ttfamily \#include $<$sim/kernel.\+h$>$}\\*
+{\ttfamily \#include $<$sim/inspect.\+h$>$}\\*
+{\ttfamily \#include $<$arch/simtypes.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}forward.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Family\+Table.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Thread\+Table.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Network.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}I\+S\+A.\+mtalpha.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_simulator_1_1drisc_1_1_pipeline}{Simulator\+::drisc\+::\+Pipeline}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_simulator}{Simulator}
+\item 
+ \hyperlink{namespace_simulator_1_1drisc}{Simulator\+::drisc}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_pipeline_8h_a5d86c826757924f60cc8f191169b3bb0}{Throw\+Illegal\+Instruction\+Exception}(Obj, P\+C,...)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_pipeline_8h_a5d86c826757924f60cc8f191169b3bb0}{\index{Pipeline.\+h@{Pipeline.\+h}!Throw\+Illegal\+Instruction\+Exception@{Throw\+Illegal\+Instruction\+Exception}}
+\index{Throw\+Illegal\+Instruction\+Exception@{Throw\+Illegal\+Instruction\+Exception}!Pipeline.\+h@{Pipeline.\+h}}
+\subsubsection[{Throw\+Illegal\+Instruction\+Exception}]{\setlength{\rightskip}{0pt plus 5cm}\#define Throw\+Illegal\+Instruction\+Exception(
+\begin{DoxyParamCaption}
+\item[{}]{Obj, }
+\item[{}]{P\+C, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{_pipeline_8h_a5d86c826757924f60cc8f191169b3bb0}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                                                \(\backslash\)
+        auto ex = exceptf<IllegalInstructionException>(Obj, \textcolor{stringliteral}{"Illegal instruction: "} \_\_VA\_ARGS\_\_); \(\backslash\)
+        ex.SetPC(PC);                                                   \(\backslash\)
+        throw ex;                                                       \(\backslash\)
+    \} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}

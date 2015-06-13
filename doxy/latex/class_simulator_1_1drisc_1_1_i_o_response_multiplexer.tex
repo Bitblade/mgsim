@@ -1,0 +1,105 @@
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_response_multiplexer}{\section{Simulator\+:\+:drisc\+:\+:I\+O\+Response\+Multiplexer Class Reference}
+\label{class_simulator_1_1drisc_1_1_i_o_response_multiplexer}\index{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer}}
+}
+
+
+{\ttfamily \#include $<$I\+O\+Response\+Multiplexer.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:drisc\+:\+:I\+O\+Response\+Multiplexer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_simulator_1_1drisc_1_1_i_o_response_multiplexer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_ad8ad7416aab9bf75d8ce5abcd34954eb}{I\+O\+Response\+Multiplexer} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1drisc_1_1_i_o_interface}{I\+O\+Interface} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock, size\+\_\+t num\+Devices, \hyperlink{class_config}{Config} \&config)
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_a5af33eff83e313c3bf471570f919b8da}{$\sim$\+I\+O\+Response\+Multiplexer} ()
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_afa3699ab9853579b952c8bbec75ad6ef}{Queue\+Write\+Back\+Address} (\hyperlink{namespace_simulator_a3493d987c866ad6b8aaa704c42502db0}{I\+O\+Device\+I\+D} dev, const \hyperlink{struct_simulator_1_1_reg_addr}{Reg\+Addr} \&addr)
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_ae5e5ee38b3897dd2e9a93dd6ec2b9389}{On\+Read\+Response\+Received} (\hyperlink{namespace_simulator_a3493d987c866ad6b8aaa704c42502db0}{I\+O\+Device\+I\+D} from, Mem\+Addr address, const \hyperlink{struct_simulator_1_1_i_o_data}{I\+O\+Data} \&data)
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_a46fca063c99af198a284bb64e12adba3}{Do\+Received\+Read\+Responses} ()
+\item 
+\hyperlink{class_simulator_1_1_storage_trace_set}{Storage\+Trace\+Set} \hyperlink{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_ac9408328bbc7b4edc0705c49699443e4}{Get\+Write\+Back\+Traces} () const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_buffer}{Buffer}$<$ I\+O\+Response $>$ \hyperlink{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_ae4b08146efe17bd050928d579e7b27be}{m\+\_\+incoming}
+\item 
+\hyperlink{class_simulator_1_1_process}{Process} \hyperlink{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_ae1734f76ad36396e574be9a2d7c26eb7}{p\+\_\+\+Incoming\+Read\+Responses}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_ad8ad7416aab9bf75d8ce5abcd34954eb}{\index{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer}!I\+O\+Response\+Multiplexer@{I\+O\+Response\+Multiplexer}}
+\index{I\+O\+Response\+Multiplexer@{I\+O\+Response\+Multiplexer}!Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer}}
+\subsubsection[{I\+O\+Response\+Multiplexer}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer\+::\+I\+O\+Response\+Multiplexer (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf I\+O\+Interface} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock, }
+\item[{size\+\_\+t}]{num\+Devices, }
+\item[{{\bf Config} \&}]{config}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_ad8ad7416aab9bf75d8ce5abcd34954eb}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_a5af33eff83e313c3bf471570f919b8da}{\index{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer}!````~I\+O\+Response\+Multiplexer@{$\sim$\+I\+O\+Response\+Multiplexer}}
+\index{````~I\+O\+Response\+Multiplexer@{$\sim$\+I\+O\+Response\+Multiplexer}!Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer}}
+\subsubsection[{$\sim$\+I\+O\+Response\+Multiplexer}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer\+::$\sim$\+I\+O\+Response\+Multiplexer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_a5af33eff83e313c3bf471570f919b8da}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_a46fca063c99af198a284bb64e12adba3}{\index{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer}!Do\+Received\+Read\+Responses@{Do\+Received\+Read\+Responses}}
+\index{Do\+Received\+Read\+Responses@{Do\+Received\+Read\+Responses}!Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer}}
+\subsubsection[{Do\+Received\+Read\+Responses}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer\+::\+Do\+Received\+Read\+Responses (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_a46fca063c99af198a284bb64e12adba3}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_ac9408328bbc7b4edc0705c49699443e4}{\index{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer}!Get\+Write\+Back\+Traces@{Get\+Write\+Back\+Traces}}
+\index{Get\+Write\+Back\+Traces@{Get\+Write\+Back\+Traces}!Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer}}
+\subsubsection[{Get\+Write\+Back\+Traces}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Storage\+Trace\+Set} Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer\+::\+Get\+Write\+Back\+Traces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_ac9408328bbc7b4edc0705c49699443e4}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_ae5e5ee38b3897dd2e9a93dd6ec2b9389}{\index{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer}!On\+Read\+Response\+Received@{On\+Read\+Response\+Received}}
+\index{On\+Read\+Response\+Received@{On\+Read\+Response\+Received}!Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer}}
+\subsubsection[{On\+Read\+Response\+Received}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer\+::\+On\+Read\+Response\+Received (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Device\+I\+D}}]{from, }
+\item[{Mem\+Addr}]{address, }
+\item[{const {\bf I\+O\+Data} \&}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_ae5e5ee38b3897dd2e9a93dd6ec2b9389}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_afa3699ab9853579b952c8bbec75ad6ef}{\index{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer}!Queue\+Write\+Back\+Address@{Queue\+Write\+Back\+Address}}
+\index{Queue\+Write\+Back\+Address@{Queue\+Write\+Back\+Address}!Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer}}
+\subsubsection[{Queue\+Write\+Back\+Address}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer\+::\+Queue\+Write\+Back\+Address (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Device\+I\+D}}]{dev, }
+\item[{const {\bf Reg\+Addr} \&}]{addr}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_afa3699ab9853579b952c8bbec75ad6ef}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_ae4b08146efe17bd050928d579e7b27be}{\index{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer}!m\+\_\+incoming@{m\+\_\+incoming}}
+\index{m\+\_\+incoming@{m\+\_\+incoming}!Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer}}
+\subsubsection[{m\+\_\+incoming}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Buffer}$<$I\+O\+Response$>$ Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer\+::m\+\_\+incoming}}\label{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_ae4b08146efe17bd050928d579e7b27be}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_ae1734f76ad36396e574be9a2d7c26eb7}{\index{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer}!p\+\_\+\+Incoming\+Read\+Responses@{p\+\_\+\+Incoming\+Read\+Responses}}
+\index{p\+\_\+\+Incoming\+Read\+Responses@{p\+\_\+\+Incoming\+Read\+Responses}!Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer}}
+\subsubsection[{p\+\_\+\+Incoming\+Read\+Responses}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process} Simulator\+::drisc\+::\+I\+O\+Response\+Multiplexer\+::p\+\_\+\+Incoming\+Read\+Responses}}\label{class_simulator_1_1drisc_1_1_i_o_response_multiplexer_ae1734f76ad36396e574be9a2d7c26eb7}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/drisc/\hyperlink{_i_o_response_multiplexer_8h}{I\+O\+Response\+Multiplexer.\+h}\item 
+arch/drisc/\hyperlink{_i_o_response_multiplexer_8cpp}{I\+O\+Response\+Multiplexer.\+cpp}\end{DoxyCompactItemize}

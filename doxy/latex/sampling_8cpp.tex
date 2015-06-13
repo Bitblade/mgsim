@@ -1,0 +1,80 @@
+\hypertarget{sampling_8cpp}{\section{sim/sampling.cpp File Reference}
+\label{sampling_8cpp}\index{sim/sampling.\+cpp@{sim/sampling.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}sampling.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$sys\+\_\+config.\+h$>$}\\*
+{\ttfamily \#include $<$arch/\+M\+G\+System.\+h$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$fnmatch.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_var_info}{Var\+Info}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef map$<$ string, \hyperlink{struct_var_info}{Var\+Info} $>$ \hyperlink{sampling_8cpp_a2b8c7ded79a03419bd2da3306e822527}{var\+\_\+registry\+\_\+t}
+\item 
+typedef pair$<$ const string \\*
+$\ast$, const \hyperlink{struct_var_info}{Var\+Info} $\ast$ $>$ \hyperlink{sampling_8cpp_ab6dd1679c533262ff425fe32525fc7f0}{varsel\+\_\+t}
+\item 
+typedef vector$<$ \hyperlink{sampling_8cpp_ab6dd1679c533262ff425fe32525fc7f0}{varsel\+\_\+t} $>$ \hyperlink{sampling_8cpp_a7077e73ebc116b33d7df6d5121e33003}{varvec\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{sampling_8cpp_ab5db207e6229d02caa169f414df660c3}{\+\_\+\+Register\+Sample\+Variable} (void $\ast$var, size\+\_\+t width, const string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{sampling_8h_aebe1c9f7e0bdb2dfac88bf77cf6c695e}{Sample\+Variable\+Data\+Type} type, \hyperlink{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71}{Sample\+Variable\+Category} cat, void $\ast$maxval)
+\item 
+void \hyperlink{sampling_8cpp_a834afc8a66a20d3487234bce88e2e218}{List\+Sample\+Variables} (ostream \&os, const string \&pat)
+\item 
+bool \hyperlink{sampling_8cpp_a7fe2897ef5ce8e1a083a2b99f7043eea}{Read\+Sample\+Variables} (ostream \&os, const string \&pat)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{sampling_8cpp_a2b8c7ded79a03419bd2da3306e822527}{\index{sampling.\+cpp@{sampling.\+cpp}!var\+\_\+registry\+\_\+t@{var\+\_\+registry\+\_\+t}}
+\index{var\+\_\+registry\+\_\+t@{var\+\_\+registry\+\_\+t}!sampling.\+cpp@{sampling.\+cpp}}
+\subsubsection[{var\+\_\+registry\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef map$<$string, {\bf Var\+Info}$>$ {\bf var\+\_\+registry\+\_\+t}}}\label{sampling_8cpp_a2b8c7ded79a03419bd2da3306e822527}
+\hypertarget{sampling_8cpp_ab6dd1679c533262ff425fe32525fc7f0}{\index{sampling.\+cpp@{sampling.\+cpp}!varsel\+\_\+t@{varsel\+\_\+t}}
+\index{varsel\+\_\+t@{varsel\+\_\+t}!sampling.\+cpp@{sampling.\+cpp}}
+\subsubsection[{varsel\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef pair$<$const string$\ast$, const {\bf Var\+Info}$\ast$$>$ {\bf varsel\+\_\+t}}}\label{sampling_8cpp_ab6dd1679c533262ff425fe32525fc7f0}
+\hypertarget{sampling_8cpp_a7077e73ebc116b33d7df6d5121e33003}{\index{sampling.\+cpp@{sampling.\+cpp}!varvec\+\_\+t@{varvec\+\_\+t}}
+\index{varvec\+\_\+t@{varvec\+\_\+t}!sampling.\+cpp@{sampling.\+cpp}}
+\subsubsection[{varvec\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef vector$<${\bf varsel\+\_\+t}$>$ {\bf varvec\+\_\+t}}}\label{sampling_8cpp_a7077e73ebc116b33d7df6d5121e33003}
+
+
+\subsection{Function Documentation}
+\hypertarget{sampling_8cpp_ab5db207e6229d02caa169f414df660c3}{\index{sampling.\+cpp@{sampling.\+cpp}!\+\_\+\+Register\+Sample\+Variable@{\+\_\+\+Register\+Sample\+Variable}}
+\index{\+\_\+\+Register\+Sample\+Variable@{\+\_\+\+Register\+Sample\+Variable}!sampling.\+cpp@{sampling.\+cpp}}
+\subsubsection[{\+\_\+\+Register\+Sample\+Variable}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+\+Register\+Sample\+Variable (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{var, }
+\item[{size\+\_\+t}]{width, }
+\item[{const string \&}]{name, }
+\item[{{\bf Sample\+Variable\+Data\+Type}}]{type, }
+\item[{{\bf Sample\+Variable\+Category}}]{cat, }
+\item[{void $\ast$}]{maxval}
+\end{DoxyParamCaption}
+)}}\label{sampling_8cpp_ab5db207e6229d02caa169f414df660c3}
+\hypertarget{sampling_8cpp_a834afc8a66a20d3487234bce88e2e218}{\index{sampling.\+cpp@{sampling.\+cpp}!List\+Sample\+Variables@{List\+Sample\+Variables}}
+\index{List\+Sample\+Variables@{List\+Sample\+Variables}!sampling.\+cpp@{sampling.\+cpp}}
+\subsubsection[{List\+Sample\+Variables}]{\setlength{\rightskip}{0pt plus 5cm}void List\+Sample\+Variables (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const string \&}]{pat}
+\end{DoxyParamCaption}
+)}}\label{sampling_8cpp_a834afc8a66a20d3487234bce88e2e218}
+\hypertarget{sampling_8cpp_a7fe2897ef5ce8e1a083a2b99f7043eea}{\index{sampling.\+cpp@{sampling.\+cpp}!Read\+Sample\+Variables@{Read\+Sample\+Variables}}
+\index{Read\+Sample\+Variables@{Read\+Sample\+Variables}!sampling.\+cpp@{sampling.\+cpp}}
+\subsubsection[{Read\+Sample\+Variables}]{\setlength{\rightskip}{0pt plus 5cm}bool Read\+Sample\+Variables (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const string \&}]{pat}
+\end{DoxyParamCaption}
+)}}\label{sampling_8cpp_a7fe2897ef5ce8e1a083a2b99f7043eea}

@@ -24,6 +24,7 @@ namespace Simulator
         class Pipeline;
         class Allocator;
         class MMIOComponent;
+        class MMU;
         class IOMatchUnit;
         class IOBusInterface;
         class IOResponseMultiplexer;

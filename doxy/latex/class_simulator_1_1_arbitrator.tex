@@ -1,0 +1,144 @@
+\hypertarget{class_simulator_1_1_arbitrator}{\section{Simulator\+:\+:Arbitrator Class Reference}
+\label{class_simulator_1_1_arbitrator}\index{Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}}
+}
+
+
+Base class for all objects that arbitrate.  
+
+
+
+
+{\ttfamily \#include $<$kernel.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:Arbitrator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.769231cm]{class_simulator_1_1_arbitrator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_simulator_1_1_arbitrator_a8cfa3d35f1916c2507b9cc264a7c34ae}{On\+Arbitrate} ()=0
+\begin{DoxyCompactList}\small\item\em $<$ Callback for arbitration \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{class_simulator_1_1_arbitrator_af4942847f33bb218ad9a37fd4cb515ba}{Get\+F\+Q\+N} () const =0
+\item 
+const \hyperlink{class_simulator_1_1_arbitrator}{Arbitrator} $\ast$ \hyperlink{class_simulator_1_1_arbitrator_a05700337b736b1bb7fb39b2bdf007005}{Get\+Next} () const 
+\item 
+\hyperlink{class_simulator_1_1_arbitrator_a8835c8e17e2894c90a72f4e1ef72eb0a}{Arbitrator} (\hyperlink{class_simulator_1_1_clock}{Clock} \&clock)
+\item 
+\hyperlink{class_simulator_1_1_arbitrator_a415268a3985b82af1e0eff6128c0dde0}{Arbitrator} (const \hyperlink{class_simulator_1_1_arbitrator}{Arbitrator} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1_arbitrator}{Arbitrator} \& \hyperlink{class_simulator_1_1_arbitrator_a6efe8951760ec0040b08dbf7d5ca89e1}{operator=} (const \hyperlink{class_simulator_1_1_arbitrator}{Arbitrator} \&)=delete
+\item 
+virtual \hyperlink{class_simulator_1_1_arbitrator_a02f0a2135894ecf6bede03ef5cde3b41}{$\sim$\+Arbitrator} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_simulator_1_1_arbitrator_a6fa047be0554f4edea1363e960835f29}{Request\+Arbitration} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_clock}{Clock} \& \hyperlink{class_simulator_1_1_arbitrator_ae81bdde0ba892172b8594a25dd2ef9cc}{m\+\_\+clock}
+\begin{DoxyCompactList}\small\item\em The clock that controls this arbitrator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_simulator_1_1_arbitrator_a3807a3ebd0e05ca8cb4d928025a943d2}{Kernel}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for all objects that arbitrate. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_arbitrator_a8835c8e17e2894c90a72f4e1ef72eb0a}{\index{Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}!Arbitrator@{Arbitrator}}
+\index{Arbitrator@{Arbitrator}!Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}}
+\subsubsection[{Arbitrator}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Arbitrator\+::\+Arbitrator (
+\begin{DoxyParamCaption}
+\item[{{\bf Clock} \&}]{clock}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_arbitrator_a8835c8e17e2894c90a72f4e1ef72eb0a}
+\hypertarget{class_simulator_1_1_arbitrator_a415268a3985b82af1e0eff6128c0dde0}{\index{Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}!Arbitrator@{Arbitrator}}
+\index{Arbitrator@{Arbitrator}!Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}}
+\subsubsection[{Arbitrator}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Arbitrator\+::\+Arbitrator (
+\begin{DoxyParamCaption}
+\item[{const {\bf Arbitrator} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_arbitrator_a415268a3985b82af1e0eff6128c0dde0}
+\hypertarget{class_simulator_1_1_arbitrator_a02f0a2135894ecf6bede03ef5cde3b41}{\index{Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}!````~Arbitrator@{$\sim$\+Arbitrator}}
+\index{````~Arbitrator@{$\sim$\+Arbitrator}!Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}}
+\subsubsection[{$\sim$\+Arbitrator}]{\setlength{\rightskip}{0pt plus 5cm}virtual Simulator\+::\+Arbitrator\+::$\sim$\+Arbitrator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_arbitrator_a02f0a2135894ecf6bede03ef5cde3b41}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_arbitrator_af4942847f33bb218ad9a37fd4cb515ba}{\index{Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}!Get\+F\+Q\+N@{Get\+F\+Q\+N}}
+\index{Get\+F\+Q\+N@{Get\+F\+Q\+N}!Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}}
+\subsubsection[{Get\+F\+Q\+N}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::string Simulator\+::\+Arbitrator\+::\+Get\+F\+Q\+N (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_simulator_1_1_arbitrator_af4942847f33bb218ad9a37fd4cb515ba}
+
+
+Implemented in \hyperlink{class_simulator_1_1_arbitrated_service_a3800ca938165d86a3f5b11a2dae763d7}{Simulator\+::\+Arbitrated\+Service$<$ Base $>$}, \hyperlink{class_simulator_1_1_arbitrated_service_a3800ca938165d86a3f5b11a2dae763d7}{Simulator\+::\+Arbitrated\+Service$<$ Simulator\+::\+Cyclic\+Arbitrated\+Port $>$}, \hyperlink{class_simulator_1_1_arbitrated_service_a3800ca938165d86a3f5b11a2dae763d7}{Simulator\+::\+Arbitrated\+Service$<$ Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port $>$}, \hyperlink{class_simulator_1_1_arbitrated_service_a3800ca938165d86a3f5b11a2dae763d7}{Simulator\+::\+Arbitrated\+Service$<$ Simulator\+::\+Arbitrator $>$}, and \hyperlink{class_simulator_1_1_i_structure_a54b5688c43dbe1b361d5e11705132fff}{Simulator\+::\+I\+Structure}.
+
+\hypertarget{class_simulator_1_1_arbitrator_a05700337b736b1bb7fb39b2bdf007005}{\index{Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}!Get\+Next@{Get\+Next}}
+\index{Get\+Next@{Get\+Next}!Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}}
+\subsubsection[{Get\+Next}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Arbitrator}$\ast$ Simulator\+::\+Arbitrator\+::\+Get\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_arbitrator_a05700337b736b1bb7fb39b2bdf007005}
+\hypertarget{class_simulator_1_1_arbitrator_a8cfa3d35f1916c2507b9cc264a7c34ae}{\index{Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}!On\+Arbitrate@{On\+Arbitrate}}
+\index{On\+Arbitrate@{On\+Arbitrate}!Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}}
+\subsubsection[{On\+Arbitrate}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Simulator\+::\+Arbitrator\+::\+On\+Arbitrate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_simulator_1_1_arbitrator_a8cfa3d35f1916c2507b9cc264a7c34ae}
+
+
+$<$ Callback for arbitration 
+
+\hypertarget{class_simulator_1_1_arbitrator_a6efe8951760ec0040b08dbf7d5ca89e1}{\index{Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}!operator=@{operator=}}
+\index{operator=@{operator=}!Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Arbitrator}\& Simulator\+::\+Arbitrator\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Arbitrator} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_arbitrator_a6efe8951760ec0040b08dbf7d5ca89e1}
+\hypertarget{class_simulator_1_1_arbitrator_a6fa047be0554f4edea1363e960835f29}{\index{Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}!Request\+Arbitration@{Request\+Arbitration}}
+\index{Request\+Arbitration@{Request\+Arbitration}!Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}}
+\subsubsection[{Request\+Arbitration}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Arbitrator\+::\+Request\+Arbitration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_simulator_1_1_arbitrator_a6fa047be0554f4edea1363e960835f29}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_simulator_1_1_arbitrator_a3807a3ebd0e05ca8cb4d928025a943d2}{\index{Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}!Kernel@{Kernel}}
+\index{Kernel@{Kernel}!Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}}
+\subsubsection[{Kernel}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Kernel}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_simulator_1_1_arbitrator_a3807a3ebd0e05ca8cb4d928025a943d2}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simulator_1_1_arbitrator_ae81bdde0ba892172b8594a25dd2ef9cc}{\index{Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}!m\+\_\+clock@{m\+\_\+clock}}
+\index{m\+\_\+clock@{m\+\_\+clock}!Simulator\+::\+Arbitrator@{Simulator\+::\+Arbitrator}}
+\subsubsection[{m\+\_\+clock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Clock}\& Simulator\+::\+Arbitrator\+::m\+\_\+clock\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_arbitrator_ae81bdde0ba892172b8594a25dd2ef9cc}
+
+
+The clock that controls this arbitrator. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{kernel_8h}{kernel.\+h}\end{DoxyCompactItemize}

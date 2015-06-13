@@ -1,0 +1,187 @@
+\hypertarget{mtconf_8h}{\section{programs/mtconf.h File Reference}
+\label{mtconf_8h}\index{programs/mtconf.\+h@{programs/mtconf.\+h}}
+}
+{\ttfamily \#include $<$svp/delegate.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$stddef.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmg__device__id}{mg\+\_\+device\+\_\+id}
+\item 
+struct \hyperlink{structmg__device__info}{mg\+\_\+device\+\_\+info}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{mtconf_8h_a49c71cce2c2038c2ea6009115860004f}{output\+\_\+ts}(Stream)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint32\+\_\+t \hyperlink{mtconf_8h_a45c43ef16f46e69b90372f18533c47b4}{confword\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{mtconf_8h_a98f6da74e77432b2da568c3476070a70}{sys\+\_\+detect\+\_\+devs} (void)
+\item 
+void \hyperlink{mtconf_8h_a167c02132cfa9504d431e0b0b4a72da9}{sys\+\_\+conf\+\_\+init} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mtconf_8h_a45c43ef16f46e69b90372f18533c47b4}{confword\+\_\+t} \hyperlink{mtconf_8h_a81a859629585a46fdb31d7ea3efcb6e2}{mgconf\+\_\+master\+\_\+freq}
+\item 
+\hyperlink{mtconf_8h_a45c43ef16f46e69b90372f18533c47b4}{confword\+\_\+t} \hyperlink{mtconf_8h_a60a78b7b46f46424332e3e507a20773c}{mgconf\+\_\+core\+\_\+freq}
+\item 
+\hyperlink{mtconf_8h_a45c43ef16f46e69b90372f18533c47b4}{confword\+\_\+t} \hyperlink{mtconf_8h_a25a8d2c901a5e914909d7c4d0ba27e84}{mgconf\+\_\+ftes\+\_\+per\+\_\+core}
+\item 
+\hyperlink{mtconf_8h_a45c43ef16f46e69b90372f18533c47b4}{confword\+\_\+t} \hyperlink{mtconf_8h_a8310bffe829c6829c548978413ee75b6}{mgconf\+\_\+ttes\+\_\+per\+\_\+core}
+\item 
+sl\+\_\+place\+\_\+t \hyperlink{mtconf_8h_a57d51a409dbb21ba6fa737bda2289179}{mg\+\_\+io\+\_\+place\+\_\+id}
+\item 
+struct \hyperlink{structmg__device__info}{mg\+\_\+device\+\_\+info} \hyperlink{mtconf_8h_a96ab0f31543fa7a3f13594c23c328daf}{mg\+\_\+devinfo}
+\item 
+uint16\+\_\+t \hyperlink{mtconf_8h_a6913a3c5830afa9ba7faee656cf5c1c6}{mg\+\_\+io\+\_\+dca\+\_\+devid}
+\item 
+size\+\_\+t \hyperlink{mtconf_8h_a2e2e41b03183e41ab2fb76dce1602c70}{mg\+\_\+uart\+\_\+devid}
+\item 
+size\+\_\+t \hyperlink{mtconf_8h_a1e28c2d78fbb854e358f0ae7d3503674}{mg\+\_\+lcd\+\_\+devid}
+\item 
+size\+\_\+t \hyperlink{mtconf_8h_adcd68c870a42f9bb70ef45cf30056004}{mg\+\_\+rtc\+\_\+devid}
+\item 
+size\+\_\+t \hyperlink{mtconf_8h_aae7381c132d01001315615afccd71f01}{mg\+\_\+cfgrom\+\_\+devid}
+\item 
+size\+\_\+t \hyperlink{mtconf_8h_ac2cd71670249bede9b030a8a73dc8d06}{mg\+\_\+argvrom\+\_\+devid}
+\item 
+size\+\_\+t \hyperlink{mtconf_8h_a1cfe9c9acdce9454121d583fd7bdc38d}{mg\+\_\+gfxctl\+\_\+devid}
+\item 
+size\+\_\+t \hyperlink{mtconf_8h_ac59669481d1344edb354edf83f0880e9}{mg\+\_\+gfxfb\+\_\+devid}
+\item 
+size\+\_\+t \hyperlink{mtconf_8h_adaabe021479f7843687a6b274bc225cc}{mg\+\_\+rpc\+\_\+devid}
+\item 
+size\+\_\+t \hyperlink{mtconf_8h_ae363cf33a5a2e63c9c01c80c0c432e86}{mg\+\_\+rpc\+\_\+chanid}
+\item 
+volatile uint32\+\_\+t $\ast$ \hyperlink{mtconf_8h_a543eed1afecb072694eb43ba2e471f10}{mg\+\_\+gfx\+\_\+ctl}
+\item 
+void $\ast$ \hyperlink{mtconf_8h_a2173712cd87f890c1c99a149360ea260}{mg\+\_\+gfx\+\_\+fb}
+\item 
+int \hyperlink{mtconf_8h_a37101d3db861005dc0a63c17c3313d84}{verbose\+\_\+boot}
+\item 
+clock\+\_\+t \hyperlink{mtconf_8h_aceccdee1911ad59a8d7155f5dbd6737c}{boot\+\_\+ts}
+\item 
+time\+\_\+t \hyperlink{mtconf_8h_aacf80bcf7c5c0995edc6663baf02d687}{boot\+\_\+time}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{mtconf_8h_a49c71cce2c2038c2ea6009115860004f}{\index{mtconf.\+h@{mtconf.\+h}!output\+\_\+ts@{output\+\_\+ts}}
+\index{output\+\_\+ts@{output\+\_\+ts}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{output\+\_\+ts}]{\setlength{\rightskip}{0pt plus 5cm}\#define output\+\_\+ts(
+\begin{DoxyParamCaption}
+\item[{}]{Stream}
+\end{DoxyParamCaption}
+)}}\label{mtconf_8h_a49c71cce2c2038c2ea6009115860004f}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                            \(\backslash\)
+        clock\_t \_tmp = clock();                           \(\backslash\)
+        output\_char(\textcolor{charliteral}{' '}, (Stream));                       \(\backslash\)
+        output\_char(\textcolor{charliteral}{'['}, (Stream));                       \(\backslash\)
+        output\_char(\textcolor{charliteral}{'+'}, (Stream));                       \(\backslash\)
+        output\_uint(\_tmp - \hyperlink{mtconf_8h_aceccdee1911ad59a8d7155f5dbd6737c}{boot\_ts}, (Stream));            \(\backslash\)
+        output\_char(\textcolor{charliteral}{']'}, (Stream));                       \hyperlink{mtconf_8h_aceccdee1911ad59a8d7155f5dbd6737c}{\(\backslash\)}
+\hyperlink{mtconf_8h_aceccdee1911ad59a8d7155f5dbd6737c}{        boot\_ts} = \_tmp;                                   \(\backslash\)
+    \} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{mtconf_8h_a45c43ef16f46e69b90372f18533c47b4}{\index{mtconf.\+h@{mtconf.\+h}!confword\+\_\+t@{confword\+\_\+t}}
+\index{confword\+\_\+t@{confword\+\_\+t}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{confword\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint32\+\_\+t {\bf confword\+\_\+t}}}\label{mtconf_8h_a45c43ef16f46e69b90372f18533c47b4}
+
+
+\subsection{Function Documentation}
+\hypertarget{mtconf_8h_a167c02132cfa9504d431e0b0b4a72da9}{\index{mtconf.\+h@{mtconf.\+h}!sys\+\_\+conf\+\_\+init@{sys\+\_\+conf\+\_\+init}}
+\index{sys\+\_\+conf\+\_\+init@{sys\+\_\+conf\+\_\+init}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{sys\+\_\+conf\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void sys\+\_\+conf\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{mtconf_8h_a167c02132cfa9504d431e0b0b4a72da9}
+\hypertarget{mtconf_8h_a98f6da74e77432b2da568c3476070a70}{\index{mtconf.\+h@{mtconf.\+h}!sys\+\_\+detect\+\_\+devs@{sys\+\_\+detect\+\_\+devs}}
+\index{sys\+\_\+detect\+\_\+devs@{sys\+\_\+detect\+\_\+devs}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{sys\+\_\+detect\+\_\+devs}]{\setlength{\rightskip}{0pt plus 5cm}void sys\+\_\+detect\+\_\+devs (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{mtconf_8h_a98f6da74e77432b2da568c3476070a70}
+
+
+\subsection{Variable Documentation}
+\hypertarget{mtconf_8h_aacf80bcf7c5c0995edc6663baf02d687}{\index{mtconf.\+h@{mtconf.\+h}!boot\+\_\+time@{boot\+\_\+time}}
+\index{boot\+\_\+time@{boot\+\_\+time}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{boot\+\_\+time}]{\setlength{\rightskip}{0pt plus 5cm}time\+\_\+t boot\+\_\+time}}\label{mtconf_8h_aacf80bcf7c5c0995edc6663baf02d687}
+\hypertarget{mtconf_8h_aceccdee1911ad59a8d7155f5dbd6737c}{\index{mtconf.\+h@{mtconf.\+h}!boot\+\_\+ts@{boot\+\_\+ts}}
+\index{boot\+\_\+ts@{boot\+\_\+ts}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{boot\+\_\+ts}]{\setlength{\rightskip}{0pt plus 5cm}clock\+\_\+t boot\+\_\+ts}}\label{mtconf_8h_aceccdee1911ad59a8d7155f5dbd6737c}
+\hypertarget{mtconf_8h_ac2cd71670249bede9b030a8a73dc8d06}{\index{mtconf.\+h@{mtconf.\+h}!mg\+\_\+argvrom\+\_\+devid@{mg\+\_\+argvrom\+\_\+devid}}
+\index{mg\+\_\+argvrom\+\_\+devid@{mg\+\_\+argvrom\+\_\+devid}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mg\+\_\+argvrom\+\_\+devid}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t mg\+\_\+argvrom\+\_\+devid}}\label{mtconf_8h_ac2cd71670249bede9b030a8a73dc8d06}
+\hypertarget{mtconf_8h_aae7381c132d01001315615afccd71f01}{\index{mtconf.\+h@{mtconf.\+h}!mg\+\_\+cfgrom\+\_\+devid@{mg\+\_\+cfgrom\+\_\+devid}}
+\index{mg\+\_\+cfgrom\+\_\+devid@{mg\+\_\+cfgrom\+\_\+devid}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mg\+\_\+cfgrom\+\_\+devid}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t mg\+\_\+cfgrom\+\_\+devid}}\label{mtconf_8h_aae7381c132d01001315615afccd71f01}
+\hypertarget{mtconf_8h_a96ab0f31543fa7a3f13594c23c328daf}{\index{mtconf.\+h@{mtconf.\+h}!mg\+\_\+devinfo@{mg\+\_\+devinfo}}
+\index{mg\+\_\+devinfo@{mg\+\_\+devinfo}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mg\+\_\+devinfo}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf mg\+\_\+device\+\_\+info} mg\+\_\+devinfo}}\label{mtconf_8h_a96ab0f31543fa7a3f13594c23c328daf}
+\hypertarget{mtconf_8h_a543eed1afecb072694eb43ba2e471f10}{\index{mtconf.\+h@{mtconf.\+h}!mg\+\_\+gfx\+\_\+ctl@{mg\+\_\+gfx\+\_\+ctl}}
+\index{mg\+\_\+gfx\+\_\+ctl@{mg\+\_\+gfx\+\_\+ctl}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mg\+\_\+gfx\+\_\+ctl}]{\setlength{\rightskip}{0pt plus 5cm}volatile uint32\+\_\+t$\ast$ mg\+\_\+gfx\+\_\+ctl}}\label{mtconf_8h_a543eed1afecb072694eb43ba2e471f10}
+\hypertarget{mtconf_8h_a2173712cd87f890c1c99a149360ea260}{\index{mtconf.\+h@{mtconf.\+h}!mg\+\_\+gfx\+\_\+fb@{mg\+\_\+gfx\+\_\+fb}}
+\index{mg\+\_\+gfx\+\_\+fb@{mg\+\_\+gfx\+\_\+fb}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mg\+\_\+gfx\+\_\+fb}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ mg\+\_\+gfx\+\_\+fb}}\label{mtconf_8h_a2173712cd87f890c1c99a149360ea260}
+\hypertarget{mtconf_8h_a1cfe9c9acdce9454121d583fd7bdc38d}{\index{mtconf.\+h@{mtconf.\+h}!mg\+\_\+gfxctl\+\_\+devid@{mg\+\_\+gfxctl\+\_\+devid}}
+\index{mg\+\_\+gfxctl\+\_\+devid@{mg\+\_\+gfxctl\+\_\+devid}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mg\+\_\+gfxctl\+\_\+devid}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t mg\+\_\+gfxctl\+\_\+devid}}\label{mtconf_8h_a1cfe9c9acdce9454121d583fd7bdc38d}
+\hypertarget{mtconf_8h_ac59669481d1344edb354edf83f0880e9}{\index{mtconf.\+h@{mtconf.\+h}!mg\+\_\+gfxfb\+\_\+devid@{mg\+\_\+gfxfb\+\_\+devid}}
+\index{mg\+\_\+gfxfb\+\_\+devid@{mg\+\_\+gfxfb\+\_\+devid}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mg\+\_\+gfxfb\+\_\+devid}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t mg\+\_\+gfxfb\+\_\+devid}}\label{mtconf_8h_ac59669481d1344edb354edf83f0880e9}
+\hypertarget{mtconf_8h_a6913a3c5830afa9ba7faee656cf5c1c6}{\index{mtconf.\+h@{mtconf.\+h}!mg\+\_\+io\+\_\+dca\+\_\+devid@{mg\+\_\+io\+\_\+dca\+\_\+devid}}
+\index{mg\+\_\+io\+\_\+dca\+\_\+devid@{mg\+\_\+io\+\_\+dca\+\_\+devid}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mg\+\_\+io\+\_\+dca\+\_\+devid}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t mg\+\_\+io\+\_\+dca\+\_\+devid}}\label{mtconf_8h_a6913a3c5830afa9ba7faee656cf5c1c6}
+\hypertarget{mtconf_8h_a57d51a409dbb21ba6fa737bda2289179}{\index{mtconf.\+h@{mtconf.\+h}!mg\+\_\+io\+\_\+place\+\_\+id@{mg\+\_\+io\+\_\+place\+\_\+id}}
+\index{mg\+\_\+io\+\_\+place\+\_\+id@{mg\+\_\+io\+\_\+place\+\_\+id}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mg\+\_\+io\+\_\+place\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}sl\+\_\+place\+\_\+t mg\+\_\+io\+\_\+place\+\_\+id}}\label{mtconf_8h_a57d51a409dbb21ba6fa737bda2289179}
+\hypertarget{mtconf_8h_a1e28c2d78fbb854e358f0ae7d3503674}{\index{mtconf.\+h@{mtconf.\+h}!mg\+\_\+lcd\+\_\+devid@{mg\+\_\+lcd\+\_\+devid}}
+\index{mg\+\_\+lcd\+\_\+devid@{mg\+\_\+lcd\+\_\+devid}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mg\+\_\+lcd\+\_\+devid}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t mg\+\_\+lcd\+\_\+devid}}\label{mtconf_8h_a1e28c2d78fbb854e358f0ae7d3503674}
+\hypertarget{mtconf_8h_ae363cf33a5a2e63c9c01c80c0c432e86}{\index{mtconf.\+h@{mtconf.\+h}!mg\+\_\+rpc\+\_\+chanid@{mg\+\_\+rpc\+\_\+chanid}}
+\index{mg\+\_\+rpc\+\_\+chanid@{mg\+\_\+rpc\+\_\+chanid}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mg\+\_\+rpc\+\_\+chanid}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t mg\+\_\+rpc\+\_\+chanid}}\label{mtconf_8h_ae363cf33a5a2e63c9c01c80c0c432e86}
+\hypertarget{mtconf_8h_adaabe021479f7843687a6b274bc225cc}{\index{mtconf.\+h@{mtconf.\+h}!mg\+\_\+rpc\+\_\+devid@{mg\+\_\+rpc\+\_\+devid}}
+\index{mg\+\_\+rpc\+\_\+devid@{mg\+\_\+rpc\+\_\+devid}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mg\+\_\+rpc\+\_\+devid}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t mg\+\_\+rpc\+\_\+devid}}\label{mtconf_8h_adaabe021479f7843687a6b274bc225cc}
+\hypertarget{mtconf_8h_adcd68c870a42f9bb70ef45cf30056004}{\index{mtconf.\+h@{mtconf.\+h}!mg\+\_\+rtc\+\_\+devid@{mg\+\_\+rtc\+\_\+devid}}
+\index{mg\+\_\+rtc\+\_\+devid@{mg\+\_\+rtc\+\_\+devid}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mg\+\_\+rtc\+\_\+devid}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t mg\+\_\+rtc\+\_\+devid}}\label{mtconf_8h_adcd68c870a42f9bb70ef45cf30056004}
+\hypertarget{mtconf_8h_a2e2e41b03183e41ab2fb76dce1602c70}{\index{mtconf.\+h@{mtconf.\+h}!mg\+\_\+uart\+\_\+devid@{mg\+\_\+uart\+\_\+devid}}
+\index{mg\+\_\+uart\+\_\+devid@{mg\+\_\+uart\+\_\+devid}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mg\+\_\+uart\+\_\+devid}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t mg\+\_\+uart\+\_\+devid}}\label{mtconf_8h_a2e2e41b03183e41ab2fb76dce1602c70}
+\hypertarget{mtconf_8h_a60a78b7b46f46424332e3e507a20773c}{\index{mtconf.\+h@{mtconf.\+h}!mgconf\+\_\+core\+\_\+freq@{mgconf\+\_\+core\+\_\+freq}}
+\index{mgconf\+\_\+core\+\_\+freq@{mgconf\+\_\+core\+\_\+freq}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mgconf\+\_\+core\+\_\+freq}]{\setlength{\rightskip}{0pt plus 5cm}{\bf confword\+\_\+t} mgconf\+\_\+core\+\_\+freq}}\label{mtconf_8h_a60a78b7b46f46424332e3e507a20773c}
+\hypertarget{mtconf_8h_a25a8d2c901a5e914909d7c4d0ba27e84}{\index{mtconf.\+h@{mtconf.\+h}!mgconf\+\_\+ftes\+\_\+per\+\_\+core@{mgconf\+\_\+ftes\+\_\+per\+\_\+core}}
+\index{mgconf\+\_\+ftes\+\_\+per\+\_\+core@{mgconf\+\_\+ftes\+\_\+per\+\_\+core}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mgconf\+\_\+ftes\+\_\+per\+\_\+core}]{\setlength{\rightskip}{0pt plus 5cm}{\bf confword\+\_\+t} mgconf\+\_\+ftes\+\_\+per\+\_\+core}}\label{mtconf_8h_a25a8d2c901a5e914909d7c4d0ba27e84}
+\hypertarget{mtconf_8h_a81a859629585a46fdb31d7ea3efcb6e2}{\index{mtconf.\+h@{mtconf.\+h}!mgconf\+\_\+master\+\_\+freq@{mgconf\+\_\+master\+\_\+freq}}
+\index{mgconf\+\_\+master\+\_\+freq@{mgconf\+\_\+master\+\_\+freq}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mgconf\+\_\+master\+\_\+freq}]{\setlength{\rightskip}{0pt plus 5cm}{\bf confword\+\_\+t} mgconf\+\_\+master\+\_\+freq}}\label{mtconf_8h_a81a859629585a46fdb31d7ea3efcb6e2}
+\hypertarget{mtconf_8h_a8310bffe829c6829c548978413ee75b6}{\index{mtconf.\+h@{mtconf.\+h}!mgconf\+\_\+ttes\+\_\+per\+\_\+core@{mgconf\+\_\+ttes\+\_\+per\+\_\+core}}
+\index{mgconf\+\_\+ttes\+\_\+per\+\_\+core@{mgconf\+\_\+ttes\+\_\+per\+\_\+core}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{mgconf\+\_\+ttes\+\_\+per\+\_\+core}]{\setlength{\rightskip}{0pt plus 5cm}{\bf confword\+\_\+t} mgconf\+\_\+ttes\+\_\+per\+\_\+core}}\label{mtconf_8h_a8310bffe829c6829c548978413ee75b6}
+\hypertarget{mtconf_8h_a37101d3db861005dc0a63c17c3313d84}{\index{mtconf.\+h@{mtconf.\+h}!verbose\+\_\+boot@{verbose\+\_\+boot}}
+\index{verbose\+\_\+boot@{verbose\+\_\+boot}!mtconf.\+h@{mtconf.\+h}}
+\subsubsection[{verbose\+\_\+boot}]{\setlength{\rightskip}{0pt plus 5cm}int verbose\+\_\+boot}}\label{mtconf_8h_a37101d3db861005dc0a63c17c3313d84}

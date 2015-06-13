@@ -1,0 +1,136 @@
+\hypertarget{class_simulator_1_1_storage}{\section{Simulator\+:\+:Storage Class Reference}
+\label{class_simulator_1_1_storage}\index{Simulator\+::\+Storage@{Simulator\+::\+Storage}}
+}
+
+
+A storage element that needs cycle-\/accurate update semantics.  
+
+
+
+
+{\ttfamily \#include $<$storage.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:Storage\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_simulator_1_1_storage}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_simulator_1_1_storage_abea2bd330384970436228e1a759b9239}{Update} ()=0
+\item 
+const \hyperlink{class_simulator_1_1_storage}{Storage} $\ast$ \hyperlink{class_simulator_1_1_storage_a9e3c90321dbde541a0b57163730acb75}{Get\+Next} () const 
+\item 
+\hyperlink{class_simulator_1_1_storage_a06cb2e92adc46a31b1ff511b218e4465}{Storage} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock)
+\item 
+\hyperlink{class_simulator_1_1_storage_ac97357837b77bd9b3cfbdc39caf59b88}{Storage} (const \hyperlink{class_simulator_1_1_storage}{Storage} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1_storage}{Storage} \& \hyperlink{class_simulator_1_1_storage_a97dbec4dabc2eb3f6d6a943c767cdf18}{operator=} (const \hyperlink{class_simulator_1_1_storage}{Storage} \&)=delete
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_simulator_1_1_storage_a52529000e4852dd5ce676557df4586fe}{Check\+Clocks} ()
+\item 
+void \hyperlink{class_simulator_1_1_storage_a46a6f7a406d12d510c39efb91574d572}{Mark\+Usage} () const 
+\item 
+void \hyperlink{class_simulator_1_1_storage_aceb798d5199650b16b8f9c4398a4c08a}{Register\+Update} ()
+\item 
+virtual \hyperlink{class_simulator_1_1_storage_ab8fe2a22c92c8d5a515c81daabdea16a}{$\sim$\+Storage} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_simulator_1_1_storage_a3807a3ebd0e05ca8cb4d928025a943d2}{Kernel}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A storage element that needs cycle-\/accurate update semantics. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_storage_ab8fe2a22c92c8d5a515c81daabdea16a}{\index{Simulator\+::\+Storage@{Simulator\+::\+Storage}!````~Storage@{$\sim$\+Storage}}
+\index{````~Storage@{$\sim$\+Storage}!Simulator\+::\+Storage@{Simulator\+::\+Storage}}
+\subsubsection[{$\sim$\+Storage}]{\setlength{\rightskip}{0pt plus 5cm}virtual Simulator\+::\+Storage\+::$\sim$\+Storage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_storage_ab8fe2a22c92c8d5a515c81daabdea16a}
+\hypertarget{class_simulator_1_1_storage_a06cb2e92adc46a31b1ff511b218e4465}{\index{Simulator\+::\+Storage@{Simulator\+::\+Storage}!Storage@{Storage}}
+\index{Storage@{Storage}!Simulator\+::\+Storage@{Simulator\+::\+Storage}}
+\subsubsection[{Storage}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Storage\+::\+Storage (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_storage_a06cb2e92adc46a31b1ff511b218e4465}
+\hypertarget{class_simulator_1_1_storage_ac97357837b77bd9b3cfbdc39caf59b88}{\index{Simulator\+::\+Storage@{Simulator\+::\+Storage}!Storage@{Storage}}
+\index{Storage@{Storage}!Simulator\+::\+Storage@{Simulator\+::\+Storage}}
+\subsubsection[{Storage}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Storage\+::\+Storage (
+\begin{DoxyParamCaption}
+\item[{const {\bf Storage} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_storage_ac97357837b77bd9b3cfbdc39caf59b88}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_storage_a52529000e4852dd5ce676557df4586fe}{\index{Simulator\+::\+Storage@{Simulator\+::\+Storage}!Check\+Clocks@{Check\+Clocks}}
+\index{Check\+Clocks@{Check\+Clocks}!Simulator\+::\+Storage@{Simulator\+::\+Storage}}
+\subsubsection[{Check\+Clocks}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Storage\+::\+Check\+Clocks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_simulator_1_1_storage_a52529000e4852dd5ce676557df4586fe}
+\hypertarget{class_simulator_1_1_storage_a9e3c90321dbde541a0b57163730acb75}{\index{Simulator\+::\+Storage@{Simulator\+::\+Storage}!Get\+Next@{Get\+Next}}
+\index{Get\+Next@{Get\+Next}!Simulator\+::\+Storage@{Simulator\+::\+Storage}}
+\subsubsection[{Get\+Next}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Storage}$\ast$ Simulator\+::\+Storage\+::\+Get\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_storage_a9e3c90321dbde541a0b57163730acb75}
+\hypertarget{class_simulator_1_1_storage_a46a6f7a406d12d510c39efb91574d572}{\index{Simulator\+::\+Storage@{Simulator\+::\+Storage}!Mark\+Usage@{Mark\+Usage}}
+\index{Mark\+Usage@{Mark\+Usage}!Simulator\+::\+Storage@{Simulator\+::\+Storage}}
+\subsubsection[{Mark\+Usage}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Storage\+::\+Mark\+Usage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_simulator_1_1_storage_a46a6f7a406d12d510c39efb91574d572}
+\hypertarget{class_simulator_1_1_storage_a97dbec4dabc2eb3f6d6a943c767cdf18}{\index{Simulator\+::\+Storage@{Simulator\+::\+Storage}!operator=@{operator=}}
+\index{operator=@{operator=}!Simulator\+::\+Storage@{Simulator\+::\+Storage}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Storage}\& Simulator\+::\+Storage\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Storage} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_storage_a97dbec4dabc2eb3f6d6a943c767cdf18}
+\hypertarget{class_simulator_1_1_storage_aceb798d5199650b16b8f9c4398a4c08a}{\index{Simulator\+::\+Storage@{Simulator\+::\+Storage}!Register\+Update@{Register\+Update}}
+\index{Register\+Update@{Register\+Update}!Simulator\+::\+Storage@{Simulator\+::\+Storage}}
+\subsubsection[{Register\+Update}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Storage\+::\+Register\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_simulator_1_1_storage_aceb798d5199650b16b8f9c4398a4c08a}
+\hypertarget{class_simulator_1_1_storage_abea2bd330384970436228e1a759b9239}{\index{Simulator\+::\+Storage@{Simulator\+::\+Storage}!Update@{Update}}
+\index{Update@{Update}!Simulator\+::\+Storage@{Simulator\+::\+Storage}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Simulator\+::\+Storage\+::\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_simulator_1_1_storage_abea2bd330384970436228e1a759b9239}
+
+
+Implemented in \hyperlink{class_simulator_1_1_flag_a3edbc0d4d4e12e0c425cbb05381c60ad}{Simulator\+::\+Flag}, \hyperlink{class_simulator_1_1_register_a7d424a1ce3822c36d63a0e4bb86c3730}{Simulator\+::\+Register$<$ T $>$}, \hyperlink{class_simulator_1_1_register_a7d424a1ce3822c36d63a0e4bb86c3730}{Simulator\+::\+Register$<$ Simulator\+::drisc\+::\+Alloc\+Response $>$}, \hyperlink{class_simulator_1_1_register_a7d424a1ce3822c36d63a0e4bb86c3730}{Simulator\+::\+Register$<$ Simulator\+::drisc\+::\+Link\+Message $>$}, \hyperlink{class_simulator_1_1_register_a7d424a1ce3822c36d63a0e4bb86c3730}{Simulator\+::\+Register$<$ Delegate\+Message, Simulator\+::\+Cyclic\+Arbitrated\+Port $>$}, \hyperlink{class_simulator_1_1_register_a7d424a1ce3822c36d63a0e4bb86c3730}{Simulator\+::\+Register$<$ bool $>$}, and \hyperlink{class_simulator_1_1_register_a7d424a1ce3822c36d63a0e4bb86c3730}{Simulator\+::\+Register$<$ Delegate\+Message $>$}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_simulator_1_1_storage_a3807a3ebd0e05ca8cb4d928025a943d2}{\index{Simulator\+::\+Storage@{Simulator\+::\+Storage}!Kernel@{Kernel}}
+\index{Kernel@{Kernel}!Simulator\+::\+Storage@{Simulator\+::\+Storage}}
+\subsubsection[{Kernel}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Kernel}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_simulator_1_1_storage_a3807a3ebd0e05ca8cb4d928025a943d2}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{storage_8h}{storage.\+h}\end{DoxyCompactItemize}

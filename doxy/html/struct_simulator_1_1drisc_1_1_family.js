@@ -1,0 +1,27 @@
+var struct_simulator_1_1drisc_1_1_family =
+[
+    [ "Dependencies", "struct_simulator_1_1drisc_1_1_family_1_1_dependencies.html", "struct_simulator_1_1drisc_1_1_family_1_1_dependencies" ],
+    [ "RegInfo", "struct_simulator_1_1drisc_1_1_family_1_1_reg_info.html", "struct_simulator_1_1drisc_1_1_family_1_1_reg_info" ],
+    [ "broken", "struct_simulator_1_1drisc_1_1_family.html#aa16ea5f70efa396315ad0b1af162c8a1", null ],
+    [ "capability", "struct_simulator_1_1drisc_1_1_family.html#ad3ba7a5ee06366f2db60dd5616bc3bc2", null ],
+    [ "dependencies", "struct_simulator_1_1drisc_1_1_family.html#afdabc889ad7fd572cb662244c2598a75", null ],
+    [ "done", "struct_simulator_1_1drisc_1_1_family.html#a1fccf3bf92239045245145323120b2fe", null ],
+    [ "hasShareds", "struct_simulator_1_1drisc_1_1_family.html#a8cf81ff5b48b3d85552090e8dc8906ed", null ],
+    [ "lastAllocated", "struct_simulator_1_1drisc_1_1_family.html#a2a86ef2830ea7020bf9b004d4e667661", null ],
+    [ "legacy", "struct_simulator_1_1drisc_1_1_family.html#a75224e207c220d7a67196d5a43692f5c", null ],
+    [ "limit", "struct_simulator_1_1drisc_1_1_family.html#a7692587243181d8a1cfe78ccd8daa163", null ],
+    [ "link", "struct_simulator_1_1drisc_1_1_family.html#a455315bf70d22fe39225d94a3bbc2e86", null ],
+    [ "nThreads", "struct_simulator_1_1drisc_1_1_family.html#af38b7adc0560eed9ecaa9cc252c59e3c", null ],
+    [ "numCores", "struct_simulator_1_1drisc_1_1_family.html#a23dc806c79918e98780e368e8aaf901b", null ],
+    [ "pc", "struct_simulator_1_1drisc_1_1_family.html#ad7d47b382d467ed7d752fcbad7a598b2", null ],
+    [ "physBlockSize", "struct_simulator_1_1drisc_1_1_family.html#abb5f31f2f00e8242f5d92ecdc57c05c3", null ],
+    [ "pid", "struct_simulator_1_1drisc_1_1_family.html#a450bf0c4a4bea0b943c3235d191e19ea", null ],
+    [ "placeSize", "struct_simulator_1_1drisc_1_1_family.html#a3c1851ecdf322bcbd74f70641542cf15", null ],
+    [ "prevCleanedUp", "struct_simulator_1_1drisc_1_1_family.html#ab17d680b0793b586d085911668653ab1", null ],
+    [ "reg", "struct_simulator_1_1drisc_1_1_family.html#a77f0bae94676d754fb515df819c26087", null ],
+    [ "regs", "struct_simulator_1_1drisc_1_1_family.html#a294b0e1f730c64cc3cfc9c79885cba6b", null ],
+    [ "start", "struct_simulator_1_1drisc_1_1_family.html#ae17e6b563b6c192627d2261df124b5f5", null ],
+    [ "state", "struct_simulator_1_1drisc_1_1_family.html#a67550340cf92f8296561385c287253ac", null ],
+    [ "step", "struct_simulator_1_1drisc_1_1_family.html#ad194800b2cb33191c069c77f7a2f9e46", null ],
+    [ "sync", "struct_simulator_1_1drisc_1_1_family.html#ad4cf98e9058028d164f8688746e697bf", null ]
+];

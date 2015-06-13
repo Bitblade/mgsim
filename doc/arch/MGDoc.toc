@@ -1,0 +1,134 @@
+\select@language {british}
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
+\contentsline {chapter}{\numberline {2}Overview}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Families of threads}{7}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Index sequence}{8}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Block size}{8}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Family synchronization}{8}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Breaking a family}{8}{subsection.2.1.4}
+\contentsline {section}{\numberline {2.2}Synchronizing Registers}{8}{section.2.2}
+\contentsline {section}{\numberline {2.3}Shared memory}{9}{section.2.3}
+\contentsline {section}{\numberline {2.4}Places}{9}{section.2.4}
+\contentsline {section}{\numberline {2.5}Network}{9}{section.2.5}
+\contentsline {chapter}{\numberline {3}Dataflow Scheduling}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Register states}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Thread control stream}{11}{section.3.2}
+\contentsline {paragraph}{Alternatives}{12}{section*.3}
+\contentsline {chapter}{\numberline {4}Instruction Set}{15}{chapter.4}
+\contentsline {section}{\numberline {4.1}Instruction list}{15}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Allocate}{15}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Set Start/Limit/Step}{16}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}SetBlock}{16}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Create}{16}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Put Global/Shared}{16}{subsection.4.1.5}
+\contentsline {subsection}{\numberline {4.1.6}Synchronize}{16}{subsection.4.1.6}
+\contentsline {subsection}{\numberline {4.1.7}Get Shared}{17}{subsection.4.1.7}
+\contentsline {subsection}{\numberline {4.1.8}Detach}{17}{subsection.4.1.8}
+\contentsline {chapter}{\numberline {5}Thread Table}{19}{chapter.5}
+\contentsline {section}{\numberline {5.1}Registers}{19}{section.5.1}
+\contentsline {section}{\numberline {5.2}Dependencies}{19}{section.5.2}
+\contentsline {section}{\numberline {5.3}Scheduler}{20}{section.5.3}
+\contentsline {section}{\numberline {5.4}Management}{20}{section.5.4}
+\contentsline {section}{\numberline {5.5}Memory Write Barrier}{20}{section.5.5}
+\contentsline {chapter}{\numberline {6}Family Table}{21}{chapter.6}
+\contentsline {section}{\numberline {6.1}Registers}{21}{section.6.1}
+\contentsline {section}{\numberline {6.2}Multi-core}{21}{section.6.2}
+\contentsline {section}{\numberline {6.3}Security}{23}{section.6.3}
+\contentsline {section}{\numberline {6.4}Thread Allocation}{23}{section.6.4}
+\contentsline {section}{\numberline {6.5}Dependencies}{23}{section.6.5}
+\contentsline {section}{\numberline {6.6}Synchronization}{24}{section.6.6}
+\contentsline {chapter}{\numberline {7}Thread Creation}{25}{chapter.7}
+\contentsline {section}{\numberline {7.1}Place identifier}{25}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Overview}{25}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}PID/Size}{25}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}Family allocation}{26}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Allocation queue}{26}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Place allocation}{27}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}Context management}{28}{subsection.7.2.3}
+\contentsline {section}{\numberline {7.3}Family setup}{28}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Index sequence}{28}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Block size}{28}{subsection.7.3.2}
+\contentsline {section}{\numberline {7.4}Family creation}{28}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Register counts}{29}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Family setup finalization}{30}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Register allocation}{30}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.4}Create distribution}{30}{subsection.7.4.4}
+\contentsline {subsection}{\numberline {7.4.5}Thread allocation queue}{30}{subsection.7.4.5}
+\contentsline {subsection}{\numberline {7.4.6}Creation notification}{30}{subsection.7.4.6}
+\contentsline {section}{\numberline {7.5}Thread allocation}{31}{section.7.5}
+\contentsline {chapter}{\numberline {8}Registers}{33}{chapter.8}
+\contentsline {section}{\numberline {8.1}Virtual layout}{33}{section.8.1}
+\contentsline {section}{\numberline {8.2}Physical layout}{33}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Family Creation}{35}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Thread Creation}{35}{subsection.8.2.2}
+\contentsline {chapter}{\numberline {9}Thread Scheduler}{37}{chapter.9}
+\contentsline {section}{\numberline {9.1}Overview}{37}{section.9.1}
+\contentsline {section}{\numberline {9.2}Linked Lists}{37}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Fairness}{38}{subsection.9.2.1}
+\contentsline {section}{\numberline {9.3}Ready List}{38}{section.9.3}
+\contentsline {section}{\numberline {9.4}Active List}{39}{section.9.4}
+\contentsline {section}{\numberline {9.5}Ports}{39}{section.9.5}
+\contentsline {subsection}{\numberline {9.5.1}Splitting}{40}{subsection.9.5.1}
+\contentsline {chapter}{\numberline {10}Instruction Cache}{41}{chapter.10}
+\contentsline {section}{\numberline {10.1}Overview}{41}{section.10.1}
+\contentsline {section}{\numberline {10.2}Cache-line contents}{41}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Reference Counter}{43}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}Creation flag}{43}{subsection.10.2.2}
+\contentsline {section}{\numberline {10.3}Bus messages}{43}{section.10.3}
+\contentsline {subsection}{\numberline {10.3.1}Write}{43}{subsection.10.3.1}
+\contentsline {subsection}{\numberline {10.3.2}Read Response}{43}{subsection.10.3.2}
+\contentsline {subsection}{\numberline {10.3.3}Invalidate}{43}{subsection.10.3.3}
+\contentsline {section}{\numberline {10.4}Processes}{43}{section.10.4}
+\contentsline {subsection}{\numberline {10.4.1}Outgoing requests}{43}{subsection.10.4.1}
+\contentsline {subsection}{\numberline {10.4.2}Completed reads}{44}{subsection.10.4.2}
+\contentsline {chapter}{\numberline {11}Data Cache}{45}{chapter.11}
+\contentsline {section}{\numberline {11.1}Overview}{45}{section.11.1}
+\contentsline {section}{\numberline {11.2}Cache-line contents}{45}{section.11.2}
+\contentsline {section}{\numberline {11.3}Registers}{47}{section.11.3}
+\contentsline {section}{\numberline {11.4}Timing issues}{47}{section.11.4}
+\contentsline {section}{\numberline {11.5}Bus messages}{47}{section.11.5}
+\contentsline {subsection}{\numberline {11.5.1}Write}{47}{subsection.11.5.1}
+\contentsline {subsection}{\numberline {11.5.2}Read Response}{47}{subsection.11.5.2}
+\contentsline {subsection}{\numberline {11.5.3}Invalidate}{47}{subsection.11.5.3}
+\contentsline {section}{\numberline {11.6}Processes}{47}{section.11.6}
+\contentsline {subsection}{\numberline {11.6.1}Outgoing requests}{48}{subsection.11.6.1}
+\contentsline {subsection}{\numberline {11.6.2}Completed writes}{48}{subsection.11.6.2}
+\contentsline {subsection}{\numberline {11.6.3}Completed reads}{48}{subsection.11.6.3}
+\contentsline {chapter}{\numberline {12}Memory}{49}{chapter.12}
+\contentsline {section}{\numberline {12.1}Core Interface}{49}{section.12.1}
+\contentsline {subsection}{\numberline {12.1.1}Read Request}{49}{subsection.12.1.1}
+\contentsline {subsection}{\numberline {12.1.2}Read Response}{49}{subsection.12.1.2}
+\contentsline {subsection}{\numberline {12.1.3}Write Request}{49}{subsection.12.1.3}
+\contentsline {subsection}{\numberline {12.1.4}Write Acknowledgement}{50}{subsection.12.1.4}
+\contentsline {subsection}{\numberline {12.1.5}Invalidate}{50}{subsection.12.1.5}
+\contentsline {section}{\numberline {12.2}COMA}{50}{section.12.2}
+\contentsline {subsection}{\numberline {12.2.1}Protocol}{50}{subsection.12.2.1}
+\contentsline {subsubsection}{Messages}{50}{section*.4}
+\contentsline {subsubsection}{Deadlock avoidance}{51}{section*.5}
+\contentsline {subsection}{\numberline {12.2.2}Cache}{52}{subsection.12.2.2}
+\contentsline {subsubsection}{Structure}{52}{section*.6}
+\contentsline {subsubsection}{Bus Read}{52}{section*.7}
+\contentsline {subsubsection}{Bus Write}{52}{section*.8}
+\contentsline {subsubsection}{Read Request}{53}{section*.9}
+\contentsline {subsubsection}{Read Request, with Data}{53}{section*.10}
+\contentsline {subsubsection}{Read Request, with Data and Tokens}{53}{section*.11}
+\contentsline {subsubsection}{Update}{53}{section*.12}
+\contentsline {subsubsection}{Eviction}{53}{section*.13}
+\contentsline {subsection}{\numberline {12.2.3}Directory}{53}{subsection.12.2.3}
+\contentsline {subsubsection}{Structure}{54}{section*.14}
+\contentsline {subsubsection}{Read Request}{54}{section*.15}
+\contentsline {subsubsection}{Read Request, with Data}{54}{section*.16}
+\contentsline {subsubsection}{Read Request, with Data and Tokens}{54}{section*.17}
+\contentsline {subsubsection}{Update}{54}{section*.18}
+\contentsline {subsubsection}{Eviction}{54}{section*.19}
+\contentsline {subsection}{\numberline {12.2.4}Root Directory}{54}{subsection.12.2.4}
+\contentsline {subsubsection}{Structure}{54}{section*.20}
+\contentsline {subsubsection}{Read Request}{54}{section*.21}
+\contentsline {subsubsection}{Read Request, with Data}{54}{section*.22}
+\contentsline {subsubsection}{Read Request, with Data and Tokens}{54}{section*.23}
+\contentsline {subsubsection}{Update}{54}{section*.24}
+\contentsline {subsubsection}{Eviction}{54}{section*.25}
+\contentsline {subsection}{\numberline {12.2.5}Virtual Memory}{54}{subsection.12.2.5}
+\contentsline {chapter}{\numberline {13}Input / output}{55}{chapter.13}
+\contentsline {section}{\numberline {13.1}General mechanisms}{55}{section.13.1}
+\contentsline {section}{\numberline {13.2}Mapping I/O to dataflow constructs}{55}{section.13.2}

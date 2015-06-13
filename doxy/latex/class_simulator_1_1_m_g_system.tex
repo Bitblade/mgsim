@@ -1,0 +1,298 @@
+\hypertarget{class_simulator_1_1_m_g_system}{\section{Simulator\+:\+:M\+G\+System Class Reference}
+\label{class_simulator_1_1_m_g_system}\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+}
+
+
+{\ttfamily \#include $<$M\+G\+System.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_simulator_1_1_m_g_system_1_1_conf_words}{Conf\+Words}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, \\*
+\hyperlink{class_simulator_1_1_object}{Object} $\ast$ $>$ \hyperlink{class_simulator_1_1_m_g_system_ae7bb90912b7e1348ab3ddefa4e8bc431}{object\+\_\+map\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_config}{Config} \& \hyperlink{class_simulator_1_1_m_g_system_aea36c14f94f755b42017a109856be4f5}{Get\+Config} () const 
+\item 
+int \hyperlink{class_simulator_1_1_m_g_system_ad6fa1e1f162df20be24e546fb25b80f8}{Get\+Debug\+Mode} () const 
+\item 
+void \hyperlink{class_simulator_1_1_m_g_system_acfe54d4c871865a4ddfaa857a6ca9bb3}{Set\+Debug\+Mode} (int mode)
+\item 
+void \hyperlink{class_simulator_1_1_m_g_system_acf2d385933a262004c030f86cd3020ac}{Toggle\+Debug\+Mode} (int mode)
+\item 
+uint64\+\_\+t \hyperlink{class_simulator_1_1_m_g_system_aff1496e896efdac9bca1328e35e47685}{Get\+Op} () const 
+\item 
+uint64\+\_\+t \hyperlink{class_simulator_1_1_m_g_system_a8e264226f2c197bffa2c7e504f861db4}{Get\+Flop} () const 
+\item 
+void \hyperlink{class_simulator_1_1_m_g_system_a7bfbc3bb9278d876f45a141cbeb438f2}{Disassemble} (Mem\+Addr addr, size\+\_\+t sz=64) const 
+\item 
+\hyperlink{class_simulator_1_1_m_g_system_ae7bb90912b7e1348ab3ddefa4e8bc431}{object\+\_\+map\+\_\+t} \hyperlink{class_simulator_1_1_m_g_system_aa871dffcaaca19cac5c80f9523a96cae}{Get\+Components} (const std\+::string \&pat=\char`\"{}$\ast$\char`\"{})
+\item 
+void \hyperlink{class_simulator_1_1_m_g_system_a09db598cea8d6fadb9f20104f455e7a0}{Print\+Components} (std\+::ostream \&os, const std\+::string \&pat=\char`\"{}$\ast$\char`\"{}, size\+\_\+t levels=0) const 
+\item 
+void \hyperlink{class_simulator_1_1_m_g_system_a9937459418531c9c90b581ee986bb38f}{Print\+Processes} (std\+::ostream \&os, const std\+::string \&pat=\char`\"{}$\ast$\char`\"{}) const 
+\item 
+void \hyperlink{class_simulator_1_1_m_g_system_aa323f6da24b64c857dc934b6f79e8ef3}{Dump\+Area} (std\+::ostream \&os, size\+\_\+t tech) const 
+\item 
+void \hyperlink{class_simulator_1_1_m_g_system_ad711cea3becfd24227b5e867e56730de}{Print\+Memory\+Statistics} (std\+::ostream \&os) const 
+\item 
+void \hyperlink{class_simulator_1_1_m_g_system_aa8c99d0706de8bf84a5de8975715a593}{Print\+State} (const std\+::vector$<$ std\+::string $>$ \&arguments) const 
+\item 
+void \hyperlink{class_simulator_1_1_m_g_system_a05765ebef83c012240acfb15d5acf2d6}{Print\+Reg\+File\+Async\+Port\+Activity} (std\+::ostream \&os) const 
+\item 
+void \hyperlink{class_simulator_1_1_m_g_system_af82584c8fefb2a83d01084ec9c68adaf}{Print\+All\+Family\+Completions} (std\+::ostream \&os) const 
+\item 
+void \hyperlink{class_simulator_1_1_m_g_system_a2d29a2d1e0ce3286002856a1f4e89018}{Print\+Family\+Completions} (std\+::ostream \&os) const 
+\item 
+void \hyperlink{class_simulator_1_1_m_g_system_a7b0d5a94676972837dfd3c7e6fce8d86}{Print\+Core\+Stats} (std\+::ostream \&os) const 
+\item 
+void \hyperlink{class_simulator_1_1_m_g_system_ab6c36f6d9f20261d5be77ec65ed9e1ff}{Print\+All\+Statistics} (std\+::ostream \&os) const 
+\item 
+const \hyperlink{class_simulator_1_1_kernel}{Kernel} \& \hyperlink{class_simulator_1_1_m_g_system_a93dcedf29365892cff8900a555d97a83}{Get\+Kernel} () const 
+\item 
+\hyperlink{class_simulator_1_1_kernel}{Kernel} \& \hyperlink{class_simulator_1_1_m_g_system_a3f167c3183128c73a2b2b5ed5441764b}{Get\+Kernel} ()
+\item 
+const \hyperlink{class_simulator_1_1_symbol_table}{Symbol\+Table} \& \hyperlink{class_simulator_1_1_m_g_system_af1bda4428111fc40ea873825937aa65f}{Get\+Sym\+Table} () const 
+\item 
+void \hyperlink{class_simulator_1_1_m_g_system_ad9e269743b27d21e37323fa150b35397}{Step} (\hyperlink{namespace_simulator_a928f1e2101eba21bb0fe409e8c9ce573}{Cycle\+No} n\+Cycles)
+\item 
+void \hyperlink{class_simulator_1_1_m_g_system_ab8d4d93c02039747a509a825545ae0c0}{Abort} ()
+\item 
+\hyperlink{class_simulator_1_1_m_g_system_a2892e11681fffba8f75f1aa228f93465}{M\+G\+System} (\hyperlink{class_config}{Config} \&config, bool quiet)
+\item 
+\hyperlink{class_simulator_1_1_m_g_system_ab7889c3c41f5849898b5a46921ee4b8b}{M\+G\+System} (const \hyperlink{class_simulator_1_1_m_g_system}{M\+G\+System} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1_m_g_system}{M\+G\+System} \& \hyperlink{class_simulator_1_1_m_g_system_aed5750793c6a16c307928974ceb2c485}{operator=} (const \hyperlink{class_simulator_1_1_m_g_system}{M\+G\+System} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1_m_g_system_a1ea24e636f32f64ef8a4401c9a91f09e}{$\sim$\+M\+G\+System} ()
+\item 
+void \hyperlink{class_simulator_1_1_m_g_system_a43a489ab7c6d18a8f6ca185b44d5fbad}{Dump\+State} (std\+::ostream \&os)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_simulator_1_1_m_g_system_ae7bb90912b7e1348ab3ddefa4e8bc431}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!object\+\_\+map\+\_\+t@{object\+\_\+map\+\_\+t}}
+\index{object\+\_\+map\+\_\+t@{object\+\_\+map\+\_\+t}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{object\+\_\+map\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$std\+::string, {\bf Object}$\ast$$>$ {\bf Simulator\+::\+M\+G\+System\+::object\+\_\+map\+\_\+t}}}\label{class_simulator_1_1_m_g_system_ae7bb90912b7e1348ab3ddefa4e8bc431}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_m_g_system_a2892e11681fffba8f75f1aa228f93465}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!M\+G\+System@{M\+G\+System}}
+\index{M\+G\+System@{M\+G\+System}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{M\+G\+System}]{\setlength{\rightskip}{0pt plus 5cm}M\+G\+System\+::\+M\+G\+System (
+\begin{DoxyParamCaption}
+\item[{{\bf Config} \&}]{config, }
+\item[{bool}]{quiet}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_m_g_system_a2892e11681fffba8f75f1aa228f93465}
+\hypertarget{class_simulator_1_1_m_g_system_ab7889c3c41f5849898b5a46921ee4b8b}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!M\+G\+System@{M\+G\+System}}
+\index{M\+G\+System@{M\+G\+System}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{M\+G\+System}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+M\+G\+System\+::\+M\+G\+System (
+\begin{DoxyParamCaption}
+\item[{const {\bf M\+G\+System} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_m_g_system_ab7889c3c41f5849898b5a46921ee4b8b}
+\hypertarget{class_simulator_1_1_m_g_system_a1ea24e636f32f64ef8a4401c9a91f09e}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!````~M\+G\+System@{$\sim$\+M\+G\+System}}
+\index{````~M\+G\+System@{$\sim$\+M\+G\+System}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{$\sim$\+M\+G\+System}]{\setlength{\rightskip}{0pt plus 5cm}M\+G\+System\+::$\sim$\+M\+G\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_m_g_system_a1ea24e636f32f64ef8a4401c9a91f09e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_m_g_system_ab8d4d93c02039747a509a825545ae0c0}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Abort@{Abort}}
+\index{Abort@{Abort}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Abort}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+M\+G\+System\+::\+Abort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_m_g_system_ab8d4d93c02039747a509a825545ae0c0}
+\hypertarget{class_simulator_1_1_m_g_system_a7bfbc3bb9278d876f45a141cbeb438f2}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Disassemble@{Disassemble}}
+\index{Disassemble@{Disassemble}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Disassemble}]{\setlength{\rightskip}{0pt plus 5cm}void M\+G\+System\+::\+Disassemble (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{addr, }
+\item[{size\+\_\+t}]{sz = {\ttfamily 64}}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_m_g_system_a7bfbc3bb9278d876f45a141cbeb438f2}
+\hypertarget{class_simulator_1_1_m_g_system_aa323f6da24b64c857dc934b6f79e8ef3}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Dump\+Area@{Dump\+Area}}
+\index{Dump\+Area@{Dump\+Area}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Dump\+Area}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+M\+G\+System\+::\+Dump\+Area (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{size\+\_\+t}]{tech}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_m_g_system_aa323f6da24b64c857dc934b6f79e8ef3}
+\hypertarget{class_simulator_1_1_m_g_system_a43a489ab7c6d18a8f6ca185b44d5fbad}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Dump\+State@{Dump\+State}}
+\index{Dump\+State@{Dump\+State}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Dump\+State}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+M\+G\+System\+::\+Dump\+State (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_m_g_system_a43a489ab7c6d18a8f6ca185b44d5fbad}
+\hypertarget{class_simulator_1_1_m_g_system_aa871dffcaaca19cac5c80f9523a96cae}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Get\+Components@{Get\+Components}}
+\index{Get\+Components@{Get\+Components}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Get\+Components}]{\setlength{\rightskip}{0pt plus 5cm}map$<$ string, {\bf Object} $\ast$ $>$ M\+G\+System\+::\+Get\+Components (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{pat = {\ttfamily \char`\"{}$\ast$\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_m_g_system_aa871dffcaaca19cac5c80f9523a96cae}
+\hypertarget{class_simulator_1_1_m_g_system_aea36c14f94f755b42017a109856be4f5}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Get\+Config@{Get\+Config}}
+\index{Get\+Config@{Get\+Config}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Get\+Config}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Config}\& Simulator\+::\+M\+G\+System\+::\+Get\+Config (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_m_g_system_aea36c14f94f755b42017a109856be4f5}
+\hypertarget{class_simulator_1_1_m_g_system_ad6fa1e1f162df20be24e546fb25b80f8}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Get\+Debug\+Mode@{Get\+Debug\+Mode}}
+\index{Get\+Debug\+Mode@{Get\+Debug\+Mode}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Get\+Debug\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}int Simulator\+::\+M\+G\+System\+::\+Get\+Debug\+Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_m_g_system_ad6fa1e1f162df20be24e546fb25b80f8}
+\hypertarget{class_simulator_1_1_m_g_system_a8e264226f2c197bffa2c7e504f861db4}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Get\+Flop@{Get\+Flop}}
+\index{Get\+Flop@{Get\+Flop}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Get\+Flop}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t M\+G\+System\+::\+Get\+Flop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_m_g_system_a8e264226f2c197bffa2c7e504f861db4}
+\hypertarget{class_simulator_1_1_m_g_system_a93dcedf29365892cff8900a555d97a83}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Get\+Kernel@{Get\+Kernel}}
+\index{Get\+Kernel@{Get\+Kernel}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Get\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Kernel}\& Simulator\+::\+M\+G\+System\+::\+Get\+Kernel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_m_g_system_a93dcedf29365892cff8900a555d97a83}
+\hypertarget{class_simulator_1_1_m_g_system_a3f167c3183128c73a2b2b5ed5441764b}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Get\+Kernel@{Get\+Kernel}}
+\index{Get\+Kernel@{Get\+Kernel}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Get\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kernel}\& Simulator\+::\+M\+G\+System\+::\+Get\+Kernel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_m_g_system_a3f167c3183128c73a2b2b5ed5441764b}
+\hypertarget{class_simulator_1_1_m_g_system_aff1496e896efdac9bca1328e35e47685}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Get\+Op@{Get\+Op}}
+\index{Get\+Op@{Get\+Op}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Get\+Op}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t M\+G\+System\+::\+Get\+Op (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_m_g_system_aff1496e896efdac9bca1328e35e47685}
+\hypertarget{class_simulator_1_1_m_g_system_af1bda4428111fc40ea873825937aa65f}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Get\+Sym\+Table@{Get\+Sym\+Table}}
+\index{Get\+Sym\+Table@{Get\+Sym\+Table}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Get\+Sym\+Table}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Symbol\+Table}\& Simulator\+::\+M\+G\+System\+::\+Get\+Sym\+Table (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_m_g_system_af1bda4428111fc40ea873825937aa65f}
+\hypertarget{class_simulator_1_1_m_g_system_aed5750793c6a16c307928974ceb2c485}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!operator=@{operator=}}
+\index{operator=@{operator=}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+G\+System}\& Simulator\+::\+M\+G\+System\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf M\+G\+System} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_m_g_system_aed5750793c6a16c307928974ceb2c485}
+\hypertarget{class_simulator_1_1_m_g_system_af82584c8fefb2a83d01084ec9c68adaf}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Print\+All\+Family\+Completions@{Print\+All\+Family\+Completions}}
+\index{Print\+All\+Family\+Completions@{Print\+All\+Family\+Completions}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Print\+All\+Family\+Completions}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+M\+G\+System\+::\+Print\+All\+Family\+Completions (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_m_g_system_af82584c8fefb2a83d01084ec9c68adaf}
+\hypertarget{class_simulator_1_1_m_g_system_ab6c36f6d9f20261d5be77ec65ed9e1ff}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Print\+All\+Statistics@{Print\+All\+Statistics}}
+\index{Print\+All\+Statistics@{Print\+All\+Statistics}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Print\+All\+Statistics}]{\setlength{\rightskip}{0pt plus 5cm}void M\+G\+System\+::\+Print\+All\+Statistics (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_m_g_system_ab6c36f6d9f20261d5be77ec65ed9e1ff}
+\hypertarget{class_simulator_1_1_m_g_system_a09db598cea8d6fadb9f20104f455e7a0}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Print\+Components@{Print\+Components}}
+\index{Print\+Components@{Print\+Components}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Print\+Components}]{\setlength{\rightskip}{0pt plus 5cm}void M\+G\+System\+::\+Print\+Components (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const std\+::string \&}]{pat = {\ttfamily \char`\"{}$\ast$\char`\"{}}, }
+\item[{size\+\_\+t}]{levels = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_m_g_system_a09db598cea8d6fadb9f20104f455e7a0}
+\hypertarget{class_simulator_1_1_m_g_system_a7b0d5a94676972837dfd3c7e6fce8d86}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Print\+Core\+Stats@{Print\+Core\+Stats}}
+\index{Print\+Core\+Stats@{Print\+Core\+Stats}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Print\+Core\+Stats}]{\setlength{\rightskip}{0pt plus 5cm}void M\+G\+System\+::\+Print\+Core\+Stats (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_m_g_system_a7b0d5a94676972837dfd3c7e6fce8d86}
+\hypertarget{class_simulator_1_1_m_g_system_a2d29a2d1e0ce3286002856a1f4e89018}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Print\+Family\+Completions@{Print\+Family\+Completions}}
+\index{Print\+Family\+Completions@{Print\+Family\+Completions}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Print\+Family\+Completions}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+M\+G\+System\+::\+Print\+Family\+Completions (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_m_g_system_a2d29a2d1e0ce3286002856a1f4e89018}
+\hypertarget{class_simulator_1_1_m_g_system_ad711cea3becfd24227b5e867e56730de}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Print\+Memory\+Statistics@{Print\+Memory\+Statistics}}
+\index{Print\+Memory\+Statistics@{Print\+Memory\+Statistics}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Print\+Memory\+Statistics}]{\setlength{\rightskip}{0pt plus 5cm}void M\+G\+System\+::\+Print\+Memory\+Statistics (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_m_g_system_ad711cea3becfd24227b5e867e56730de}
+\hypertarget{class_simulator_1_1_m_g_system_a9937459418531c9c90b581ee986bb38f}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Print\+Processes@{Print\+Processes}}
+\index{Print\+Processes@{Print\+Processes}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Print\+Processes}]{\setlength{\rightskip}{0pt plus 5cm}void M\+G\+System\+::\+Print\+Processes (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const std\+::string \&}]{pat = {\ttfamily \char`\"{}$\ast$\char`\"{}}}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_m_g_system_a9937459418531c9c90b581ee986bb38f}
+\hypertarget{class_simulator_1_1_m_g_system_a05765ebef83c012240acfb15d5acf2d6}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Print\+Reg\+File\+Async\+Port\+Activity@{Print\+Reg\+File\+Async\+Port\+Activity}}
+\index{Print\+Reg\+File\+Async\+Port\+Activity@{Print\+Reg\+File\+Async\+Port\+Activity}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Print\+Reg\+File\+Async\+Port\+Activity}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+M\+G\+System\+::\+Print\+Reg\+File\+Async\+Port\+Activity (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_m_g_system_a05765ebef83c012240acfb15d5acf2d6}
+\hypertarget{class_simulator_1_1_m_g_system_aa8c99d0706de8bf84a5de8975715a593}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Print\+State@{Print\+State}}
+\index{Print\+State@{Print\+State}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Print\+State}]{\setlength{\rightskip}{0pt plus 5cm}void M\+G\+System\+::\+Print\+State (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_m_g_system_aa8c99d0706de8bf84a5de8975715a593}
+\hypertarget{class_simulator_1_1_m_g_system_acfe54d4c871865a4ddfaa857a6ca9bb3}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Set\+Debug\+Mode@{Set\+Debug\+Mode}}
+\index{Set\+Debug\+Mode@{Set\+Debug\+Mode}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Set\+Debug\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+M\+G\+System\+::\+Set\+Debug\+Mode (
+\begin{DoxyParamCaption}
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_m_g_system_acfe54d4c871865a4ddfaa857a6ca9bb3}
+\hypertarget{class_simulator_1_1_m_g_system_ad9e269743b27d21e37323fa150b35397}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Step@{Step}}
+\index{Step@{Step}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Step}]{\setlength{\rightskip}{0pt plus 5cm}void M\+G\+System\+::\+Step (
+\begin{DoxyParamCaption}
+\item[{{\bf Cycle\+No}}]{n\+Cycles}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_m_g_system_ad9e269743b27d21e37323fa150b35397}
+\hypertarget{class_simulator_1_1_m_g_system_acf2d385933a262004c030f86cd3020ac}{\index{Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}!Toggle\+Debug\+Mode@{Toggle\+Debug\+Mode}}
+\index{Toggle\+Debug\+Mode@{Toggle\+Debug\+Mode}!Simulator\+::\+M\+G\+System@{Simulator\+::\+M\+G\+System}}
+\subsubsection[{Toggle\+Debug\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+M\+G\+System\+::\+Toggle\+Debug\+Mode (
+\begin{DoxyParamCaption}
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_m_g_system_acf2d385933a262004c030f86cd3020ac}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/\hyperlink{_m_g_system_8h}{M\+G\+System.\+h}\item 
+arch/\hyperlink{area_8cpp}{area.\+cpp}\item 
+arch/\hyperlink{_m_g_system_8cpp}{M\+G\+System.\+cpp}\end{DoxyCompactItemize}

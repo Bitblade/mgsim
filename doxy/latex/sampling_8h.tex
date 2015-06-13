@@ -1,0 +1,155 @@
+\hypertarget{sampling_8h}{\section{sim/sampling.h File Reference}
+\label{sampling_8h}\index{sim/sampling.\+h@{sim/sampling.\+h}}
+}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct__sv__detect__type}{\+\_\+sv\+\_\+detect\+\_\+type$<$ T $>$}
+\item 
+struct \hyperlink{struct__sv__detect__type_3_01float_01_4}{\+\_\+sv\+\_\+detect\+\_\+type$<$ float $>$}
+\item 
+struct \hyperlink{struct__sv__detect__type_3_01double_01_4}{\+\_\+sv\+\_\+detect\+\_\+type$<$ double $>$}
+\item 
+class \hyperlink{class_binary_sampler}{Binary\+Sampler}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{sampling_8h_ac8eb801e371d0f08880da6835f444653}{Register\+Sample\+Variable\+In\+Object}(var, cat,...)~\hyperlink{sampling_8h_a242612ac126b054380c2b3833f9354bc}{Register\+Sample\+Variable}(var, Get\+F\+Q\+N() + '\+:' + (\#var + 2) , cat, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{sampling_8h_a2bd4506fa06e7a2ab1e14d4297c0b850}{Register\+Sample\+Variable\+In\+Object\+With\+Name}(var, \hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, cat,...)~\hyperlink{sampling_8h_a242612ac126b054380c2b3833f9354bc}{Register\+Sample\+Variable}(var, Get\+F\+Q\+N() + '\+:' + \hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, cat, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{sampling_8h_aebe1c9f7e0bdb2dfac88bf77cf6c695e}{Sample\+Variable\+Data\+Type} \{ \hyperlink{sampling_8h_aebe1c9f7e0bdb2dfac88bf77cf6c695eab28043966ee32c64d4952f244e45d0cc}{S\+V\+\_\+\+I\+N\+T\+E\+G\+E\+R}, 
+\hyperlink{sampling_8h_aebe1c9f7e0bdb2dfac88bf77cf6c695eaf1631c0808b6554059af5ff3ccdaca15}{S\+V\+\_\+\+F\+L\+O\+A\+T}
+ \}
+\item 
+enum \hyperlink{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71}{Sample\+Variable\+Category} \{ \hyperlink{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71a85adc460f3f68c9d0291b401a7ccdc10}{S\+V\+C\+\_\+\+L\+E\+V\+E\+L}, 
+\hyperlink{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71ae892749277dee5d56d99f1f727ff5295}{S\+V\+C\+\_\+\+S\+T\+A\+T\+E}, 
+\hyperlink{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71a9d15fcef203201e145326c2279a726ed}{S\+V\+C\+\_\+\+W\+A\+T\+E\+R\+M\+A\+R\+K}, 
+\hyperlink{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71ac5cf1beeb6478edede22f23b07fc8f0a}{S\+V\+C\+\_\+\+C\+U\+M\+U\+L\+A\+T\+I\+V\+E}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{sampling_8h_aea31886c7019bbb3ae470b8997b51757}{\+\_\+\+Register\+Sample\+Variable} (void $\ast$, size\+\_\+t, const std\+::string \&, \hyperlink{sampling_8h_aebe1c9f7e0bdb2dfac88bf77cf6c695e}{Sample\+Variable\+Data\+Type}, \hyperlink{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71}{Sample\+Variable\+Category}, void $\ast$)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{sampling_8h_a92d83632d5c26618f56e6e3a4e87bec6}{Register\+Sample\+Variable} (T \&var, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71}{Sample\+Variable\+Category} cat)
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\void \hyperlink{sampling_8h_a242612ac126b054380c2b3833f9354bc}{Register\+Sample\+Variable} (T \&var, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71}{Sample\+Variable\+Category} cat, U max)
+\item 
+void \hyperlink{sampling_8h_ae7f8ae3b3926ddc99d13d2e3488f9a5d}{List\+Sample\+Variables} (std\+::ostream \&os, const std\+::string \&pat=\char`\"{}$\ast$\char`\"{})
+\item 
+bool \hyperlink{sampling_8h_a47244fcd22cd9adaf58824dba3565ce3}{Read\+Sample\+Variables} (std\+::ostream \&os, const std\+::string \&pat=\char`\"{}$\ast$\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{sampling_8h_ac8eb801e371d0f08880da6835f444653}{\index{sampling.\+h@{sampling.\+h}!Register\+Sample\+Variable\+In\+Object@{Register\+Sample\+Variable\+In\+Object}}
+\index{Register\+Sample\+Variable\+In\+Object@{Register\+Sample\+Variable\+In\+Object}!sampling.\+h@{sampling.\+h}}
+\subsubsection[{Register\+Sample\+Variable\+In\+Object}]{\setlength{\rightskip}{0pt plus 5cm}\#define Register\+Sample\+Variable\+In\+Object(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{cat, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)~{\bf Register\+Sample\+Variable}(var, Get\+F\+Q\+N() + '\+:' + (\#var + 2) , cat, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}}\label{sampling_8h_ac8eb801e371d0f08880da6835f444653}
+\hypertarget{sampling_8h_a2bd4506fa06e7a2ab1e14d4297c0b850}{\index{sampling.\+h@{sampling.\+h}!Register\+Sample\+Variable\+In\+Object\+With\+Name@{Register\+Sample\+Variable\+In\+Object\+With\+Name}}
+\index{Register\+Sample\+Variable\+In\+Object\+With\+Name@{Register\+Sample\+Variable\+In\+Object\+With\+Name}!sampling.\+h@{sampling.\+h}}
+\subsubsection[{Register\+Sample\+Variable\+In\+Object\+With\+Name}]{\setlength{\rightskip}{0pt plus 5cm}\#define Register\+Sample\+Variable\+In\+Object\+With\+Name(
+\begin{DoxyParamCaption}
+\item[{}]{var, }
+\item[{}]{{\bf name}, }
+\item[{}]{cat, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)~{\bf Register\+Sample\+Variable}(var, Get\+F\+Q\+N() + '\+:' + {\bf name}, cat, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}}\label{sampling_8h_a2bd4506fa06e7a2ab1e14d4297c0b850}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71}{\index{sampling.\+h@{sampling.\+h}!Sample\+Variable\+Category@{Sample\+Variable\+Category}}
+\index{Sample\+Variable\+Category@{Sample\+Variable\+Category}!sampling.\+h@{sampling.\+h}}
+\subsubsection[{Sample\+Variable\+Category}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Sample\+Variable\+Category}}}\label{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+V\+C\+\_\+\+L\+E\+V\+E\+L@{S\+V\+C\+\_\+\+L\+E\+V\+E\+L}!sampling.\+h@{sampling.\+h}}\index{sampling.\+h@{sampling.\+h}!S\+V\+C\+\_\+\+L\+E\+V\+E\+L@{S\+V\+C\+\_\+\+L\+E\+V\+E\+L}}\item[{\em 
+\hypertarget{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71a85adc460f3f68c9d0291b401a7ccdc10}{S\+V\+C\+\_\+\+L\+E\+V\+E\+L}\label{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71a85adc460f3f68c9d0291b401a7ccdc10}
+}]\index{S\+V\+C\+\_\+\+S\+T\+A\+T\+E@{S\+V\+C\+\_\+\+S\+T\+A\+T\+E}!sampling.\+h@{sampling.\+h}}\index{sampling.\+h@{sampling.\+h}!S\+V\+C\+\_\+\+S\+T\+A\+T\+E@{S\+V\+C\+\_\+\+S\+T\+A\+T\+E}}\item[{\em 
+\hypertarget{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71ae892749277dee5d56d99f1f727ff5295}{S\+V\+C\+\_\+\+S\+T\+A\+T\+E}\label{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71ae892749277dee5d56d99f1f727ff5295}
+}]\index{S\+V\+C\+\_\+\+W\+A\+T\+E\+R\+M\+A\+R\+K@{S\+V\+C\+\_\+\+W\+A\+T\+E\+R\+M\+A\+R\+K}!sampling.\+h@{sampling.\+h}}\index{sampling.\+h@{sampling.\+h}!S\+V\+C\+\_\+\+W\+A\+T\+E\+R\+M\+A\+R\+K@{S\+V\+C\+\_\+\+W\+A\+T\+E\+R\+M\+A\+R\+K}}\item[{\em 
+\hypertarget{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71a9d15fcef203201e145326c2279a726ed}{S\+V\+C\+\_\+\+W\+A\+T\+E\+R\+M\+A\+R\+K}\label{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71a9d15fcef203201e145326c2279a726ed}
+}]\index{S\+V\+C\+\_\+\+C\+U\+M\+U\+L\+A\+T\+I\+V\+E@{S\+V\+C\+\_\+\+C\+U\+M\+U\+L\+A\+T\+I\+V\+E}!sampling.\+h@{sampling.\+h}}\index{sampling.\+h@{sampling.\+h}!S\+V\+C\+\_\+\+C\+U\+M\+U\+L\+A\+T\+I\+V\+E@{S\+V\+C\+\_\+\+C\+U\+M\+U\+L\+A\+T\+I\+V\+E}}\item[{\em 
+\hypertarget{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71ac5cf1beeb6478edede22f23b07fc8f0a}{S\+V\+C\+\_\+\+C\+U\+M\+U\+L\+A\+T\+I\+V\+E}\label{sampling_8h_a3c74ca9dc5b22d369ebba2c024a08a71ac5cf1beeb6478edede22f23b07fc8f0a}
+}]\end{description}
+\end{Desc}
+\hypertarget{sampling_8h_aebe1c9f7e0bdb2dfac88bf77cf6c695e}{\index{sampling.\+h@{sampling.\+h}!Sample\+Variable\+Data\+Type@{Sample\+Variable\+Data\+Type}}
+\index{Sample\+Variable\+Data\+Type@{Sample\+Variable\+Data\+Type}!sampling.\+h@{sampling.\+h}}
+\subsubsection[{Sample\+Variable\+Data\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Sample\+Variable\+Data\+Type}}}\label{sampling_8h_aebe1c9f7e0bdb2dfac88bf77cf6c695e}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+V\+\_\+\+I\+N\+T\+E\+G\+E\+R@{S\+V\+\_\+\+I\+N\+T\+E\+G\+E\+R}!sampling.\+h@{sampling.\+h}}\index{sampling.\+h@{sampling.\+h}!S\+V\+\_\+\+I\+N\+T\+E\+G\+E\+R@{S\+V\+\_\+\+I\+N\+T\+E\+G\+E\+R}}\item[{\em 
+\hypertarget{sampling_8h_aebe1c9f7e0bdb2dfac88bf77cf6c695eab28043966ee32c64d4952f244e45d0cc}{S\+V\+\_\+\+I\+N\+T\+E\+G\+E\+R}\label{sampling_8h_aebe1c9f7e0bdb2dfac88bf77cf6c695eab28043966ee32c64d4952f244e45d0cc}
+}]\index{S\+V\+\_\+\+F\+L\+O\+A\+T@{S\+V\+\_\+\+F\+L\+O\+A\+T}!sampling.\+h@{sampling.\+h}}\index{sampling.\+h@{sampling.\+h}!S\+V\+\_\+\+F\+L\+O\+A\+T@{S\+V\+\_\+\+F\+L\+O\+A\+T}}\item[{\em 
+\hypertarget{sampling_8h_aebe1c9f7e0bdb2dfac88bf77cf6c695eaf1631c0808b6554059af5ff3ccdaca15}{S\+V\+\_\+\+F\+L\+O\+A\+T}\label{sampling_8h_aebe1c9f7e0bdb2dfac88bf77cf6c695eaf1631c0808b6554059af5ff3ccdaca15}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{sampling_8h_aea31886c7019bbb3ae470b8997b51757}{\index{sampling.\+h@{sampling.\+h}!\+\_\+\+Register\+Sample\+Variable@{\+\_\+\+Register\+Sample\+Variable}}
+\index{\+\_\+\+Register\+Sample\+Variable@{\+\_\+\+Register\+Sample\+Variable}!sampling.\+h@{sampling.\+h}}
+\subsubsection[{\+\_\+\+Register\+Sample\+Variable}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+\+Register\+Sample\+Variable (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{, }
+\item[{size\+\_\+t}]{, }
+\item[{const std\+::string \&}]{, }
+\item[{{\bf Sample\+Variable\+Data\+Type}}]{, }
+\item[{{\bf Sample\+Variable\+Category}}]{, }
+\item[{void $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{sampling_8h_aea31886c7019bbb3ae470b8997b51757}
+\hypertarget{sampling_8h_ae7f8ae3b3926ddc99d13d2e3488f9a5d}{\index{sampling.\+h@{sampling.\+h}!List\+Sample\+Variables@{List\+Sample\+Variables}}
+\index{List\+Sample\+Variables@{List\+Sample\+Variables}!sampling.\+h@{sampling.\+h}}
+\subsubsection[{List\+Sample\+Variables}]{\setlength{\rightskip}{0pt plus 5cm}void List\+Sample\+Variables (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const std\+::string \&}]{pat = {\ttfamily \char`\"{}$\ast$\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{sampling_8h_ae7f8ae3b3926ddc99d13d2e3488f9a5d}
+\hypertarget{sampling_8h_a47244fcd22cd9adaf58824dba3565ce3}{\index{sampling.\+h@{sampling.\+h}!Read\+Sample\+Variables@{Read\+Sample\+Variables}}
+\index{Read\+Sample\+Variables@{Read\+Sample\+Variables}!sampling.\+h@{sampling.\+h}}
+\subsubsection[{Read\+Sample\+Variables}]{\setlength{\rightskip}{0pt plus 5cm}bool Read\+Sample\+Variables (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const std\+::string \&}]{pat = {\ttfamily \char`\"{}$\ast$\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{sampling_8h_a47244fcd22cd9adaf58824dba3565ce3}
+\hypertarget{sampling_8h_a92d83632d5c26618f56e6e3a4e87bec6}{\index{sampling.\+h@{sampling.\+h}!Register\+Sample\+Variable@{Register\+Sample\+Variable}}
+\index{Register\+Sample\+Variable@{Register\+Sample\+Variable}!sampling.\+h@{sampling.\+h}}
+\subsubsection[{Register\+Sample\+Variable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void Register\+Sample\+Variable (
+\begin{DoxyParamCaption}
+\item[{T \&}]{var, }
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Sample\+Variable\+Category}}]{cat}
+\end{DoxyParamCaption}
+)}}\label{sampling_8h_a92d83632d5c26618f56e6e3a4e87bec6}
+\hypertarget{sampling_8h_a242612ac126b054380c2b3833f9354bc}{\index{sampling.\+h@{sampling.\+h}!Register\+Sample\+Variable@{Register\+Sample\+Variable}}
+\index{Register\+Sample\+Variable@{Register\+Sample\+Variable}!sampling.\+h@{sampling.\+h}}
+\subsubsection[{Register\+Sample\+Variable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename U $>$ void Register\+Sample\+Variable (
+\begin{DoxyParamCaption}
+\item[{T \&}]{var, }
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Sample\+Variable\+Category}}]{cat, }
+\item[{U}]{max}
+\end{DoxyParamCaption}
+)}}\label{sampling_8h_a242612ac126b054380c2b3833f9354bc}

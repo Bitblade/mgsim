@@ -1,7 +1,7 @@
 #ifndef PERFCOUNTERS_H
 #define PERFCOUNTERS_H
 
-#include "IOMatchUnit.h"
+#include "mmu/old/IOMatchUnit.h"
 
 namespace Simulator
 {

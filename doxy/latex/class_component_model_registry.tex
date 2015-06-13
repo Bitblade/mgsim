@@ -1,0 +1,376 @@
+\hypertarget{class_component_model_registry}{\section{Component\+Model\+Registry Class Reference}
+\label{class_component_model_registry}\index{Component\+Model\+Registry@{Component\+Model\+Registry}}
+}
+
+
+{\ttfamily \#include $<$config.\+h$>$}
+
+Inheritance diagram for Component\+Model\+Registry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_component_model_registry}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_component_model_registry_1_1_entity}{Entity}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_component_model_registry_a568f894311c2ad30b305e6b1fd93946a}{register\+Object} (const \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} \&obj, const std\+::string \&objtype)
+\item 
+void \hyperlink{class_component_model_registry_a2a2228ef21439a5215265e49cee6eed9}{register\+Property} (const \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} \&obj, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name})
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{class_component_model_registry_a6b2e1fee7184d8392c47e9865c618a61}{register\+Property} (const \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} \&obj, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, const T \&value)
+\item 
+void \hyperlink{class_component_model_registry_af84094d9ae18ee73e2726b99efd6a014}{register\+Relation} (const \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} \&left, const \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} \&right, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, bool sibling=false, bool bidi=false)
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\void \hyperlink{class_component_model_registry_a429df2e02198d09d3ede691549119657}{register\+Relation} (const T \&left, const U \&right, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, bool sibling=false)
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\void \hyperlink{class_component_model_registry_a3115e14ef7e333f9e7989ed0fd7b0cef}{register\+Bidi\+Relation} (const T \&left, const U \&right, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, bool sibling=false)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{class_component_model_registry_a74afd150d09c9a6c3a9f5ff3e92b3ca7}{register\+Tagged\+Relation} (const \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} \&left, const \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} \&right, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, const T \&value, bool sibling=false, bool bidi=false)
+\item 
+{\footnotesize template$<$typename T , typename U , typename V $>$ }\\void \hyperlink{class_component_model_registry_a28709e521e3e64bbcd349095bee31831}{register\+Tagged\+Relation} (const T \&left, const U \&right, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, const V \&value, bool sibling=false)
+\item 
+{\footnotesize template$<$typename T , typename U , typename V $>$ }\\void \hyperlink{class_component_model_registry_af7d9529c8de84955e3a856241b843640}{register\+Tagged\+Bidi\+Relation} (const T \&left, const U \&right, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, const V \&value, bool sibling=false)
+\item 
+void \hyperlink{class_component_model_registry_adb491194c93c8031b35c256136b03802}{dump\+Component\+Graph} (std\+::ostream \&out, bool display\+\_\+nodeprops=true, bool display\+\_\+linkprops=true)
+\item 
+\hyperlink{class_component_model_registry_a2816959e7e85a75fbd46be4e403f1e3f}{Component\+Model\+Registry} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef const std\+::string $\ast$ \hyperlink{class_component_model_registry_a76ae77a9f2c8f03598f7c45e3450cc49}{Symbol}
+\item 
+typedef const \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} $\ast$ \hyperlink{class_component_model_registry_a315c966cec3143524c002daa7301b054}{Object\+Ref}
+\item 
+typedef const \hyperlink{struct_component_model_registry_1_1_entity}{Entity} $\ast$ \hyperlink{class_component_model_registry_ad5fd4e46e4b78c737db070735c2ffb16}{Entity\+Ref}
+\item 
+typedef std\+::pair$<$ \hyperlink{class_component_model_registry_a76ae77a9f2c8f03598f7c45e3450cc49}{Symbol}, \\*
+\hyperlink{class_component_model_registry_ad5fd4e46e4b78c737db070735c2ffb16}{Entity\+Ref} $>$ \hyperlink{class_component_model_registry_aec59450251d175f19c49a0c020ba3b8f}{Property}
+\item 
+typedef std\+::map$<$ \hyperlink{class_component_model_registry_a315c966cec3143524c002daa7301b054}{Object\+Ref}, \\*
+std\+::vector$<$ \hyperlink{class_component_model_registry_aec59450251d175f19c49a0c020ba3b8f}{Property} $>$ $>$ \hyperlink{class_component_model_registry_af0083198a2d84ecf7d7d668e5b3e4660}{objprops\+\_\+t}
+\item 
+typedef std\+::map$<$ std\+::pair\\*
+$<$ \hyperlink{class_component_model_registry_a315c966cec3143524c002daa7301b054}{Object\+Ref}, std\+::pair\\*
+$<$ \hyperlink{class_component_model_registry_a315c966cec3143524c002daa7301b054}{Object\+Ref}, std\+::pair$<$ bool, \\*
+bool $>$ $>$ $>$, std\+::vector\\*
+$<$ \hyperlink{class_component_model_registry_aec59450251d175f19c49a0c020ba3b8f}{Property} $>$ $>$ \hyperlink{class_component_model_registry_a05e8f9171449fb800c90abee1a698afb}{linkprops\+\_\+t}
+\item 
+typedef std\+::map$<$ \hyperlink{class_component_model_registry_a76ae77a9f2c8f03598f7c45e3450cc49}{Symbol}, \\*
+std\+::vector$<$ \hyperlink{class_component_model_registry_a76ae77a9f2c8f03598f7c45e3450cc49}{Symbol} $>$ $>$ \hyperlink{class_component_model_registry_a8fb4d43b83df65428c1701f659a8acff}{types\+\_\+t}
+\item 
+typedef std\+::map$<$ \hyperlink{class_component_model_registry_a76ae77a9f2c8f03598f7c45e3450cc49}{Symbol}, \\*
+std\+::map$<$ \hyperlink{class_component_model_registry_a76ae77a9f2c8f03598f7c45e3450cc49}{Symbol}, size\+\_\+t $>$ $>$ \hyperlink{class_component_model_registry_a901d7abbb42dbbf185d37d0a342e6564}{typeattrs\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_component_model_registry_a23ca85547bf40688838f7691550fbb1b}{print\+Entity} (std\+::ostream \&os, const \hyperlink{struct_component_model_registry_1_1_entity}{Entity} \&e) const 
+\item 
+\hyperlink{class_component_model_registry_a76ae77a9f2c8f03598f7c45e3450cc49}{Symbol} \hyperlink{class_component_model_registry_a52c0bdf678cfbaa776c11da84b2be8b2}{make\+Symbol} (const std\+::string \&sym)
+\item 
+\hyperlink{class_component_model_registry_a315c966cec3143524c002daa7301b054}{Object\+Ref} \hyperlink{class_component_model_registry_a61f933c47ad1f6df23ecd13c6b8f54fc}{ref\+Object} (const \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} \&obj)
+\item 
+\hyperlink{class_component_model_registry_ad5fd4e46e4b78c737db070735c2ffb16}{Entity\+Ref} \hyperlink{class_component_model_registry_a88be6f902bcef180d1ba7a83c052bd65}{ref\+Entity} (const \hyperlink{class_component_model_registry_a315c966cec3143524c002daa7301b054}{Object\+Ref} \&obj)
+\item 
+\hyperlink{class_component_model_registry_ad5fd4e46e4b78c737db070735c2ffb16}{Entity\+Ref} \hyperlink{class_component_model_registry_aaf0b419f650dc2769ed8fc94b36c585f}{ref\+Entity} (const \hyperlink{class_component_model_registry_a76ae77a9f2c8f03598f7c45e3450cc49}{Symbol} \&sym)
+\item 
+\hyperlink{class_component_model_registry_ad5fd4e46e4b78c737db070735c2ffb16}{Entity\+Ref} \hyperlink{class_component_model_registry_a1db53153b921c0e568558e1c5ef5d413}{ref\+Entity} (const char $\ast$\&str)
+\item 
+\hyperlink{class_component_model_registry_ad5fd4e46e4b78c737db070735c2ffb16}{Entity\+Ref} \hyperlink{class_component_model_registry_a7fea3f5f2901427a6f2a45c86fceeec4}{ref\+Entity} (const std\+::string \&str)
+\item 
+\hyperlink{class_component_model_registry_ad5fd4e46e4b78c737db070735c2ffb16}{Entity\+Ref} \hyperlink{class_component_model_registry_a769c5f97ee004cf96ef0bafaefad2e02}{ref\+Entity} (const uint32\+\_\+t \&val)
+\item 
+\hyperlink{class_component_model_registry_ad5fd4e46e4b78c737db070735c2ffb16}{Entity\+Ref} \hyperlink{class_component_model_registry_ac8b9db2b16f4839e315bc8adda6350c4}{ref\+Entity} (void)
+\item 
+void \hyperlink{class_component_model_registry_a52d78b0bb749e6f8c5151750fb8ab9a8}{rename\+Objects} (void)
+\item 
+void \hyperlink{class_component_model_registry_aeb7b7c79422430e85a2b707045c6aa63}{collect\+Properties\+By\+Type} (void)
+\item 
+virtual \hyperlink{class_component_model_registry_af72d06c3a9416c3dc4070a90a2e6be2b}{$\sim$\+Component\+Model\+Registry} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::set$<$ std\+::string $>$ \hyperlink{class_component_model_registry_ab66f9920fac78cc986138541f0de8383}{m\+\_\+symbols}
+\item 
+std\+::map$<$ \hyperlink{class_component_model_registry_a315c966cec3143524c002daa7301b054}{Object\+Ref}, \hyperlink{class_component_model_registry_a76ae77a9f2c8f03598f7c45e3450cc49}{Symbol} $>$ \hyperlink{class_component_model_registry_ae0e32b8bfee83babf0d403c6e3b64f36}{m\+\_\+objects}
+\item 
+std\+::set$<$ \hyperlink{struct_component_model_registry_1_1_entity}{Entity} $>$ \hyperlink{class_component_model_registry_a2987c2cf0fccf7c4c32beee980548f50}{m\+\_\+entities}
+\item 
+\hyperlink{class_component_model_registry_af0083198a2d84ecf7d7d668e5b3e4660}{objprops\+\_\+t} \hyperlink{class_component_model_registry_a6fb1e8e4fdcc3dd78909affc77fbad56}{m\+\_\+objprops}
+\item 
+\hyperlink{class_component_model_registry_a05e8f9171449fb800c90abee1a698afb}{linkprops\+\_\+t} \hyperlink{class_component_model_registry_a80e6aac08b0471a248b1c9eb1a903f96}{m\+\_\+linkprops}
+\item 
+std\+::map$<$ \hyperlink{class_component_model_registry_a315c966cec3143524c002daa7301b054}{Object\+Ref}, \hyperlink{class_component_model_registry_a76ae77a9f2c8f03598f7c45e3450cc49}{Symbol} $>$ \hyperlink{class_component_model_registry_a41c18375b49c196440c14124ef24ec7e}{m\+\_\+names}
+\item 
+\hyperlink{class_component_model_registry_a8fb4d43b83df65428c1701f659a8acff}{types\+\_\+t} \hyperlink{class_component_model_registry_a306f1c7a15084c47e5b62d1d9854b804}{m\+\_\+types}
+\item 
+\hyperlink{class_component_model_registry_a901d7abbb42dbbf185d37d0a342e6564}{typeattrs\+\_\+t} \hyperlink{class_component_model_registry_a75b5f9994f8c432af4e951f160896652}{m\+\_\+typeattrs}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_component_model_registry}{Component\+Model\+Registry}\+: registry for the component structure and properties after the architecture has been set up. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_component_model_registry_ad5fd4e46e4b78c737db070735c2ffb16}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!Entity\+Ref@{Entity\+Ref}}
+\index{Entity\+Ref@{Entity\+Ref}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{Entity\+Ref}]{\setlength{\rightskip}{0pt plus 5cm}typedef const {\bf Entity}$\ast$ {\bf Component\+Model\+Registry\+::\+Entity\+Ref}\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_ad5fd4e46e4b78c737db070735c2ffb16}
+\hypertarget{class_component_model_registry_a05e8f9171449fb800c90abee1a698afb}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!linkprops\+\_\+t@{linkprops\+\_\+t}}
+\index{linkprops\+\_\+t@{linkprops\+\_\+t}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{linkprops\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$std\+::pair$<${\bf Object\+Ref}, std\+::pair$<${\bf Object\+Ref}, std\+::pair$<$bool, bool$>$ $>$ $>$, std\+::vector$<${\bf Property}$>$ $>$ {\bf Component\+Model\+Registry\+::linkprops\+\_\+t}\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_a05e8f9171449fb800c90abee1a698afb}
+\hypertarget{class_component_model_registry_a315c966cec3143524c002daa7301b054}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!Object\+Ref@{Object\+Ref}}
+\index{Object\+Ref@{Object\+Ref}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{Object\+Ref}]{\setlength{\rightskip}{0pt plus 5cm}typedef const {\bf Simulator\+::\+Object}$\ast$ {\bf Component\+Model\+Registry\+::\+Object\+Ref}\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_a315c966cec3143524c002daa7301b054}
+\hypertarget{class_component_model_registry_af0083198a2d84ecf7d7d668e5b3e4660}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!objprops\+\_\+t@{objprops\+\_\+t}}
+\index{objprops\+\_\+t@{objprops\+\_\+t}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{objprops\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<${\bf Object\+Ref}, std\+::vector$<${\bf Property}$>$ $>$ {\bf Component\+Model\+Registry\+::objprops\+\_\+t}\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_af0083198a2d84ecf7d7d668e5b3e4660}
+\hypertarget{class_component_model_registry_aec59450251d175f19c49a0c020ba3b8f}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!Property@{Property}}
+\index{Property@{Property}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{Property}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::pair$<${\bf Symbol}, {\bf Entity\+Ref}$>$ {\bf Component\+Model\+Registry\+::\+Property}\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_aec59450251d175f19c49a0c020ba3b8f}
+\hypertarget{class_component_model_registry_a76ae77a9f2c8f03598f7c45e3450cc49}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!Symbol@{Symbol}}
+\index{Symbol@{Symbol}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{Symbol}]{\setlength{\rightskip}{0pt plus 5cm}typedef const std\+::string$\ast$ {\bf Component\+Model\+Registry\+::\+Symbol}\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_a76ae77a9f2c8f03598f7c45e3450cc49}
+\hypertarget{class_component_model_registry_a901d7abbb42dbbf185d37d0a342e6564}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!typeattrs\+\_\+t@{typeattrs\+\_\+t}}
+\index{typeattrs\+\_\+t@{typeattrs\+\_\+t}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{typeattrs\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<${\bf Symbol}, std\+::map$<${\bf Symbol}, size\+\_\+t$>$ $>$ {\bf Component\+Model\+Registry\+::typeattrs\+\_\+t}\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_a901d7abbb42dbbf185d37d0a342e6564}
+\hypertarget{class_component_model_registry_a8fb4d43b83df65428c1701f659a8acff}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!types\+\_\+t@{types\+\_\+t}}
+\index{types\+\_\+t@{types\+\_\+t}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{types\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<${\bf Symbol}, std\+::vector$<${\bf Symbol}$>$ $>$ {\bf Component\+Model\+Registry\+::types\+\_\+t}\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_a8fb4d43b83df65428c1701f659a8acff}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_component_model_registry_a2816959e7e85a75fbd46be4e403f1e3f}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\index{Component\+Model\+Registry@{Component\+Model\+Registry}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{Component\+Model\+Registry}]{\setlength{\rightskip}{0pt plus 5cm}Component\+Model\+Registry\+::\+Component\+Model\+Registry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_component_model_registry_a2816959e7e85a75fbd46be4e403f1e3f}
+\hypertarget{class_component_model_registry_af72d06c3a9416c3dc4070a90a2e6be2b}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!````~Component\+Model\+Registry@{$\sim$\+Component\+Model\+Registry}}
+\index{````~Component\+Model\+Registry@{$\sim$\+Component\+Model\+Registry}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{$\sim$\+Component\+Model\+Registry}]{\setlength{\rightskip}{0pt plus 5cm}virtual Component\+Model\+Registry\+::$\sim$\+Component\+Model\+Registry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_component_model_registry_af72d06c3a9416c3dc4070a90a2e6be2b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_component_model_registry_aeb7b7c79422430e85a2b707045c6aa63}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!collect\+Properties\+By\+Type@{collect\+Properties\+By\+Type}}
+\index{collect\+Properties\+By\+Type@{collect\+Properties\+By\+Type}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{collect\+Properties\+By\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Model\+Registry\+::collect\+Properties\+By\+Type (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_aeb7b7c79422430e85a2b707045c6aa63}
+\hypertarget{class_component_model_registry_adb491194c93c8031b35c256136b03802}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!dump\+Component\+Graph@{dump\+Component\+Graph}}
+\index{dump\+Component\+Graph@{dump\+Component\+Graph}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{dump\+Component\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Model\+Registry\+::dump\+Component\+Graph (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{bool}]{display\+\_\+nodeprops = {\ttfamily true}, }
+\item[{bool}]{display\+\_\+linkprops = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{class_component_model_registry_adb491194c93c8031b35c256136b03802}
+\hypertarget{class_component_model_registry_a52c0bdf678cfbaa776c11da84b2be8b2}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!make\+Symbol@{make\+Symbol}}
+\index{make\+Symbol@{make\+Symbol}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{make\+Symbol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component\+Model\+Registry\+::\+Symbol} Component\+Model\+Registry\+::make\+Symbol (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{sym}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_a52c0bdf678cfbaa776c11da84b2be8b2}
+\hypertarget{class_component_model_registry_a23ca85547bf40688838f7691550fbb1b}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!print\+Entity@{print\+Entity}}
+\index{print\+Entity@{print\+Entity}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{print\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Model\+Registry\+::print\+Entity (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Entity} \&}]{e}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_a23ca85547bf40688838f7691550fbb1b}
+\hypertarget{class_component_model_registry_a88be6f902bcef180d1ba7a83c052bd65}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!ref\+Entity@{ref\+Entity}}
+\index{ref\+Entity@{ref\+Entity}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{ref\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component\+Model\+Registry\+::\+Entity\+Ref} Component\+Model\+Registry\+::ref\+Entity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object\+Ref} \&}]{obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_a88be6f902bcef180d1ba7a83c052bd65}
+\hypertarget{class_component_model_registry_aaf0b419f650dc2769ed8fc94b36c585f}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!ref\+Entity@{ref\+Entity}}
+\index{ref\+Entity@{ref\+Entity}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{ref\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component\+Model\+Registry\+::\+Entity\+Ref} Component\+Model\+Registry\+::ref\+Entity (
+\begin{DoxyParamCaption}
+\item[{const {\bf Symbol} \&}]{sym}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_aaf0b419f650dc2769ed8fc94b36c585f}
+\hypertarget{class_component_model_registry_a1db53153b921c0e568558e1c5ef5d413}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!ref\+Entity@{ref\+Entity}}
+\index{ref\+Entity@{ref\+Entity}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{ref\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity\+Ref} Component\+Model\+Registry\+::ref\+Entity (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$\&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_component_model_registry_a1db53153b921c0e568558e1c5ef5d413}
+\hypertarget{class_component_model_registry_a7fea3f5f2901427a6f2a45c86fceeec4}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!ref\+Entity@{ref\+Entity}}
+\index{ref\+Entity@{ref\+Entity}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{ref\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Entity\+Ref} Component\+Model\+Registry\+::ref\+Entity (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_component_model_registry_a7fea3f5f2901427a6f2a45c86fceeec4}
+\hypertarget{class_component_model_registry_a769c5f97ee004cf96ef0bafaefad2e02}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!ref\+Entity@{ref\+Entity}}
+\index{ref\+Entity@{ref\+Entity}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{ref\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component\+Model\+Registry\+::\+Entity\+Ref} Component\+Model\+Registry\+::ref\+Entity (
+\begin{DoxyParamCaption}
+\item[{const uint32\+\_\+t \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_a769c5f97ee004cf96ef0bafaefad2e02}
+\hypertarget{class_component_model_registry_ac8b9db2b16f4839e315bc8adda6350c4}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!ref\+Entity@{ref\+Entity}}
+\index{ref\+Entity@{ref\+Entity}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{ref\+Entity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component\+Model\+Registry\+::\+Entity\+Ref} Component\+Model\+Registry\+::ref\+Entity (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_ac8b9db2b16f4839e315bc8adda6350c4}
+\hypertarget{class_component_model_registry_a61f933c47ad1f6df23ecd13c6b8f54fc}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!ref\+Object@{ref\+Object}}
+\index{ref\+Object@{ref\+Object}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{ref\+Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component\+Model\+Registry\+::\+Object\+Ref} Component\+Model\+Registry\+::ref\+Object (
+\begin{DoxyParamCaption}
+\item[{const {\bf Simulator\+::\+Object} \&}]{obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_a61f933c47ad1f6df23ecd13c6b8f54fc}
+\hypertarget{class_component_model_registry_a3115e14ef7e333f9e7989ed0fd7b0cef}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!register\+Bidi\+Relation@{register\+Bidi\+Relation}}
+\index{register\+Bidi\+Relation@{register\+Bidi\+Relation}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{register\+Bidi\+Relation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename U $>$ void Component\+Model\+Registry\+::register\+Bidi\+Relation (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{left, }
+\item[{const U \&}]{right, }
+\item[{const std\+::string \&}]{name, }
+\item[{bool}]{sibling = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_component_model_registry_a3115e14ef7e333f9e7989ed0fd7b0cef}
+\hypertarget{class_component_model_registry_a568f894311c2ad30b305e6b1fd93946a}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!register\+Object@{register\+Object}}
+\index{register\+Object@{register\+Object}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{register\+Object}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Model\+Registry\+::register\+Object (
+\begin{DoxyParamCaption}
+\item[{const {\bf Simulator\+::\+Object} \&}]{obj, }
+\item[{const std\+::string \&}]{objtype}
+\end{DoxyParamCaption}
+)}}\label{class_component_model_registry_a568f894311c2ad30b305e6b1fd93946a}
+\hypertarget{class_component_model_registry_a2a2228ef21439a5215265e49cee6eed9}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!register\+Property@{register\+Property}}
+\index{register\+Property@{register\+Property}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{register\+Property}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Model\+Registry\+::register\+Property (
+\begin{DoxyParamCaption}
+\item[{const {\bf Simulator\+::\+Object} \&}]{obj, }
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_component_model_registry_a2a2228ef21439a5215265e49cee6eed9}
+\hypertarget{class_component_model_registry_a6b2e1fee7184d8392c47e9865c618a61}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!register\+Property@{register\+Property}}
+\index{register\+Property@{register\+Property}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{register\+Property}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void Component\+Model\+Registry\+::register\+Property (
+\begin{DoxyParamCaption}
+\item[{const {\bf Simulator\+::\+Object} \&}]{obj, }
+\item[{const std\+::string \&}]{name, }
+\item[{const T \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_component_model_registry_a6b2e1fee7184d8392c47e9865c618a61}
+\hypertarget{class_component_model_registry_af84094d9ae18ee73e2726b99efd6a014}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!register\+Relation@{register\+Relation}}
+\index{register\+Relation@{register\+Relation}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{register\+Relation}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Model\+Registry\+::register\+Relation (
+\begin{DoxyParamCaption}
+\item[{const {\bf Simulator\+::\+Object} \&}]{left, }
+\item[{const {\bf Simulator\+::\+Object} \&}]{right, }
+\item[{const std\+::string \&}]{name, }
+\item[{bool}]{sibling = {\ttfamily false}, }
+\item[{bool}]{bidi = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_component_model_registry_af84094d9ae18ee73e2726b99efd6a014}
+\hypertarget{class_component_model_registry_a429df2e02198d09d3ede691549119657}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!register\+Relation@{register\+Relation}}
+\index{register\+Relation@{register\+Relation}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{register\+Relation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename U $>$ void Component\+Model\+Registry\+::register\+Relation (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{left, }
+\item[{const U \&}]{right, }
+\item[{const std\+::string \&}]{name, }
+\item[{bool}]{sibling = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_component_model_registry_a429df2e02198d09d3ede691549119657}
+\hypertarget{class_component_model_registry_af7d9529c8de84955e3a856241b843640}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!register\+Tagged\+Bidi\+Relation@{register\+Tagged\+Bidi\+Relation}}
+\index{register\+Tagged\+Bidi\+Relation@{register\+Tagged\+Bidi\+Relation}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{register\+Tagged\+Bidi\+Relation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename U , typename V $>$ void Component\+Model\+Registry\+::register\+Tagged\+Bidi\+Relation (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{left, }
+\item[{const U \&}]{right, }
+\item[{const std\+::string \&}]{name, }
+\item[{const V \&}]{value, }
+\item[{bool}]{sibling = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_component_model_registry_af7d9529c8de84955e3a856241b843640}
+\hypertarget{class_component_model_registry_a74afd150d09c9a6c3a9f5ff3e92b3ca7}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!register\+Tagged\+Relation@{register\+Tagged\+Relation}}
+\index{register\+Tagged\+Relation@{register\+Tagged\+Relation}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{register\+Tagged\+Relation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void Component\+Model\+Registry\+::register\+Tagged\+Relation (
+\begin{DoxyParamCaption}
+\item[{const {\bf Simulator\+::\+Object} \&}]{left, }
+\item[{const {\bf Simulator\+::\+Object} \&}]{right, }
+\item[{const std\+::string \&}]{name, }
+\item[{const T \&}]{value, }
+\item[{bool}]{sibling = {\ttfamily false}, }
+\item[{bool}]{bidi = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_component_model_registry_a74afd150d09c9a6c3a9f5ff3e92b3ca7}
+\hypertarget{class_component_model_registry_a28709e521e3e64bbcd349095bee31831}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!register\+Tagged\+Relation@{register\+Tagged\+Relation}}
+\index{register\+Tagged\+Relation@{register\+Tagged\+Relation}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{register\+Tagged\+Relation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename U , typename V $>$ void Component\+Model\+Registry\+::register\+Tagged\+Relation (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{left, }
+\item[{const U \&}]{right, }
+\item[{const std\+::string \&}]{name, }
+\item[{const V \&}]{value, }
+\item[{bool}]{sibling = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_component_model_registry_a28709e521e3e64bbcd349095bee31831}
+\hypertarget{class_component_model_registry_a52d78b0bb749e6f8c5151750fb8ab9a8}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!rename\+Objects@{rename\+Objects}}
+\index{rename\+Objects@{rename\+Objects}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{rename\+Objects}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Model\+Registry\+::rename\+Objects (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_a52d78b0bb749e6f8c5151750fb8ab9a8}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_component_model_registry_a2987c2cf0fccf7c4c32beee980548f50}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!m\+\_\+entities@{m\+\_\+entities}}
+\index{m\+\_\+entities@{m\+\_\+entities}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{m\+\_\+entities}]{\setlength{\rightskip}{0pt plus 5cm}std\+::set$<${\bf Entity}$>$ Component\+Model\+Registry\+::m\+\_\+entities\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_a2987c2cf0fccf7c4c32beee980548f50}
+\hypertarget{class_component_model_registry_a80e6aac08b0471a248b1c9eb1a903f96}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!m\+\_\+linkprops@{m\+\_\+linkprops}}
+\index{m\+\_\+linkprops@{m\+\_\+linkprops}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{m\+\_\+linkprops}]{\setlength{\rightskip}{0pt plus 5cm}{\bf linkprops\+\_\+t} Component\+Model\+Registry\+::m\+\_\+linkprops\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_a80e6aac08b0471a248b1c9eb1a903f96}
+\hypertarget{class_component_model_registry_a41c18375b49c196440c14124ef24ec7e}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!m\+\_\+names@{m\+\_\+names}}
+\index{m\+\_\+names@{m\+\_\+names}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{m\+\_\+names}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<${\bf Object\+Ref}, {\bf Symbol}$>$ Component\+Model\+Registry\+::m\+\_\+names\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_a41c18375b49c196440c14124ef24ec7e}
+\hypertarget{class_component_model_registry_ae0e32b8bfee83babf0d403c6e3b64f36}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!m\+\_\+objects@{m\+\_\+objects}}
+\index{m\+\_\+objects@{m\+\_\+objects}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{m\+\_\+objects}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<${\bf Object\+Ref}, {\bf Symbol}$>$ Component\+Model\+Registry\+::m\+\_\+objects\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_ae0e32b8bfee83babf0d403c6e3b64f36}
+\hypertarget{class_component_model_registry_a6fb1e8e4fdcc3dd78909affc77fbad56}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!m\+\_\+objprops@{m\+\_\+objprops}}
+\index{m\+\_\+objprops@{m\+\_\+objprops}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{m\+\_\+objprops}]{\setlength{\rightskip}{0pt plus 5cm}{\bf objprops\+\_\+t} Component\+Model\+Registry\+::m\+\_\+objprops\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_a6fb1e8e4fdcc3dd78909affc77fbad56}
+\hypertarget{class_component_model_registry_ab66f9920fac78cc986138541f0de8383}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!m\+\_\+symbols@{m\+\_\+symbols}}
+\index{m\+\_\+symbols@{m\+\_\+symbols}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{m\+\_\+symbols}]{\setlength{\rightskip}{0pt plus 5cm}std\+::set$<$std\+::string$>$ Component\+Model\+Registry\+::m\+\_\+symbols\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_ab66f9920fac78cc986138541f0de8383}
+\hypertarget{class_component_model_registry_a75b5f9994f8c432af4e951f160896652}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!m\+\_\+typeattrs@{m\+\_\+typeattrs}}
+\index{m\+\_\+typeattrs@{m\+\_\+typeattrs}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{m\+\_\+typeattrs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf typeattrs\+\_\+t} Component\+Model\+Registry\+::m\+\_\+typeattrs\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_a75b5f9994f8c432af4e951f160896652}
+\hypertarget{class_component_model_registry_a306f1c7a15084c47e5b62d1d9854b804}{\index{Component\+Model\+Registry@{Component\+Model\+Registry}!m\+\_\+types@{m\+\_\+types}}
+\index{m\+\_\+types@{m\+\_\+types}!Component\+Model\+Registry@{Component\+Model\+Registry}}
+\subsubsection[{m\+\_\+types}]{\setlength{\rightskip}{0pt plus 5cm}{\bf types\+\_\+t} Component\+Model\+Registry\+::m\+\_\+types\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_component_model_registry_a306f1c7a15084c47e5b62d1d9854b804}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{config_8h}{config.\+h}\item 
+sim/\hyperlink{config_8cpp}{config.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,223 @@
+\hypertarget{class_simulator_1_1_break_point_manager}{\section{Simulator\+:\+:Break\+Point\+Manager Class Reference}
+\label{class_simulator_1_1_break_point_manager}\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+}
+
+
+{\ttfamily \#include $<$breakpoints.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7b}{Break\+Point\+Type} \{ \\*
+\hyperlink{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7baccb2fb913155b4416bf8f54adbc79c97}{F\+E\+T\+C\+H} = 1, 
+\hyperlink{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7ba22cfe04247cd5846d978d8ad19755ec4}{E\+X\+E\+C} = 2, 
+\hyperlink{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7ba7c5132b18f18695faa853ee1bd089b19}{M\+E\+M\+R\+E\+A\+D} = 4, 
+\hyperlink{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7baed5743529528d4fef1fe3202e9ad7aeb}{M\+E\+M\+W\+R\+I\+T\+E} = 8, 
+\\*
+\hyperlink{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7ba55258c41764b4331fd275e45b178e464}{T\+R\+A\+C\+E\+O\+N\+L\+Y} = 16
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_break_point_manager_aca59f29e711bdc9bd94779d66d8c31db}{Break\+Point\+Manager} (\hyperlink{class_simulator_1_1_kernel}{Simulator\+::\+Kernel} \&kernel, \hyperlink{class_simulator_1_1_symbol_table}{Symbol\+Table} $\ast$symtable=0)
+\item 
+\hyperlink{class_simulator_1_1_break_point_manager_a63e7c321d4be88b6592d66eb87e4bd7d}{Break\+Point\+Manager} (const \hyperlink{class_simulator_1_1_break_point_manager}{Break\+Point\+Manager} \&other)
+\item 
+\hyperlink{class_simulator_1_1_break_point_manager}{Break\+Point\+Manager} \& \hyperlink{class_simulator_1_1_break_point_manager_a9bc83b7fec833a21bcc68f93b3f3c591}{operator=} (const \hyperlink{class_simulator_1_1_break_point_manager}{Break\+Point\+Manager} \&other)=delete
+\item 
+void \hyperlink{class_simulator_1_1_break_point_manager_a829d4497ea561c68acfade511c84a20b}{Enable\+Check} (void)
+\item 
+void \hyperlink{class_simulator_1_1_break_point_manager_ac9a420fe4c73465899c35a59bf2f6719}{Disable\+Check} (void)
+\item 
+void \hyperlink{class_simulator_1_1_break_point_manager_af5a8762aeb09e3da6365cee32255ecd2}{Enable\+Break\+Point} (unsigned \hyperlink{mtconf_8c_aa3185401f04d30bd505daebf48c39cc5}{id})
+\item 
+void \hyperlink{class_simulator_1_1_break_point_manager_a03cc25e048450a65df43303e046c3011}{Disable\+Break\+Point} (unsigned \hyperlink{mtconf_8c_aa3185401f04d30bd505daebf48c39cc5}{id})
+\item 
+void \hyperlink{class_simulator_1_1_break_point_manager_a9960fe716c6474b4e7a43b254ed1faee}{Delete\+Break\+Point} (unsigned \hyperlink{mtconf_8c_aa3185401f04d30bd505daebf48c39cc5}{id})
+\item 
+void \hyperlink{class_simulator_1_1_break_point_manager_a9f1e6e644de80d7bba2a66551dda6aac}{Add\+Break\+Point} (Simulator\+::\+Mem\+Addr addr, int type=\hyperlink{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7ba22cfe04247cd5846d978d8ad19755ec4}{E\+X\+E\+C})
+\item 
+void \hyperlink{class_simulator_1_1_break_point_manager_a7d67935bd2646d51307963bcb48163b3}{Add\+Break\+Point} (const std\+::string \&sym, int offset, int type=\hyperlink{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7ba22cfe04247cd5846d978d8ad19755ec4}{E\+X\+E\+C})
+\item 
+void \hyperlink{class_simulator_1_1_break_point_manager_abfcda8bf0a03060188c3a491a9000553}{Clear\+All\+Break\+Points} (void)
+\item 
+void \hyperlink{class_simulator_1_1_break_point_manager_a1c5874f7b1b33a65feabb8b50270f72c}{List\+Break\+Points} (std\+::ostream \&out) const 
+\item 
+void \hyperlink{class_simulator_1_1_break_point_manager_a6c8fece4f41fff6618d40e09cd56a381}{Resume} (void)
+\item 
+void \hyperlink{class_simulator_1_1_break_point_manager_a6ede48c906f70b4ba107b62f1d3a2222}{Report\+Breaks} (std\+::ostream \&out) const 
+\item 
+bool \hyperlink{class_simulator_1_1_break_point_manager_a5748b6f13c95438ab197c4709b9c5db0}{New\+Breaks\+Detected} (void) const 
+\item 
+void \hyperlink{class_simulator_1_1_break_point_manager_a33bf787698426b649ffb4ab7aaad727e}{Check} (int type, Simulator\+::\+Mem\+Addr addr, \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} \&obj)
+\item 
+void \hyperlink{class_simulator_1_1_break_point_manager_a173d134ed8cb70c53823f9e423773d4d}{Set\+Symbol\+Table} (\hyperlink{class_simulator_1_1_symbol_table}{Symbol\+Table} \&symtable)
+\item 
+\hyperlink{class_simulator_1_1_symbol_table}{Symbol\+Table} \& \hyperlink{class_simulator_1_1_break_point_manager_ae2242fce958d0394560440b12fac45d3}{Get\+Symbol\+Table} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7b}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!Break\+Point\+Type@{Break\+Point\+Type}}
+\index{Break\+Point\+Type@{Break\+Point\+Type}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{Break\+Point\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Simulator\+::\+Break\+Point\+Manager\+::\+Break\+Point\+Type}}}\label{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7b}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{F\+E\+T\+C\+H@{F\+E\+T\+C\+H}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!F\+E\+T\+C\+H@{F\+E\+T\+C\+H}}\item[{\em 
+\hypertarget{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7baccb2fb913155b4416bf8f54adbc79c97}{F\+E\+T\+C\+H}\label{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7baccb2fb913155b4416bf8f54adbc79c97}
+}]\index{E\+X\+E\+C@{E\+X\+E\+C}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!E\+X\+E\+C@{E\+X\+E\+C}}\item[{\em 
+\hypertarget{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7ba22cfe04247cd5846d978d8ad19755ec4}{E\+X\+E\+C}\label{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7ba22cfe04247cd5846d978d8ad19755ec4}
+}]\index{M\+E\+M\+R\+E\+A\+D@{M\+E\+M\+R\+E\+A\+D}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!M\+E\+M\+R\+E\+A\+D@{M\+E\+M\+R\+E\+A\+D}}\item[{\em 
+\hypertarget{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7ba7c5132b18f18695faa853ee1bd089b19}{M\+E\+M\+R\+E\+A\+D}\label{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7ba7c5132b18f18695faa853ee1bd089b19}
+}]\index{M\+E\+M\+W\+R\+I\+T\+E@{M\+E\+M\+W\+R\+I\+T\+E}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!M\+E\+M\+W\+R\+I\+T\+E@{M\+E\+M\+W\+R\+I\+T\+E}}\item[{\em 
+\hypertarget{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7baed5743529528d4fef1fe3202e9ad7aeb}{M\+E\+M\+W\+R\+I\+T\+E}\label{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7baed5743529528d4fef1fe3202e9ad7aeb}
+}]\index{T\+R\+A\+C\+E\+O\+N\+L\+Y@{T\+R\+A\+C\+E\+O\+N\+L\+Y}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!T\+R\+A\+C\+E\+O\+N\+L\+Y@{T\+R\+A\+C\+E\+O\+N\+L\+Y}}\item[{\em 
+\hypertarget{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7ba55258c41764b4331fd275e45b178e464}{T\+R\+A\+C\+E\+O\+N\+L\+Y}\label{class_simulator_1_1_break_point_manager_a425072fcb3c0e59e3fb6f300d6afbd7ba55258c41764b4331fd275e45b178e464}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_break_point_manager_aca59f29e711bdc9bd94779d66d8c31db}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!Break\+Point\+Manager@{Break\+Point\+Manager}}
+\index{Break\+Point\+Manager@{Break\+Point\+Manager}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{Break\+Point\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Break\+Point\+Manager\+::\+Break\+Point\+Manager (
+\begin{DoxyParamCaption}
+\item[{{\bf Simulator\+::\+Kernel} \&}]{kernel, }
+\item[{{\bf Symbol\+Table} $\ast$}]{symtable = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_break_point_manager_aca59f29e711bdc9bd94779d66d8c31db}
+\hypertarget{class_simulator_1_1_break_point_manager_a63e7c321d4be88b6592d66eb87e4bd7d}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!Break\+Point\+Manager@{Break\+Point\+Manager}}
+\index{Break\+Point\+Manager@{Break\+Point\+Manager}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{Break\+Point\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Break\+Point\+Manager\+::\+Break\+Point\+Manager (
+\begin{DoxyParamCaption}
+\item[{const {\bf Break\+Point\+Manager} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_break_point_manager_a63e7c321d4be88b6592d66eb87e4bd7d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_break_point_manager_a9f1e6e644de80d7bba2a66551dda6aac}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!Add\+Break\+Point@{Add\+Break\+Point}}
+\index{Add\+Break\+Point@{Add\+Break\+Point}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{Add\+Break\+Point}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Break\+Point\+Manager\+::\+Add\+Break\+Point (
+\begin{DoxyParamCaption}
+\item[{Simulator\+::\+Mem\+Addr}]{addr, }
+\item[{int}]{type = {\ttfamily {\bf E\+X\+E\+C}}}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_break_point_manager_a9f1e6e644de80d7bba2a66551dda6aac}
+\hypertarget{class_simulator_1_1_break_point_manager_a7d67935bd2646d51307963bcb48163b3}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!Add\+Break\+Point@{Add\+Break\+Point}}
+\index{Add\+Break\+Point@{Add\+Break\+Point}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{Add\+Break\+Point}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Break\+Point\+Manager\+::\+Add\+Break\+Point (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{sym, }
+\item[{int}]{offset, }
+\item[{int}]{type = {\ttfamily {\bf E\+X\+E\+C}}}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_break_point_manager_a7d67935bd2646d51307963bcb48163b3}
+\hypertarget{class_simulator_1_1_break_point_manager_a33bf787698426b649ffb4ab7aaad727e}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!Check@{Check}}
+\index{Check@{Check}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{Check}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Break\+Point\+Manager\+::\+Check (
+\begin{DoxyParamCaption}
+\item[{int}]{type, }
+\item[{Simulator\+::\+Mem\+Addr}]{addr, }
+\item[{{\bf Simulator\+::\+Object} \&}]{obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_break_point_manager_a33bf787698426b649ffb4ab7aaad727e}
+\hypertarget{class_simulator_1_1_break_point_manager_abfcda8bf0a03060188c3a491a9000553}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!Clear\+All\+Break\+Points@{Clear\+All\+Break\+Points}}
+\index{Clear\+All\+Break\+Points@{Clear\+All\+Break\+Points}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{Clear\+All\+Break\+Points}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Break\+Point\+Manager\+::\+Clear\+All\+Break\+Points (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_break_point_manager_abfcda8bf0a03060188c3a491a9000553}
+\hypertarget{class_simulator_1_1_break_point_manager_a9960fe716c6474b4e7a43b254ed1faee}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!Delete\+Break\+Point@{Delete\+Break\+Point}}
+\index{Delete\+Break\+Point@{Delete\+Break\+Point}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{Delete\+Break\+Point}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Break\+Point\+Manager\+::\+Delete\+Break\+Point (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_break_point_manager_a9960fe716c6474b4e7a43b254ed1faee}
+\hypertarget{class_simulator_1_1_break_point_manager_a03cc25e048450a65df43303e046c3011}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!Disable\+Break\+Point@{Disable\+Break\+Point}}
+\index{Disable\+Break\+Point@{Disable\+Break\+Point}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{Disable\+Break\+Point}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Break\+Point\+Manager\+::\+Disable\+Break\+Point (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_break_point_manager_a03cc25e048450a65df43303e046c3011}
+\hypertarget{class_simulator_1_1_break_point_manager_ac9a420fe4c73465899c35a59bf2f6719}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!Disable\+Check@{Disable\+Check}}
+\index{Disable\+Check@{Disable\+Check}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{Disable\+Check}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Break\+Point\+Manager\+::\+Disable\+Check (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_break_point_manager_ac9a420fe4c73465899c35a59bf2f6719}
+\hypertarget{class_simulator_1_1_break_point_manager_af5a8762aeb09e3da6365cee32255ecd2}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!Enable\+Break\+Point@{Enable\+Break\+Point}}
+\index{Enable\+Break\+Point@{Enable\+Break\+Point}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{Enable\+Break\+Point}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Break\+Point\+Manager\+::\+Enable\+Break\+Point (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_break_point_manager_af5a8762aeb09e3da6365cee32255ecd2}
+\hypertarget{class_simulator_1_1_break_point_manager_a829d4497ea561c68acfade511c84a20b}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!Enable\+Check@{Enable\+Check}}
+\index{Enable\+Check@{Enable\+Check}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{Enable\+Check}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Break\+Point\+Manager\+::\+Enable\+Check (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_break_point_manager_a829d4497ea561c68acfade511c84a20b}
+\hypertarget{class_simulator_1_1_break_point_manager_ae2242fce958d0394560440b12fac45d3}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!Get\+Symbol\+Table@{Get\+Symbol\+Table}}
+\index{Get\+Symbol\+Table@{Get\+Symbol\+Table}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{Get\+Symbol\+Table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Symbol\+Table}\& Simulator\+::\+Break\+Point\+Manager\+::\+Get\+Symbol\+Table (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_break_point_manager_ae2242fce958d0394560440b12fac45d3}
+\hypertarget{class_simulator_1_1_break_point_manager_a1c5874f7b1b33a65feabb8b50270f72c}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!List\+Break\+Points@{List\+Break\+Points}}
+\index{List\+Break\+Points@{List\+Break\+Points}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{List\+Break\+Points}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Break\+Point\+Manager\+::\+List\+Break\+Points (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_break_point_manager_a1c5874f7b1b33a65feabb8b50270f72c}
+\hypertarget{class_simulator_1_1_break_point_manager_a5748b6f13c95438ab197c4709b9c5db0}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!New\+Breaks\+Detected@{New\+Breaks\+Detected}}
+\index{New\+Breaks\+Detected@{New\+Breaks\+Detected}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{New\+Breaks\+Detected}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+Break\+Point\+Manager\+::\+New\+Breaks\+Detected (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_break_point_manager_a5748b6f13c95438ab197c4709b9c5db0}
+\hypertarget{class_simulator_1_1_break_point_manager_a9bc83b7fec833a21bcc68f93b3f3c591}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!operator=@{operator=}}
+\index{operator=@{operator=}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Break\+Point\+Manager}\& Simulator\+::\+Break\+Point\+Manager\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Break\+Point\+Manager} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_break_point_manager_a9bc83b7fec833a21bcc68f93b3f3c591}
+\hypertarget{class_simulator_1_1_break_point_manager_a6ede48c906f70b4ba107b62f1d3a2222}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!Report\+Breaks@{Report\+Breaks}}
+\index{Report\+Breaks@{Report\+Breaks}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{Report\+Breaks}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Break\+Point\+Manager\+::\+Report\+Breaks (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_break_point_manager_a6ede48c906f70b4ba107b62f1d3a2222}
+\hypertarget{class_simulator_1_1_break_point_manager_a6c8fece4f41fff6618d40e09cd56a381}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!Resume@{Resume}}
+\index{Resume@{Resume}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{Resume}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Break\+Point\+Manager\+::\+Resume (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_break_point_manager_a6c8fece4f41fff6618d40e09cd56a381}
+\hypertarget{class_simulator_1_1_break_point_manager_a173d134ed8cb70c53823f9e423773d4d}{\index{Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}!Set\+Symbol\+Table@{Set\+Symbol\+Table}}
+\index{Set\+Symbol\+Table@{Set\+Symbol\+Table}!Simulator\+::\+Break\+Point\+Manager@{Simulator\+::\+Break\+Point\+Manager}}
+\subsubsection[{Set\+Symbol\+Table}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Break\+Point\+Manager\+::\+Set\+Symbol\+Table (
+\begin{DoxyParamCaption}
+\item[{{\bf Symbol\+Table} \&}]{symtable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_break_point_manager_a173d134ed8cb70c53823f9e423773d4d}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{breakpoints_8h}{breakpoints.\+h}\item 
+sim/\hyperlink{breakpoints_8cpp}{breakpoints.\+cpp}\end{DoxyCompactItemize}

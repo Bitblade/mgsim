@@ -1,0 +1,20 @@
+Process: Write to memory
+================
+- MemoryStage oncycle
+	- Needs to activate? YES
+	- WRITE, so input latch has FULL register.
+		(RegState{RST_: INVALID, EMPTY, WAITING, PENDING, FULL})
+	- Breakpoint
+	- Get (Serialised) byte value of input
+	> Test IOMatchUnit::IsRegisteredWriteAddress
+	>	Search map object for addr in range. map entries: {MemSize, AccessMode{R,W,RW}, MMIOComponent*}
+	
+    > IOMatchUnit::Write
+    >   Search map object again
+    >   Calculate base, offset
+    >   [MMIOComponent]::Write(offset, data, size, fid, tid)
+    > 		Simulator::drisc::MMUInterface::Write(...)
+    > 			Test if offset = integer aligned
+    ? 			WHAT THE HECK!? It's doing some virtual memory stuff using hints
+    ?			Hints are comming from the pipeline. Execute stage is using the same
+    ?			hints as "cmd" 

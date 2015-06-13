@@ -7,13 +7,40 @@
 
 namespace Inspect
 {
+	//MLDCOULDDO Make doxygen comments explaining the InterfaceTypes.
     enum InterfaceTypes
     {
+    	/*
+    	 * MLDNOTE This one is obvious
+    	 */
         None = 0,
+
+
+		/*
+		 * MLDNOTE Not only for static info, may display dynamic values too. @see ActiveROM
+		 */
         Info = 1,
+
+
+    	/*
+    	 * MLDNote Looking at ActiveROM, this seems to be used when the component actually stores data.
+    	 *		   ActiveRom displays it's ranges in Cmd_Info
+    	 */
         Read = 2,
+
+
+		/*
+		 * MLDNOTE Used to enable/disable trace of memory address.
+		 * 		   Could be used more generically, possibly by design.
+		 *  	   Only implemented in CMDA, ZLCDMA
+		 */
         Trace = 4,
+
+		/*
+		 * MLDNOTE Displays status about a (memory) line. Only implemented in CMDA, ZLCDMA
+		 */
         Line = 8,
+
         LastType = Line
     };
 

@@ -1,0 +1,32 @@
+\hypertarget{simtypes_8cpp}{\section{arch/simtypes.cpp File Reference}
+\label{simtypes_8cpp}\index{arch/simtypes.\+cpp@{arch/simtypes.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}simtypes.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$limits$>$}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_simulator}{Simulator}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{namespace_simulator_a9c970ee2ae9969dc3cd1b6aa88916b5d}{Simulator\+::\+Get\+Remote\+Register\+Type\+String} (Remote\+Reg\+Type type)
+\item 
+ostream \& \hyperlink{namespace_simulator_adc7a77459220b9a30df7261db14c6026}{Simulator\+::operator$<$$<$} (ostream \&output, const Reg\+Addr \&reg)
+\item 
+Instruction \hyperlink{namespace_simulator_a62ae125de2c67d20338442f34d782ce8}{Simulator\+::\+Unserialize\+Instruction} (const void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Unserialize an instruction Unserializes an instruction by reading the integer value from memory with an architecture-\/dependent decoding. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{namespace_simulator_afb231dc2ba9490c5439c1c13719ffda6}{Simulator\+::\+Unserialize\+Register} (Reg\+Type type, const void $\ast$data, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Unserialize a register Unserializes a register by reading the integer value from memory with an architecture-\/dependent decoding. \end{DoxyCompactList}\item 
+void \hyperlink{namespace_simulator_a0807c908a0aab9a01b6d03d530dc53bf}{Simulator\+::\+Serialize\+Register} (Reg\+Type type, uint64\+\_\+t value, void $\ast$data, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Serialize a register Serializes a register by writing the integer value to memory in an architecture-\/dependent encoding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$const \hyperlink{namespace_simulator_ac83869ddbe91d60b829877113e17acb0}{Simulator\+::\+Thread\+State\+Names} \mbox{[}T\+S\+T\+\_\+\+N\+U\+M\+S\+T\+A\+T\+E\+S\mbox{]}
+\end{DoxyCompactItemize}

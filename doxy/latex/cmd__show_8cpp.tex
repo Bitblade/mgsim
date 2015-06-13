@@ -1,0 +1,67 @@
+\hypertarget{cmd__show_8cpp}{\section{cli/cmd\+\_\+show.cpp File Reference}
+\label{cmd__show_8cpp}\index{cli/cmd\+\_\+show.\+cpp@{cli/cmd\+\_\+show.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}commands.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$sim/sampling.\+h$>$}\\*
+{\ttfamily \#include $<$arch/dev/\+I\+O\+Device\+Database.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{cmd__show_8cpp_abe73dc73de3774d4230f37faa9ab990a}{cmd\+\_\+show\+\_\+vars} (const vector$<$ string $>$ \&, vector$<$ string $>$ \&args, \hyperlink{structcli__context}{cli\+\_\+context} \&)
+\item 
+bool \hyperlink{cmd__show_8cpp_a37e3270d91e2a2588e277d80cd1c4cec}{cmd\+\_\+show\+\_\+syms} (const vector$<$ string $>$ \&, vector$<$ string $>$ \&args, \hyperlink{structcli__context}{cli\+\_\+context} \&ctx)
+\item 
+bool \hyperlink{cmd__show_8cpp_a4fa6fec11c204702eb5b1c659b60f0b5}{cmd\+\_\+show\+\_\+components} (const vector$<$ string $>$ \&, vector$<$ string $>$ \&args, \hyperlink{structcli__context}{cli\+\_\+context} \&ctx)
+\item 
+bool \hyperlink{cmd__show_8cpp_acee67bda5b138103c4777a703564ef17}{cmd\+\_\+show\+\_\+processes} (const vector$<$ string $>$ \&, vector$<$ string $>$ \&args, \hyperlink{structcli__context}{cli\+\_\+context} \&ctx)
+\item 
+bool \hyperlink{cmd__show_8cpp_a70683760b0dc28fc4ce6e618e866dd79}{cmd\+\_\+show\+\_\+devdb} (const vector$<$ string $>$ \&, vector$<$ string $>$ \&, \hyperlink{structcli__context}{cli\+\_\+context} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{cmd__show_8cpp_a4fa6fec11c204702eb5b1c659b60f0b5}{\index{cmd\+\_\+show.\+cpp@{cmd\+\_\+show.\+cpp}!cmd\+\_\+show\+\_\+components@{cmd\+\_\+show\+\_\+components}}
+\index{cmd\+\_\+show\+\_\+components@{cmd\+\_\+show\+\_\+components}!cmd\+\_\+show.\+cpp@{cmd\+\_\+show.\+cpp}}
+\subsubsection[{cmd\+\_\+show\+\_\+components}]{\setlength{\rightskip}{0pt plus 5cm}bool cmd\+\_\+show\+\_\+components (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ string $>$ \&}]{, }
+\item[{vector$<$ string $>$ \&}]{args, }
+\item[{{\bf cli\+\_\+context} \&}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{cmd__show_8cpp_a4fa6fec11c204702eb5b1c659b60f0b5}
+\hypertarget{cmd__show_8cpp_a70683760b0dc28fc4ce6e618e866dd79}{\index{cmd\+\_\+show.\+cpp@{cmd\+\_\+show.\+cpp}!cmd\+\_\+show\+\_\+devdb@{cmd\+\_\+show\+\_\+devdb}}
+\index{cmd\+\_\+show\+\_\+devdb@{cmd\+\_\+show\+\_\+devdb}!cmd\+\_\+show.\+cpp@{cmd\+\_\+show.\+cpp}}
+\subsubsection[{cmd\+\_\+show\+\_\+devdb}]{\setlength{\rightskip}{0pt plus 5cm}bool cmd\+\_\+show\+\_\+devdb (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ string $>$ \&}]{, }
+\item[{vector$<$ string $>$ \&}]{, }
+\item[{{\bf cli\+\_\+context} \&}]{}
+\end{DoxyParamCaption}
+)}}\label{cmd__show_8cpp_a70683760b0dc28fc4ce6e618e866dd79}
+\hypertarget{cmd__show_8cpp_acee67bda5b138103c4777a703564ef17}{\index{cmd\+\_\+show.\+cpp@{cmd\+\_\+show.\+cpp}!cmd\+\_\+show\+\_\+processes@{cmd\+\_\+show\+\_\+processes}}
+\index{cmd\+\_\+show\+\_\+processes@{cmd\+\_\+show\+\_\+processes}!cmd\+\_\+show.\+cpp@{cmd\+\_\+show.\+cpp}}
+\subsubsection[{cmd\+\_\+show\+\_\+processes}]{\setlength{\rightskip}{0pt plus 5cm}bool cmd\+\_\+show\+\_\+processes (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ string $>$ \&}]{, }
+\item[{vector$<$ string $>$ \&}]{args, }
+\item[{{\bf cli\+\_\+context} \&}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{cmd__show_8cpp_acee67bda5b138103c4777a703564ef17}
+\hypertarget{cmd__show_8cpp_a37e3270d91e2a2588e277d80cd1c4cec}{\index{cmd\+\_\+show.\+cpp@{cmd\+\_\+show.\+cpp}!cmd\+\_\+show\+\_\+syms@{cmd\+\_\+show\+\_\+syms}}
+\index{cmd\+\_\+show\+\_\+syms@{cmd\+\_\+show\+\_\+syms}!cmd\+\_\+show.\+cpp@{cmd\+\_\+show.\+cpp}}
+\subsubsection[{cmd\+\_\+show\+\_\+syms}]{\setlength{\rightskip}{0pt plus 5cm}bool cmd\+\_\+show\+\_\+syms (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ string $>$ \&}]{, }
+\item[{vector$<$ string $>$ \&}]{args, }
+\item[{{\bf cli\+\_\+context} \&}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{cmd__show_8cpp_a37e3270d91e2a2588e277d80cd1c4cec}
+\hypertarget{cmd__show_8cpp_abe73dc73de3774d4230f37faa9ab990a}{\index{cmd\+\_\+show.\+cpp@{cmd\+\_\+show.\+cpp}!cmd\+\_\+show\+\_\+vars@{cmd\+\_\+show\+\_\+vars}}
+\index{cmd\+\_\+show\+\_\+vars@{cmd\+\_\+show\+\_\+vars}!cmd\+\_\+show.\+cpp@{cmd\+\_\+show.\+cpp}}
+\subsubsection[{cmd\+\_\+show\+\_\+vars}]{\setlength{\rightskip}{0pt plus 5cm}bool cmd\+\_\+show\+\_\+vars (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ string $>$ \&}]{, }
+\item[{vector$<$ string $>$ \&}]{args, }
+\item[{{\bf cli\+\_\+context} \&}]{}
+\end{DoxyParamCaption}
+)}}\label{cmd__show_8cpp_abe73dc73de3774d4230f37faa9ab990a}

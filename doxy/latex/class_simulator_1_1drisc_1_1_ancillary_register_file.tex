@@ -1,0 +1,126 @@
+\hypertarget{class_simulator_1_1drisc_1_1_ancillary_register_file}{\section{Simulator\+:\+:drisc\+:\+:Ancillary\+Register\+File Class Reference}
+\label{class_simulator_1_1drisc_1_1_ancillary_register_file}\index{Simulator\+::drisc\+::\+Ancillary\+Register\+File@{Simulator\+::drisc\+::\+Ancillary\+Register\+File}}
+}
+
+
+{\ttfamily \#include $<$Ancillary\+Register\+File.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:drisc\+:\+:Ancillary\+Register\+File\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.929825cm]{class_simulator_1_1drisc_1_1_ancillary_register_file}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_ancillary_register_file_afde874ec5ddcb79b5a5f3176b992cddb}{Ancillary\+Register\+File} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent, \hyperlink{class_config}{Config} \&config)
+\item 
+size\+\_\+t \hyperlink{class_simulator_1_1drisc_1_1_ancillary_register_file_a0ac3171f2a7eab754224d745d512187f}{Get\+Size} () const 
+\item 
+Integer \hyperlink{class_simulator_1_1drisc_1_1_ancillary_register_file_a75607efb134538da4dea7feb2d5caa03}{Read\+Register} (\hyperlink{namespace_simulator_1_1drisc_ad67fa6022bb8dfc914132e37bbba2e97}{A\+R\+Addr} addr) const 
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_ancillary_register_file_a561e7817b28287f2900d209b474aa938}{Write\+Register} (\hyperlink{namespace_simulator_1_1drisc_ad67fa6022bb8dfc914132e37bbba2e97}{A\+R\+Addr} addr, Integer data)
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1drisc_1_1_ancillary_register_file_ad56a4d08a6faf73d117cfe2767e5e9e2}{Read} (Mem\+Addr address, void $\ast$data, Mem\+Size size, \hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} fid, \hyperlink{namespace_simulator_a483cc4ecee1736e895054617672cded5}{T\+I\+D} tid, const \hyperlink{struct_simulator_1_1_reg_addr}{Reg\+Addr} \&writeback)
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1drisc_1_1_ancillary_register_file_a18868afcd222db4d23133218919bf822}{Write} (Mem\+Addr address, const void $\ast$data, Mem\+Size size, \hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} fid, \hyperlink{namespace_simulator_a483cc4ecee1736e895054617672cded5}{T\+I\+D} tid)
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_ancillary_register_file_aa2e8ca48224cb01a0c0b33f9f6f7aa31}{Cmd\+\_\+\+Info} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const 
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_ancillary_register_file_a02d850eea146d21dda48e7d384357022}{Cmd\+\_\+\+Read} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_ancillary_register_file_afde874ec5ddcb79b5a5f3176b992cddb}{\index{Simulator\+::drisc\+::\+Ancillary\+Register\+File@{Simulator\+::drisc\+::\+Ancillary\+Register\+File}!Ancillary\+Register\+File@{Ancillary\+Register\+File}}
+\index{Ancillary\+Register\+File@{Ancillary\+Register\+File}!Simulator\+::drisc\+::\+Ancillary\+Register\+File@{Simulator\+::drisc\+::\+Ancillary\+Register\+File}}
+\subsubsection[{Ancillary\+Register\+File}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+Ancillary\+Register\+File\+::\+Ancillary\+Register\+File (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent, }
+\item[{{\bf Config} \&}]{config}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_ancillary_register_file_afde874ec5ddcb79b5a5f3176b992cddb}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_ancillary_register_file_aa2e8ca48224cb01a0c0b33f9f6f7aa31}{\index{Simulator\+::drisc\+::\+Ancillary\+Register\+File@{Simulator\+::drisc\+::\+Ancillary\+Register\+File}!Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}}
+\index{Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}!Simulator\+::drisc\+::\+Ancillary\+Register\+File@{Simulator\+::drisc\+::\+Ancillary\+Register\+File}}
+\subsubsection[{Cmd\+\_\+\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+Ancillary\+Register\+File\+::\+Cmd\+\_\+\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_ancillary_register_file_aa2e8ca48224cb01a0c0b33f9f6f7aa31}
+\hypertarget{class_simulator_1_1drisc_1_1_ancillary_register_file_a02d850eea146d21dda48e7d384357022}{\index{Simulator\+::drisc\+::\+Ancillary\+Register\+File@{Simulator\+::drisc\+::\+Ancillary\+Register\+File}!Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}}
+\index{Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}!Simulator\+::drisc\+::\+Ancillary\+Register\+File@{Simulator\+::drisc\+::\+Ancillary\+Register\+File}}
+\subsubsection[{Cmd\+\_\+\+Read}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+Ancillary\+Register\+File\+::\+Cmd\+\_\+\+Read (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_ancillary_register_file_a02d850eea146d21dda48e7d384357022}
+\hypertarget{class_simulator_1_1drisc_1_1_ancillary_register_file_a0ac3171f2a7eab754224d745d512187f}{\index{Simulator\+::drisc\+::\+Ancillary\+Register\+File@{Simulator\+::drisc\+::\+Ancillary\+Register\+File}!Get\+Size@{Get\+Size}}
+\index{Get\+Size@{Get\+Size}!Simulator\+::drisc\+::\+Ancillary\+Register\+File@{Simulator\+::drisc\+::\+Ancillary\+Register\+File}}
+\subsubsection[{Get\+Size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Simulator\+::drisc\+::\+Ancillary\+Register\+File\+::\+Get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1drisc_1_1_ancillary_register_file_a0ac3171f2a7eab754224d745d512187f}
+
+
+Implements \hyperlink{class_simulator_1_1drisc_1_1_m_m_i_o_component_ad8f1a93b445f287895949bfe52972346}{Simulator\+::drisc\+::\+M\+M\+I\+O\+Component}.
+
+\hypertarget{class_simulator_1_1drisc_1_1_ancillary_register_file_ad56a4d08a6faf73d117cfe2767e5e9e2}{\index{Simulator\+::drisc\+::\+Ancillary\+Register\+File@{Simulator\+::drisc\+::\+Ancillary\+Register\+File}!Read@{Read}}
+\index{Read@{Read}!Simulator\+::drisc\+::\+Ancillary\+Register\+File@{Simulator\+::drisc\+::\+Ancillary\+Register\+File}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::drisc\+::\+Ancillary\+Register\+File\+::\+Read (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{void $\ast$}]{data, }
+\item[{Mem\+Size}]{size, }
+\item[{{\bf L\+F\+I\+D}}]{fid, }
+\item[{{\bf T\+I\+D}}]{tid, }
+\item[{const {\bf Reg\+Addr} \&}]{writeback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1drisc_1_1_ancillary_register_file_ad56a4d08a6faf73d117cfe2767e5e9e2}
+
+
+Implements \hyperlink{class_simulator_1_1drisc_1_1_m_m_i_o_component_af07e2f3e1280d8d56cab7a59815e7eeb}{Simulator\+::drisc\+::\+M\+M\+I\+O\+Component}.
+
+\hypertarget{class_simulator_1_1drisc_1_1_ancillary_register_file_a75607efb134538da4dea7feb2d5caa03}{\index{Simulator\+::drisc\+::\+Ancillary\+Register\+File@{Simulator\+::drisc\+::\+Ancillary\+Register\+File}!Read\+Register@{Read\+Register}}
+\index{Read\+Register@{Read\+Register}!Simulator\+::drisc\+::\+Ancillary\+Register\+File@{Simulator\+::drisc\+::\+Ancillary\+Register\+File}}
+\subsubsection[{Read\+Register}]{\setlength{\rightskip}{0pt plus 5cm}Integer Simulator\+::drisc\+::\+Ancillary\+Register\+File\+::\+Read\+Register (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+R\+Addr}}]{addr}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_ancillary_register_file_a75607efb134538da4dea7feb2d5caa03}
+\hypertarget{class_simulator_1_1drisc_1_1_ancillary_register_file_a18868afcd222db4d23133218919bf822}{\index{Simulator\+::drisc\+::\+Ancillary\+Register\+File@{Simulator\+::drisc\+::\+Ancillary\+Register\+File}!Write@{Write}}
+\index{Write@{Write}!Simulator\+::drisc\+::\+Ancillary\+Register\+File@{Simulator\+::drisc\+::\+Ancillary\+Register\+File}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::drisc\+::\+Ancillary\+Register\+File\+::\+Write (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{const void $\ast$}]{data, }
+\item[{Mem\+Size}]{size, }
+\item[{{\bf L\+F\+I\+D}}]{fid, }
+\item[{{\bf T\+I\+D}}]{tid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1drisc_1_1_ancillary_register_file_a18868afcd222db4d23133218919bf822}
+
+
+Implements \hyperlink{class_simulator_1_1drisc_1_1_m_m_i_o_component_aab3662058e7a00109b122a1460188a8b}{Simulator\+::drisc\+::\+M\+M\+I\+O\+Component}.
+
+\hypertarget{class_simulator_1_1drisc_1_1_ancillary_register_file_a561e7817b28287f2900d209b474aa938}{\index{Simulator\+::drisc\+::\+Ancillary\+Register\+File@{Simulator\+::drisc\+::\+Ancillary\+Register\+File}!Write\+Register@{Write\+Register}}
+\index{Write\+Register@{Write\+Register}!Simulator\+::drisc\+::\+Ancillary\+Register\+File@{Simulator\+::drisc\+::\+Ancillary\+Register\+File}}
+\subsubsection[{Write\+Register}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+Ancillary\+Register\+File\+::\+Write\+Register (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+R\+Addr}}]{addr, }
+\item[{Integer}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_ancillary_register_file_a561e7817b28287f2900d209b474aa938}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/drisc/mmu/\hyperlink{_ancillary_register_file_8h}{Ancillary\+Register\+File.\+h}\item 
+arch/drisc/mmu/\hyperlink{_ancillary_register_file_8cpp}{Ancillary\+Register\+File.\+cpp}\end{DoxyCompactItemize}

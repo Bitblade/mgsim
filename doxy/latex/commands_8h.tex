@@ -1,0 +1,252 @@
+\hypertarget{commands_8h}{\section{cli/commands.h File Reference}
+\label{commands_8h}\index{cli/commands.\+h@{cli/commands.\+h}}
+}
+{\ttfamily \#include \char`\"{}simreadline.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$sim/monitor.\+h$>$}\\*
+{\ttfamily \#include $<$arch/\+M\+G\+System.\+h$>$}\\*
+{\ttfamily \#include $<$sim/inspect.\+h$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcli__context}{cli\+\_\+context}
+\item 
+struct \hyperlink{structcommand__descriptor}{command\+\_\+descriptor}
+\item 
+struct \hyperlink{structcommand__alias}{command\+\_\+alias}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef bool( \hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} )(const std\+::vector$<$ std\+::string $>$ \&command, std\+::vector$<$ std\+::string $>$ \&args, \hyperlink{structcli__context}{cli\+\_\+context} \&ctx)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{commands_8h_ad845b5eab0385f68e3bda3441d3d01bb}{Expand\+Aliases} (std\+::vector$<$ std\+::string $>$ \&command)
+\item 
+bool \hyperlink{commands_8h_aa6aeba2ea5399a8116673f3c52669a59}{Do\+Command} (std\+::vector$<$ std\+::string $>$ \&command, \hyperlink{structcli__context}{cli\+\_\+context} \&ctx)
+\item 
+bool \hyperlink{commands_8h_a5f2e2090987b41a7d2623998d495454a}{Handle\+Command\+Line} (\hyperlink{structcli__context}{cli\+\_\+context} \&ctx)
+\item 
+void \hyperlink{commands_8h_a3dec4567bdc2302af09fcd76ddad4437}{Print\+Exception} (\hyperlink{class_simulator_1_1_m_g_system}{Simulator\+::\+M\+G\+System} $\ast$sys, std\+::ostream \&out, const std\+::exception \&e)
+\item 
+void \hyperlink{commands_8h_a3c48bb4bbb18a26e7e12a7bb1326bbd8}{Step\+System} (\hyperlink{class_simulator_1_1_m_g_system}{Simulator\+::\+M\+G\+System} \&system, \hyperlink{namespace_simulator_a928f1e2101eba21bb0fe409e8c9ce573}{Simulator\+::\+Cycle\+No} cycles)
+\item 
+{\footnotesize template$<$unsigned Type$>$ }\\void \hyperlink{commands_8h_a16531b48b50c68ee9b88822698878799}{Do\+Object\+Command} (std\+::ostream \&out, \hyperlink{class_simulator_1_1_m_g_system}{Simulator\+::\+M\+G\+System} \&sys, const std\+::string \&pat, std\+::vector$<$ std\+::string $>$ \&args)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a0833abcb55804dabbf1fb011e8d00c02}{cmd\+\_\+aliases}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_abb5e47ef69063fb52d53242341b44862}{cmd\+\_\+bp\+\_\+list}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a0a87b0831c5592ce8285963067b2021f}{cmd\+\_\+bp\+\_\+add}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a0caaebb340a17fe39a72cb06dd7bbb6d}{cmd\+\_\+bp\+\_\+clear}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a44f2d7c95f632a6b43969f1d4ce9fc1b}{cmd\+\_\+bp\+\_\+del}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a83952789e27a7aeb6a0c04187dadc209}{cmd\+\_\+bp\+\_\+disable}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a998eb2d4a6a3ca0db1cce5767a706c35}{cmd\+\_\+bp\+\_\+enable}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a2d709b730ccf27e11bcc53a83f062b64}{cmd\+\_\+bp\+\_\+off}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_afd0c32e55be290a38e743b1cbfc8c62f}{cmd\+\_\+bp\+\_\+on}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a267723a38c1fc003e60bb03c4528daf3}{cmd\+\_\+bp\+\_\+state}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_afa35f0dc9bac3473efd2bd48bb406a02}{cmd\+\_\+disas}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a878f10d0804cc1fae6c55bfbea01c2ce}{cmd\+\_\+help}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_aeaa1d2d46118721d1d1355d32f442a20}{cmd\+\_\+info}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a3c80dff5287320a2d75202155fc1d148}{cmd\+\_\+line}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_aa263b9781e93f03180b2705d735d9d79}{cmd\+\_\+lookup}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a2a987db77f6a1135b96d040613c0d23d}{cmd\+\_\+quit}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a58660f7af4d2acfdc1a8eae0772bd49c}{cmd\+\_\+inspect}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a77c3a5731ceebcce9f3c2e4838972091}{cmd\+\_\+run}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a7ce6591ce2fee46cfce2ca920a34d550}{cmd\+\_\+show\+\_\+vars}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a799f8582baf33d5a61a5c94bff4c5df2}{cmd\+\_\+show\+\_\+syms}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a2a8ff239e38c26e432da94c3946553dc}{cmd\+\_\+show\+\_\+components}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a6a8525b8b9bc064a72dbd6e4815225f9}{cmd\+\_\+show\+\_\+processes}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_ab72de6587c5f0d7cf448780dcf90df39}{cmd\+\_\+show\+\_\+devdb}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_abf926d4aa9cf8af3e00fd2f8b107cb96}{cmd\+\_\+state}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a9df3b30c3edc3efdb7bccc3d56d79d89}{cmd\+\_\+stats}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_ab5152c5422b3ec57040a526753703909}{cmd\+\_\+trace\+\_\+show}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_a341ed4bb81307d03f7e2fa2734ec13e3}{cmd\+\_\+trace\+\_\+debug}
+\item 
+\hyperlink{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{command\+\_\+handler} \hyperlink{commands_8h_aa3b7dcd9c9c51305fa3fa57640b8daff}{cmd\+\_\+trace\+\_\+line}
+\item 
+const \hyperlink{structcommand__descriptor}{command\+\_\+descriptor} \hyperlink{commands_8h_a83ea1c0029dc05dcedd7f274c65b07b5}{command\+\_\+table} \mbox{[}$\,$\mbox{]}
+\item 
+const \hyperlink{structcommand__alias}{command\+\_\+alias} \hyperlink{commands_8h_ac129745a1421d708670137a4402695c3}{alias\+\_\+table} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}{\index{commands.\+h@{commands.\+h}!command\+\_\+handler@{command\+\_\+handler}}
+\index{command\+\_\+handler@{command\+\_\+handler}!commands.\+h@{commands.\+h}}
+\subsubsection[{command\+\_\+handler}]{\setlength{\rightskip}{0pt plus 5cm}typedef bool( command\+\_\+handler)(const std\+::vector$<$ std\+::string $>$ \&command, std\+::vector$<$ std\+::string $>$ \&args, {\bf cli\+\_\+context} \&ctx)}}\label{commands_8h_a4f73e3beca0296e4da2d4c609b02c5de}
+
+
+\subsection{Function Documentation}
+\hypertarget{commands_8h_aa6aeba2ea5399a8116673f3c52669a59}{\index{commands.\+h@{commands.\+h}!Do\+Command@{Do\+Command}}
+\index{Do\+Command@{Do\+Command}!commands.\+h@{commands.\+h}}
+\subsubsection[{Do\+Command}]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Command (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$ \&}]{command, }
+\item[{{\bf cli\+\_\+context} \&}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{commands_8h_aa6aeba2ea5399a8116673f3c52669a59}
+\hypertarget{commands_8h_a16531b48b50c68ee9b88822698878799}{\index{commands.\+h@{commands.\+h}!Do\+Object\+Command@{Do\+Object\+Command}}
+\index{Do\+Object\+Command@{Do\+Object\+Command}!commands.\+h@{commands.\+h}}
+\subsubsection[{Do\+Object\+Command}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned Type$>$ void Do\+Object\+Command (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{{\bf Simulator\+::\+M\+G\+System} \&}]{sys, }
+\item[{const std\+::string \&}]{pat, }
+\item[{std\+::vector$<$ std\+::string $>$ \&}]{args}
+\end{DoxyParamCaption}
+)}}\label{commands_8h_a16531b48b50c68ee9b88822698878799}
+\hypertarget{commands_8h_ad845b5eab0385f68e3bda3441d3d01bb}{\index{commands.\+h@{commands.\+h}!Expand\+Aliases@{Expand\+Aliases}}
+\index{Expand\+Aliases@{Expand\+Aliases}!commands.\+h@{commands.\+h}}
+\subsubsection[{Expand\+Aliases}]{\setlength{\rightskip}{0pt plus 5cm}void Expand\+Aliases (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$ \&}]{command}
+\end{DoxyParamCaption}
+)}}\label{commands_8h_ad845b5eab0385f68e3bda3441d3d01bb}
+\hypertarget{commands_8h_a5f2e2090987b41a7d2623998d495454a}{\index{commands.\+h@{commands.\+h}!Handle\+Command\+Line@{Handle\+Command\+Line}}
+\index{Handle\+Command\+Line@{Handle\+Command\+Line}!commands.\+h@{commands.\+h}}
+\subsubsection[{Handle\+Command\+Line}]{\setlength{\rightskip}{0pt plus 5cm}bool Handle\+Command\+Line (
+\begin{DoxyParamCaption}
+\item[{{\bf cli\+\_\+context} \&}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{commands_8h_a5f2e2090987b41a7d2623998d495454a}
+\hypertarget{commands_8h_a3dec4567bdc2302af09fcd76ddad4437}{\index{commands.\+h@{commands.\+h}!Print\+Exception@{Print\+Exception}}
+\index{Print\+Exception@{Print\+Exception}!commands.\+h@{commands.\+h}}
+\subsubsection[{Print\+Exception}]{\setlength{\rightskip}{0pt plus 5cm}void Print\+Exception (
+\begin{DoxyParamCaption}
+\item[{{\bf Simulator\+::\+M\+G\+System} $\ast$}]{sys, }
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::exception \&}]{e}
+\end{DoxyParamCaption}
+)}}\label{commands_8h_a3dec4567bdc2302af09fcd76ddad4437}
+\hypertarget{commands_8h_a3c48bb4bbb18a26e7e12a7bb1326bbd8}{\index{commands.\+h@{commands.\+h}!Step\+System@{Step\+System}}
+\index{Step\+System@{Step\+System}!commands.\+h@{commands.\+h}}
+\subsubsection[{Step\+System}]{\setlength{\rightskip}{0pt plus 5cm}void Step\+System (
+\begin{DoxyParamCaption}
+\item[{{\bf Simulator\+::\+M\+G\+System} \&}]{system, }
+\item[{{\bf Simulator\+::\+Cycle\+No}}]{cycles}
+\end{DoxyParamCaption}
+)}}\label{commands_8h_a3c48bb4bbb18a26e7e12a7bb1326bbd8}
+
+
+\subsection{Variable Documentation}
+\hypertarget{commands_8h_ac129745a1421d708670137a4402695c3}{\index{commands.\+h@{commands.\+h}!alias\+\_\+table@{alias\+\_\+table}}
+\index{alias\+\_\+table@{alias\+\_\+table}!commands.\+h@{commands.\+h}}
+\subsubsection[{alias\+\_\+table}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf command\+\_\+alias} alias\+\_\+table\mbox{[}$\,$\mbox{]}}}\label{commands_8h_ac129745a1421d708670137a4402695c3}
+\hypertarget{commands_8h_a0833abcb55804dabbf1fb011e8d00c02}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+aliases@{cmd\+\_\+aliases}}
+\index{cmd\+\_\+aliases@{cmd\+\_\+aliases}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+aliases}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+aliases}}\label{commands_8h_a0833abcb55804dabbf1fb011e8d00c02}
+\hypertarget{commands_8h_a0a87b0831c5592ce8285963067b2021f}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+bp\+\_\+add@{cmd\+\_\+bp\+\_\+add}}
+\index{cmd\+\_\+bp\+\_\+add@{cmd\+\_\+bp\+\_\+add}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+bp\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+bp\+\_\+add}}\label{commands_8h_a0a87b0831c5592ce8285963067b2021f}
+\hypertarget{commands_8h_a0caaebb340a17fe39a72cb06dd7bbb6d}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+bp\+\_\+clear@{cmd\+\_\+bp\+\_\+clear}}
+\index{cmd\+\_\+bp\+\_\+clear@{cmd\+\_\+bp\+\_\+clear}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+bp\+\_\+clear}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+bp\+\_\+clear}}\label{commands_8h_a0caaebb340a17fe39a72cb06dd7bbb6d}
+\hypertarget{commands_8h_a44f2d7c95f632a6b43969f1d4ce9fc1b}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+bp\+\_\+del@{cmd\+\_\+bp\+\_\+del}}
+\index{cmd\+\_\+bp\+\_\+del@{cmd\+\_\+bp\+\_\+del}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+bp\+\_\+del}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+bp\+\_\+del}}\label{commands_8h_a44f2d7c95f632a6b43969f1d4ce9fc1b}
+\hypertarget{commands_8h_a83952789e27a7aeb6a0c04187dadc209}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+bp\+\_\+disable@{cmd\+\_\+bp\+\_\+disable}}
+\index{cmd\+\_\+bp\+\_\+disable@{cmd\+\_\+bp\+\_\+disable}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+bp\+\_\+disable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+bp\+\_\+disable}}\label{commands_8h_a83952789e27a7aeb6a0c04187dadc209}
+\hypertarget{commands_8h_a998eb2d4a6a3ca0db1cce5767a706c35}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+bp\+\_\+enable@{cmd\+\_\+bp\+\_\+enable}}
+\index{cmd\+\_\+bp\+\_\+enable@{cmd\+\_\+bp\+\_\+enable}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+bp\+\_\+enable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+bp\+\_\+enable}}\label{commands_8h_a998eb2d4a6a3ca0db1cce5767a706c35}
+\hypertarget{commands_8h_abb5e47ef69063fb52d53242341b44862}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+bp\+\_\+list@{cmd\+\_\+bp\+\_\+list}}
+\index{cmd\+\_\+bp\+\_\+list@{cmd\+\_\+bp\+\_\+list}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+bp\+\_\+list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+bp\+\_\+list}}\label{commands_8h_abb5e47ef69063fb52d53242341b44862}
+\hypertarget{commands_8h_a2d709b730ccf27e11bcc53a83f062b64}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+bp\+\_\+off@{cmd\+\_\+bp\+\_\+off}}
+\index{cmd\+\_\+bp\+\_\+off@{cmd\+\_\+bp\+\_\+off}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+bp\+\_\+off}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+bp\+\_\+off}}\label{commands_8h_a2d709b730ccf27e11bcc53a83f062b64}
+\hypertarget{commands_8h_afd0c32e55be290a38e743b1cbfc8c62f}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+bp\+\_\+on@{cmd\+\_\+bp\+\_\+on}}
+\index{cmd\+\_\+bp\+\_\+on@{cmd\+\_\+bp\+\_\+on}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+bp\+\_\+on}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+bp\+\_\+on}}\label{commands_8h_afd0c32e55be290a38e743b1cbfc8c62f}
+\hypertarget{commands_8h_a267723a38c1fc003e60bb03c4528daf3}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+bp\+\_\+state@{cmd\+\_\+bp\+\_\+state}}
+\index{cmd\+\_\+bp\+\_\+state@{cmd\+\_\+bp\+\_\+state}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+bp\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+bp\+\_\+state}}\label{commands_8h_a267723a38c1fc003e60bb03c4528daf3}
+\hypertarget{commands_8h_afa35f0dc9bac3473efd2bd48bb406a02}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+disas@{cmd\+\_\+disas}}
+\index{cmd\+\_\+disas@{cmd\+\_\+disas}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+disas}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+disas}}\label{commands_8h_afa35f0dc9bac3473efd2bd48bb406a02}
+\hypertarget{commands_8h_a878f10d0804cc1fae6c55bfbea01c2ce}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+help@{cmd\+\_\+help}}
+\index{cmd\+\_\+help@{cmd\+\_\+help}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+help}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+help}}\label{commands_8h_a878f10d0804cc1fae6c55bfbea01c2ce}
+\hypertarget{commands_8h_aeaa1d2d46118721d1d1355d32f442a20}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+info@{cmd\+\_\+info}}
+\index{cmd\+\_\+info@{cmd\+\_\+info}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+info}}\label{commands_8h_aeaa1d2d46118721d1d1355d32f442a20}
+\hypertarget{commands_8h_a58660f7af4d2acfdc1a8eae0772bd49c}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+inspect@{cmd\+\_\+inspect}}
+\index{cmd\+\_\+inspect@{cmd\+\_\+inspect}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+inspect}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+inspect}}\label{commands_8h_a58660f7af4d2acfdc1a8eae0772bd49c}
+\hypertarget{commands_8h_a3c80dff5287320a2d75202155fc1d148}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+line@{cmd\+\_\+line}}
+\index{cmd\+\_\+line@{cmd\+\_\+line}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+line}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+line}}\label{commands_8h_a3c80dff5287320a2d75202155fc1d148}
+\hypertarget{commands_8h_aa263b9781e93f03180b2705d735d9d79}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+lookup@{cmd\+\_\+lookup}}
+\index{cmd\+\_\+lookup@{cmd\+\_\+lookup}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+lookup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+lookup}}\label{commands_8h_aa263b9781e93f03180b2705d735d9d79}
+\hypertarget{commands_8h_a2a987db77f6a1135b96d040613c0d23d}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+quit@{cmd\+\_\+quit}}
+\index{cmd\+\_\+quit@{cmd\+\_\+quit}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+quit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+quit}}\label{commands_8h_a2a987db77f6a1135b96d040613c0d23d}
+\hypertarget{commands_8h_a77c3a5731ceebcce9f3c2e4838972091}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+run@{cmd\+\_\+run}}
+\index{cmd\+\_\+run@{cmd\+\_\+run}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+run}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+run}}\label{commands_8h_a77c3a5731ceebcce9f3c2e4838972091}
+\hypertarget{commands_8h_a2a8ff239e38c26e432da94c3946553dc}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+show\+\_\+components@{cmd\+\_\+show\+\_\+components}}
+\index{cmd\+\_\+show\+\_\+components@{cmd\+\_\+show\+\_\+components}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+show\+\_\+components}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+show\+\_\+components}}\label{commands_8h_a2a8ff239e38c26e432da94c3946553dc}
+\hypertarget{commands_8h_ab72de6587c5f0d7cf448780dcf90df39}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+show\+\_\+devdb@{cmd\+\_\+show\+\_\+devdb}}
+\index{cmd\+\_\+show\+\_\+devdb@{cmd\+\_\+show\+\_\+devdb}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+show\+\_\+devdb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+show\+\_\+devdb}}\label{commands_8h_ab72de6587c5f0d7cf448780dcf90df39}
+\hypertarget{commands_8h_a6a8525b8b9bc064a72dbd6e4815225f9}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+show\+\_\+processes@{cmd\+\_\+show\+\_\+processes}}
+\index{cmd\+\_\+show\+\_\+processes@{cmd\+\_\+show\+\_\+processes}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+show\+\_\+processes}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+show\+\_\+processes}}\label{commands_8h_a6a8525b8b9bc064a72dbd6e4815225f9}
+\hypertarget{commands_8h_a799f8582baf33d5a61a5c94bff4c5df2}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+show\+\_\+syms@{cmd\+\_\+show\+\_\+syms}}
+\index{cmd\+\_\+show\+\_\+syms@{cmd\+\_\+show\+\_\+syms}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+show\+\_\+syms}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+show\+\_\+syms}}\label{commands_8h_a799f8582baf33d5a61a5c94bff4c5df2}
+\hypertarget{commands_8h_a7ce6591ce2fee46cfce2ca920a34d550}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+show\+\_\+vars@{cmd\+\_\+show\+\_\+vars}}
+\index{cmd\+\_\+show\+\_\+vars@{cmd\+\_\+show\+\_\+vars}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+show\+\_\+vars}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+show\+\_\+vars}}\label{commands_8h_a7ce6591ce2fee46cfce2ca920a34d550}
+\hypertarget{commands_8h_abf926d4aa9cf8af3e00fd2f8b107cb96}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+state@{cmd\+\_\+state}}
+\index{cmd\+\_\+state@{cmd\+\_\+state}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+state}}\label{commands_8h_abf926d4aa9cf8af3e00fd2f8b107cb96}
+\hypertarget{commands_8h_a9df3b30c3edc3efdb7bccc3d56d79d89}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+stats@{cmd\+\_\+stats}}
+\index{cmd\+\_\+stats@{cmd\+\_\+stats}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+stats}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+stats}}\label{commands_8h_a9df3b30c3edc3efdb7bccc3d56d79d89}
+\hypertarget{commands_8h_a341ed4bb81307d03f7e2fa2734ec13e3}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+trace\+\_\+debug@{cmd\+\_\+trace\+\_\+debug}}
+\index{cmd\+\_\+trace\+\_\+debug@{cmd\+\_\+trace\+\_\+debug}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+trace\+\_\+debug}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+trace\+\_\+debug}}\label{commands_8h_a341ed4bb81307d03f7e2fa2734ec13e3}
+\hypertarget{commands_8h_aa3b7dcd9c9c51305fa3fa57640b8daff}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+trace\+\_\+line@{cmd\+\_\+trace\+\_\+line}}
+\index{cmd\+\_\+trace\+\_\+line@{cmd\+\_\+trace\+\_\+line}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+trace\+\_\+line}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+trace\+\_\+line}}\label{commands_8h_aa3b7dcd9c9c51305fa3fa57640b8daff}
+\hypertarget{commands_8h_ab5152c5422b3ec57040a526753703909}{\index{commands.\+h@{commands.\+h}!cmd\+\_\+trace\+\_\+show@{cmd\+\_\+trace\+\_\+show}}
+\index{cmd\+\_\+trace\+\_\+show@{cmd\+\_\+trace\+\_\+show}!commands.\+h@{commands.\+h}}
+\subsubsection[{cmd\+\_\+trace\+\_\+show}]{\setlength{\rightskip}{0pt plus 5cm}{\bf command\+\_\+handler} cmd\+\_\+trace\+\_\+show}}\label{commands_8h_ab5152c5422b3ec57040a526753703909}
+\hypertarget{commands_8h_a83ea1c0029dc05dcedd7f274c65b07b5}{\index{commands.\+h@{commands.\+h}!command\+\_\+table@{command\+\_\+table}}
+\index{command\+\_\+table@{command\+\_\+table}!commands.\+h@{commands.\+h}}
+\subsubsection[{command\+\_\+table}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf command\+\_\+descriptor} command\+\_\+table\mbox{[}$\,$\mbox{]}}}\label{commands_8h_a83ea1c0029dc05dcedd7f274c65b07b5}

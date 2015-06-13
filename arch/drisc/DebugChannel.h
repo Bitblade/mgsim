@@ -1,9 +1,9 @@
 #ifndef DEBUGCHANNEL_H
 #define DEBUGCHANNEL_H
 
-#include "IOMatchUnit.h"
 #include <iostream>
 
+#include "mmu/MMIOComponent.h"
 namespace Simulator
 {
 namespace drisc

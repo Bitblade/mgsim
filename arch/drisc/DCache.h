@@ -12,6 +12,10 @@ namespace Simulator
 namespace drisc
 {
 
+/*
+ * MLDQUESTION Why doesn't DCache extend Inspect::Interface<Inspect::Info>?
+ * Neither does ICache. ActiveRom does.
+ */
 class DCache : public Object, public IMemoryCallback, public Inspect::Interface<Inspect::Read>
 {
     friend class Simulator::DRISC;

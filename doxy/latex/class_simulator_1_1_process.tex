@@ -1,0 +1,152 @@
+\hypertarget{class_simulator_1_1_process}{\section{Simulator\+:\+:Process Class Reference}
+\label{class_simulator_1_1_process}\index{Simulator\+::\+Process@{Simulator\+::\+Process}}
+}
+
+
+{\ttfamily \#include $<$kernel.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{class_simulator_1_1_process}{Process} $\ast$ \hyperlink{class_simulator_1_1_process_a45e0d809a62e75161a4f319851eefe49}{Get\+Next} () const 
+\item 
+\hyperlink{namespace_simulator_a7b6594cd8ea507163ee6e4d4db4ddad5}{Run\+State} \hyperlink{class_simulator_1_1_process_ae6b3e8d40654ac8edbce88b64d44f925}{Get\+State} () const 
+\item 
+\hyperlink{class_simulator_1_1_object}{Object} $\ast$ \hyperlink{class_simulator_1_1_process_a1fbf0e399a433e98654e2d1b355afec4}{Get\+Object} () const 
+\item 
+std\+::string \hyperlink{class_simulator_1_1_process_a651e8a8cedc9a13f2667524325640c02}{Get\+Name} () const 
+\item 
+void \hyperlink{class_simulator_1_1_process_a81fa6b864242ca842cc64b2485786783}{Deactivate} ()
+\item 
+void \hyperlink{class_simulator_1_1_process_abe655e0c742cc6527b9a4b408ad2f853}{On\+Begin\+Cycle} ()
+\item 
+void \hyperlink{class_simulator_1_1_process_ae33929cc5e8e74c48b7f9c4ca09ae788}{On\+End\+Cycle} () const 
+\item 
+void \hyperlink{class_simulator_1_1_process_a31220f92e88beb3b885eb4cf51cb773e}{On\+Storage\+Access} (const \hyperlink{class_simulator_1_1_storage}{Storage} \&s)
+\item 
+void \hyperlink{class_simulator_1_1_process_ac7671a8abab60b3361cf8fe5eb4b47f8}{Set\+Storage\+Traces} (const \hyperlink{class_simulator_1_1_storage_trace_set}{Storage\+Trace\+Set} \&sl)
+\item 
+\hyperlink{class_simulator_1_1_process_aa2cfb7f220ee42879275381c43fedb31}{Process} (\hyperlink{class_simulator_1_1_object}{Object} \&parent, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, const \hyperlink{class_simulator_1_1delegate}{delegate} \&\hyperlink{class_simulator_1_1delegate}{delegate})
+\item 
+\hyperlink{class_simulator_1_1_process_a08128f1be2125793487e29bf747541a9}{$\sim$\+Process} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::set$<$ const \\*
+\hyperlink{class_simulator_1_1_process}{Process} $\ast$ $>$ \& \hyperlink{class_simulator_1_1_process_a99027b7d48b9801655b25e5866408d59}{Get\+All\+Processes} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_simulator_1_1_process_a3807a3ebd0e05ca8cb4d928025a943d2}{Kernel}
+\item 
+class \hyperlink{class_simulator_1_1_process_a5ae5b1616a53c84525df7446cb4014e2}{Clock}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_process_aa2cfb7f220ee42879275381c43fedb31}{\index{Simulator\+::\+Process@{Simulator\+::\+Process}!Process@{Process}}
+\index{Process@{Process}!Simulator\+::\+Process@{Simulator\+::\+Process}}
+\subsubsection[{Process}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Process\+::\+Process (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} \&}]{parent, }
+\item[{const std\+::string \&}]{name, }
+\item[{const {\bf delegate} \&}]{delegate}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_process_aa2cfb7f220ee42879275381c43fedb31}
+\hypertarget{class_simulator_1_1_process_a08128f1be2125793487e29bf747541a9}{\index{Simulator\+::\+Process@{Simulator\+::\+Process}!````~Process@{$\sim$\+Process}}
+\index{````~Process@{$\sim$\+Process}!Simulator\+::\+Process@{Simulator\+::\+Process}}
+\subsubsection[{$\sim$\+Process}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Process\+::$\sim$\+Process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_process_a08128f1be2125793487e29bf747541a9}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_process_a81fa6b864242ca842cc64b2485786783}{\index{Simulator\+::\+Process@{Simulator\+::\+Process}!Deactivate@{Deactivate}}
+\index{Deactivate@{Deactivate}!Simulator\+::\+Process@{Simulator\+::\+Process}}
+\subsubsection[{Deactivate}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Process\+::\+Deactivate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_process_a81fa6b864242ca842cc64b2485786783}
+\hypertarget{class_simulator_1_1_process_a99027b7d48b9801655b25e5866408d59}{\index{Simulator\+::\+Process@{Simulator\+::\+Process}!Get\+All\+Processes@{Get\+All\+Processes}}
+\index{Get\+All\+Processes@{Get\+All\+Processes}!Simulator\+::\+Process@{Simulator\+::\+Process}}
+\subsubsection[{Get\+All\+Processes}]{\setlength{\rightskip}{0pt plus 5cm}static const std\+::set$<$const {\bf Process}$\ast$$>$\& Simulator\+::\+Process\+::\+Get\+All\+Processes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_simulator_1_1_process_a99027b7d48b9801655b25e5866408d59}
+\hypertarget{class_simulator_1_1_process_a651e8a8cedc9a13f2667524325640c02}{\index{Simulator\+::\+Process@{Simulator\+::\+Process}!Get\+Name@{Get\+Name}}
+\index{Get\+Name@{Get\+Name}!Simulator\+::\+Process@{Simulator\+::\+Process}}
+\subsubsection[{Get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Simulator\+::\+Process\+::\+Get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_process_a651e8a8cedc9a13f2667524325640c02}
+\hypertarget{class_simulator_1_1_process_a45e0d809a62e75161a4f319851eefe49}{\index{Simulator\+::\+Process@{Simulator\+::\+Process}!Get\+Next@{Get\+Next}}
+\index{Get\+Next@{Get\+Next}!Simulator\+::\+Process@{Simulator\+::\+Process}}
+\subsubsection[{Get\+Next}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Process}$\ast$ Simulator\+::\+Process\+::\+Get\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_process_a45e0d809a62e75161a4f319851eefe49}
+\hypertarget{class_simulator_1_1_process_a1fbf0e399a433e98654e2d1b355afec4}{\index{Simulator\+::\+Process@{Simulator\+::\+Process}!Get\+Object@{Get\+Object}}
+\index{Get\+Object@{Get\+Object}!Simulator\+::\+Process@{Simulator\+::\+Process}}
+\subsubsection[{Get\+Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ Simulator\+::\+Process\+::\+Get\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_process_a1fbf0e399a433e98654e2d1b355afec4}
+\hypertarget{class_simulator_1_1_process_ae6b3e8d40654ac8edbce88b64d44f925}{\index{Simulator\+::\+Process@{Simulator\+::\+Process}!Get\+State@{Get\+State}}
+\index{Get\+State@{Get\+State}!Simulator\+::\+Process@{Simulator\+::\+Process}}
+\subsubsection[{Get\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Run\+State} Simulator\+::\+Process\+::\+Get\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_process_ae6b3e8d40654ac8edbce88b64d44f925}
+\hypertarget{class_simulator_1_1_process_abe655e0c742cc6527b9a4b408ad2f853}{\index{Simulator\+::\+Process@{Simulator\+::\+Process}!On\+Begin\+Cycle@{On\+Begin\+Cycle}}
+\index{On\+Begin\+Cycle@{On\+Begin\+Cycle}!Simulator\+::\+Process@{Simulator\+::\+Process}}
+\subsubsection[{On\+Begin\+Cycle}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Process\+::\+On\+Begin\+Cycle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_process_abe655e0c742cc6527b9a4b408ad2f853}
+\hypertarget{class_simulator_1_1_process_ae33929cc5e8e74c48b7f9c4ca09ae788}{\index{Simulator\+::\+Process@{Simulator\+::\+Process}!On\+End\+Cycle@{On\+End\+Cycle}}
+\index{On\+End\+Cycle@{On\+End\+Cycle}!Simulator\+::\+Process@{Simulator\+::\+Process}}
+\subsubsection[{On\+End\+Cycle}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Process\+::\+On\+End\+Cycle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_process_ae33929cc5e8e74c48b7f9c4ca09ae788}
+\hypertarget{class_simulator_1_1_process_a31220f92e88beb3b885eb4cf51cb773e}{\index{Simulator\+::\+Process@{Simulator\+::\+Process}!On\+Storage\+Access@{On\+Storage\+Access}}
+\index{On\+Storage\+Access@{On\+Storage\+Access}!Simulator\+::\+Process@{Simulator\+::\+Process}}
+\subsubsection[{On\+Storage\+Access}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Process\+::\+On\+Storage\+Access (
+\begin{DoxyParamCaption}
+\item[{const {\bf Storage} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_process_a31220f92e88beb3b885eb4cf51cb773e}
+\hypertarget{class_simulator_1_1_process_ac7671a8abab60b3361cf8fe5eb4b47f8}{\index{Simulator\+::\+Process@{Simulator\+::\+Process}!Set\+Storage\+Traces@{Set\+Storage\+Traces}}
+\index{Set\+Storage\+Traces@{Set\+Storage\+Traces}!Simulator\+::\+Process@{Simulator\+::\+Process}}
+\subsubsection[{Set\+Storage\+Traces}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Process\+::\+Set\+Storage\+Traces (
+\begin{DoxyParamCaption}
+\item[{const {\bf Storage\+Trace\+Set} \&}]{sl}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_process_ac7671a8abab60b3361cf8fe5eb4b47f8}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_simulator_1_1_process_a5ae5b1616a53c84525df7446cb4014e2}{\index{Simulator\+::\+Process@{Simulator\+::\+Process}!Clock@{Clock}}
+\index{Clock@{Clock}!Simulator\+::\+Process@{Simulator\+::\+Process}}
+\subsubsection[{Clock}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Clock}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_simulator_1_1_process_a5ae5b1616a53c84525df7446cb4014e2}
+\hypertarget{class_simulator_1_1_process_a3807a3ebd0e05ca8cb4d928025a943d2}{\index{Simulator\+::\+Process@{Simulator\+::\+Process}!Kernel@{Kernel}}
+\index{Kernel@{Kernel}!Simulator\+::\+Process@{Simulator\+::\+Process}}
+\subsubsection[{Kernel}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Kernel}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_simulator_1_1_process_a3807a3ebd0e05ca8cb4d928025a943d2}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{kernel_8h}{kernel.\+h}\item 
+sim/\hyperlink{kernel_8cpp}{kernel.\+cpp}\end{DoxyCompactItemize}

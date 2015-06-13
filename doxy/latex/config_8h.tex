@@ -1,0 +1,63 @@
+\hypertarget{config_8h}{\section{sim/config.h File Reference}
+\label{config_8h}\index{sim/config.\+h@{sim/config.\+h}}
+}
+{\ttfamily \#include \char`\"{}kernel.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}except.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$programs/mgsim.\+h$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$ostream$>$}\\*
+{\ttfamily \#include $<$cerrno$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include $<$inttypes.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_config_map}{Config\+Map}
+\item 
+class \hyperlink{class_input_config_registry}{Input\+Config\+Registry}
+\item 
+class \hyperlink{class_component_model_registry}{Component\+Model\+Registry}
+\item 
+struct \hyperlink{struct_component_model_registry_1_1_entity}{Component\+Model\+Registry\+::\+Entity}
+\item 
+class \hyperlink{class_config}{Config}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_config}{Config} class used by the simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$$>$ }\\std\+::string \hyperlink{config_8h_af23dbb8dfdc44788ddce3549508d00dc}{Input\+Config\+Registry\+::lookup\+Value$<$ std\+::string $>$} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, const std\+::string \&def, bool fail\+\_\+if\+\_\+not\+\_\+found)
+\begin{DoxyCompactList}\small\item\em specializations for the methods in \hyperlink{class_input_config_registry}{Input\+Config\+Registry} \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \hyperlink{config_8h_ab4582dd3c487477ba492fa33bb6fc68f}{Component\+Model\+Registry\+::register\+Tagged\+Relation$<$ Simulator\+::\+Object $>$} (const \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} \&left, const \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} \&right, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, const \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} \&value, bool sibling, bool bidi)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{config_8h_ab4582dd3c487477ba492fa33bb6fc68f}{\index{config.\+h@{config.\+h}!Component\+Model\+Registry\+::register\+Tagged\+Relation$<$ Simulator\+::\+Object $>$@{Component\+Model\+Registry\+::register\+Tagged\+Relation$<$ Simulator\+::\+Object $>$}}
+\index{Component\+Model\+Registry\+::register\+Tagged\+Relation$<$ Simulator\+::\+Object $>$@{Component\+Model\+Registry\+::register\+Tagged\+Relation$<$ Simulator\+::\+Object $>$}!config.\+h@{config.\+h}}
+\subsubsection[{Component\+Model\+Registry\+::register\+Tagged\+Relation$<$ Simulator\+::\+Object $>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ void {\bf Component\+Model\+Registry\+::register\+Tagged\+Relation}$<$ {\bf Simulator\+::\+Object} $>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Simulator\+::\+Object} \&}]{left, }
+\item[{const {\bf Simulator\+::\+Object} \&}]{right, }
+\item[{const std\+::string \&}]{name, }
+\item[{const {\bf Simulator\+::\+Object} \&}]{value, }
+\item[{bool}]{sibling, }
+\item[{bool}]{bidi}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{config_8h_ab4582dd3c487477ba492fa33bb6fc68f}
+\hypertarget{config_8h_af23dbb8dfdc44788ddce3549508d00dc}{\index{config.\+h@{config.\+h}!Input\+Config\+Registry\+::lookup\+Value$<$ std\+::string $>$@{Input\+Config\+Registry\+::lookup\+Value$<$ std\+::string $>$}}
+\index{Input\+Config\+Registry\+::lookup\+Value$<$ std\+::string $>$@{Input\+Config\+Registry\+::lookup\+Value$<$ std\+::string $>$}!config.\+h@{config.\+h}}
+\subsubsection[{Input\+Config\+Registry\+::lookup\+Value$<$ std\+::string $>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ std\+::string Input\+Config\+Registry\+::lookup\+Value$<$ std\+::string $>$ (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{const std\+::string \&}]{def, }
+\item[{bool}]{fail\+\_\+if\+\_\+not\+\_\+found}
+\end{DoxyParamCaption}
+)}}\label{config_8h_af23dbb8dfdc44788ddce3549508d00dc}
+
+
+specializations for the methods in \hyperlink{class_input_config_registry}{Input\+Config\+Registry} 
+

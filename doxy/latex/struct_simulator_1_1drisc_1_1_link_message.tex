@@ -1,0 +1,293 @@
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message}{\section{Simulator\+:\+:drisc\+:\+:Link\+Message Struct Reference}
+\label{struct_simulator_1_1drisc_1_1_link_message}\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+}
+
+
+{\ttfamily \#include $<$Network.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8}{Type} \{ \\*
+\hyperlink{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8af2894706709cda7895e7ede7c4088a0e}{M\+S\+G\+\_\+\+A\+L\+L\+O\+C\+A\+T\+E}, 
+\hyperlink{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8aba37866ab99a42b26031c3a0e1cd5683}{M\+S\+G\+\_\+\+B\+A\+L\+L\+O\+C\+A\+T\+E}, 
+\hyperlink{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a3e29e02199c93bafc9fe56099f8a7227}{M\+S\+G\+\_\+\+S\+E\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y}, 
+\hyperlink{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a37e1d16ca46ea206d1e20c9db4fff0b0}{M\+S\+G\+\_\+\+C\+R\+E\+A\+T\+E}, 
+\\*
+\hyperlink{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a2a3f9e7516ed56c26f2af82a7d053c3c}{M\+S\+G\+\_\+\+D\+O\+N\+E}, 
+\hyperlink{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a38fb6d31797672a80bea85111f910d14}{M\+S\+G\+\_\+\+S\+Y\+N\+C}, 
+\hyperlink{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a9aac2f483e41b85f60a6297af5d48c2e}{M\+S\+G\+\_\+\+D\+E\+T\+A\+C\+H}, 
+\hyperlink{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a81571060904d8557a60a14dbad10a4dc}{M\+S\+G\+\_\+\+B\+R\+E\+A\+K}, 
+\\*
+\hyperlink{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8ac6df5d749217838a133540a2db114027}{M\+S\+G\+\_\+\+G\+L\+O\+B\+A\+L}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a44068a2729c7dd0fee0692e9d6116dfc}{str} () const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8}{Type} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a58f0ab57e00077944e169066734d9e6b}{type}
+\begin{DoxyCompactList}\small\item\em Type of the message. \end{DoxyCompactList}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{LFID} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a66931c60942bec7ca261587f68f4bf3c}{first\_fid}\\
+\>\>\>{\em \hyperlink{struct_simulator_1_1_f_i_d}{FID} on the first core of the matching family. }\\
+\>\>\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{LFID} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a3ccdb327f824406646216b097aba9c74}{prev\_fid}\\
+\>\>\>{\em \hyperlink{struct_simulator_1_1_f_i_d}{FID} on the previous core (sender) of allocated family. }\\
+\>\>\hyperlink{namespace_simulator_a4aa07bee2f34beac11abf48a8ccc47c4}{PSize} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a169d77277a47b0a1e104f8952996ac34}{size}\\
+\>\>\>{\em Size of the place. }\\
+\>\>\hyperlink{namespace_simulator_aa671021151c047ae2da6dce4e6303476}{PID} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_abb2d561c6d0cc151d13244bd1f8f13df}{completion\_pid}\\
+\>\>\>{\em PID where the thread runs that issued the allocate. }\\
+\>\>\hyperlink{namespace_simulator_ab00c9033de4c9a17db7b53d6c292515c}{RegIndex} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_ae6325eb9e8b62e2c15e491407b9dcff5}{completion\_reg}\\
+\>\>\>{\em Reg on parent\_pid of the completion register. }\\
+\>\>bool \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a05092a8badc43615fee2a2f9097fbd71}{exact}\\
+\>\>\>{\em Allocate exactly 'size' cores. }\\
+\>\>bool \hyperlink{struct_simulator_1_1drisc_1_1_link_message_af12d77a4dccfe7e5d7275f27b5a01abd}{suspend}\\
+\>\>\>{\em Suspend until we get a context (only if exact) }\\
+\>\} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a19b5bdeb4b2f40e09d3591050bfeb8f6}{allocate}\\
+\>struct \{\\
+\>\>unsigned \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a74392a3a738eefb31a377ccc4babb1ab}{min\_contexts}\\
+\>\>\>{\em Minimum of contexts found so far. }\\
+\>\>\hyperlink{namespace_simulator_aa671021151c047ae2da6dce4e6303476}{PID} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_af2d159f349cba2eccdeb4ccd3ae358a4}{min\_pid}\\
+\>\>\>{\em Core where the minimum was found. }\\
+\>\>\hyperlink{namespace_simulator_a4aa07bee2f34beac11abf48a8ccc47c4}{PSize} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a169d77277a47b0a1e104f8952996ac34}{size}\\
+\>\>\>{\em Size of the place. }\\
+\>\>\hyperlink{namespace_simulator_aa671021151c047ae2da6dce4e6303476}{PID} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_abb2d561c6d0cc151d13244bd1f8f13df}{completion\_pid}\\
+\>\>\>{\em PID where the thread runs that issued the allocate. }\\
+\>\>\hyperlink{namespace_simulator_ab00c9033de4c9a17db7b53d6c292515c}{RegIndex} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_ae6325eb9e8b62e2c15e491407b9dcff5}{completion\_reg}\\
+\>\>\>{\em Reg on parent\_pid of the completion register. }\\
+\>\>bool \hyperlink{struct_simulator_1_1drisc_1_1_link_message_af12d77a4dccfe7e5d7275f27b5a01abd}{suspend}\\
+\>\>\>{\em Suspend until we get a context (only if exact) }\\
+\>\} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a54ba23bf0bc599d1f817784b8d581731}{ballocate}\\
+\>struct \{\\
+\>\>\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{LFID} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a37e30a9a8d7491b3ceb8ea32c2d9c336}{fid}\\
+\>\>\hyperlink{namespace_simulator_a5fbe5f4a5800f7bb940fa2fa4c737d99}{FamilyProperty} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_abf6d679c0dbd70baaf0efc98d02316f6}{type}\\
+\>\>\>{\em The property to set. }\\
+\>\>Integer \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a5f4802c3875915d6e14abb3f9e2c6867}{value}\\
+\>\>\>{\em The new value of the property. }\\
+\>\} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_ae74e69344d254eb78233a0491aa10e57}{property}\\
+\>struct \{\\
+\>\>\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{LFID} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a37e30a9a8d7491b3ceb8ea32c2d9c336}{fid}\\
+\>\>\hyperlink{namespace_simulator_a4aa07bee2f34beac11abf48a8ccc47c4}{PSize} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a6d040d4ef7ee7c20eb95919798bba284}{numCores}\\
+\>\>MemAddr \hyperlink{struct_simulator_1_1drisc_1_1_link_message_adb4efb41e06557b9c28fbfc9f5485d74}{address}\\
+\>\>\hyperlink{struct_simulator_1_1_regs_no}{RegsNo} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_addcd5bb1cbe9c408692abc60a8b81c28}{regs} \mbox{[}NUM\_REG\_TYPES\mbox{]}\\
+\>\} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a2238126ff09b5495cc264cbd6afaed56}{create}\\
+\>struct \{\\
+\>\>\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{LFID} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a37e30a9a8d7491b3ceb8ea32c2d9c336}{fid}\\
+\>\>bool \hyperlink{struct_simulator_1_1drisc_1_1_link_message_af3ff4cc8aaea2474ca2be1280d533c16}{broken}\\
+\>\} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a7b35c744d0948f3c90ee9073297c84bf}{done}\\
+\>struct \{\\
+\>\>\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{LFID} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a37e30a9a8d7491b3ceb8ea32c2d9c336}{fid}\\
+\>\>\hyperlink{namespace_simulator_aa671021151c047ae2da6dce4e6303476}{PID} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_abb2d561c6d0cc151d13244bd1f8f13df}{completion\_pid}\\
+\>\>\hyperlink{namespace_simulator_ab00c9033de4c9a17db7b53d6c292515c}{RegIndex} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_ae6325eb9e8b62e2c15e491407b9dcff5}{completion\_reg}\\
+\>\} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a78c2f0c9540e1a5b6b1cdb46bbf9ca09}{sync}\\
+\>struct \{\\
+\>\>\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{LFID} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a37e30a9a8d7491b3ceb8ea32c2d9c336}{fid}\\
+\>\} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a6412e99f2297ebf7bf73b8f71b026197}{detach}\\
+\>struct \{\\
+\>\>\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{LFID} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a37e30a9a8d7491b3ceb8ea32c2d9c336}{fid}\\
+\>\>\>{\em \hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} to break. }\\
+\>\} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_ab0ead1311d8b1b63586d923fc60df0d6}{brk}\\
+\>struct \{\\
+\>\>\hyperlink{struct_simulator_1_1_reg_value}{RegValue} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a0fda63d44c5fc4a78baa7881614d41d9}{value}\\
+\>\>\hyperlink{struct_simulator_1_1_reg_addr}{RegAddr} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a37977bcb182ff99e5f3b756aef13517a}{addr}\\
+\>\>\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{LFID} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_a37e30a9a8d7491b3ceb8ea32c2d9c336}{fid}\\
+\>\} \hyperlink{struct_simulator_1_1drisc_1_1_link_message_ab33862b74a1e4cf5eaa05f84eb134c1d}{global}\\
+\}; \\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em The message contents. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!Type@{Type}}
+\index{Type@{Type}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Simulator\+::drisc\+::\+Link\+Message\+::\+Type}}}\label{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+S\+G\+\_\+\+A\+L\+L\+O\+C\+A\+T\+E@{M\+S\+G\+\_\+\+A\+L\+L\+O\+C\+A\+T\+E}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!M\+S\+G\+\_\+\+A\+L\+L\+O\+C\+A\+T\+E@{M\+S\+G\+\_\+\+A\+L\+L\+O\+C\+A\+T\+E}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8af2894706709cda7895e7ede7c4088a0e}{M\+S\+G\+\_\+\+A\+L\+L\+O\+C\+A\+T\+E}\label{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8af2894706709cda7895e7ede7c4088a0e}
+}]Allocate family. \index{M\+S\+G\+\_\+\+B\+A\+L\+L\+O\+C\+A\+T\+E@{M\+S\+G\+\_\+\+B\+A\+L\+L\+O\+C\+A\+T\+E}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!M\+S\+G\+\_\+\+B\+A\+L\+L\+O\+C\+A\+T\+E@{M\+S\+G\+\_\+\+B\+A\+L\+L\+O\+C\+A\+T\+E}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8aba37866ab99a42b26031c3a0e1cd5683}{M\+S\+G\+\_\+\+B\+A\+L\+L\+O\+C\+A\+T\+E}\label{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8aba37866ab99a42b26031c3a0e1cd5683}
+}]Balanced allocate. \index{M\+S\+G\+\_\+\+S\+E\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y@{M\+S\+G\+\_\+\+S\+E\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!M\+S\+G\+\_\+\+S\+E\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y@{M\+S\+G\+\_\+\+S\+E\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a3e29e02199c93bafc9fe56099f8a7227}{M\+S\+G\+\_\+\+S\+E\+T\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y}\label{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a3e29e02199c93bafc9fe56099f8a7227}
+}]Set family property. \index{M\+S\+G\+\_\+\+C\+R\+E\+A\+T\+E@{M\+S\+G\+\_\+\+C\+R\+E\+A\+T\+E}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!M\+S\+G\+\_\+\+C\+R\+E\+A\+T\+E@{M\+S\+G\+\_\+\+C\+R\+E\+A\+T\+E}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a37e1d16ca46ea206d1e20c9db4fff0b0}{M\+S\+G\+\_\+\+C\+R\+E\+A\+T\+E}\label{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a37e1d16ca46ea206d1e20c9db4fff0b0}
+}]Create family. \index{M\+S\+G\+\_\+\+D\+O\+N\+E@{M\+S\+G\+\_\+\+D\+O\+N\+E}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!M\+S\+G\+\_\+\+D\+O\+N\+E@{M\+S\+G\+\_\+\+D\+O\+N\+E}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a2a3f9e7516ed56c26f2af82a7d053c3c}{M\+S\+G\+\_\+\+D\+O\+N\+E}\label{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a2a3f9e7516ed56c26f2af82a7d053c3c}
+}]\hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} has finished on previous core. \index{M\+S\+G\+\_\+\+S\+Y\+N\+C@{M\+S\+G\+\_\+\+S\+Y\+N\+C}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!M\+S\+G\+\_\+\+S\+Y\+N\+C@{M\+S\+G\+\_\+\+S\+Y\+N\+C}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a38fb6d31797672a80bea85111f910d14}{M\+S\+G\+\_\+\+S\+Y\+N\+C}\label{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a38fb6d31797672a80bea85111f910d14}
+}]Synchronise on family. \index{M\+S\+G\+\_\+\+D\+E\+T\+A\+C\+H@{M\+S\+G\+\_\+\+D\+E\+T\+A\+C\+H}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!M\+S\+G\+\_\+\+D\+E\+T\+A\+C\+H@{M\+S\+G\+\_\+\+D\+E\+T\+A\+C\+H}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a9aac2f483e41b85f60a6297af5d48c2e}{M\+S\+G\+\_\+\+D\+E\+T\+A\+C\+H}\label{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a9aac2f483e41b85f60a6297af5d48c2e}
+}]Detach family. \index{M\+S\+G\+\_\+\+B\+R\+E\+A\+K@{M\+S\+G\+\_\+\+B\+R\+E\+A\+K}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!M\+S\+G\+\_\+\+B\+R\+E\+A\+K@{M\+S\+G\+\_\+\+B\+R\+E\+A\+K}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a81571060904d8557a60a14dbad10a4dc}{M\+S\+G\+\_\+\+B\+R\+E\+A\+K}\label{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8a81571060904d8557a60a14dbad10a4dc}
+}]Break. \index{M\+S\+G\+\_\+\+G\+L\+O\+B\+A\+L@{M\+S\+G\+\_\+\+G\+L\+O\+B\+A\+L}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!M\+S\+G\+\_\+\+G\+L\+O\+B\+A\+L@{M\+S\+G\+\_\+\+G\+L\+O\+B\+A\+L}}\item[{\em 
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8ac6df5d749217838a133540a2db114027}{M\+S\+G\+\_\+\+G\+L\+O\+B\+A\+L}\label{struct_simulator_1_1drisc_1_1_link_message_a96329a62ee5cf3fb1fc5ae96076a63f8ac6df5d749217838a133540a2db114027}
+}]Global register data. \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a44068a2729c7dd0fee0692e9d6116dfc}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!str@{str}}
+\index{str@{str}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{str}]{\setlength{\rightskip}{0pt plus 5cm}string Simulator\+::drisc\+::\+Link\+Message\+::str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{struct_simulator_1_1drisc_1_1_link_message_a44068a2729c7dd0fee0692e9d6116dfc}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a3882c0cf26f4477fe02ee2fe9971dfc0}{\subsubsection[{"@44}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{struct_simulator_1_1drisc_1_1_link_message_a3882c0cf26f4477fe02ee2fe9971dfc0}
+
+
+The message contents. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a37977bcb182ff99e5f3b756aef13517a}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!addr@{addr}}
+\index{addr@{addr}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{addr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reg\+Addr} Simulator\+::drisc\+::\+Link\+Message\+::addr}}\label{struct_simulator_1_1drisc_1_1_link_message_a37977bcb182ff99e5f3b756aef13517a}
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_adb4efb41e06557b9c28fbfc9f5485d74}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!address@{address}}
+\index{address@{address}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{address}]{\setlength{\rightskip}{0pt plus 5cm}Mem\+Addr Simulator\+::drisc\+::\+Link\+Message\+::address}}\label{struct_simulator_1_1drisc_1_1_link_message_adb4efb41e06557b9c28fbfc9f5485d74}
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a19b5bdeb4b2f40e09d3591050bfeb8f6}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!allocate@{allocate}}
+\index{allocate@{allocate}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{allocate}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Simulator\+::drisc\+::\+Link\+Message\+::allocate}}\label{struct_simulator_1_1drisc_1_1_link_message_a19b5bdeb4b2f40e09d3591050bfeb8f6}
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a54ba23bf0bc599d1f817784b8d581731}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!ballocate@{ballocate}}
+\index{ballocate@{ballocate}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{ballocate}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Simulator\+::drisc\+::\+Link\+Message\+::ballocate}}\label{struct_simulator_1_1drisc_1_1_link_message_a54ba23bf0bc599d1f817784b8d581731}
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_ab0ead1311d8b1b63586d923fc60df0d6}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!brk@{brk}}
+\index{brk@{brk}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{brk}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Simulator\+::drisc\+::\+Link\+Message\+::brk}}\label{struct_simulator_1_1drisc_1_1_link_message_ab0ead1311d8b1b63586d923fc60df0d6}
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_af3ff4cc8aaea2474ca2be1280d533c16}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!broken@{broken}}
+\index{broken@{broken}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{broken}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Link\+Message\+::broken}}\label{struct_simulator_1_1drisc_1_1_link_message_af3ff4cc8aaea2474ca2be1280d533c16}
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_abb2d561c6d0cc151d13244bd1f8f13df}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!completion\+\_\+pid@{completion\+\_\+pid}}
+\index{completion\+\_\+pid@{completion\+\_\+pid}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{completion\+\_\+pid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+I\+D} Simulator\+::drisc\+::\+Link\+Message\+::completion\+\_\+pid}}\label{struct_simulator_1_1drisc_1_1_link_message_abb2d561c6d0cc151d13244bd1f8f13df}
+
+
+P\+I\+D where the thread runs that issued the allocate. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_ae6325eb9e8b62e2c15e491407b9dcff5}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!completion\+\_\+reg@{completion\+\_\+reg}}
+\index{completion\+\_\+reg@{completion\+\_\+reg}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{completion\+\_\+reg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reg\+Index} Simulator\+::drisc\+::\+Link\+Message\+::completion\+\_\+reg}}\label{struct_simulator_1_1drisc_1_1_link_message_ae6325eb9e8b62e2c15e491407b9dcff5}
+
+
+Reg on parent\+\_\+pid of the completion register. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a2238126ff09b5495cc264cbd6afaed56}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!create@{create}}
+\index{create@{create}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Simulator\+::drisc\+::\+Link\+Message\+::create}}\label{struct_simulator_1_1drisc_1_1_link_message_a2238126ff09b5495cc264cbd6afaed56}
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a6412e99f2297ebf7bf73b8f71b026197}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!detach@{detach}}
+\index{detach@{detach}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{detach}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Simulator\+::drisc\+::\+Link\+Message\+::detach}}\label{struct_simulator_1_1drisc_1_1_link_message_a6412e99f2297ebf7bf73b8f71b026197}
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a7b35c744d0948f3c90ee9073297c84bf}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!done@{done}}
+\index{done@{done}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{done}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Simulator\+::drisc\+::\+Link\+Message\+::done}}\label{struct_simulator_1_1drisc_1_1_link_message_a7b35c744d0948f3c90ee9073297c84bf}
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a05092a8badc43615fee2a2f9097fbd71}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!exact@{exact}}
+\index{exact@{exact}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{exact}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Link\+Message\+::exact}}\label{struct_simulator_1_1drisc_1_1_link_message_a05092a8badc43615fee2a2f9097fbd71}
+
+
+Allocate exactly 'size' cores. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a37e30a9a8d7491b3ceb8ea32c2d9c336}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!fid@{fid}}
+\index{fid@{fid}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{fid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+F\+I\+D} Simulator\+::drisc\+::\+Link\+Message\+::fid}}\label{struct_simulator_1_1drisc_1_1_link_message_a37e30a9a8d7491b3ceb8ea32c2d9c336}
+
+
+\hyperlink{struct_simulator_1_1drisc_1_1_family}{Family} to break. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a66931c60942bec7ca261587f68f4bf3c}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!first\+\_\+fid@{first\+\_\+fid}}
+\index{first\+\_\+fid@{first\+\_\+fid}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{first\+\_\+fid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+F\+I\+D} Simulator\+::drisc\+::\+Link\+Message\+::first\+\_\+fid}}\label{struct_simulator_1_1drisc_1_1_link_message_a66931c60942bec7ca261587f68f4bf3c}
+
+
+\hyperlink{struct_simulator_1_1_f_i_d}{F\+I\+D} on the first core of the matching family. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_ab33862b74a1e4cf5eaa05f84eb134c1d}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!global@{global}}
+\index{global@{global}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{global}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Simulator\+::drisc\+::\+Link\+Message\+::global}}\label{struct_simulator_1_1drisc_1_1_link_message_ab33862b74a1e4cf5eaa05f84eb134c1d}
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a74392a3a738eefb31a377ccc4babb1ab}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!min\+\_\+contexts@{min\+\_\+contexts}}
+\index{min\+\_\+contexts@{min\+\_\+contexts}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{min\+\_\+contexts}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Simulator\+::drisc\+::\+Link\+Message\+::min\+\_\+contexts}}\label{struct_simulator_1_1drisc_1_1_link_message_a74392a3a738eefb31a377ccc4babb1ab}
+
+
+Minimum of contexts found so far. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_af2d159f349cba2eccdeb4ccd3ae358a4}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!min\+\_\+pid@{min\+\_\+pid}}
+\index{min\+\_\+pid@{min\+\_\+pid}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{min\+\_\+pid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+I\+D} Simulator\+::drisc\+::\+Link\+Message\+::min\+\_\+pid}}\label{struct_simulator_1_1drisc_1_1_link_message_af2d159f349cba2eccdeb4ccd3ae358a4}
+
+
+Core where the minimum was found. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a6d040d4ef7ee7c20eb95919798bba284}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!num\+Cores@{num\+Cores}}
+\index{num\+Cores@{num\+Cores}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{num\+Cores}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+Size} Simulator\+::drisc\+::\+Link\+Message\+::num\+Cores}}\label{struct_simulator_1_1drisc_1_1_link_message_a6d040d4ef7ee7c20eb95919798bba284}
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a3ccdb327f824406646216b097aba9c74}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!prev\+\_\+fid@{prev\+\_\+fid}}
+\index{prev\+\_\+fid@{prev\+\_\+fid}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{prev\+\_\+fid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+F\+I\+D} Simulator\+::drisc\+::\+Link\+Message\+::prev\+\_\+fid}}\label{struct_simulator_1_1drisc_1_1_link_message_a3ccdb327f824406646216b097aba9c74}
+
+
+\hyperlink{struct_simulator_1_1_f_i_d}{F\+I\+D} on the previous core (sender) of allocated family. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_ae74e69344d254eb78233a0491aa10e57}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!property@{property}}
+\index{property@{property}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{property}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Simulator\+::drisc\+::\+Link\+Message\+::property}}\label{struct_simulator_1_1drisc_1_1_link_message_ae74e69344d254eb78233a0491aa10e57}
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_addcd5bb1cbe9c408692abc60a8b81c28}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!regs@{regs}}
+\index{regs@{regs}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{regs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Regs\+No} Simulator\+::drisc\+::\+Link\+Message\+::regs\mbox{[}N\+U\+M\+\_\+\+R\+E\+G\+\_\+\+T\+Y\+P\+E\+S\mbox{]}}}\label{struct_simulator_1_1drisc_1_1_link_message_addcd5bb1cbe9c408692abc60a8b81c28}
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a169d77277a47b0a1e104f8952996ac34}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!size@{size}}
+\index{size@{size}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+Size} Simulator\+::drisc\+::\+Link\+Message\+::size}}\label{struct_simulator_1_1drisc_1_1_link_message_a169d77277a47b0a1e104f8952996ac34}
+
+
+Size of the place. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_af12d77a4dccfe7e5d7275f27b5a01abd}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!suspend@{suspend}}
+\index{suspend@{suspend}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{suspend}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Link\+Message\+::suspend}}\label{struct_simulator_1_1drisc_1_1_link_message_af12d77a4dccfe7e5d7275f27b5a01abd}
+
+
+Suspend until we get a context (only if exact) 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a78c2f0c9540e1a5b6b1cdb46bbf9ca09}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!sync@{sync}}
+\index{sync@{sync}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{sync}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   Simulator\+::drisc\+::\+Link\+Message\+::sync}}\label{struct_simulator_1_1drisc_1_1_link_message_a78c2f0c9540e1a5b6b1cdb46bbf9ca09}
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a58f0ab57e00077944e169066734d9e6b}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!type@{type}}
+\index{type@{type}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Type} Simulator\+::drisc\+::\+Link\+Message\+::type}}\label{struct_simulator_1_1drisc_1_1_link_message_a58f0ab57e00077944e169066734d9e6b}
+
+
+Type of the message. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_abf6d679c0dbd70baaf0efc98d02316f6}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!type@{type}}
+\index{type@{type}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Family\+Property} Simulator\+::drisc\+::\+Link\+Message\+::type}}\label{struct_simulator_1_1drisc_1_1_link_message_abf6d679c0dbd70baaf0efc98d02316f6}
+
+
+The property to set. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a5f4802c3875915d6e14abb3f9e2c6867}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!value@{value}}
+\index{value@{value}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}Integer Simulator\+::drisc\+::\+Link\+Message\+::value}}\label{struct_simulator_1_1drisc_1_1_link_message_a5f4802c3875915d6e14abb3f9e2c6867}
+
+
+The new value of the property. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_link_message_a0fda63d44c5fc4a78baa7881614d41d9}{\index{Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}!value@{value}}
+\index{value@{value}!Simulator\+::drisc\+::\+Link\+Message@{Simulator\+::drisc\+::\+Link\+Message}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reg\+Value} Simulator\+::drisc\+::\+Link\+Message\+::value}}\label{struct_simulator_1_1drisc_1_1_link_message_a0fda63d44c5fc4a78baa7881614d41d9}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/drisc/\hyperlink{_network_8h}{Network.\+h}\item 
+arch/drisc/\hyperlink{_network_8cpp}{Network.\+cpp}\end{DoxyCompactItemize}

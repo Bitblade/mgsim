@@ -1,0 +1,84 @@
+\hypertarget{class_resource_usage}{\section{Resource\+Usage Class Reference}
+\label{class_resource_usage}\index{Resource\+Usage@{Resource\+Usage}}
+}
+
+
+{\ttfamily \#include $<$rusage.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef long long \hyperlink{class_resource_usage_a836fea046a492cafcb5a1e4161b97b18}{usecs\+\_\+t}
+\item 
+typedef long \hyperlink{class_resource_usage_aa1679a8d0d180d8a2e9bc6b6718a79a4}{kbytes\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_resource_usage_ac8a2f762be2c3352a5c3494cf5d27c88}{Resource\+Usage} (bool sample=false, bool set\+\_\+initial=false)
+\item 
+\hyperlink{class_resource_usage_a836fea046a492cafcb5a1e4161b97b18}{usecs\+\_\+t} \hyperlink{class_resource_usage_a47648773c5edb360a8d83f0422def985}{Get\+User\+Time} () const 
+\item 
+\hyperlink{class_resource_usage_a836fea046a492cafcb5a1e4161b97b18}{usecs\+\_\+t} \hyperlink{class_resource_usage_af7b1d49fdbe4e5a0330302dd9a31b060}{Get\+System\+Time} () const 
+\item 
+\hyperlink{class_resource_usage_aa1679a8d0d180d8a2e9bc6b6718a79a4}{kbytes\+\_\+t} \hyperlink{class_resource_usage_a1beabb43e656e96c709058950d980226}{Get\+Max\+Resident\+Size} () const 
+\item 
+\hyperlink{class_resource_usage}{Resource\+Usage} \hyperlink{class_resource_usage_a571cd8d911ff708469d2145b0da07635}{operator-\/} (const \hyperlink{class_resource_usage}{Resource\+Usage} \&other) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_resource_usage_aa1679a8d0d180d8a2e9bc6b6718a79a4}{\index{Resource\+Usage@{Resource\+Usage}!kbytes\+\_\+t@{kbytes\+\_\+t}}
+\index{kbytes\+\_\+t@{kbytes\+\_\+t}!Resource\+Usage@{Resource\+Usage}}
+\subsubsection[{kbytes\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef long {\bf Resource\+Usage\+::kbytes\+\_\+t}}}\label{class_resource_usage_aa1679a8d0d180d8a2e9bc6b6718a79a4}
+\hypertarget{class_resource_usage_a836fea046a492cafcb5a1e4161b97b18}{\index{Resource\+Usage@{Resource\+Usage}!usecs\+\_\+t@{usecs\+\_\+t}}
+\index{usecs\+\_\+t@{usecs\+\_\+t}!Resource\+Usage@{Resource\+Usage}}
+\subsubsection[{usecs\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef long long {\bf Resource\+Usage\+::usecs\+\_\+t}}}\label{class_resource_usage_a836fea046a492cafcb5a1e4161b97b18}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_resource_usage_ac8a2f762be2c3352a5c3494cf5d27c88}{\index{Resource\+Usage@{Resource\+Usage}!Resource\+Usage@{Resource\+Usage}}
+\index{Resource\+Usage@{Resource\+Usage}!Resource\+Usage@{Resource\+Usage}}
+\subsubsection[{Resource\+Usage}]{\setlength{\rightskip}{0pt plus 5cm}Resource\+Usage\+::\+Resource\+Usage (
+\begin{DoxyParamCaption}
+\item[{bool}]{sample = {\ttfamily false}, }
+\item[{bool}]{set\+\_\+initial = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{class_resource_usage_ac8a2f762be2c3352a5c3494cf5d27c88}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_resource_usage_a1beabb43e656e96c709058950d980226}{\index{Resource\+Usage@{Resource\+Usage}!Get\+Max\+Resident\+Size@{Get\+Max\+Resident\+Size}}
+\index{Get\+Max\+Resident\+Size@{Get\+Max\+Resident\+Size}!Resource\+Usage@{Resource\+Usage}}
+\subsubsection[{Get\+Max\+Resident\+Size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf kbytes\+\_\+t} Resource\+Usage\+::\+Get\+Max\+Resident\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_resource_usage_a1beabb43e656e96c709058950d980226}
+\hypertarget{class_resource_usage_af7b1d49fdbe4e5a0330302dd9a31b060}{\index{Resource\+Usage@{Resource\+Usage}!Get\+System\+Time@{Get\+System\+Time}}
+\index{Get\+System\+Time@{Get\+System\+Time}!Resource\+Usage@{Resource\+Usage}}
+\subsubsection[{Get\+System\+Time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf usecs\+\_\+t} Resource\+Usage\+::\+Get\+System\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_resource_usage_af7b1d49fdbe4e5a0330302dd9a31b060}
+\hypertarget{class_resource_usage_a47648773c5edb360a8d83f0422def985}{\index{Resource\+Usage@{Resource\+Usage}!Get\+User\+Time@{Get\+User\+Time}}
+\index{Get\+User\+Time@{Get\+User\+Time}!Resource\+Usage@{Resource\+Usage}}
+\subsubsection[{Get\+User\+Time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf usecs\+\_\+t} Resource\+Usage\+::\+Get\+User\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_resource_usage_a47648773c5edb360a8d83f0422def985}
+\hypertarget{class_resource_usage_a571cd8d911ff708469d2145b0da07635}{\index{Resource\+Usage@{Resource\+Usage}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Resource\+Usage@{Resource\+Usage}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resource\+Usage} Resource\+Usage\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Resource\+Usage} \&}]{other}
+\end{DoxyParamCaption}
+) const}}\label{class_resource_usage_a571cd8d911ff708469d2145b0da07635}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{rusage_8h}{rusage.\+h}\item 
+sim/\hyperlink{rusage_8cpp}{rusage.\+cpp}\end{DoxyCompactItemize}

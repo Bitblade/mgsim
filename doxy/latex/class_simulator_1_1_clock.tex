@@ -1,0 +1,174 @@
+\hypertarget{class_simulator_1_1_clock}{\section{Simulator\+:\+:Clock Class Reference}
+\label{class_simulator_1_1_clock}\index{Simulator\+::\+Clock@{Simulator\+::\+Clock}}
+}
+
+
+{\ttfamily \#include $<$kernel.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_kernel}{Kernel} \& \hyperlink{class_simulator_1_1_clock_af2d37b476969e4c081f373d4289cdd77}{Get\+Kernel} ()
+\item 
+const \hyperlink{class_simulator_1_1_clock}{Clock} $\ast$ \hyperlink{class_simulator_1_1_clock_ac9f77a912cfccb11f13b8bac1856b94f}{Get\+Next} () const 
+\begin{DoxyCompactList}\small\item\em Used for iterating through active clocks. \end{DoxyCompactList}\item 
+const \hyperlink{class_simulator_1_1_process}{Process} $\ast$ \hyperlink{class_simulator_1_1_clock_a6ba1a05417d234e27b60a63093e763bc}{Get\+Active\+Processes} () const 
+\item 
+const \hyperlink{class_simulator_1_1_storage}{Storage} $\ast$ \hyperlink{class_simulator_1_1_clock_a84be4a7d805dae493b2d163d8317f718}{Get\+Active\+Storages} () const 
+\item 
+const \hyperlink{class_simulator_1_1_arbitrator}{Arbitrator} $\ast$ \hyperlink{class_simulator_1_1_clock_a3cad12dad6b91c89fe080557f24f1703}{Get\+Active\+Arbitrators} () const 
+\item 
+\hyperlink{namespace_simulator_a928f1e2101eba21bb0fe409e8c9ce573}{Cycle\+No} \hyperlink{class_simulator_1_1_clock_a163aff5e2f52dfbffce4353b9b2b790f}{Get\+Next\+Tick} () const 
+\item 
+\hyperlink{namespace_simulator_a928f1e2101eba21bb0fe409e8c9ce573}{Cycle\+No} \hyperlink{class_simulator_1_1_clock_a1a840aaeb898581ab6234c3ccb135c68}{Get\+Cycle\+No} () const 
+\begin{DoxyCompactList}\small\item\em Returns the cycle counter for this clock. \end{DoxyCompactList}\item 
+unsigned long long \hyperlink{class_simulator_1_1_clock_a33bced1d6b21cfa1e13923ddb2213b07}{Get\+Frequency} () const 
+\begin{DoxyCompactList}\small\item\em Returns the frequency of this clock. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_1_1_storage}{Storage} $\ast$ \hyperlink{class_simulator_1_1_clock_af051b1730aa459c97e41ff514099d16f}{Activate\+Storage} (\hyperlink{class_simulator_1_1_storage}{Storage} \&storage)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_simulator_1_1_register}{Register} an update request for the specified storage at the end of the cycle. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_1_1_arbitrator}{Arbitrator} $\ast$ \hyperlink{class_simulator_1_1_clock_ad42357b1feaf31181126645c39c9afe0}{Activate\+Arbitrator} (\hyperlink{class_simulator_1_1_arbitrator}{Arbitrator} \&arbitrator)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_simulator_1_1_register}{Register} an update request for the specified arbitrator at the end of the cycle. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulator_1_1_clock_a37e7934391b529a2155c4e2a08f4ee9b}{Activate\+Process} (\hyperlink{class_simulator_1_1_process}{Process} \&process)
+\begin{DoxyCompactList}\small\item\em Schedule the specified process on the run queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_simulator_1_1_clock_a3807a3ebd0e05ca8cb4d928025a943d2}{Kernel}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_clock_ad42357b1feaf31181126645c39c9afe0}{\index{Simulator\+::\+Clock@{Simulator\+::\+Clock}!Activate\+Arbitrator@{Activate\+Arbitrator}}
+\index{Activate\+Arbitrator@{Activate\+Arbitrator}!Simulator\+::\+Clock@{Simulator\+::\+Clock}}
+\subsubsection[{Activate\+Arbitrator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Arbitrator} $\ast$ Simulator\+::\+Clock\+::\+Activate\+Arbitrator (
+\begin{DoxyParamCaption}
+\item[{{\bf Arbitrator} \&}]{arbitrator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_clock_ad42357b1feaf31181126645c39c9afe0}
+
+
+\hyperlink{class_simulator_1_1_register}{Register} an update request for the specified arbitrator at the end of the cycle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arbitrator} & The arbitrator to update \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the next arbitrator that requires updating 
+\end{DoxyReturn}
+\hypertarget{class_simulator_1_1_clock_a37e7934391b529a2155c4e2a08f4ee9b}{\index{Simulator\+::\+Clock@{Simulator\+::\+Clock}!Activate\+Process@{Activate\+Process}}
+\index{Activate\+Process@{Activate\+Process}!Simulator\+::\+Clock@{Simulator\+::\+Clock}}
+\subsubsection[{Activate\+Process}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Clock\+::\+Activate\+Process (
+\begin{DoxyParamCaption}
+\item[{{\bf Process} \&}]{process}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_clock_a37e7934391b529a2155c4e2a08f4ee9b}
+
+
+Schedule the specified process on the run queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em process} & The process to schedule \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_simulator_1_1_clock_af051b1730aa459c97e41ff514099d16f}{\index{Simulator\+::\+Clock@{Simulator\+::\+Clock}!Activate\+Storage@{Activate\+Storage}}
+\index{Activate\+Storage@{Activate\+Storage}!Simulator\+::\+Clock@{Simulator\+::\+Clock}}
+\subsubsection[{Activate\+Storage}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Storage} $\ast$ Simulator\+::\+Clock\+::\+Activate\+Storage (
+\begin{DoxyParamCaption}
+\item[{{\bf Storage} \&}]{storage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_clock_af051b1730aa459c97e41ff514099d16f}
+
+
+\hyperlink{class_simulator_1_1_register}{Register} an update request for the specified storage at the end of the cycle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em storage} & The storage to update \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the next storage that requires updating 
+\end{DoxyReturn}
+\hypertarget{class_simulator_1_1_clock_a3cad12dad6b91c89fe080557f24f1703}{\index{Simulator\+::\+Clock@{Simulator\+::\+Clock}!Get\+Active\+Arbitrators@{Get\+Active\+Arbitrators}}
+\index{Get\+Active\+Arbitrators@{Get\+Active\+Arbitrators}!Simulator\+::\+Clock@{Simulator\+::\+Clock}}
+\subsubsection[{Get\+Active\+Arbitrators}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Arbitrator}$\ast$ Simulator\+::\+Clock\+::\+Get\+Active\+Arbitrators (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_clock_a3cad12dad6b91c89fe080557f24f1703}
+\hypertarget{class_simulator_1_1_clock_a6ba1a05417d234e27b60a63093e763bc}{\index{Simulator\+::\+Clock@{Simulator\+::\+Clock}!Get\+Active\+Processes@{Get\+Active\+Processes}}
+\index{Get\+Active\+Processes@{Get\+Active\+Processes}!Simulator\+::\+Clock@{Simulator\+::\+Clock}}
+\subsubsection[{Get\+Active\+Processes}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Process}$\ast$ Simulator\+::\+Clock\+::\+Get\+Active\+Processes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_clock_a6ba1a05417d234e27b60a63093e763bc}
+\hypertarget{class_simulator_1_1_clock_a84be4a7d805dae493b2d163d8317f718}{\index{Simulator\+::\+Clock@{Simulator\+::\+Clock}!Get\+Active\+Storages@{Get\+Active\+Storages}}
+\index{Get\+Active\+Storages@{Get\+Active\+Storages}!Simulator\+::\+Clock@{Simulator\+::\+Clock}}
+\subsubsection[{Get\+Active\+Storages}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Storage}$\ast$ Simulator\+::\+Clock\+::\+Get\+Active\+Storages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_clock_a84be4a7d805dae493b2d163d8317f718}
+\hypertarget{class_simulator_1_1_clock_a1a840aaeb898581ab6234c3ccb135c68}{\index{Simulator\+::\+Clock@{Simulator\+::\+Clock}!Get\+Cycle\+No@{Get\+Cycle\+No}}
+\index{Get\+Cycle\+No@{Get\+Cycle\+No}!Simulator\+::\+Clock@{Simulator\+::\+Clock}}
+\subsubsection[{Get\+Cycle\+No}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cycle\+No} Simulator\+::\+Clock\+::\+Get\+Cycle\+No (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_clock_a1a840aaeb898581ab6234c3ccb135c68}
+
+
+Returns the cycle counter for this clock. 
+
+\hypertarget{class_simulator_1_1_clock_a33bced1d6b21cfa1e13923ddb2213b07}{\index{Simulator\+::\+Clock@{Simulator\+::\+Clock}!Get\+Frequency@{Get\+Frequency}}
+\index{Get\+Frequency@{Get\+Frequency}!Simulator\+::\+Clock@{Simulator\+::\+Clock}}
+\subsubsection[{Get\+Frequency}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long long Simulator\+::\+Clock\+::\+Get\+Frequency (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_clock_a33bced1d6b21cfa1e13923ddb2213b07}
+
+
+Returns the frequency of this clock. 
+
+\hypertarget{class_simulator_1_1_clock_af2d37b476969e4c081f373d4289cdd77}{\index{Simulator\+::\+Clock@{Simulator\+::\+Clock}!Get\+Kernel@{Get\+Kernel}}
+\index{Get\+Kernel@{Get\+Kernel}!Simulator\+::\+Clock@{Simulator\+::\+Clock}}
+\subsubsection[{Get\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kernel}\& Simulator\+::\+Clock\+::\+Get\+Kernel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_clock_af2d37b476969e4c081f373d4289cdd77}
+\hypertarget{class_simulator_1_1_clock_ac9f77a912cfccb11f13b8bac1856b94f}{\index{Simulator\+::\+Clock@{Simulator\+::\+Clock}!Get\+Next@{Get\+Next}}
+\index{Get\+Next@{Get\+Next}!Simulator\+::\+Clock@{Simulator\+::\+Clock}}
+\subsubsection[{Get\+Next}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Clock}$\ast$ Simulator\+::\+Clock\+::\+Get\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_clock_ac9f77a912cfccb11f13b8bac1856b94f}
+
+
+Used for iterating through active clocks. 
+
+\hypertarget{class_simulator_1_1_clock_a163aff5e2f52dfbffce4353b9b2b790f}{\index{Simulator\+::\+Clock@{Simulator\+::\+Clock}!Get\+Next\+Tick@{Get\+Next\+Tick}}
+\index{Get\+Next\+Tick@{Get\+Next\+Tick}!Simulator\+::\+Clock@{Simulator\+::\+Clock}}
+\subsubsection[{Get\+Next\+Tick}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cycle\+No} Simulator\+::\+Clock\+::\+Get\+Next\+Tick (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_clock_a163aff5e2f52dfbffce4353b9b2b790f}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_simulator_1_1_clock_a3807a3ebd0e05ca8cb4d928025a943d2}{\index{Simulator\+::\+Clock@{Simulator\+::\+Clock}!Kernel@{Kernel}}
+\index{Kernel@{Kernel}!Simulator\+::\+Clock@{Simulator\+::\+Clock}}
+\subsubsection[{Kernel}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Kernel}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_simulator_1_1_clock_a3807a3ebd0e05ca8cb4d928025a943d2}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{kernel_8h}{kernel.\+h}\item 
+sim/\hyperlink{kernel_8cpp}{kernel.\+cpp}\end{DoxyCompactItemize}

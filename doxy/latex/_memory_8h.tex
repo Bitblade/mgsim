@@ -1,0 +1,41 @@
+\hypertarget{_memory_8h}{\section{arch/\+Memory.h File Reference}
+\label{_memory_8h}\index{arch/\+Memory.\+h@{arch/\+Memory.\+h}}
+}
+{\ttfamily \#include \char`\"{}simtypes.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}symtable.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$sim/ports.\+h$>$}\\*
+{\ttfamily \#include $<$sim/storage.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_simulator_1_1_mem_data}{Simulator\+::\+Mem\+Data}
+\item 
+class \hyperlink{class_simulator_1_1_i_memory_callback}{Simulator\+::\+I\+Memory\+Callback}
+\item 
+class \hyperlink{class_simulator_1_1_i_memory}{Simulator\+::\+I\+Memory}
+\item 
+class \hyperlink{class_simulator_1_1_i_memory_admin}{Simulator\+::\+I\+Memory\+Admin}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_simulator}{Simulator}
+\item 
+ \hyperlink{namespace_simulator_1_1line}{Simulator\+::line}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef size\+\_\+t \hyperlink{namespace_simulator_a4b5747ff30c62c6373badf3b53b9abf7}{Simulator\+::\+M\+C\+I\+D}
+\begin{DoxyCompactList}\small\item\em Memory Client I\+D. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename M , typename S $>$ }\\void \hyperlink{namespace_simulator_1_1line_a238b8d050e9abf8ca7d5a2ab3466e227}{Simulator\+::line\+::blit} (T $\ast$dst, const T $\ast$src, const M $\ast$mask, S sz)
+\item 
+{\footnotesize template$<$typename T , typename M , typename S $>$ }\\void \hyperlink{namespace_simulator_1_1line_a97884dd8bbf8be5543c9bd16da4a1797}{Simulator\+::line\+::blitnot} (T $\ast$dst, const T $\ast$src, const M $\ast$mask, S sz)
+\item 
+{\footnotesize template$<$typename T , typename M , typename S $>$ }\\void \hyperlink{namespace_simulator_1_1line_ac6d3ef48d601c90b9b5f82029c887b7b}{Simulator\+::line\+::setif} (T $\ast$dst, const T \&src, const M $\ast$mask, S sz)
+\item 
+{\footnotesize template$<$typename T , typename M , typename S $>$ }\\void \hyperlink{namespace_simulator_1_1line_a66f7bf7c202ec603fda3c92778b7919b}{Simulator\+::line\+::setifnot} (T $\ast$dst, const T \&src, const M $\ast$mask, S sz)
+\end{DoxyCompactItemize}

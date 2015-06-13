@@ -1,0 +1,210 @@
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message}{\section{Simulator\+:\+:C\+D\+M\+A\+:\+:Node\+:\+:Message Union Reference}
+\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message}\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}
+}
+
+
+This is the message that gets sent around.  
+
+
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119}{Type} \{ \\*
+\hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119af7966eae3007c2e675145c64db3bf2f4}{R\+E\+Q\+U\+E\+S\+T}, 
+\hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119ac2c26908233d0351c27b743964615e71}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+A\+T\+A}, 
+\hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119a4711b161edd8e7508ec31be8e8d7f16b}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+O\+K\+E\+N}, 
+\hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119a58c44380dc7bf8c42942c9593079ca38}{E\+V\+I\+C\+T\+I\+O\+N}, 
+\\*
+\hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119ab38e1b9d833fd0bc9564a15eaadd5903}{U\+P\+D\+A\+T\+E}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_aef7cb86116a2bcb63d356417e2bc0fe6}{str} () const 
+\item 
+\hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ae3aa2537b339f27ca552c5ddc9e0ed75}{Message} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void $\ast$ \hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a8398e0bb4cc431c1625043ef0ca5d5fb}{operator new} (size\+\_\+t size)
+\item 
+static void \hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_af816a8d8ad8a8db6f4ae14fa451e73e2}{operator delete} (void $\ast$p, size\+\_\+t size)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119}{Type} \hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_aaf4785761a8eb844f5ad25be2f6078e8}{type}\\
+\>\>{\em Type of message. }\\
+\>bool \hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a40adca4a041526242a87a513b6490af6}{dirty}\\
+\>\>{\em Is the data dirty? (EV, RD, RDT) }\\
+\>bool \hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a8f8af70650fb46cf43d6cb088770da4d}{ignore}\\
+\>\>{\em Just pass this message through to the top level. }\\
+\>MemAddr \hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a49e22738904eeee4d3daeef53cff7671}{address}\\
+\>\>{\em The address of the cache-\/line. }\\
+\>\hyperlink{struct_simulator_1_1_mem_data}{MemData} \hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_aa245e95fda405759ee6e9ba5336a24b5}{data}\\
+\>\>{\em The data (RD, RDT, EV, UP) }\\
+\>\hyperlink{class_simulator_1_1_c_d_m_a_a59272166fd32e642f3113c22cc756927}{NodeID} \hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ae57a5922a94bc7198cf288a5e68146e1}{sender}\\
+\>\>{\em ID of the sender of the message. }\\
+\>size\_t \hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a69e5d008aa2f5e5ba4a4858313b8c43e}{client}\\
+\>\>{\em Sending client (UP) }\\
+\>\hyperlink{namespace_simulator_a0de605c35951a450d074222efcef6359}{WClientID} \hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a627f2c8a8794da22fa8554fd559cc666}{wid}\\
+\>\>{\em Sending entity on client (family/thread) (UP) }\\
+\>unsigned int \hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a852ab90e37739e1d1239d14635d7c4bb}{tokens}\\
+\>\>{\em Number of tokens in this message (RDT, EV) }\\
+\}; \\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em The actual message contents that's simulated. \end{DoxyCompactList}\item 
+\hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message}{Message} $\ast$ \hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a9cc157f9a6cef35bacc0d630c333d18f}{next}
+\begin{DoxyCompactList}\small\item\em For memory management. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the message that gets sent around. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!Type@{Type}}
+\index{Type@{Type}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message\+::\+Type}}}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{R\+E\+Q\+U\+E\+S\+T@{R\+E\+Q\+U\+E\+S\+T}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!R\+E\+Q\+U\+E\+S\+T@{R\+E\+Q\+U\+E\+S\+T}}\item[{\em 
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119af7966eae3007c2e675145c64db3bf2f4}{R\+E\+Q\+U\+E\+S\+T}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119af7966eae3007c2e675145c64db3bf2f4}
+}]Read request (R\+R) \index{R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+A\+T\+A@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+A\+T\+A}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+A\+T\+A@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+A\+T\+A}}\item[{\em 
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119ac2c26908233d0351c27b743964615e71}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+A\+T\+A}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119ac2c26908233d0351c27b743964615e71}
+}]Read request with data (R\+D) \index{R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+O\+K\+E\+N@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+O\+K\+E\+N}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+O\+K\+E\+N@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+O\+K\+E\+N}}\item[{\em 
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119a4711b161edd8e7508ec31be8e8d7f16b}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+O\+K\+E\+N}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119a4711b161edd8e7508ec31be8e8d7f16b}
+}]Read request with data and tokens (R\+D\+T) \index{E\+V\+I\+C\+T\+I\+O\+N@{E\+V\+I\+C\+T\+I\+O\+N}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!E\+V\+I\+C\+T\+I\+O\+N@{E\+V\+I\+C\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119a58c44380dc7bf8c42942c9593079ca38}{E\+V\+I\+C\+T\+I\+O\+N}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119a58c44380dc7bf8c42942c9593079ca38}
+}]Eviction (E\+V) \index{U\+P\+D\+A\+T\+E@{U\+P\+D\+A\+T\+E}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!U\+P\+D\+A\+T\+E@{U\+P\+D\+A\+T\+E}}\item[{\em 
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119ab38e1b9d833fd0bc9564a15eaadd5903}{U\+P\+D\+A\+T\+E}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ac3095cafaabbfe8a9bff7d8600899119ab38e1b9d833fd0bc9564a15eaadd5903}
+}]Update (U\+P) \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ae3aa2537b339f27ca552c5ddc9e0ed75}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!Message@{Message}}
+\index{Message@{Message}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}
+\subsubsection[{Message}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message\+::\+Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ae3aa2537b339f27ca552c5ddc9e0ed75}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_af816a8d8ad8a8db6f4ae14fa451e73e2}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}
+\subsubsection[{operator delete}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message\+::operator delete (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p, }
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_af816a8d8ad8a8db6f4ae14fa451e73e2}
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a8398e0bb4cc431c1625043ef0ca5d5fb}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!operator new@{operator new}}
+\index{operator new@{operator new}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}
+\subsubsection[{operator new}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message\+::operator new (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a8398e0bb4cc431c1625043ef0ca5d5fb}
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_aef7cb86116a2bcb63d356417e2bc0fe6}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!str@{str}}
+\index{str@{str}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}
+\subsubsection[{str}]{\setlength{\rightskip}{0pt plus 5cm}string Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message\+::str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_aef7cb86116a2bcb63d356417e2bc0fe6}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a7304d09679793225172d2abdec4b9e73}{\subsubsection[{"@60}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \} }}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a7304d09679793225172d2abdec4b9e73}
+
+
+The actual message contents that's simulated. 
+
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a49e22738904eeee4d3daeef53cff7671}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!address@{address}}
+\index{address@{address}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}
+\subsubsection[{address}]{\setlength{\rightskip}{0pt plus 5cm}Mem\+Addr Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message\+::address}}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a49e22738904eeee4d3daeef53cff7671}
+
+
+The address of the cache-\/line. 
+
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a69e5d008aa2f5e5ba4a4858313b8c43e}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!client@{client}}
+\index{client@{client}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}
+\subsubsection[{client}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message\+::client}}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a69e5d008aa2f5e5ba4a4858313b8c43e}
+
+
+Sending client (U\+P) 
+
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_aa245e95fda405759ee6e9ba5336a24b5}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!data@{data}}
+\index{data@{data}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mem\+Data} Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message\+::data}}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_aa245e95fda405759ee6e9ba5336a24b5}
+
+
+The data (R\+D, R\+D\+T, E\+V, U\+P) 
+
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a40adca4a041526242a87a513b6490af6}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!dirty@{dirty}}
+\index{dirty@{dirty}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}
+\subsubsection[{dirty}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message\+::dirty}}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a40adca4a041526242a87a513b6490af6}
+
+
+Is the data dirty? (E\+V, R\+D, R\+D\+T) 
+
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a8f8af70650fb46cf43d6cb088770da4d}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!ignore@{ignore}}
+\index{ignore@{ignore}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}
+\subsubsection[{ignore}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message\+::ignore}}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a8f8af70650fb46cf43d6cb088770da4d}
+
+
+Just pass this message through to the top level. 
+
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a9cc157f9a6cef35bacc0d630c333d18f}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!next@{next}}
+\index{next@{next}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Message}$\ast$ Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message\+::next}}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a9cc157f9a6cef35bacc0d630c333d18f}
+
+
+For memory management. 
+
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ae57a5922a94bc7198cf288a5e68146e1}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!sender@{sender}}
+\index{sender@{sender}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}
+\subsubsection[{sender}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node\+I\+D} Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message\+::sender}}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_ae57a5922a94bc7198cf288a5e68146e1}
+
+
+I\+D of the sender of the message. 
+
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a852ab90e37739e1d1239d14635d7c4bb}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!tokens@{tokens}}
+\index{tokens@{tokens}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}
+\subsubsection[{tokens}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message\+::tokens}}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a852ab90e37739e1d1239d14635d7c4bb}
+
+
+Number of tokens in this message (R\+D\+T, E\+V) 
+
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_aaf4785761a8eb844f5ad25be2f6078e8}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!type@{type}}
+\index{type@{type}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Type} Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message\+::type}}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_aaf4785761a8eb844f5ad25be2f6078e8}
+
+
+Type of message. 
+
+\hypertarget{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a627f2c8a8794da22fa8554fd559cc666}{\index{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}!wid@{wid}}
+\index{wid@{wid}!Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message@{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}}
+\subsubsection[{wid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+Client\+I\+D} Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message\+::wid}}\label{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message_a627f2c8a8794da22fa8554fd559cc666}
+
+
+Sending entity on client (family/thread) (U\+P) 
+
+
+
+The documentation for this union was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/mem/cdma/\hyperlink{cdma_2_node_8h}{Node.\+h}\item 
+arch/mem/cdma/\hyperlink{cdma_2_node_8cpp}{Node.\+cpp}\end{DoxyCompactItemize}

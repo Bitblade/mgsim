@@ -1,0 +1,802 @@
+.\" Man page generated from reStructuredText.
+.
+.TH MGSIMDOC 7 "July 2013" "3.4.90-5937" ""
+.SH NAME
+mgsimdoc \- Documentation and configuration for MGSim
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.SH DESCRIPTION
+.sp
+MGSim was developed to facilitate research in the design
+of many\-core general\-purpose processor chips, in particular Microgrid
+chips based on D\-RISC. It also includes full\-system capability,
+including a fully configurable I/O subsystem and memory interconnect.
+.SH OVERVIEW
+.sp
+An execution of the simulator entails the following steps:
+.INDENT 0.0
+.IP 1. 3
+the simulator parses configuration parameters from a configuration
+file (\fB\-c\fP) and optional configuration overrides on the command
+line (\fB\-o\fP / \fB\-I\fP).
+.IP 2. 3
+it creates the system\(aqs components (cores, FPUs, memories, etc)
+using the configuration. Input files, including program code, is
+loaded into ROM pseudo\-devices.
+.IP 3. 3
+it signals to the processor chip to boot.
+.IP 4. 3
+it proceeds to run the simulation of all components, until either
+of the following happens:
+.INDENT 3.0
+.IP \(bu 2
+the software running on the platform signals explicit termination;
+.IP \(bu 2
+a simulation error occurs;
+.IP \(bu 2
+the user interrupts the simulation.
+.UNINDENT
+.IP 5. 3
+Unless instructed otherwise with option \fB\-t\fP, the simulation then
+drops to an interactive prompt where the state of the system can be
+inspected.
+.UNINDENT
+.SH COMPONENTS AND TOPOLOGY
+.sp
+The minimum components found in a MGSim configuration are:
+.INDENT 0.0
+.IP \(bu 2
+a core;
+.IP \(bu 2
+a memory system;
+.IP \(bu 2
+an I/O network with a bootable ROM and SMC device.
+.UNINDENT
+.sp
+The number of cores, as well as the topology of the I/O and memory
+systems between cores, is configurable.
+.SS Cores
+.sp
+MGSim defines two core models, MT\-Alpha and MT\-SPARC. Both models are
+based on the general D\-RISC core design. D\-RISC is an in\-order,
+single\-issue pipelined, dataflow\-scheduled, multithreaded RISC
+core. MGSim\(aqs core model simulates D\-RISC\(aqs pipeline, functional
+units, L1 cache, and ancillary components in detail, down to the
+interactions at every clock cycle. D\-RISC also features
+asynchronous FPUs, where one FPU can be shared between two or more
+D\-RISC cores.
+.sp
+Contrary to other simulator or ISA emulators which decouple component
+model simulation from the functional behavior of ISA instructions,
+MGSim\(aqs core implementation realistically decomposes instruction
+execution in multiple pipeline stages with explicit data paths and
+latch buffers. This enables accurate modeling of timing\-dependent
+behavior fo all instructions, including inter\-core synchronization,
+memory accesses and I/O operations.
+.sp
+Currently the choice of the core model is static (compile\-time);
+it is selected during source configuration using \fB\-\-target\fP\&.
+.SS Memory
+.sp
+MGSim simulates a many\-core chip connected to a shared memory. The
+memory protocol, topology and interconnect are determined by the
+run\-time choice of a memory system.
+.sp
+The following memory systems are supported:
+.INDENT 0.0
+.TP
+.B \fBserial\fP
+A simple bus connecting all cores with a single memory
+interface.
+.TP
+.B \fBparallel\fP
+A multi\-ported memory interface is connected to all cores using
+separate links. Requests from each port are handled concurrently.
+Consistency is resolved on request completion.
+.TP
+.B \fBbanked\fP
+Multiple memory interfaces are connected to all cores using an
+Omega network. The mapping of address space ranges to memory
+interfaces is configurable, and defaults to round\-robin on the
+lowest significant bits of the address.
+.TP
+.B \fBrandombanked\fP
+Same as \fBbanked\fP, with a bit shuffling for the mapping of
+addresses to interfaces, to maximize load distribution.
+.TP
+.B \fBdirectddr\fP
+Similar to \fBbanked\fP, where the memory interface simulates
+a DDR channel that pipelines memory requests.
+.TP
+.B \fBrandomddr\fP
+Similar to \fBrandombanked\fP, with DDR interfaces.
+.TP
+.B \fBflatcdma\fP
+Cores are connected to L2 caches, in turn connected to memory
+interfaces.  Memory interfaces implement DDR channels. The L2
+caches and memory interface are organized in a ring. Directories at
+each memory interface determine what data is currently present in
+cache, to optimize accesses. Each group of core sharing a L2 cache
+is connected using a bus. The protocol migrates cache lines at the
+L2 cache of last use.
+.TP
+.B \fBcdma\fP
+Like \fBflatcdma\fP, with two levels of rings. L2 caches are
+connected together in multiple rings each containing a middle\-level
+directory. Middle\-level directories are then connected in a single
+top\-level ring also containing the memory interfaces.
+.TP
+.B \fBzlcdma\fP
+Like \fBcdma\fP, using an alternate, token\-based but less realistic
+cache coherence protocol.
+.UNINDENT
+.SS On\-chip interconnect
+.sp
+When multiple cores are configured, they are automatically connected
+together using three on\-chip networks: the memory network (for memory
+loads and stores), the delegation network (for cross\-chip work
+distribution) and the link network (for local work distribution
+between adjacent cores).
+.sp
+The memory network is determined by the selected memory system, as
+described above. The cores are placed over the 2D grid surface using a
+space\-filling curve, so as to maximize locality in the memory network
+at different core cluster sizes.
+.sp
+The link network is a one\-dimensional, word\-wide, short\-latency
+network connecting all cores in their natural index ordering.
+.sp
+The delegation network connects all cores; is intended to be
+implemented as a narrow mesh, although its timing model attributes a
+single latency for any pairwise communication.
+.sp
+The interconnect is not directly configurable; instead, it is derived
+automatically from the selected memory system and number of cores.
+.sp
+It is possible to dump the interconnect topology as a Graphviz
+directed graph using command\-line option \fB\-T\fP\&.
+.SS I/O subsystem
+.sp
+The cores are connected to the simulation\(aqs environment using an I/O
+subsystem featuring pseudo\-device emulations. The number of I/O
+buses, which pseudo\-devices are connected to them and how
+they are connected to cores on the simulated chip are all
+configurable.
+.sp
+The choice of pseudo\-device types includes:
+.INDENT 0.0
+.IP \(bu 2
+realistic serial UARTs (\fBuart\fP);
+.IP \(bu 2
+realistic real time clocks (\fBrtc\fP);
+.IP \(bu 2
+character matrix displays (\fBlcd\fP);
+.IP \(bu 2
+ROMs with integrated DMA controller (\fBarom\fP);
+.IP \(bu 2
+a graphical framebuffer (\fBgfx\fP);
+.IP \(bu 2
+a syscall interface to the host\(aqs POSIX file handling (\fBrpc\fP);
+.IP \(bu 2
+a System Management Controller (SMC) responsible for booting up the
+simulated platform\(aqs software (\fBsmc\fP).
+.UNINDENT
+.sp
+Some of these pseudo\-devices have their own documentation, cf \fI\%SEE
+ALSO\fP below for details.
+.SH COMPONENTS AND NAMING
+.sp
+A Microgrid system is simulated as a \fIhierarchy\fP of connected
+\fIcomponents\fP, implemented as objects in C++. Conceptually independent
+from the C++ class hierarchy, the component hierarchy reflects the
+position of the components on chip. For example the allocation unit
+("\fBalloc\fP") is a sub\-component of a processor ("\fBcpu\fP").
+.sp
+Components represent circuits that implement both processes and
+storage (state). Processes are either single cycle, or state machines
+over multiple cycles. Processes can perform the following actions:
+.INDENT 0.0
+.IP \(bu 2
+update storage, either locally or remotely, optionally
+through an arbitrator if the state is shared between two or more
+processes.
+.IP \(bu 2
+send a signal, which (re\-)starts another process either locally or
+remotely. This can be done either via explicit process activation or
+implicitely by pushing data into a buffer with a listener (consumer)
+process.
+.UNINDENT
+.sp
+A component is defined by its sub\-parts, which can be either:
+.INDENT 0.0
+.IP \(bu 2
+passive storage;
+.IP \(bu 2
+arbitrators, that regulate shared access to passive storage;
+.IP \(bu 2
+active storages, which wake up a consumer process upon becoming
+non\-empty and suspend a producer process upon becoming full;
+.IP \(bu 2
+processes, which access both storages and arbitrators;
+.IP \(bu 2
+sub\-components.
+.UNINDENT
+.sp
+Moreover, each component can define one or more \fImonitoring variables\fP
+that reflect its internal state. When a variable is defined, it also
+has a name relative to the component where it is defined.
+.SS Entity names
+.sp
+Components and their sub\-parts are identified by a \fIname\fP, relative to
+their parent entity. Any entity can be thus identified globally using
+its \fIfully qualified name\fP (FQN), which indicates its path in the
+hierarchy. For example \fBcpu4.pipeline.execute\fP is the FQN of the
+execute stage of the pipeline of the 5th simulated core on the system.
+.sp
+Entity names are used throughout the simulation environment: to
+manipulate components in the interactive prompt, to set up
+configuration, to report simulation messages, etc.
+.sp
+The name of an entity mat indicate its type:
+.INDENT 0.0
+.IP \(bu 2
+names starting with "\fBb_\fP" identify \fIbuffers\fP, ie. FIFO queues of
+fixed\-width entries and a statically configurable maximum
+size. These are active storages;
+.IP \(bu 2
+names starting with "\fBf_\fP" identify \fIflags\fP, ie. single\-bit active
+storages;
+.IP \(bu 2
+names starting with "\fBp_\fP" identify \fIpriority arbitrators\fP;
+.UNINDENT
+.sp
+The FQN of an entity can further identify its type:
+.INDENT 0.0
+.IP \(bu 2
+a component FQN is a concatenation of its path in the hierarchy with
+periods ("\fB\&.\fP");
+.IP \(bu 2
+a process FQN or monitoring variable FQN is the concatenation of its
+component FQN and its name with a colon ("\fB:\fP").
+.UNINDENT
+.sp
+The list of all entities can be obtained from a running instance of
+the Microgrid simulator. From the interactive prompt, the commands
+\fBshow components\fP, \fBshow processes\fP and \fBshow vars\fP in
+interactive mode (\fB\-i\fP) can be used. Here is an example session:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+00000000> show components *cpu27*
+cpu27                       DRISC
+  families                  DRISC::FamilyTable
+  threads                   DRISC::ThreadTable
+  registers                 DRISC::RegisterFile
+  rau                       DRISC::RAUnit
+  icache                    DRISC::ICache
+    b_outgoing              Buffer<unsigned long long>
+    b_incoming              Buffer<unsigned long>
+  dcache                    DRISC::DCache
+    b_completed             Buffer<unsigned long>
+    b_incoming              Buffer<DRISC::DCache::Response>
+    b_outgoing              Buffer<DRISC::DCache::Request>
+  pipeline                  DRISC::Pipeline
+    f_active                Register<bool>
+    fetch                   DRISC::Pipeline::FetchStage
+    decode                  DRISC::Pipeline::DecodeStage
+    execute                 DRISC::Pipeline::ExecuteStage
+ (some output lines omitted)
+
+00000000> show processes *cpu27*
+cpu27.alloc:thread\-allocate
+cpu27.alloc:family\-allocate
+cpu27.alloc:family\-create
+cpu27.alloc:thread\-activation
+cpu27.icache:outgoing
+cpu27.icache:incoming
+cpu27.dcache:completed\-reads
+cpu27.dcache:incoming
+cpu27.dcache:outgoing
+(some output lines omitted)
+
+00000000> show vars *cpu27*
+# size type  dtype max address     name
+  8    level int   0   0x10160ee18 cpu27.alloc.b_alloc:cursize
+  8    wmark int   32  0x10160ee10 cpu27.alloc.b_alloc:maxsize
+  8    cumul int   N/A 0x10160edf8 cpu27.alloc.b_alloc:stalls
+  8    cumul int   N/A 0x10160ee08 cpu27.alloc.b_alloc:totalsize
+  8    level int   0   0x10160f788 cpu27.alloc.b_allocRequestsExclusive:cursize
+  8    cumul int   N/A 0x10160f768 cpu27.alloc.b_allocRequestsExclusive:stalls
+(some output lines omitted)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SH CONFIGURATION SYSTEM AND VARIABLES
+.sp
+The simulated Microgrid can be configured via command\-line parameters
+and an architecture configuration file.
+.sp
+The following can be configured:
+.INDENT 0.0
+.IP \(bu 2
+the \fIsimulation environment\fP itself. For example, the name of the
+asynchronous monitoring output stream.
+.IP \(bu 2
+\fIarchitectural constants\fP which have a pervasive effect. For
+example, the D\-RISC control block size.
+.IP \(bu 2
+the \fIsystem layout\fP\&. For example, the number of cores, as well as
+which I/O devices are connected to each I/O network or the number of
+DDR channels.
+.IP \(bu 2
+\fIindividual component parameters\fP\&. These can be configured with
+separate values for each component of a given type. For example, the
+associativity of the L1 D\-cache can be configured separately for
+each core. Similarly, buffer (FIFO) maximum sizes can be configured
+individually.
+.IP \(bu 2
+\fIshared component parameters\fP that cannot (yet) be configured per
+component. For example, the core frequency and the cache line width
+are shared across the system.
+.UNINDENT
+.sp
+Each configurable item has a \fIname\fP which identifies it uniquely.
+.sp
+For individual component parameters, the name is composed of the fully
+qualified component name (FQN), followed by a colon and the parameter
+name. For example, \fBcpu27.dcache:associativity\fP is the parameter
+name for the associativity of the D\-cache of core 27.
+.sp
+For all other configurable items, the option name is simply the name
+of the item. For example, \fBControlBlockSize\fP is the name of the
+parameter to configure the control block size.
+.sp
+The set of all configurable items is documented in the reference
+configuration file provided alongside \fBmgsim\fP\&.
+.SS Configuration specification
+.sp
+The input configuration is a \fIsequence of configuration rules\fP
+called the \fIconfiguration space\fP\&. Each configuration rule has the
+form:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+pattern = value
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+The value of each parameter is determined by \fIfirst match\fP of the
+parameter name against the sequence of patterns from the configuration
+rules. Matching is performed using \fIcase\-insensitive\fP comparison
+and Unix shell pattern matching semantics. In particular, \fB*\fP
+matches any string (including the empty string), \fB?\fP matches any
+character, and \fB[...]\fP matches any one of the enclosed characters.
+.sp
+For example, given the following configuration space:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+cpu27.dcache:numsets = 8
+cpu*.dcache:numsets = 4
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+the parameter \fBsystem.cpu27.dcache:numsets\fP matches the first
+specification and configures the D\-cache of core 27 with 8 cache
+sets. Meanwhile, the corresponding parameter for all other cores fall
+back to the second specification and configure the remaining D\-caches
+with 4 cache sets.
+.sp
+The configuration space is constructed when the simulator is started,
+using the following input:
+.INDENT 0.0
+.IP 1. 3
+any \fIoverride\fP from the command line (parameters \fB\-o\fP and
+\fB\-I\fP), in inverse order: later overrides on the command line are
+considered first;
+.IP 2. 3
+the contents of the \fIconfiguration file\fP specified with parameter
+\fB\-c\fP, or the default configuration file if none is specified, in
+inverse order: later key/value pairs in the file are considered
+first.
+.UNINDENT
+.sp
+The configuration space can be dumped to the console output upon
+initialization using the command\-line parameter \fB\-d\fP\&. It is also copied
+to the asynchronous monitoring metadata file if this is enabled.
+.SS Important configuration variables
+.sp
+The following parameters seem to receive most interest:
+.INDENT 0.0
+.TP
+.B \fBNumProcessors\fP
+The number of cores.
+.TP
+.B \fBCPU*.ICache:Associativity\fP, \fBCPU*.ICache:NumSets\fP
+The size of individual L1 I\-caches.
+.TP
+.B \fBCPU*.DCache:Associativity\fP, \fBCPU*.DCache:NumSets\fP
+The size of individual L1 D\-caches.
+.TP
+.B \fBMemoryType\fP
+The memory system to use.
+.TP
+.B \fBMemory:NumRootDirectories\fP
+For COMA\-based systems, the number of root directories and thus
+number of external memory interfaces.
+.TP
+.B \fBNumClientsPerL2Cache\fP
+For COMA\-based systems, the number of cores per L2 cache. Combined
+with \fBNumProcessors\fP this determines the number of L2 caches in
+total.
+.TP
+.B \fBMemory:L2CacheAssociativity\fP, \fBMemory:L2CacheNumSets\fP
+The size of each L2 cache.
+.UNINDENT
+.SS Default values
+.sp
+Configurable parameters are generally not assigned default values. The
+simulator should report an error when no pattern in the configuration
+space matches the name of a parameter that needs configuration.
+.sp
+There are exceptions to this rule. Some parameters do have default values,
+which are described as comments in the reference configuration file.
+.SS Configuration file format
+.sp
+The files read by parameters \fB\-c\fP and \fB\-I\fP are text files that
+contain configuration specifications of the form \fBkey = value\fP, as
+described above.
+.sp
+In a configuration file, the following extra syntax is also recognized:
+.INDENT 0.0
+.IP \(bu 2
+comments starting with \fB#\fP or \fB;\fP at the start of lines or after
+values;
+.IP \(bu 2
+"section names", of the form \fB[NAME]\fP\&. A section name introduces a
+common prefix for the following keys, until the following section
+name. For example, the following syntax:
+.INDENT 2.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+[CPU1]
+ICache:Associativity = 4
+DCache:Associativity = 8
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+is equivalent to:
+.INDENT 2.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+CPU1.ICache:Associativity = 4
+CPU1.DCache:Associativity = 8
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+The special section name \fB[global]\fP resets the
+prefix to empty.
+.UNINDENT
+.sp
+More examples can be found in the default configuration file shipped
+with the program.
+.SS Standard configuration file
+.sp
+MGSim is shipped with a standard configuration file which defines the
+following system as of August 2012:
+.INDENT 0.0
+.IP \(bu 2
+128 D\-RISC cores at 1GHz, with 2K+4K L1 caches;
+.IP \(bu 2
+64 FPUs (2 cores per FPU);
+.IP \(bu 2
+\fBrandombanked\fP memory system clocked at 1GHz;
+.IP \(bu 2
+one I/O pseudo\-device of each type, around an I/O network connected
+to the first core only. The first ROM contains the program image
+specified on the command line, if any. Additional devices with type
+\fBarom\fP are created to hold character strings for additional
+command\-line arguments and the configuration space.
+.UNINDENT
+.SH INTERACTIVE MODE
+.sp
+When started with \fB\-i\fP, or upon encountering an error and \fB\-t\fP is
+not specified, MGSim presents an interactive prompt to the user to
+control the simulation.
+.sp
+The prompt indicates the current simulation cycle.
+.sp
+The command \fBhelp\fP lists the available commands.
+.SS General commands
+.INDENT 0.0
+.TP
+.B \fBrun\fP
+Run the system until it is idle or deadlocks. Livelocks will not be reported.
+.TP
+.B \fBstep [N]\fP
+Advance the system by N clock cycles (default 1).
+.TP
+.B \fBstate\fP
+Show the state of the system. Idle components are left out.
+.TP
+.B \fBstatistics\fP
+Print the current simulation statistics.
+.TP
+.B \fBquit\fP
+Exit the simulation.
+.TP
+.B \fBhelp [COMMAND]\fP
+Print the help text for COMMAND, or this text if no command is specified.
+.TP
+.B \fBaliases\fP
+List all command aliases.
+.UNINDENT
+.SS Inspection commands
+.INDENT 0.0
+.TP
+.B \fBinfo COMPONENT [ARGS...]\fP
+Show help/configuration/layout for COMPONENT.
+.TP
+.B \fBinspect NAME [ARGS...]\fP (or \fBread\fP)
+Inspect NAME (component, process or monitoring variable).
+Components may have multiple \fBinspect\fP sub\-commands. See \fBinfo
+NAME\fP for details.
+.TP
+.B \fBline COMPONENT ADDR\fP
+Lookup the memory line at address ADDR in the memory system COMPONENT.
+.TP
+.B \fBdisassemble ADDR [SZ]\fP
+Disassemble the program from address ADDR.
+.TP
+.B \fBshow vars [PAT]\fP
+List monitoring variables matching PAT.
+.TP
+.B \fBshow syms [PAT]\fP
+List program symbols matching PAT.
+.TP
+.B \fBshow components [PAT] [LEVEL]\fP
+List components matching PAT (at most LEVELs).
+.TP
+.B \fBshow processes [PAT]\fP
+List processes matching PAT.
+.TP
+.B \fBshow devicedb\fP
+List the I/O device identifier database. See mgsimdev\-smc(7) for use.
+.TP
+.B \fBlookup ADDR\fP
+Look up the program symbol closest to address ADDR.
+.UNINDENT
+.SS Execution control / tracing
+.INDENT 0.0
+.TP
+.B \fBbp\fP (\fBbreakpoint\fP)
+List all current breakpoints.
+.TP
+.B \fBbp add MODE ADDR\fP
+Set a breakpoint at address ADDR with MODE.
+.TP
+.B \fBbp clear\fP
+Clear all breakpoints.
+.TP
+.B \fBbp del ID\fP
+Delete the breakpoint specified by ID.
+.TP
+.B \fBbp disable ID\fP or \fBbp enable ID\fP
+Disable/enable the breakpoint specified by ID.
+.TP
+.B \fBbp off\fP or \fBbp on\fP
+Disable/enable breakpoint detection.
+.TP
+.B \fBbp state\fP
+Report which breakpoints have been reached.
+.TP
+.B \fBtrace line COMPONENT ADDR [clear]\fP
+Enable/Disable tracing of the cache line at address ADDR by memory COMPONENT.
+.TP
+.B \fBtrace [FLAGS...]\fP
+Show current traces / toggle tracing of FLAGS.
+.UNINDENT
+.SH MONITORING
+.sp
+MGSim offers two mechanisms to monitor the simulated environment over
+time: synchronous \fIevent traces\fP, where all detailed events are
+reported, and asynchronous \fIvariable traces\fP, where the state
+of the simulation is sampled at regular time intervals.
+.SS Synchronous event traces
+.sp
+Event traces are enabled using the \fBtrace\fP command in interactive
+mode (\fB\-i\fP). It causes MGSim to report events in a text format on
+its standard output at each simulation step.
+.sp
+Event categories can be individually selected:
+.INDENT 0.0
+.TP
+.B \fBtrace regs\fP
+Events reporting updates to the cores\(aq register files.
+.TP
+.B \fBtrace pipe\fP
+Events reporting pipeline activity within cores.
+.TP
+.B \fBtrace fpu\fP
+Events reporting FPU activity.
+.TP
+.B \fBtrace mem\fP
+Events reporting memory loads and stores.
+.TP
+.B \fBtrace memnet\fP
+Events reporting messages on the memory network.
+.TP
+.B \fBtrace io\fP
+Events reporting I/O operations.
+.TP
+.B \fBtrace ionet\fP
+Events reporting communication on the I/O interconnect.
+.TP
+.B \fBtrace net\fP
+Events reporting communication on the inter\-core delegation and
+link networks.
+.TP
+.B \fBtrace sim\fP
+Events about concurrency management and synchronization between
+cores.
+.TP
+.B \fBtrace deadlocks\fP
+Events reporting process stalls.
+.TP
+.B \fBtrace flow\fP
+Events reporting control flow of the software running on the
+platform (branches).
+.TP
+.B \fBtrace prog\fP
+Debugging messages generated by the software running on the platform.
+.UNINDENT
+.sp
+The special aliases \fBtrace all\fP and \fBtrace none\fP are also
+recognized.
+.sp
+A full simulation trace can be generated using the following command:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+echo "trace all; run; quit" | mgsim \-i ...  >event\-trace.log
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+A simulation trace can in turn be transformed to an HTML table for
+graphical representations with the separate \fBviewlog\fP utility. See
+viewlog(1) for details.
+.sp
+Note that synchronous event traces slow down the simulation by a large
+factor.
+.SS Asynchronous variable traces
+.sp
+Variable traces are enabled using the command\-line flag \fB\-m\fP\&. It
+causes MGSim to start a second thread in the simulation process which
+samples monitoring variables at a regular time interval.
+.sp
+The list of monitoring variables to sample is selected using the
+configuration variable \fBMonitorSampleVariables\fP\&. The standard
+selection shipped with the standard configuration file monitors the
+number of instructions issued, and the number of floating\-point
+instructions executed over time. It can be overloaded using \fB\-o\fP\&.
+.sp
+The time interval between samples is configured using
+\fBMonitorSampleDelay\fP; the standard configuration sets this to 1ms.
+.sp
+The asynchronous monitoring has two outputs. The \fImetadata\fP indicates
+which variables were selected and their width in bytes. The \fItrace\fP
+reports the samples in fixed\-length data packets. The output file
+names are configured using \fBMonitorMetadataFile\fP and
+\fBMonitorTraceFile\fP, and default to \fBmgtrace.md\fP and
+\fBmgtrace.out\fP\&.
+.sp
+The metadata and trace can then in turn be converted to text form
+using the separate utility \fBreadtrace\fP; see readtrace(1) for details.
+.sp
+For example:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+mgsim \-m \-o MonitorSampleVariables="cpu*.pipeline.execute.op"
+readtrace mgtrace.md mgtrace.out >var\-trace.log
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Asynchronous monitoring automatically suspends whenever MGSim displays
+its interactive prompt.
+.SH SEE ALSO
+.INDENT 0.0
+.IP \(bu 2
+mgsim(1), viewlog(1), readtrace(1)
+.IP \(bu 2
+mgsimdev\-arom(7), mgsimdev\-gfx(7), mgsimdev\-lcd(7),
+mgsimdev\-uart(7), mgsimdev\-rtc(7)
+.IP \(bu 2
+M5, \fI\%http://www.m5sim.org/\fP a detailed simulator for networks.
+.IP \(bu 2
+Raphael Poss, Mike Lankamp, Qiang Yang, Jian Fu, Irfan Uddin, and
+Chris Jesshope. \fIMGSim \- a simulation environment for multi\-core
+research and education.\fP In Proc. Intl. Conf. on Embedded Computer
+Systems: Architectures, MOdeling and Simulation (SAMOS). IEEE,
+Samos, Greece, July 2013.
+.IP \(bu 2
+Mike Lankamp, Raphael Poss, Qiang Yang, Jian Fu, Irfan Uddin, and
+Chris R. Jesshope. \fIMGSim \- simulation tools for multi\-core processor
+architectures.\fP Technical Report arXiv:1302.1390v1 [cs.AR],
+University of Amsterdam, February 2013.
+http://arxiv.org/abs/1302.1390
+.IP \(bu 2
+Raphael Poss, Mike Lankamp, Qiang Yang, Jian Fu, Michiel W. van Tol,
+and Chris Jesshope. \fIApple\-CORE: Microgrids of SVP cores (invited
+paper).\fP In Proc. 15th Euromicro Conference on Digital System
+Design. IEEE, Cesme, Izmir, Turkey, September 2012.
+.IP \(bu 2
+Raphael Poss, Mike Lankamp, M. Irfan Uddin, Jaroslav Sykora, and
+Leos Kafka. \fIHeterogeneous integration to simplify many\-core
+architecture simulations.\fP In Proc. 2012 Workshop on Rapid Simulation
+and Performance Evaluation: Methods and Tools, RAPIDO\(aq12, pages
+17\-24. ACM, 2012. ISBN 978\-1\-4503\-1114\-4.
+.UNINDENT
+.SH BUGS
+.sp
+Report bugs & suggest improvements to \fI\%microgrids@svp\-home.org\fP\&.
+.SH AUTHOR
+MGSim was created by Mike Lankamp. MGSim is now under
+stewardship of the MGSim project. This manual page was written
+by Raphael 'kena' Poss.
+.SH COPYRIGHT
+Copyright (C) 2008-2013 the MGSim project.
+.\" Generated by docutils manpage writer.
+.

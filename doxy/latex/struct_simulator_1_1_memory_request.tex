@@ -1,0 +1,87 @@
+\hypertarget{struct_simulator_1_1_memory_request}{\section{Simulator\+:\+:Memory\+Request Struct Reference}
+\label{struct_simulator_1_1_memory_request}\index{Simulator\+::\+Memory\+Request@{Simulator\+::\+Memory\+Request}}
+}
+
+
+This structure stores memory request information, to be used in \hyperlink{struct_simulator_1_1_reg_value}{Reg\+Value}.  
+
+
+
+
+{\ttfamily \#include $<$simtypes.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{struct_simulator_1_1_memory_request_a3453eb77386d52fdec6b5a0727e1ca76}{str} () const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_simulator_1_1_reg_addr}{Reg\+Addr} \hyperlink{struct_simulator_1_1_memory_request_a5bd0134cde59df68d78beb8e618d7e3a}{next}
+\begin{DoxyCompactList}\small\item\em Next register waiting on the cache-\/line. \end{DoxyCompactList}\item 
+\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} \hyperlink{struct_simulator_1_1_memory_request_a189a15aa31e0b4c18fbc2e26762a1b3e}{fid}
+\begin{DoxyCompactList}\small\item\em Family that made the request. \end{DoxyCompactList}\item 
+unsigned \hyperlink{struct_simulator_1_1_memory_request_a2bd25f26857936a5a4b7c2080cc51132}{size}
+\begin{DoxyCompactList}\small\item\em Size of data, in bytes. \end{DoxyCompactList}\item 
+unsigned \hyperlink{struct_simulator_1_1_memory_request_a2db3c5641196ad285fd9d45f74ec16eb}{offset}
+\begin{DoxyCompactList}\small\item\em Offset in the cache-\/line, in bytes. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_simulator_1_1_memory_request_a555fcb4753e36b18ae39a73d01ea70a5}{sign\+\_\+extend}
+\begin{DoxyCompactList}\small\item\em Sign-\/extend the loaded value into the register? \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This structure stores memory request information, to be used in \hyperlink{struct_simulator_1_1_reg_value}{Reg\+Value}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_simulator_1_1_memory_request_a3453eb77386d52fdec6b5a0727e1ca76}{\index{Simulator\+::\+Memory\+Request@{Simulator\+::\+Memory\+Request}!str@{str}}
+\index{str@{str}!Simulator\+::\+Memory\+Request@{Simulator\+::\+Memory\+Request}}
+\subsubsection[{str}]{\setlength{\rightskip}{0pt plus 5cm}string Simulator\+::\+Memory\+Request\+::str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{struct_simulator_1_1_memory_request_a3453eb77386d52fdec6b5a0727e1ca76}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_simulator_1_1_memory_request_a189a15aa31e0b4c18fbc2e26762a1b3e}{\index{Simulator\+::\+Memory\+Request@{Simulator\+::\+Memory\+Request}!fid@{fid}}
+\index{fid@{fid}!Simulator\+::\+Memory\+Request@{Simulator\+::\+Memory\+Request}}
+\subsubsection[{fid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+F\+I\+D} Simulator\+::\+Memory\+Request\+::fid}}\label{struct_simulator_1_1_memory_request_a189a15aa31e0b4c18fbc2e26762a1b3e}
+
+
+Family that made the request. 
+
+\hypertarget{struct_simulator_1_1_memory_request_a5bd0134cde59df68d78beb8e618d7e3a}{\index{Simulator\+::\+Memory\+Request@{Simulator\+::\+Memory\+Request}!next@{next}}
+\index{next@{next}!Simulator\+::\+Memory\+Request@{Simulator\+::\+Memory\+Request}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reg\+Addr} Simulator\+::\+Memory\+Request\+::next}}\label{struct_simulator_1_1_memory_request_a5bd0134cde59df68d78beb8e618d7e3a}
+
+
+Next register waiting on the cache-\/line. 
+
+\hypertarget{struct_simulator_1_1_memory_request_a2db3c5641196ad285fd9d45f74ec16eb}{\index{Simulator\+::\+Memory\+Request@{Simulator\+::\+Memory\+Request}!offset@{offset}}
+\index{offset@{offset}!Simulator\+::\+Memory\+Request@{Simulator\+::\+Memory\+Request}}
+\subsubsection[{offset}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Simulator\+::\+Memory\+Request\+::offset}}\label{struct_simulator_1_1_memory_request_a2db3c5641196ad285fd9d45f74ec16eb}
+
+
+Offset in the cache-\/line, in bytes. 
+
+\hypertarget{struct_simulator_1_1_memory_request_a555fcb4753e36b18ae39a73d01ea70a5}{\index{Simulator\+::\+Memory\+Request@{Simulator\+::\+Memory\+Request}!sign\+\_\+extend@{sign\+\_\+extend}}
+\index{sign\+\_\+extend@{sign\+\_\+extend}!Simulator\+::\+Memory\+Request@{Simulator\+::\+Memory\+Request}}
+\subsubsection[{sign\+\_\+extend}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+Memory\+Request\+::sign\+\_\+extend}}\label{struct_simulator_1_1_memory_request_a555fcb4753e36b18ae39a73d01ea70a5}
+
+
+Sign-\/extend the loaded value into the register? 
+
+\hypertarget{struct_simulator_1_1_memory_request_a2bd25f26857936a5a4b7c2080cc51132}{\index{Simulator\+::\+Memory\+Request@{Simulator\+::\+Memory\+Request}!size@{size}}
+\index{size@{size}!Simulator\+::\+Memory\+Request@{Simulator\+::\+Memory\+Request}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}unsigned Simulator\+::\+Memory\+Request\+::size}}\label{struct_simulator_1_1_memory_request_a2bd25f26857936a5a4b7c2080cc51132}
+
+
+Size of data, in bytes. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/\hyperlink{simtypes_8h}{simtypes.\+h}\item 
+arch/\hyperlink{simtypes_8cpp}{simtypes.\+cpp}\end{DoxyCompactItemize}

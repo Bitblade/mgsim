@@ -8,12 +8,10 @@
 #include <arch/BankSelector.h>
 #include <arch/FPU.h>
 #include "RAUnit.h"
-#include "IOMatchUnit.h"
 #include "DebugChannel.h"
 #include "ActionInterface.h"
 #include "AncillaryRegisterFile.h"
 #include "PerfCounters.h"
-#include "MMUInterface.h"
 #include "RegisterFile.h"
 #include "FamilyTable.h"
 #include "ThreadTable.h"
@@ -22,6 +20,7 @@
 #include "IOInterface.h"
 #include "Network.h"
 #include "Allocator.h"
+#include "mmu/old/MMUInterface.h"
 #include "Pipeline.h"
 
 class Config;

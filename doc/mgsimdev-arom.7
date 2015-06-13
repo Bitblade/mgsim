@@ -1,0 +1,283 @@
+.\" Man page generated from reStructuredText.
+.
+.TH MGSIMDEV-AROM 7 "August 2012" "3.4.90-5937" ""
+.SH NAME
+mgsimdev-arom \- Active ROM pseudo-device in MGSim
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.SH DESCRIPTION
+.sp
+An Active ROM is a combination of a (passive) ROM and an (active) DMA
+controller. It supports both explicit reads to the ROM\(aqs contents and
+DMA requests to push the ROM contents to the shared memory
+asynchronously.
+.sp
+Because DMA accesses are performed within the on\-chip memory system,
+this kind of access is called "Direct Cache Access" (DCA).
+.sp
+An I/O device of this type can be specified in MGSim using the device
+type \fBAROM\fP\&.
+.SH CONFIGURATION
+.sp
+Each \fBarom\fP device support the following configuration variables:
+.INDENT 0.0
+.TP
+.B \fB<dev>:ROMContentSource\fP
+Specifies what data is loaded in the ROM. Can be either:
+.INDENT 7.0
+.TP
+.B \fBRAW\fP
+Unprocessed bytes. The ROM contains the exact contents of the
+input file specified with \fBROMFileName\fP\&.
+.TP
+.B \fBELF\fP
+The input file specified with \fBROMFileName\fP is loaded as a
+ELF binary image containing multiple sections.
+.TP
+.B \fBCONFIG\fP
+The ROM contains the MGSim configuration space, using the binary
+format described in mgsimconf(7).
+.TP
+.B \fBARGV\fP
+The ROM contains the command\-line arguments passed to \fBmgsim\fP,
+after option processing. The ROM contents is laid out as follows:
+.TS
+center;
+|l|l|.
+_
+T{
+Address
+T}	T{
+Description
+T}
+_
+T{
+bytes 0\-3
+T}	T{
+The magic value 0x56475241.
+T}
+_
+T{
+bytes 4\-7
+T}	T{
+The number of MGSim command\-line arguments.
+T}
+_
+T{
+bytes 8\-11
+T}	T{
+The number of bytes following.
+T}
+_
+T{
+bytes 12+
+T}	T{
+The MGSim command\-line arguments, nul\-separated.
+T}
+_
+.TE
+.UNINDENT
+.TP
+.B \fB<dev>:ROMFileName\fP
+The input file name for \fBRAW\fP and \fBELF\fP content sources.
+.TP
+.B \fB<dev>:ROMBaseAddr\fP
+Address in shared memory at which DCA transfers will inject the ROM
+contents. Valid for all content sources except \fBELF\fP: the ELF
+file format specifies its own load target addresses. Can be
+overriden at run\-time.
+.TP
+.B \fB<dev>:PreloadROMToRAM\fP
+If set to true, MGSim will preload the ROM contents into the shared
+memory prior to system starts up. This enables programs to use
+the ROM data directly without using the I/O interface.
+.TP
+.B \fB<dev>:DCATargetID\fP
+Default target device on the I/O network for DCA transfers. Can be
+overriden at run\-time.
+.TP
+.B \fB<dev>:DCANotificationChannel\fP
+Default notification channel to signal when a DCA transfer has
+completed. Can be overriden at run\-time.
+.UNINDENT
+.SH PROTOCOL
+.SS Direct reads
+.sp
+Any \fII/O read\fP request will read the ROM bytes, unmodified, at the
+offset specified in the request.
+.SS DCA loads
+.sp
+A DCA transfer is triggered by sending an \fII/O write\fP request to
+address 0. The integrated DMA controller will then transfer the bytes
+from the ROM to the shared memory system across the I/O network.  When
+the transfer is completed, a notification is sent to the I/O network
+on a predefined channel.  A program can thus wait asynchronously on
+completion of the DCA transfer.
+.sp
+The target device where to send the data, as well as the DCA
+parameters (source/destination addresses, and size) can be configured
+by sending \fII/O write\fP requests to offsets 4\-28, as described in
+\fI\%INTERFACE\fP below.
+.sp
+The effect of changing the DCA configuration \fIduring\fP a DCA transfer
+is undefined.
+.SH INTERFACE
+.sp
+The device presents itself to the I/O bus as a single device.
+.TS
+center;
+|l|l|l|l|.
+_
+T{
+Address
+T}	T{
+Access width
+T}	T{
+Mode
+T}	T{
+Description
+T}
+_
+T{
+0+
+T}	T{
+(any)
+T}	T{
+Read
+T}	T{
+Read the ROM contents
+T}
+_
+T{
+0
+T}	T{
+4 bytes
+T}	T{
+Write
+T}	T{
+Start DCA transfer
+T}
+_
+T{
+4
+T}	T{
+4 bytes
+T}	T{
+Write
+T}	T{
+Set DCA target dev ID (bits 0\-15) + notification channel (bits 16\-31)
+T}
+_
+T{
+8
+T}	T{
+4 bytes
+T}	T{
+Write
+T}	T{
+Base source address for DCA (low bits)
+T}
+_
+T{
+12
+T}	T{
+4 bytes
+T}	T{
+Write
+T}	T{
+Base source address for DCA (high bits)
+T}
+_
+T{
+16
+T}	T{
+4 bytes
+T}	T{
+Write
+T}	T{
+Base target address for DCA (low bits)
+T}
+_
+T{
+20
+T}	T{
+4 bytes
+T}	T{
+Write
+T}	T{
+Base target address for DCA (high bits)
+T}
+_
+T{
+24
+T}	T{
+4 bytes
+T}	T{
+Write
+T}	T{
+Number of bytes for DCA (low bits)
+T}
+_
+T{
+28
+T}	T{
+4 bytes
+T}	T{
+Write
+T}	T{
+Number of bytes for DCA (high bits)
+T}
+_
+.TE
+.sp
+Any \fBarom\fP device further supports the following commands on the
+MGSim interactive prompt:
+.INDENT 0.0
+.TP
+.B \fBinfo <dev>\fP
+Reports the size, current DCA configuration and loadable memory
+ranges.
+.TP
+.B \fBread <dev> <addr> <size>\fP
+Read \fB<size>\fP bytes of the ROM data starting from relative
+address \fB<addr>\fP\&.
+.UNINDENT
+.SH SEE ALSO
+.sp
+mgsim(1), mgsimdoc(7), mgsimconf(7)
+.SH BUGS
+.sp
+Report bugs & suggest improvements to \fI\%microgrids@svp\-home.org\fP\&.
+.SH AUTHOR
+MGSim was created by Mike Lankamp. MGSim is now under
+stewardship of the Microgrid project. This manual page was written
+by Raphael 'kena' Poss.
+.SH COPYRIGHT
+Copyright (C) 2008-2012 the Microgrid project.
+.\" Generated by docutils manpage writer.
+.

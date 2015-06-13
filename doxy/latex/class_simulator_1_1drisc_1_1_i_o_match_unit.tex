@@ -1,0 +1,173 @@
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_match_unit}{\section{Simulator\+:\+:drisc\+:\+:I\+O\+Match\+Unit Class Reference}
+\label{class_simulator_1_1drisc_1_1_i_o_match_unit}\index{Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}}
+}
+
+
+{\ttfamily \#include $<$I\+O\+Match\+Unit.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:drisc\+:\+:I\+O\+Match\+Unit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_simulator_1_1drisc_1_1_i_o_match_unit}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_simulator_1_1drisc_1_1_i_o_match_unit_1_1_component_interface}{Component\+Interface}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_simulator_1_1drisc_1_1_i_o_match_unit_ab8216ac84dabbc1133fe4d26298de231}{Access\+Mode} \{ \hyperlink{class_simulator_1_1drisc_1_1_i_o_match_unit_ab8216ac84dabbc1133fe4d26298de231a24b95e35e70eb151255c43600be2ea89}{R\+E\+A\+D} = 1, 
+\hyperlink{class_simulator_1_1drisc_1_1_i_o_match_unit_ab8216ac84dabbc1133fe4d26298de231a2c7639b1ed72e67c64f498c8f8e0633b}{W\+R\+I\+T\+E} = 2, 
+\hyperlink{class_simulator_1_1drisc_1_1_i_o_match_unit_ab8216ac84dabbc1133fe4d26298de231ac78bfb0330f02b92176f4dd2a9212601}{R\+E\+A\+D\+W\+R\+I\+T\+E} = 3
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_i_o_match_unit_ae366a3316a2081406476d6adda0b8e41}{I\+O\+Match\+Unit} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock)
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_i_o_match_unit_a2dcec12c65ea6e0d88e558e46559d30e}{Is\+Registered\+Read\+Address} (Mem\+Addr address, Mem\+Size size) const 
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_i_o_match_unit_a59183bf7e2285c8bb55832bc4ff3a9cd}{Is\+Registered\+Write\+Address} (Mem\+Addr address, Mem\+Size size) const 
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1drisc_1_1_i_o_match_unit_a894606ca56355078146c24cd83d8e72d}{Read} (Mem\+Addr address, void $\ast$data, Mem\+Size size, \hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} fid, \hyperlink{namespace_simulator_a483cc4ecee1736e895054617672cded5}{T\+I\+D} tid, const \hyperlink{struct_simulator_1_1_reg_addr}{Reg\+Addr} \&writeback)
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1drisc_1_1_i_o_match_unit_a8aaee17de76f6375af71b07eee25279c}{Write} (Mem\+Addr address, const void $\ast$data, Mem\+Size size, \hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} fid, \hyperlink{namespace_simulator_a483cc4ecee1736e895054617672cded5}{T\+I\+D} tid)
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_i_o_match_unit_a8352c1af79d47b33a398a5724ca05112}{Register\+Component} (Mem\+Addr base, \hyperlink{class_simulator_1_1drisc_1_1_i_o_match_unit_ab8216ac84dabbc1133fe4d26298de231}{Access\+Mode} mode, \hyperlink{class_simulator_1_1drisc_1_1_m_m_i_o_component}{M\+M\+I\+O\+Component} \&component)
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_i_o_match_unit_a542060cb44834f30736ea2a733805ba2}{Cmd\+\_\+\+Info} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const override
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ Mem\+Addr, \\*
+\hyperlink{struct_simulator_1_1drisc_1_1_i_o_match_unit_1_1_component_interface}{Component\+Interface} $>$ \hyperlink{class_simulator_1_1drisc_1_1_i_o_match_unit_aa8059233383b2fea82a96da38a2784ce}{Range\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Range\+Map\+::const\+\_\+iterator \hyperlink{class_simulator_1_1drisc_1_1_i_o_match_unit_a505053f6620c8fecfc8615a47d4c6ef8}{Find\+Interface} (Mem\+Addr address, Mem\+Size size) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_i_o_match_unit_aa8059233383b2fea82a96da38a2784ce}{Range\+Map} \hyperlink{class_simulator_1_1drisc_1_1_i_o_match_unit_abd7fa33205080d9e5148e1220ed770b2}{m\+\_\+ranges}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_match_unit_aa8059233383b2fea82a96da38a2784ce}{\index{Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}!Range\+Map@{Range\+Map}}
+\index{Range\+Map@{Range\+Map}!Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}}
+\subsubsection[{Range\+Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$Mem\+Addr, {\bf Component\+Interface}$>$ {\bf Simulator\+::drisc\+::\+I\+O\+Match\+Unit\+::\+Range\+Map}\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1drisc_1_1_i_o_match_unit_aa8059233383b2fea82a96da38a2784ce}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_match_unit_ab8216ac84dabbc1133fe4d26298de231}{\index{Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}!Access\+Mode@{Access\+Mode}}
+\index{Access\+Mode@{Access\+Mode}!Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}}
+\subsubsection[{Access\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Simulator\+::drisc\+::\+I\+O\+Match\+Unit\+::\+Access\+Mode}}}\label{class_simulator_1_1drisc_1_1_i_o_match_unit_ab8216ac84dabbc1133fe4d26298de231}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{R\+E\+A\+D@{R\+E\+A\+D}!Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}}\index{Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}!R\+E\+A\+D@{R\+E\+A\+D}}\item[{\em 
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_match_unit_ab8216ac84dabbc1133fe4d26298de231a24b95e35e70eb151255c43600be2ea89}{R\+E\+A\+D}\label{class_simulator_1_1drisc_1_1_i_o_match_unit_ab8216ac84dabbc1133fe4d26298de231a24b95e35e70eb151255c43600be2ea89}
+}]\index{W\+R\+I\+T\+E@{W\+R\+I\+T\+E}!Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}}\index{Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}!W\+R\+I\+T\+E@{W\+R\+I\+T\+E}}\item[{\em 
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_match_unit_ab8216ac84dabbc1133fe4d26298de231a2c7639b1ed72e67c64f498c8f8e0633b}{W\+R\+I\+T\+E}\label{class_simulator_1_1drisc_1_1_i_o_match_unit_ab8216ac84dabbc1133fe4d26298de231a2c7639b1ed72e67c64f498c8f8e0633b}
+}]\index{R\+E\+A\+D\+W\+R\+I\+T\+E@{R\+E\+A\+D\+W\+R\+I\+T\+E}!Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}}\index{Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}!R\+E\+A\+D\+W\+R\+I\+T\+E@{R\+E\+A\+D\+W\+R\+I\+T\+E}}\item[{\em 
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_match_unit_ab8216ac84dabbc1133fe4d26298de231ac78bfb0330f02b92176f4dd2a9212601}{R\+E\+A\+D\+W\+R\+I\+T\+E}\label{class_simulator_1_1drisc_1_1_i_o_match_unit_ab8216ac84dabbc1133fe4d26298de231ac78bfb0330f02b92176f4dd2a9212601}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_match_unit_ae366a3316a2081406476d6adda0b8e41}{\index{Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}!I\+O\+Match\+Unit@{I\+O\+Match\+Unit}}
+\index{I\+O\+Match\+Unit@{I\+O\+Match\+Unit}!Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}}
+\subsubsection[{I\+O\+Match\+Unit}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+I\+O\+Match\+Unit\+::\+I\+O\+Match\+Unit (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_o_match_unit_ae366a3316a2081406476d6adda0b8e41}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_match_unit_a542060cb44834f30736ea2a733805ba2}{\index{Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}!Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}}
+\index{Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}!Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}}
+\subsubsection[{Cmd\+\_\+\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+I\+O\+Match\+Unit\+::\+Cmd\+\_\+\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}}}\label{class_simulator_1_1drisc_1_1_i_o_match_unit_a542060cb44834f30736ea2a733805ba2}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_match_unit_a505053f6620c8fecfc8615a47d4c6ef8}{\index{Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}!Find\+Interface@{Find\+Interface}}
+\index{Find\+Interface@{Find\+Interface}!Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}}
+\subsubsection[{Find\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}I\+O\+Match\+Unit\+::\+Range\+Map\+::const\+\_\+iterator Simulator\+::drisc\+::\+I\+O\+Match\+Unit\+::\+Find\+Interface (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{Mem\+Size}]{size}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1drisc_1_1_i_o_match_unit_a505053f6620c8fecfc8615a47d4c6ef8}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_match_unit_a2dcec12c65ea6e0d88e558e46559d30e}{\index{Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}!Is\+Registered\+Read\+Address@{Is\+Registered\+Read\+Address}}
+\index{Is\+Registered\+Read\+Address@{Is\+Registered\+Read\+Address}!Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}}
+\subsubsection[{Is\+Registered\+Read\+Address}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+I\+O\+Match\+Unit\+::\+Is\+Registered\+Read\+Address (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{Mem\+Size}]{size}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_i_o_match_unit_a2dcec12c65ea6e0d88e558e46559d30e}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_match_unit_a59183bf7e2285c8bb55832bc4ff3a9cd}{\index{Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}!Is\+Registered\+Write\+Address@{Is\+Registered\+Write\+Address}}
+\index{Is\+Registered\+Write\+Address@{Is\+Registered\+Write\+Address}!Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}}
+\subsubsection[{Is\+Registered\+Write\+Address}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+I\+O\+Match\+Unit\+::\+Is\+Registered\+Write\+Address (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{Mem\+Size}]{size}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_i_o_match_unit_a59183bf7e2285c8bb55832bc4ff3a9cd}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_match_unit_a894606ca56355078146c24cd83d8e72d}{\index{Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}!Read@{Read}}
+\index{Read@{Read}!Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::drisc\+::\+I\+O\+Match\+Unit\+::\+Read (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{void $\ast$}]{data, }
+\item[{Mem\+Size}]{size, }
+\item[{{\bf L\+F\+I\+D}}]{fid, }
+\item[{{\bf T\+I\+D}}]{tid, }
+\item[{const {\bf Reg\+Addr} \&}]{writeback}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_o_match_unit_a894606ca56355078146c24cd83d8e72d}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_match_unit_a8352c1af79d47b33a398a5724ca05112}{\index{Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}!Register\+Component@{Register\+Component}}
+\index{Register\+Component@{Register\+Component}!Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}}
+\subsubsection[{Register\+Component}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+I\+O\+Match\+Unit\+::\+Register\+Component (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{base, }
+\item[{{\bf Access\+Mode}}]{mode, }
+\item[{{\bf M\+M\+I\+O\+Component} \&}]{component}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_o_match_unit_a8352c1af79d47b33a398a5724ca05112}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_match_unit_a8aaee17de76f6375af71b07eee25279c}{\index{Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}!Write@{Write}}
+\index{Write@{Write}!Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::drisc\+::\+I\+O\+Match\+Unit\+::\+Write (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{const void $\ast$}]{data, }
+\item[{Mem\+Size}]{size, }
+\item[{{\bf L\+F\+I\+D}}]{fid, }
+\item[{{\bf T\+I\+D}}]{tid}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_o_match_unit_a8aaee17de76f6375af71b07eee25279c}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_match_unit_abd7fa33205080d9e5148e1220ed770b2}{\index{Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}!m\+\_\+ranges@{m\+\_\+ranges}}
+\index{m\+\_\+ranges@{m\+\_\+ranges}!Simulator\+::drisc\+::\+I\+O\+Match\+Unit@{Simulator\+::drisc\+::\+I\+O\+Match\+Unit}}
+\subsubsection[{m\+\_\+ranges}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Range\+Map} Simulator\+::drisc\+::\+I\+O\+Match\+Unit\+::m\+\_\+ranges\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1drisc_1_1_i_o_match_unit_abd7fa33205080d9e5148e1220ed770b2}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/drisc/mmu/\hyperlink{_i_o_match_unit_8h}{I\+O\+Match\+Unit.\+h}\item 
+arch/drisc/mmu/\hyperlink{_i_o_match_unit_8cpp}{I\+O\+Match\+Unit.\+cpp}\end{DoxyCompactItemize}

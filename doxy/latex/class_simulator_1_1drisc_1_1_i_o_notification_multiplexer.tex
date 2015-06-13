@@ -1,0 +1,158 @@
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer}{\section{Simulator\+:\+:drisc\+:\+:I\+O\+Notification\+Multiplexer Class Reference}
+\label{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer}\index{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}}
+}
+
+
+{\ttfamily \#include $<$I\+O\+Notification\+Multiplexer.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:drisc\+:\+:I\+O\+Notification\+Multiplexer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_abe79d7157ac52e6fd6f321d117b2cd58}{I\+O\+Notification\+Multiplexer} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1drisc_1_1_i_o_interface}{I\+O\+Interface} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock, size\+\_\+t num\+Channels, \hyperlink{class_config}{Config} \&config)
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a4d3908e2a6843f3fe29919160ebb8fa4}{$\sim$\+I\+O\+Notification\+Multiplexer} ()
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_adc52c0f29fe6a719c0a944f21597c9ba}{Set\+Write\+Back\+Address} (\hyperlink{namespace_simulator_a951e1bf3ee91c11c980382a7bcbba287}{I\+O\+Notification\+Channel\+I\+D} which, const \hyperlink{struct_simulator_1_1_reg_addr}{Reg\+Addr} \&addr)
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a576117abf1dc9a925ab7436c55802c98}{Configure\+Channel} (\hyperlink{namespace_simulator_a951e1bf3ee91c11c980382a7bcbba287}{I\+O\+Notification\+Channel\+I\+D} which, Integer mode)
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a57fae78b25090725f632abc1be084a5d}{On\+Interrupt\+Request\+Received} (\hyperlink{namespace_simulator_a951e1bf3ee91c11c980382a7bcbba287}{I\+O\+Notification\+Channel\+I\+D} which)
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a6d7ac7337dfbe38401d0f4f14e51fe97}{On\+Notification\+Received} (\hyperlink{namespace_simulator_a951e1bf3ee91c11c980382a7bcbba287}{I\+O\+Notification\+Channel\+I\+D} which, Integer tag)
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a917a5a8aabca32bd42048cc36349f13f}{Do\+Received\+Notifications} ()
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a0d51528c58a649bc297d6610c3f04be5}{Cmd\+\_\+\+Info} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const 
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a1865e4784b1f0ec5380f04a60ab3a36b}{Cmd\+\_\+\+Read} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const 
+\item 
+\hyperlink{class_simulator_1_1_storage_trace_set}{Storage\+Trace\+Set} \hyperlink{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a86e5acf9490a4d5410783d877483fec0}{Get\+Write\+Back\+Traces} () const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ bool $>$ \hyperlink{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_ad2a670520047a365153c3368612a89b4}{m\+\_\+mask}
+\item 
+std\+::vector$<$ \hyperlink{class_simulator_1_1_single_flag}{Single\+Flag} $\ast$ $>$ \hyperlink{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a289de8e270f98af7cb3de8868373afe8}{m\+\_\+interrupts}
+\item 
+std\+::vector$<$ \hyperlink{class_simulator_1_1_buffer}{Buffer}$<$ Integer $>$ $\ast$ $>$ \hyperlink{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a5084820b78186edca4fb291e39bb2b8f}{m\+\_\+notifications}
+\item 
+std\+::vector$<$ \hyperlink{class_simulator_1_1_arbitrated_service}{Arbitrated\+Service}$<$$>$ $\ast$ $>$ \hyperlink{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a63e8745028e4e013786283ea963cb515}{m\+\_\+services}
+\item 
+\hyperlink{class_simulator_1_1_process}{Process} \hyperlink{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_acefe69eb8744c97868986edaa1c5ef2e}{p\+\_\+\+Incoming\+Notifications}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_abe79d7157ac52e6fd6f321d117b2cd58}{\index{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}!I\+O\+Notification\+Multiplexer@{I\+O\+Notification\+Multiplexer}}
+\index{I\+O\+Notification\+Multiplexer@{I\+O\+Notification\+Multiplexer}!Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}}
+\subsubsection[{I\+O\+Notification\+Multiplexer}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer\+::\+I\+O\+Notification\+Multiplexer (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf I\+O\+Interface} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock, }
+\item[{size\+\_\+t}]{num\+Channels, }
+\item[{{\bf Config} \&}]{config}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_abe79d7157ac52e6fd6f321d117b2cd58}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a4d3908e2a6843f3fe29919160ebb8fa4}{\index{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}!````~I\+O\+Notification\+Multiplexer@{$\sim$\+I\+O\+Notification\+Multiplexer}}
+\index{````~I\+O\+Notification\+Multiplexer@{$\sim$\+I\+O\+Notification\+Multiplexer}!Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}}
+\subsubsection[{$\sim$\+I\+O\+Notification\+Multiplexer}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer\+::$\sim$\+I\+O\+Notification\+Multiplexer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a4d3908e2a6843f3fe29919160ebb8fa4}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a0d51528c58a649bc297d6610c3f04be5}{\index{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}!Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}}
+\index{Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}!Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}}
+\subsubsection[{Cmd\+\_\+\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer\+::\+Cmd\+\_\+\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a0d51528c58a649bc297d6610c3f04be5}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a1865e4784b1f0ec5380f04a60ab3a36b}{\index{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}!Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}}
+\index{Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}!Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}}
+\subsubsection[{Cmd\+\_\+\+Read}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer\+::\+Cmd\+\_\+\+Read (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a1865e4784b1f0ec5380f04a60ab3a36b}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a576117abf1dc9a925ab7436c55802c98}{\index{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}!Configure\+Channel@{Configure\+Channel}}
+\index{Configure\+Channel@{Configure\+Channel}!Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}}
+\subsubsection[{Configure\+Channel}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer\+::\+Configure\+Channel (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Notification\+Channel\+I\+D}}]{which, }
+\item[{Integer}]{mode}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a576117abf1dc9a925ab7436c55802c98}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a917a5a8aabca32bd42048cc36349f13f}{\index{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}!Do\+Received\+Notifications@{Do\+Received\+Notifications}}
+\index{Do\+Received\+Notifications@{Do\+Received\+Notifications}!Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}}
+\subsubsection[{Do\+Received\+Notifications}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer\+::\+Do\+Received\+Notifications (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a917a5a8aabca32bd42048cc36349f13f}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a86e5acf9490a4d5410783d877483fec0}{\index{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}!Get\+Write\+Back\+Traces@{Get\+Write\+Back\+Traces}}
+\index{Get\+Write\+Back\+Traces@{Get\+Write\+Back\+Traces}!Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}}
+\subsubsection[{Get\+Write\+Back\+Traces}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Storage\+Trace\+Set} Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer\+::\+Get\+Write\+Back\+Traces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a86e5acf9490a4d5410783d877483fec0}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a57fae78b25090725f632abc1be084a5d}{\index{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}!On\+Interrupt\+Request\+Received@{On\+Interrupt\+Request\+Received}}
+\index{On\+Interrupt\+Request\+Received@{On\+Interrupt\+Request\+Received}!Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}}
+\subsubsection[{On\+Interrupt\+Request\+Received}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer\+::\+On\+Interrupt\+Request\+Received (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Notification\+Channel\+I\+D}}]{which}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a57fae78b25090725f632abc1be084a5d}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a6d7ac7337dfbe38401d0f4f14e51fe97}{\index{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}!On\+Notification\+Received@{On\+Notification\+Received}}
+\index{On\+Notification\+Received@{On\+Notification\+Received}!Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}}
+\subsubsection[{On\+Notification\+Received}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer\+::\+On\+Notification\+Received (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Notification\+Channel\+I\+D}}]{which, }
+\item[{Integer}]{tag}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a6d7ac7337dfbe38401d0f4f14e51fe97}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_adc52c0f29fe6a719c0a944f21597c9ba}{\index{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}!Set\+Write\+Back\+Address@{Set\+Write\+Back\+Address}}
+\index{Set\+Write\+Back\+Address@{Set\+Write\+Back\+Address}!Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}}
+\subsubsection[{Set\+Write\+Back\+Address}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer\+::\+Set\+Write\+Back\+Address (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Notification\+Channel\+I\+D}}]{which, }
+\item[{const {\bf Reg\+Addr} \&}]{addr}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_adc52c0f29fe6a719c0a944f21597c9ba}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a289de8e270f98af7cb3de8868373afe8}{\index{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}!m\+\_\+interrupts@{m\+\_\+interrupts}}
+\index{m\+\_\+interrupts@{m\+\_\+interrupts}!Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}}
+\subsubsection[{m\+\_\+interrupts}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Single\+Flag}$\ast$$>$ Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer\+::m\+\_\+interrupts}}\label{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a289de8e270f98af7cb3de8868373afe8}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_ad2a670520047a365153c3368612a89b4}{\index{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}!m\+\_\+mask@{m\+\_\+mask}}
+\index{m\+\_\+mask@{m\+\_\+mask}!Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}}
+\subsubsection[{m\+\_\+mask}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$bool$>$ Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer\+::m\+\_\+mask}}\label{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_ad2a670520047a365153c3368612a89b4}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a5084820b78186edca4fb291e39bb2b8f}{\index{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}!m\+\_\+notifications@{m\+\_\+notifications}}
+\index{m\+\_\+notifications@{m\+\_\+notifications}!Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}}
+\subsubsection[{m\+\_\+notifications}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Buffer}$<$Integer$>$$\ast$$>$ Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer\+::m\+\_\+notifications}}\label{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a5084820b78186edca4fb291e39bb2b8f}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a63e8745028e4e013786283ea963cb515}{\index{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}!m\+\_\+services@{m\+\_\+services}}
+\index{m\+\_\+services@{m\+\_\+services}!Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}}
+\subsubsection[{m\+\_\+services}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Arbitrated\+Service}$<$$>$$\ast$$>$ Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer\+::m\+\_\+services}}\label{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_a63e8745028e4e013786283ea963cb515}
+\hypertarget{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_acefe69eb8744c97868986edaa1c5ef2e}{\index{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}!p\+\_\+\+Incoming\+Notifications@{p\+\_\+\+Incoming\+Notifications}}
+\index{p\+\_\+\+Incoming\+Notifications@{p\+\_\+\+Incoming\+Notifications}!Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer@{Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer}}
+\subsubsection[{p\+\_\+\+Incoming\+Notifications}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process} Simulator\+::drisc\+::\+I\+O\+Notification\+Multiplexer\+::p\+\_\+\+Incoming\+Notifications}}\label{class_simulator_1_1drisc_1_1_i_o_notification_multiplexer_acefe69eb8744c97868986edaa1c5ef2e}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/drisc/\hyperlink{_i_o_notification_multiplexer_8h}{I\+O\+Notification\+Multiplexer.\+h}\item 
+arch/drisc/\hyperlink{_i_o_notification_multiplexer_8cpp}{I\+O\+Notification\+Multiplexer.\+cpp}\end{DoxyCompactItemize}

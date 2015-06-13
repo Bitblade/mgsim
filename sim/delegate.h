@@ -8,6 +8,8 @@ namespace Simulator
 
 class Object;
 
+//MLDTODO Bij D$ miss kan thread gesuspend worden op resultaat van load.
+//
 enum Result
 {
     FAILED,

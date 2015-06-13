@@ -244,6 +244,7 @@ Result DCache::Read(MemAddr address, void* data, MemSize size, RegAddr* reg)
         Request request;
         request.write     = false;
         request.address   = address - offset;
+        //MLDTODO DCache miss -> TLB Lookup -> Interface hier.
         if (!m_outgoing.Push(request))
         {
             ++m_numStallingRMisses;
@@ -399,7 +400,10 @@ Result DCache::Write(MemAddr address, void* data, MemSize size, LFID fid, TID ti
     Request request;
     request.write     = true;
     request.address   = address - offset;
-    request.wid       = tid;
+    request.wid       = tid; //MLDNOTE wid=write id, continuation word opgeslagen (wachten tot alle writes gecommit, optioneel)
+    //MLDNOTE Bij store+TLB Miss --> Threads hebben ook een linkedlist. Threads suspenden. On request completion: Reschedule threads.
+    //MLDNOTE Beginnen met een stall.
+    //MLDTODO Hoort ook weer in scriptie.
 
     COMMIT{
     std::copy((char*)data, ((char*)data)+size, request.data.data+offset);

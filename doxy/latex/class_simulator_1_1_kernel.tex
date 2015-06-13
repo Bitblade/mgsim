@@ -1,0 +1,343 @@
+\hypertarget{class_simulator_1_1_kernel}{\section{Simulator\+:\+:Kernel Class Reference}
+\label{class_simulator_1_1_kernel}\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+}
+
+
+Component-\/manager class The kernel class is the manager for all components in the simulation. It advances time, calls the cycle callbacks on all components, initiates arbitration and more.  
+
+
+
+
+{\ttfamily \#include $<$kernel.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234a}{Debug\+Mode} \{ \\*
+\hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aac1d621d783166a33be29e7cdb6ec0637}{D\+E\+B\+U\+G\+\_\+\+S\+I\+M} = 1, 
+\hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aa4c7b8054a67a2eb6bc2f975026669cf3}{D\+E\+B\+U\+G\+\_\+\+P\+R\+O\+G} = 2, 
+\hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aaa0bf9e3b8b0cf429c5a04992ab60074f}{D\+E\+B\+U\+G\+\_\+\+D\+E\+A\+D\+L\+O\+C\+K} = 4, 
+\hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aa69c8d584aaea26b48c2649c5b1c00607}{D\+E\+B\+U\+G\+\_\+\+F\+L\+O\+W} = 8, 
+\\*
+\hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aafa59308d321333d469f3a49503f7844a}{D\+E\+B\+U\+G\+\_\+\+M\+E\+M} = 16, 
+\hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aaae377b10e15f336b5ba5f5876542e54f}{D\+E\+B\+U\+G\+\_\+\+I\+O} = 32, 
+\hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aadaa52a1a219d6e0f590dfdfb2d3b1352}{D\+E\+B\+U\+G\+\_\+\+R\+E\+G} = 64, 
+\hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aa82b8dbf789f0a0fa27c808b6121d6974}{D\+E\+B\+U\+G\+\_\+\+N\+E\+T} = 128, 
+\\*
+\hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aa88868a4cbb6b8ff3b97e597c111d1d22}{D\+E\+B\+U\+G\+\_\+\+I\+O\+N\+E\+T} = 256, 
+\hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aabd2f29b2e44719b6d1b002a675b03d60}{D\+E\+B\+U\+G\+\_\+\+F\+P\+U} = 512, 
+\hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aafc8a8606c29b7735b78f985fe17c6048}{D\+E\+B\+U\+G\+\_\+\+P\+I\+P\+E} = 1024, 
+\hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aa6dbde64d112dd31fd0d49e47ae02876b}{D\+E\+B\+U\+G\+\_\+\+M\+E\+M\+N\+E\+T} = 2048
+ \}
+\begin{DoxyCompactList}\small\item\em Modes of debugging. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_kernel_aa5884ec5c226d80b3b66d28b420b38b2}{Kernel} (\hyperlink{class_simulator_1_1_break_point_manager}{Break\+Point\+Manager} \&breakpoints)
+\item 
+\hyperlink{class_simulator_1_1_kernel_a86bb0e9f2bd1418b975a8144966ab18b}{$\sim$\+Kernel} ()
+\item 
+\hyperlink{class_simulator_1_1_kernel_a59cea6da9f62b4f048581017a976d546}{Kernel} (const \hyperlink{class_simulator_1_1_kernel}{Kernel} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1_kernel}{Kernel} \& \hyperlink{class_simulator_1_1_kernel_ae2acb85d7a5011c0eeaaa3555a78ed01}{operator=} (const \hyperlink{class_simulator_1_1_kernel}{Kernel} \&)=delete
+\item 
+void \hyperlink{class_simulator_1_1_kernel_a85b974b369a76becd119496a3f339ea2}{Activate\+Clock} (\hyperlink{class_simulator_1_1_clock}{Clock} \&clock)
+\item 
+\hyperlink{class_simulator_1_1_clock}{Simulator\+::\+Clock} \& \hyperlink{class_simulator_1_1_kernel_ae85126f35f2be33dfe63cd4f333e27e8}{Create\+Clock} (unsigned long mhz)
+\begin{DoxyCompactList}\small\item\em Creates a clock at the specified frequency (in M\+Hz). \end{DoxyCompactList}\item 
+unsigned long long \hyperlink{class_simulator_1_1_kernel_afbf48e6e87a025004375f9c44375e0b9}{Get\+Master\+Frequency} () const 
+\begin{DoxyCompactList}\small\item\em Returns the master frequency for the simulation, in M\+Hz. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_1_1_process}{Process} $\ast$ \hyperlink{class_simulator_1_1_kernel_ad2600c251b36facc96fb2f0255834e7e}{Get\+Active\+Process} () const 
+\begin{DoxyCompactList}\small\item\em Get the currently executing process. \end{DoxyCompactList}\item 
+const \hyperlink{class_simulator_1_1_clock}{Clock} $\ast$ \hyperlink{class_simulator_1_1_kernel_a338d330dfe58d78185acc2e414659ac8}{Get\+Active\+Clocks} () const 
+\begin{DoxyCompactList}\small\item\em Get the currently scheduled processes. \end{DoxyCompactList}\item 
+\hyperlink{namespace_simulator_a928f1e2101eba21bb0fe409e8c9ce573}{Cycle\+No} \hyperlink{class_simulator_1_1_kernel_a59b95ba6ae8f3abd6a2468fa6b66899d}{Get\+Cycle\+No} () const 
+\begin{DoxyCompactList}\small\item\em Get the cycle counter. Gets the current cycle counter of the simulation. \end{DoxyCompactList}\item 
+\hyperlink{namespace_simulator_afd4b64cfd93793eb135bdb1a3c58c238}{Cycle\+Phase} \hyperlink{class_simulator_1_1_kernel_ab76ee5f46fb946e067aa1fba595d2a7a}{Get\+Cycle\+Phase} () const 
+\begin{DoxyCompactList}\small\item\em Get the cycle phase. Gets the current sub-\/cycle phase of the simulation. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulator_1_1_kernel_a96e873d4aafff467b1da6ba5c537d788}{Set\+Debug\+Mode} (int flags)
+\item 
+void \hyperlink{class_simulator_1_1_kernel_a4b381af089ab5befbacffabbebbc90d4}{Toggle\+Debug\+Mode} (int flags)
+\item 
+int \hyperlink{class_simulator_1_1_kernel_a842c78239f6feb1e7e41bfbc7822ef6d}{Get\+Debug\+Mode} () const 
+\item 
+\hyperlink{namespace_simulator_a7b6594cd8ea507163ee6e4d4db4ddad5}{Run\+State} \hyperlink{class_simulator_1_1_kernel_acacace30804ec07b738e7a24e7a09327}{Step} (\hyperlink{namespace_simulator_a928f1e2101eba21bb0fe409e8c9ce573}{Cycle\+No} cycles=1)
+\begin{DoxyCompactList}\small\item\em Advances the simulation. Advances the simulation by the specified number of cycles. It will abort early if the simulation reaches deadlock. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulator_1_1_kernel_aae2cbea41e33acb29694d4cc1df33d97}{Abort} ()
+\begin{DoxyCompactList}\small\item\em Aborts the simulation Stops the current simulation, in \hyperlink{class_simulator_1_1_kernel_acacace30804ec07b738e7a24e7a09327}{Step()}. This is best called asynchronously, from a signal handler. \hyperlink{class_simulator_1_1_kernel_acacace30804ec07b738e7a24e7a09327}{Step()} will return S\+T\+A\+T\+E\+\_\+\+A\+B\+O\+R\+T\+E\+D. The simulation cannot be resumed. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulator_1_1_kernel_a1c58e6942a54a0abded9988d48890a2c}{Stop} ()
+\begin{DoxyCompactList}\small\item\em Suspends the simulation Stops the current simulation, in \hyperlink{class_simulator_1_1_kernel_acacace30804ec07b738e7a24e7a09327}{Step()}. This is best called asynchronously, from a signal handler. \hyperlink{class_simulator_1_1_kernel_acacace30804ec07b738e7a24e7a09327}{Step()} will return S\+T\+A\+T\+E\+\_\+\+A\+B\+O\+R\+T\+E\+D. Next call to \hyperlink{class_simulator_1_1_kernel_acacace30804ec07b738e7a24e7a09327}{Step()} will resume the simulation. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_1_1_break_point_manager}{Break\+Point\+Manager} \& \hyperlink{class_simulator_1_1_kernel_a0ccd0f5f4713ff4abbd382beeff39141}{Get\+Break\+Point\+Manager} () const 
+\begin{DoxyCompactList}\small\item\em Get all components. Gets the list of all components in the simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_simulator_1_1_kernel_a18dcad4f90063352a7815039fc00cb64}{D\+E\+B\+U\+G\+\_\+\+C\+P\+U\+\_\+\+M\+A\+S\+K} = \hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aac1d621d783166a33be29e7cdb6ec0637}{D\+E\+B\+U\+G\+\_\+\+S\+I\+M} $\vert$ \hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aa4c7b8054a67a2eb6bc2f975026669cf3}{D\+E\+B\+U\+G\+\_\+\+P\+R\+O\+G} $\vert$ \hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aaa0bf9e3b8b0cf429c5a04992ab60074f}{D\+E\+B\+U\+G\+\_\+\+D\+E\+A\+D\+L\+O\+C\+K} $\vert$ \hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aa69c8d584aaea26b48c2649c5b1c00607}{D\+E\+B\+U\+G\+\_\+\+F\+L\+O\+W} $\vert$ \hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aafa59308d321333d469f3a49503f7844a}{D\+E\+B\+U\+G\+\_\+\+M\+E\+M} $\vert$ \hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aaae377b10e15f336b5ba5f5876542e54f}{D\+E\+B\+U\+G\+\_\+\+I\+O} $\vert$ \hyperlink{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aadaa52a1a219d6e0f590dfdfb2d3b1352}{D\+E\+B\+U\+G\+\_\+\+R\+E\+G}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_simulator_1_1_kernel_a0720b5f434e636e22a3ed34f847eec57}{Object}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Component-\/manager class The kernel class is the manager for all components in the simulation. It advances time, calls the cycle callbacks on all components, initiates arbitration and more. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234a}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Debug\+Mode@{Debug\+Mode}}
+\index{Debug\+Mode@{Debug\+Mode}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Debug\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Simulator\+::\+Kernel\+::\+Debug\+Mode}}}\label{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234a}
+
+
+Modes of debugging. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{D\+E\+B\+U\+G\+\_\+\+S\+I\+M@{D\+E\+B\+U\+G\+\_\+\+S\+I\+M}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!D\+E\+B\+U\+G\+\_\+\+S\+I\+M@{D\+E\+B\+U\+G\+\_\+\+S\+I\+M}}\item[{\em 
+\hypertarget{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aac1d621d783166a33be29e7cdb6ec0637}{D\+E\+B\+U\+G\+\_\+\+S\+I\+M}\label{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aac1d621d783166a33be29e7cdb6ec0637}
+}]Debug the simulator. \index{D\+E\+B\+U\+G\+\_\+\+P\+R\+O\+G@{D\+E\+B\+U\+G\+\_\+\+P\+R\+O\+G}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!D\+E\+B\+U\+G\+\_\+\+P\+R\+O\+G@{D\+E\+B\+U\+G\+\_\+\+P\+R\+O\+G}}\item[{\em 
+\hypertarget{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aa4c7b8054a67a2eb6bc2f975026669cf3}{D\+E\+B\+U\+G\+\_\+\+P\+R\+O\+G}\label{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aa4c7b8054a67a2eb6bc2f975026669cf3}
+}]Debug the program. \index{D\+E\+B\+U\+G\+\_\+\+D\+E\+A\+D\+L\+O\+C\+K@{D\+E\+B\+U\+G\+\_\+\+D\+E\+A\+D\+L\+O\+C\+K}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!D\+E\+B\+U\+G\+\_\+\+D\+E\+A\+D\+L\+O\+C\+K@{D\+E\+B\+U\+G\+\_\+\+D\+E\+A\+D\+L\+O\+C\+K}}\item[{\em 
+\hypertarget{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aaa0bf9e3b8b0cf429c5a04992ab60074f}{D\+E\+B\+U\+G\+\_\+\+D\+E\+A\+D\+L\+O\+C\+K}\label{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aaa0bf9e3b8b0cf429c5a04992ab60074f}
+}]Debug deadlocks. \index{D\+E\+B\+U\+G\+\_\+\+F\+L\+O\+W@{D\+E\+B\+U\+G\+\_\+\+F\+L\+O\+W}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!D\+E\+B\+U\+G\+\_\+\+F\+L\+O\+W@{D\+E\+B\+U\+G\+\_\+\+F\+L\+O\+W}}\item[{\em 
+\hypertarget{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aa69c8d584aaea26b48c2649c5b1c00607}{D\+E\+B\+U\+G\+\_\+\+F\+L\+O\+W}\label{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aa69c8d584aaea26b48c2649c5b1c00607}
+}]Debug control flow. \index{D\+E\+B\+U\+G\+\_\+\+M\+E\+M@{D\+E\+B\+U\+G\+\_\+\+M\+E\+M}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!D\+E\+B\+U\+G\+\_\+\+M\+E\+M@{D\+E\+B\+U\+G\+\_\+\+M\+E\+M}}\item[{\em 
+\hypertarget{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aafa59308d321333d469f3a49503f7844a}{D\+E\+B\+U\+G\+\_\+\+M\+E\+M}\label{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aafa59308d321333d469f3a49503f7844a}
+}]Debug memory stores. \index{D\+E\+B\+U\+G\+\_\+\+I\+O@{D\+E\+B\+U\+G\+\_\+\+I\+O}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!D\+E\+B\+U\+G\+\_\+\+I\+O@{D\+E\+B\+U\+G\+\_\+\+I\+O}}\item[{\em 
+\hypertarget{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aaae377b10e15f336b5ba5f5876542e54f}{D\+E\+B\+U\+G\+\_\+\+I\+O}\label{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aaae377b10e15f336b5ba5f5876542e54f}
+}]Debug I/\+O requests. \index{D\+E\+B\+U\+G\+\_\+\+R\+E\+G@{D\+E\+B\+U\+G\+\_\+\+R\+E\+G}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!D\+E\+B\+U\+G\+\_\+\+R\+E\+G@{D\+E\+B\+U\+G\+\_\+\+R\+E\+G}}\item[{\em 
+\hypertarget{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aadaa52a1a219d6e0f590dfdfb2d3b1352}{D\+E\+B\+U\+G\+\_\+\+R\+E\+G}\label{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aadaa52a1a219d6e0f590dfdfb2d3b1352}
+}]Debug register accesses. \index{D\+E\+B\+U\+G\+\_\+\+N\+E\+T@{D\+E\+B\+U\+G\+\_\+\+N\+E\+T}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!D\+E\+B\+U\+G\+\_\+\+N\+E\+T@{D\+E\+B\+U\+G\+\_\+\+N\+E\+T}}\item[{\em 
+\hypertarget{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aa82b8dbf789f0a0fa27c808b6121d6974}{D\+E\+B\+U\+G\+\_\+\+N\+E\+T}\label{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aa82b8dbf789f0a0fa27c808b6121d6974}
+}]Debug network message (delegation/link) \index{D\+E\+B\+U\+G\+\_\+\+I\+O\+N\+E\+T@{D\+E\+B\+U\+G\+\_\+\+I\+O\+N\+E\+T}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!D\+E\+B\+U\+G\+\_\+\+I\+O\+N\+E\+T@{D\+E\+B\+U\+G\+\_\+\+I\+O\+N\+E\+T}}\item[{\em 
+\hypertarget{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aa88868a4cbb6b8ff3b97e597c111d1d22}{D\+E\+B\+U\+G\+\_\+\+I\+O\+N\+E\+T}\label{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aa88868a4cbb6b8ff3b97e597c111d1d22}
+}]Debug I/\+O network message (interrupts/requests) \index{D\+E\+B\+U\+G\+\_\+\+F\+P\+U@{D\+E\+B\+U\+G\+\_\+\+F\+P\+U}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!D\+E\+B\+U\+G\+\_\+\+F\+P\+U@{D\+E\+B\+U\+G\+\_\+\+F\+P\+U}}\item[{\em 
+\hypertarget{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aabd2f29b2e44719b6d1b002a675b03d60}{D\+E\+B\+U\+G\+\_\+\+F\+P\+U}\label{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aabd2f29b2e44719b6d1b002a675b03d60}
+}]Debug \hyperlink{class_simulator_1_1_f_p_u}{F\+P\+U} activity. \index{D\+E\+B\+U\+G\+\_\+\+P\+I\+P\+E@{D\+E\+B\+U\+G\+\_\+\+P\+I\+P\+E}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!D\+E\+B\+U\+G\+\_\+\+P\+I\+P\+E@{D\+E\+B\+U\+G\+\_\+\+P\+I\+P\+E}}\item[{\em 
+\hypertarget{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aafc8a8606c29b7735b78f985fe17c6048}{D\+E\+B\+U\+G\+\_\+\+P\+I\+P\+E}\label{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aafc8a8606c29b7735b78f985fe17c6048}
+}]Debug pipeline activity. \index{D\+E\+B\+U\+G\+\_\+\+M\+E\+M\+N\+E\+T@{D\+E\+B\+U\+G\+\_\+\+M\+E\+M\+N\+E\+T}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!D\+E\+B\+U\+G\+\_\+\+M\+E\+M\+N\+E\+T@{D\+E\+B\+U\+G\+\_\+\+M\+E\+M\+N\+E\+T}}\item[{\em 
+\hypertarget{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aa6dbde64d112dd31fd0d49e47ae02876b}{D\+E\+B\+U\+G\+\_\+\+M\+E\+M\+N\+E\+T}\label{class_simulator_1_1_kernel_a69dec9d2b2d106e64de63f97301e234aa6dbde64d112dd31fd0d49e47ae02876b}
+}]Debug memory network activity. \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_kernel_aa5884ec5c226d80b3b66d28b420b38b2}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Kernel@{Kernel}}
+\index{Kernel@{Kernel}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Kernel}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Kernel\+::\+Kernel (
+\begin{DoxyParamCaption}
+\item[{{\bf Break\+Point\+Manager} \&}]{breakpoints}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_kernel_aa5884ec5c226d80b3b66d28b420b38b2}
+\hypertarget{class_simulator_1_1_kernel_a86bb0e9f2bd1418b975a8144966ab18b}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!````~Kernel@{$\sim$\+Kernel}}
+\index{````~Kernel@{$\sim$\+Kernel}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{$\sim$\+Kernel}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Kernel\+::$\sim$\+Kernel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_kernel_a86bb0e9f2bd1418b975a8144966ab18b}
+\hypertarget{class_simulator_1_1_kernel_a59cea6da9f62b4f048581017a976d546}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Kernel@{Kernel}}
+\index{Kernel@{Kernel}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Kernel}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Kernel\+::\+Kernel (
+\begin{DoxyParamCaption}
+\item[{const {\bf Kernel} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_kernel_a59cea6da9f62b4f048581017a976d546}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_kernel_aae2cbea41e33acb29694d4cc1df33d97}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Abort@{Abort}}
+\index{Abort@{Abort}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Abort}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Kernel\+::\+Abort (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_kernel_aae2cbea41e33acb29694d4cc1df33d97}
+
+
+Aborts the simulation Stops the current simulation, in \hyperlink{class_simulator_1_1_kernel_acacace30804ec07b738e7a24e7a09327}{Step()}. This is best called asynchronously, from a signal handler. \hyperlink{class_simulator_1_1_kernel_acacace30804ec07b738e7a24e7a09327}{Step()} will return S\+T\+A\+T\+E\+\_\+\+A\+B\+O\+R\+T\+E\+D. The simulation cannot be resumed. 
+
+\hypertarget{class_simulator_1_1_kernel_a85b974b369a76becd119496a3f339ea2}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Activate\+Clock@{Activate\+Clock}}
+\index{Activate\+Clock@{Activate\+Clock}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Activate\+Clock}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Kernel\+::\+Activate\+Clock (
+\begin{DoxyParamCaption}
+\item[{{\bf Clock} \&}]{clock}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_kernel_a85b974b369a76becd119496a3f339ea2}
+\hypertarget{class_simulator_1_1_kernel_ae85126f35f2be33dfe63cd4f333e27e8}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Create\+Clock@{Create\+Clock}}
+\index{Create\+Clock@{Create\+Clock}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Create\+Clock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Clock} \& Simulator\+::\+Kernel\+::\+Create\+Clock (
+\begin{DoxyParamCaption}
+\item[{unsigned long}]{mhz}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_kernel_ae85126f35f2be33dfe63cd4f333e27e8}
+
+
+Creates a clock at the specified frequency (in M\+Hz). 
+
+\hypertarget{class_simulator_1_1_kernel_a338d330dfe58d78185acc2e414659ac8}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Get\+Active\+Clocks@{Get\+Active\+Clocks}}
+\index{Get\+Active\+Clocks@{Get\+Active\+Clocks}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Get\+Active\+Clocks}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Clock}$\ast$ Simulator\+::\+Kernel\+::\+Get\+Active\+Clocks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_kernel_a338d330dfe58d78185acc2e414659ac8}
+
+
+Get the currently scheduled processes. 
+
+\hypertarget{class_simulator_1_1_kernel_ad2600c251b36facc96fb2f0255834e7e}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Get\+Active\+Process@{Get\+Active\+Process}}
+\index{Get\+Active\+Process@{Get\+Active\+Process}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Get\+Active\+Process}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process}$\ast$ Simulator\+::\+Kernel\+::\+Get\+Active\+Process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_kernel_ad2600c251b36facc96fb2f0255834e7e}
+
+
+Get the currently executing process. 
+
+\hypertarget{class_simulator_1_1_kernel_a0ccd0f5f4713ff4abbd382beeff39141}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Get\+Break\+Point\+Manager@{Get\+Break\+Point\+Manager}}
+\index{Get\+Break\+Point\+Manager@{Get\+Break\+Point\+Manager}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Get\+Break\+Point\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Break\+Point\+Manager}\& Simulator\+::\+Kernel\+::\+Get\+Break\+Point\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_kernel_a0ccd0f5f4713ff4abbd382beeff39141}
+
+
+Get all components. Gets the list of all components in the simulation. 
+
+\begin{DoxyReturn}{Returns}
+a constant reference to the list of all components. 
+\end{DoxyReturn}
+\hypertarget{class_simulator_1_1_kernel_a59b95ba6ae8f3abd6a2468fa6b66899d}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Get\+Cycle\+No@{Get\+Cycle\+No}}
+\index{Get\+Cycle\+No@{Get\+Cycle\+No}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Get\+Cycle\+No}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cycle\+No} Simulator\+::\+Kernel\+::\+Get\+Cycle\+No (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_kernel_a59b95ba6ae8f3abd6a2468fa6b66899d}
+
+
+Get the cycle counter. Gets the current cycle counter of the simulation. 
+
+\begin{DoxyReturn}{Returns}
+the current cycle counter. 
+\end{DoxyReturn}
+\hypertarget{class_simulator_1_1_kernel_ab76ee5f46fb946e067aa1fba595d2a7a}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Get\+Cycle\+Phase@{Get\+Cycle\+Phase}}
+\index{Get\+Cycle\+Phase@{Get\+Cycle\+Phase}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Get\+Cycle\+Phase}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cycle\+Phase} Simulator\+::\+Kernel\+::\+Get\+Cycle\+Phase (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_kernel_ab76ee5f46fb946e067aa1fba595d2a7a}
+
+
+Get the cycle phase. Gets the current sub-\/cycle phase of the simulation. 
+
+\begin{DoxyReturn}{Returns}
+the current sub-\/cycle phase. 
+\end{DoxyReturn}
+\hypertarget{class_simulator_1_1_kernel_a842c78239f6feb1e7e41bfbc7822ef6d}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Get\+Debug\+Mode@{Get\+Debug\+Mode}}
+\index{Get\+Debug\+Mode@{Get\+Debug\+Mode}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Get\+Debug\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}int Simulator\+::\+Kernel\+::\+Get\+Debug\+Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_kernel_a842c78239f6feb1e7e41bfbc7822ef6d}
+Gets the current debug flags. \begin{DoxyReturn}{Returns}
+the current debug flags. 
+\end{DoxyReturn}
+\hypertarget{class_simulator_1_1_kernel_afbf48e6e87a025004375f9c44375e0b9}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Get\+Master\+Frequency@{Get\+Master\+Frequency}}
+\index{Get\+Master\+Frequency@{Get\+Master\+Frequency}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Get\+Master\+Frequency}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long long Simulator\+::\+Kernel\+::\+Get\+Master\+Frequency (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_kernel_afbf48e6e87a025004375f9c44375e0b9}
+
+
+Returns the master frequency for the simulation, in M\+Hz. 
+
+\hypertarget{class_simulator_1_1_kernel_ae2acb85d7a5011c0eeaaa3555a78ed01}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!operator=@{operator=}}
+\index{operator=@{operator=}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Kernel}\& Simulator\+::\+Kernel\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Kernel} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_kernel_ae2acb85d7a5011c0eeaaa3555a78ed01}
+\hypertarget{class_simulator_1_1_kernel_a96e873d4aafff467b1da6ba5c537d788}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Set\+Debug\+Mode@{Set\+Debug\+Mode}}
+\index{Set\+Debug\+Mode@{Set\+Debug\+Mode}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Set\+Debug\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Kernel\+::\+Set\+Debug\+Mode (
+\begin{DoxyParamCaption}
+\item[{int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_kernel_a96e873d4aafff467b1da6ba5c537d788}
+Sets the debug flags. 
+\begin{DoxyParams}{Parameters}
+{\em mode} & the debug flags to set (from enum Debug\+Mode). \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_simulator_1_1_kernel_acacace30804ec07b738e7a24e7a09327}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Step@{Step}}
+\index{Step@{Step}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Step}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Run\+State} Simulator\+::\+Kernel\+::\+Step (
+\begin{DoxyParamCaption}
+\item[{{\bf Cycle\+No}}]{cycles = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_kernel_acacace30804ec07b738e7a24e7a09327}
+
+
+Advances the simulation. Advances the simulation by the specified number of cycles. It will abort early if the simulation reaches deadlock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cycles} & The number of cycles to advance the simulation with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the state of simulation afterwards. 
+\end{DoxyReturn}
+\hypertarget{class_simulator_1_1_kernel_a1c58e6942a54a0abded9988d48890a2c}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Stop@{Stop}}
+\index{Stop@{Stop}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Stop}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Kernel\+::\+Stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_kernel_a1c58e6942a54a0abded9988d48890a2c}
+
+
+Suspends the simulation Stops the current simulation, in \hyperlink{class_simulator_1_1_kernel_acacace30804ec07b738e7a24e7a09327}{Step()}. This is best called asynchronously, from a signal handler. \hyperlink{class_simulator_1_1_kernel_acacace30804ec07b738e7a24e7a09327}{Step()} will return S\+T\+A\+T\+E\+\_\+\+A\+B\+O\+R\+T\+E\+D. Next call to \hyperlink{class_simulator_1_1_kernel_acacace30804ec07b738e7a24e7a09327}{Step()} will resume the simulation. 
+
+\hypertarget{class_simulator_1_1_kernel_a4b381af089ab5befbacffabbebbc90d4}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Toggle\+Debug\+Mode@{Toggle\+Debug\+Mode}}
+\index{Toggle\+Debug\+Mode@{Toggle\+Debug\+Mode}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Toggle\+Debug\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Kernel\+::\+Toggle\+Debug\+Mode (
+\begin{DoxyParamCaption}
+\item[{int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_kernel_a4b381af089ab5befbacffabbebbc90d4}
+Toggle the debug flags. 
+\begin{DoxyParams}{Parameters}
+{\em mode} & the debug flags to toggle (from enum Debug\+Mode). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_simulator_1_1_kernel_a0720b5f434e636e22a3ed34f847eec57}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!Object@{Object}}
+\index{Object@{Object}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{Object}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Object}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_simulator_1_1_kernel_a0720b5f434e636e22a3ed34f847eec57}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simulator_1_1_kernel_a18dcad4f90063352a7815039fc00cb64}{\index{Simulator\+::\+Kernel@{Simulator\+::\+Kernel}!D\+E\+B\+U\+G\+\_\+\+C\+P\+U\+\_\+\+M\+A\+S\+K@{D\+E\+B\+U\+G\+\_\+\+C\+P\+U\+\_\+\+M\+A\+S\+K}}
+\index{D\+E\+B\+U\+G\+\_\+\+C\+P\+U\+\_\+\+M\+A\+S\+K@{D\+E\+B\+U\+G\+\_\+\+C\+P\+U\+\_\+\+M\+A\+S\+K}!Simulator\+::\+Kernel@{Simulator\+::\+Kernel}}
+\subsubsection[{D\+E\+B\+U\+G\+\_\+\+C\+P\+U\+\_\+\+M\+A\+S\+K}]{\setlength{\rightskip}{0pt plus 5cm}const int Simulator\+::\+Kernel\+::\+D\+E\+B\+U\+G\+\_\+\+C\+P\+U\+\_\+\+M\+A\+S\+K = {\bf D\+E\+B\+U\+G\+\_\+\+S\+I\+M} $\vert$ {\bf D\+E\+B\+U\+G\+\_\+\+P\+R\+O\+G} $\vert$ {\bf D\+E\+B\+U\+G\+\_\+\+D\+E\+A\+D\+L\+O\+C\+K} $\vert$ {\bf D\+E\+B\+U\+G\+\_\+\+F\+L\+O\+W} $\vert$ {\bf D\+E\+B\+U\+G\+\_\+\+M\+E\+M} $\vert$ {\bf D\+E\+B\+U\+G\+\_\+\+I\+O} $\vert$ {\bf D\+E\+B\+U\+G\+\_\+\+R\+E\+G}\hspace{0.3cm}{\ttfamily [static]}}}\label{class_simulator_1_1_kernel_a18dcad4f90063352a7815039fc00cb64}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{kernel_8h}{kernel.\+h}\item 
+sim/\hyperlink{kernel_8cpp}{kernel.\+cpp}\end{DoxyCompactItemize}

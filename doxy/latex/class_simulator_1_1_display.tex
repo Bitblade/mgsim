@@ -1,0 +1,168 @@
+\hypertarget{class_simulator_1_1_display}{\section{Simulator\+:\+:Display Class Reference}
+\label{class_simulator_1_1_display}\index{Simulator\+::\+Display@{Simulator\+::\+Display}}
+}
+
+
+{\ttfamily \#include $<$Display.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:Display\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_simulator_1_1_display}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_display_a9e8dd95d8d8d6f6a68a8a7aabe29b400}{Display} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent, \hyperlink{class_simulator_1_1_i_i_o_bus}{I\+I\+O\+Bus} \&iobus, \hyperlink{namespace_simulator_a3493d987c866ad6b8aaa704c42502db0}{I\+O\+Device\+I\+D} ctldevid, \hyperlink{namespace_simulator_a3493d987c866ad6b8aaa704c42502db0}{I\+O\+Device\+I\+D} fbdevid, \hyperlink{class_config}{Config} \&config)
+\item 
+\hyperlink{class_simulator_1_1_display_aaad56ddda9a85cfeb1c3cdec28ba62e5}{Display} (const \hyperlink{class_simulator_1_1_display}{Display} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1_display}{Display} \& \hyperlink{class_simulator_1_1_display_a2062fb4d91091b3793a8b81d57c4e4ba}{operator=} (const \hyperlink{class_simulator_1_1_display}{Display} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1_display_abbb1e81edfa7c0067b403b8ccde20091}{$\sim$\+Display} ()
+\item 
+void \hyperlink{class_simulator_1_1_display_a49e90cfde0aef86aa7d98343621d7432}{Check\+Events} (void)
+\item 
+void \hyperlink{class_simulator_1_1_display_adb2a9249e4163dea8ef1457aff79ff5c}{On\+Cycle} (\hyperlink{namespace_simulator_a928f1e2101eba21bb0fe409e8c9ce573}{Cycle\+No} cycle)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_simulator_1_1_display}{Display} $\ast$ \hyperlink{class_simulator_1_1_display_afbff3836d53856e0105e6e68e43b7542}{Get\+Display} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_simulator_1_1_display_a9ac001d4d97c472e8921aa6548f9fdfd}{Resize} (unsigned w, unsigned h, bool erase)
+\item 
+void \hyperlink{class_simulator_1_1_display_acf029f340eff0205cf1c534755ec8f0f}{Refresh} () const 
+\item 
+void \hyperlink{class_simulator_1_1_display_ad936a0ecf504adc4619a91dc053d6c01}{Reset\+Caption} () const 
+\item 
+void \hyperlink{class_simulator_1_1_display_a4807e664e7fc47b686e35a999a2e2772}{Resize\+Screen} (unsigned int w, unsigned int h)
+\item 
+void \hyperlink{class_simulator_1_1_display_afb4959747fcefb5fe4215f180cf6a149}{Dump\+Frame\+Buffer} (unsigned key, int stream, bool gen\+\_\+timestamp) const 
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_simulator_1_1_display_a40db1df984344b6204f9c8a338aacabb}{Control\+Interface}
+\item 
+class \hyperlink{class_simulator_1_1_display_a8ecdedbbf356339204e1e013df18699b}{Frame\+Buffer\+Interface}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_display_a9e8dd95d8d8d6f6a68a8a7aabe29b400}{\index{Simulator\+::\+Display@{Simulator\+::\+Display}!Display@{Display}}
+\index{Display@{Display}!Simulator\+::\+Display@{Simulator\+::\+Display}}
+\subsubsection[{Display}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Display\+::\+Display (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent, }
+\item[{{\bf I\+I\+O\+Bus} \&}]{iobus, }
+\item[{{\bf I\+O\+Device\+I\+D}}]{ctldevid, }
+\item[{{\bf I\+O\+Device\+I\+D}}]{fbdevid, }
+\item[{{\bf Config} \&}]{config}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_display_a9e8dd95d8d8d6f6a68a8a7aabe29b400}
+\hypertarget{class_simulator_1_1_display_aaad56ddda9a85cfeb1c3cdec28ba62e5}{\index{Simulator\+::\+Display@{Simulator\+::\+Display}!Display@{Display}}
+\index{Display@{Display}!Simulator\+::\+Display@{Simulator\+::\+Display}}
+\subsubsection[{Display}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Display\+::\+Display (
+\begin{DoxyParamCaption}
+\item[{const {\bf Display} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_display_aaad56ddda9a85cfeb1c3cdec28ba62e5}
+\hypertarget{class_simulator_1_1_display_abbb1e81edfa7c0067b403b8ccde20091}{\index{Simulator\+::\+Display@{Simulator\+::\+Display}!````~Display@{$\sim$\+Display}}
+\index{````~Display@{$\sim$\+Display}!Simulator\+::\+Display@{Simulator\+::\+Display}}
+\subsubsection[{$\sim$\+Display}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Display\+::$\sim$\+Display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_display_abbb1e81edfa7c0067b403b8ccde20091}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_display_a49e90cfde0aef86aa7d98343621d7432}{\index{Simulator\+::\+Display@{Simulator\+::\+Display}!Check\+Events@{Check\+Events}}
+\index{Check\+Events@{Check\+Events}!Simulator\+::\+Display@{Simulator\+::\+Display}}
+\subsubsection[{Check\+Events}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Display\+::\+Check\+Events (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_display_a49e90cfde0aef86aa7d98343621d7432}
+\hypertarget{class_simulator_1_1_display_afb4959747fcefb5fe4215f180cf6a149}{\index{Simulator\+::\+Display@{Simulator\+::\+Display}!Dump\+Frame\+Buffer@{Dump\+Frame\+Buffer}}
+\index{Dump\+Frame\+Buffer@{Dump\+Frame\+Buffer}!Simulator\+::\+Display@{Simulator\+::\+Display}}
+\subsubsection[{Dump\+Frame\+Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Display\+::\+Dump\+Frame\+Buffer (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{key, }
+\item[{int}]{stream, }
+\item[{bool}]{gen\+\_\+timestamp}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_display_afb4959747fcefb5fe4215f180cf6a149}
+\hypertarget{class_simulator_1_1_display_afbff3836d53856e0105e6e68e43b7542}{\index{Simulator\+::\+Display@{Simulator\+::\+Display}!Get\+Display@{Get\+Display}}
+\index{Get\+Display@{Get\+Display}!Simulator\+::\+Display@{Simulator\+::\+Display}}
+\subsubsection[{Get\+Display}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Display}$\ast$ Simulator\+::\+Display\+::\+Get\+Display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_simulator_1_1_display_afbff3836d53856e0105e6e68e43b7542}
+\hypertarget{class_simulator_1_1_display_adb2a9249e4163dea8ef1457aff79ff5c}{\index{Simulator\+::\+Display@{Simulator\+::\+Display}!On\+Cycle@{On\+Cycle}}
+\index{On\+Cycle@{On\+Cycle}!Simulator\+::\+Display@{Simulator\+::\+Display}}
+\subsubsection[{On\+Cycle}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Display\+::\+On\+Cycle (
+\begin{DoxyParamCaption}
+\item[{{\bf Cycle\+No}}]{cycle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_display_adb2a9249e4163dea8ef1457aff79ff5c}
+\hypertarget{class_simulator_1_1_display_a2062fb4d91091b3793a8b81d57c4e4ba}{\index{Simulator\+::\+Display@{Simulator\+::\+Display}!operator=@{operator=}}
+\index{operator=@{operator=}!Simulator\+::\+Display@{Simulator\+::\+Display}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Display}\& Simulator\+::\+Display\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Display} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_display_a2062fb4d91091b3793a8b81d57c4e4ba}
+\hypertarget{class_simulator_1_1_display_acf029f340eff0205cf1c534755ec8f0f}{\index{Simulator\+::\+Display@{Simulator\+::\+Display}!Refresh@{Refresh}}
+\index{Refresh@{Refresh}!Simulator\+::\+Display@{Simulator\+::\+Display}}
+\subsubsection[{Refresh}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Display\+::\+Refresh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_display_acf029f340eff0205cf1c534755ec8f0f}
+\hypertarget{class_simulator_1_1_display_ad936a0ecf504adc4619a91dc053d6c01}{\index{Simulator\+::\+Display@{Simulator\+::\+Display}!Reset\+Caption@{Reset\+Caption}}
+\index{Reset\+Caption@{Reset\+Caption}!Simulator\+::\+Display@{Simulator\+::\+Display}}
+\subsubsection[{Reset\+Caption}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Display\+::\+Reset\+Caption (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_display_ad936a0ecf504adc4619a91dc053d6c01}
+\hypertarget{class_simulator_1_1_display_a9ac001d4d97c472e8921aa6548f9fdfd}{\index{Simulator\+::\+Display@{Simulator\+::\+Display}!Resize@{Resize}}
+\index{Resize@{Resize}!Simulator\+::\+Display@{Simulator\+::\+Display}}
+\subsubsection[{Resize}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Display\+::\+Resize (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{w, }
+\item[{unsigned}]{h, }
+\item[{bool}]{erase}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_display_a9ac001d4d97c472e8921aa6548f9fdfd}
+\hypertarget{class_simulator_1_1_display_a4807e664e7fc47b686e35a999a2e2772}{\index{Simulator\+::\+Display@{Simulator\+::\+Display}!Resize\+Screen@{Resize\+Screen}}
+\index{Resize\+Screen@{Resize\+Screen}!Simulator\+::\+Display@{Simulator\+::\+Display}}
+\subsubsection[{Resize\+Screen}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Display\+::\+Resize\+Screen (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{w, }
+\item[{unsigned int}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_display_a4807e664e7fc47b686e35a999a2e2772}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_simulator_1_1_display_a40db1df984344b6204f9c8a338aacabb}{\index{Simulator\+::\+Display@{Simulator\+::\+Display}!Control\+Interface@{Control\+Interface}}
+\index{Control\+Interface@{Control\+Interface}!Simulator\+::\+Display@{Simulator\+::\+Display}}
+\subsubsection[{Control\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}friend class Control\+Interface\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_simulator_1_1_display_a40db1df984344b6204f9c8a338aacabb}
+\hypertarget{class_simulator_1_1_display_a8ecdedbbf356339204e1e013df18699b}{\index{Simulator\+::\+Display@{Simulator\+::\+Display}!Frame\+Buffer\+Interface@{Frame\+Buffer\+Interface}}
+\index{Frame\+Buffer\+Interface@{Frame\+Buffer\+Interface}!Simulator\+::\+Display@{Simulator\+::\+Display}}
+\subsubsection[{Frame\+Buffer\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}friend class Frame\+Buffer\+Interface\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_simulator_1_1_display_a8ecdedbbf356339204e1e013df18699b}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/dev/\hyperlink{_display_8h}{Display.\+h}\item 
+arch/dev/\hyperlink{_display_8cpp}{Display.\+cpp}\end{DoxyCompactItemize}

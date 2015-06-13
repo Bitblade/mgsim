@@ -1,0 +1,41 @@
+\hypertarget{_i_s_a_8mtsparc_8cpp}{\section{arch/drisc/\+I\+S\+A.mtsparc.\+cpp File Reference}
+\label{_i_s_a_8mtsparc_8cpp}\index{arch/drisc/\+I\+S\+A.\+mtsparc.\+cpp@{arch/drisc/\+I\+S\+A.\+mtsparc.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}Pipeline.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}D\+R\+I\+S\+C.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$arch/\+F\+P\+U.\+h$>$}\\*
+{\ttfamily \#include $<$arch/symtable.\+h$>$}\\*
+{\ttfamily \#include $<$programs/mgsim.\+h$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_simulator}{Simulator}
+\item 
+ \hyperlink{namespace_simulator_1_1drisc}{Simulator\+::drisc}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_i_s_a_8mtsparc_8cpp_ab7f0e61087c903181a226f57e87eaad5}{C\+H\+E\+C\+K\+D\+I\+V0}(X)~if ((X) == 0) \hyperlink{_pipeline_8h_a5d86c826757924f60cc8f191169b3bb0}{Throw\+Illegal\+Instruction\+Exception}($\ast$this, m\+\_\+input.\+pc, \char`\"{}Division by zero\char`\"{})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \hyperlink{namespace_simulator_1_1drisc_a7b9fb384103083b1aa85dab795649ec2}{Simulator\+::drisc\+::\+Get\+Default\+Local\+Register\+Aliases} (Reg\+Type type)
+\item 
+unsigned char \hyperlink{namespace_simulator_1_1drisc_a1d5f90abc637bb4ad07daa78682b7fa2}{Simulator\+::drisc\+::\+Get\+Register\+Class} (unsigned char addr, const Regs\+No \&regs, Reg\+Class $\ast$rc, Reg\+Type type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_i_s_a_8mtsparc_8cpp_ab7f0e61087c903181a226f57e87eaad5}{\index{I\+S\+A.\+mtsparc.\+cpp@{I\+S\+A.\+mtsparc.\+cpp}!C\+H\+E\+C\+K\+D\+I\+V0@{C\+H\+E\+C\+K\+D\+I\+V0}}
+\index{C\+H\+E\+C\+K\+D\+I\+V0@{C\+H\+E\+C\+K\+D\+I\+V0}!I\+S\+A.\+mtsparc.\+cpp@{I\+S\+A.\+mtsparc.\+cpp}}
+\subsubsection[{C\+H\+E\+C\+K\+D\+I\+V0}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+E\+C\+K\+D\+I\+V0(
+\begin{DoxyParamCaption}
+\item[{}]{X}
+\end{DoxyParamCaption}
+)~if ((X) == 0) {\bf Throw\+Illegal\+Instruction\+Exception}($\ast$this, m\+\_\+input.\+pc, \char`\"{}Division by zero\char`\"{})}}\label{_i_s_a_8mtsparc_8cpp_ab7f0e61087c903181a226f57e87eaad5}

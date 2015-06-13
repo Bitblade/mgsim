@@ -1,0 +1,77 @@
+\hypertarget{class_simulator_1_1_parallel_memory_1_1_port}{\section{Simulator\+:\+:Parallel\+Memory\+:\+:Port Class Reference}
+\label{class_simulator_1_1_parallel_memory_1_1_port}\index{Simulator\+::\+Parallel\+Memory\+::\+Port@{Simulator\+::\+Parallel\+Memory\+::\+Port}}
+}
+Inheritance diagram for Simulator\+:\+:Parallel\+Memory\+:\+:Port\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_simulator_1_1_parallel_memory_1_1_port}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_i_memory_callback}{I\+Memory\+Callback} \& \hyperlink{class_simulator_1_1_parallel_memory_1_1_port_ae82e4d23a41a8db79e37dea33a0ffba8}{Get\+Callback} ()
+\item 
+void \hyperlink{class_simulator_1_1_parallel_memory_1_1_port_aed959a7c45a68f61d69936fab0e2a2fd}{Print} (ostream \&out)
+\item 
+bool \hyperlink{class_simulator_1_1_parallel_memory_1_1_port_a855633c11d41d59fb370c7a68084fe7a}{Add\+Request} (const \hyperlink{struct_simulator_1_1_parallel_memory_1_1_request}{Request} \&request)
+\item 
+bool \hyperlink{class_simulator_1_1_parallel_memory_1_1_port_a4aef3332e642bb5182d988a2901b435d}{On\+Memory\+Snooped} (Mem\+Addr address, const char $\ast$data, const bool $\ast$mask)
+\item 
+\hyperlink{class_simulator_1_1_parallel_memory_1_1_port_a8c4c42288501c743cdd75f92903b5c02}{Port} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_parallel_memory}{Parallel\+Memory} \&memory, \hyperlink{namespace_simulator_a5ca279f926485be2d0554e41275a3305}{Buffer\+Size} buffersize, \hyperlink{class_simulator_1_1_i_memory_callback}{I\+Memory\+Callback} \&callback, \hyperlink{class_simulator_1_1_process}{Process} \&process, \hyperlink{class_simulator_1_1_storage_trace_set}{Storage\+Trace\+Set} \&traces, const \hyperlink{class_simulator_1_1_storage_trace_set}{Storage\+Trace\+Set} \&storages, size\+\_\+t line\+Size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_parallel_memory_1_1_port_a8c4c42288501c743cdd75f92903b5c02}{\index{Simulator\+::\+Parallel\+Memory\+::\+Port@{Simulator\+::\+Parallel\+Memory\+::\+Port}!Port@{Port}}
+\index{Port@{Port}!Simulator\+::\+Parallel\+Memory\+::\+Port@{Simulator\+::\+Parallel\+Memory\+::\+Port}}
+\subsubsection[{Port}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Parallel\+Memory\+::\+Port\+::\+Port (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Parallel\+Memory} \&}]{memory, }
+\item[{{\bf Buffer\+Size}}]{buffersize, }
+\item[{{\bf I\+Memory\+Callback} \&}]{callback, }
+\item[{{\bf Process} \&}]{process, }
+\item[{{\bf Storage\+Trace\+Set} \&}]{traces, }
+\item[{const {\bf Storage\+Trace\+Set} \&}]{storages, }
+\item[{size\+\_\+t}]{line\+Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_parallel_memory_1_1_port_a8c4c42288501c743cdd75f92903b5c02}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_parallel_memory_1_1_port_a855633c11d41d59fb370c7a68084fe7a}{\index{Simulator\+::\+Parallel\+Memory\+::\+Port@{Simulator\+::\+Parallel\+Memory\+::\+Port}!Add\+Request@{Add\+Request}}
+\index{Add\+Request@{Add\+Request}!Simulator\+::\+Parallel\+Memory\+::\+Port@{Simulator\+::\+Parallel\+Memory\+::\+Port}}
+\subsubsection[{Add\+Request}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+Parallel\+Memory\+::\+Port\+::\+Add\+Request (
+\begin{DoxyParamCaption}
+\item[{const {\bf Request} \&}]{request}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_parallel_memory_1_1_port_a855633c11d41d59fb370c7a68084fe7a}
+\hypertarget{class_simulator_1_1_parallel_memory_1_1_port_ae82e4d23a41a8db79e37dea33a0ffba8}{\index{Simulator\+::\+Parallel\+Memory\+::\+Port@{Simulator\+::\+Parallel\+Memory\+::\+Port}!Get\+Callback@{Get\+Callback}}
+\index{Get\+Callback@{Get\+Callback}!Simulator\+::\+Parallel\+Memory\+::\+Port@{Simulator\+::\+Parallel\+Memory\+::\+Port}}
+\subsubsection[{Get\+Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Memory\+Callback}\& Simulator\+::\+Parallel\+Memory\+::\+Port\+::\+Get\+Callback (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_parallel_memory_1_1_port_ae82e4d23a41a8db79e37dea33a0ffba8}
+\hypertarget{class_simulator_1_1_parallel_memory_1_1_port_a4aef3332e642bb5182d988a2901b435d}{\index{Simulator\+::\+Parallel\+Memory\+::\+Port@{Simulator\+::\+Parallel\+Memory\+::\+Port}!On\+Memory\+Snooped@{On\+Memory\+Snooped}}
+\index{On\+Memory\+Snooped@{On\+Memory\+Snooped}!Simulator\+::\+Parallel\+Memory\+::\+Port@{Simulator\+::\+Parallel\+Memory\+::\+Port}}
+\subsubsection[{On\+Memory\+Snooped}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+Parallel\+Memory\+::\+Port\+::\+On\+Memory\+Snooped (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{const char $\ast$}]{data, }
+\item[{const bool $\ast$}]{mask}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_parallel_memory_1_1_port_a4aef3332e642bb5182d988a2901b435d}
+\hypertarget{class_simulator_1_1_parallel_memory_1_1_port_aed959a7c45a68f61d69936fab0e2a2fd}{\index{Simulator\+::\+Parallel\+Memory\+::\+Port@{Simulator\+::\+Parallel\+Memory\+::\+Port}!Print@{Print}}
+\index{Print@{Print}!Simulator\+::\+Parallel\+Memory\+::\+Port@{Simulator\+::\+Parallel\+Memory\+::\+Port}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Parallel\+Memory\+::\+Port\+::\+Print (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_parallel_memory_1_1_port_aed959a7c45a68f61d69936fab0e2a2fd}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+arch/mem/\hyperlink{_parallel_memory_8cpp}{Parallel\+Memory.\+cpp}\end{DoxyCompactItemize}

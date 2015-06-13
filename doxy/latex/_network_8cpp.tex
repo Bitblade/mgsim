@@ -1,0 +1,42 @@
+\hypertarget{_network_8cpp}{\section{arch/drisc/\+Network.cpp File Reference}
+\label{_network_8cpp}\index{arch/drisc/\+Network.\+cpp@{arch/drisc/\+Network.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}Network.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}D\+R\+I\+S\+C.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$sim/config.\+h$>$}\\*
+{\ttfamily \#include $<$sim/log2.\+h$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_simulator}{Simulator}
+\item 
+ \hyperlink{namespace_simulator_1_1drisc}{Simulator\+::drisc}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_network_8cpp_a901c03409fb7b5d5a1252ab91b742748}{C\+O\+N\+S\+T\+R\+U\+C\+T\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R}(\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name})~\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}($\ast$this, \#\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name})
+\item 
+\#define \hyperlink{_network_8cpp_a8823176d77e5119eb3b14f05a30f0466}{I\+N\+I\+T\+I\+A\+L\+I\+Z\+E}(object, dest)~object.\+Initialize(dest-\/$>$object)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_network_8cpp_a901c03409fb7b5d5a1252ab91b742748}{\index{Network.\+cpp@{Network.\+cpp}!C\+O\+N\+S\+T\+R\+U\+C\+T\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R@{C\+O\+N\+S\+T\+R\+U\+C\+T\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R}}
+\index{C\+O\+N\+S\+T\+R\+U\+C\+T\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R@{C\+O\+N\+S\+T\+R\+U\+C\+T\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R}!Network.\+cpp@{Network.\+cpp}}
+\subsubsection[{C\+O\+N\+S\+T\+R\+U\+C\+T\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+S\+T\+R\+U\+C\+T\+\_\+\+R\+E\+G\+I\+S\+T\+E\+R(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf name}}
+\end{DoxyParamCaption}
+)~{\bf name}($\ast$this, \#{\bf name})}}\label{_network_8cpp_a901c03409fb7b5d5a1252ab91b742748}
+\hypertarget{_network_8cpp_a8823176d77e5119eb3b14f05a30f0466}{\index{Network.\+cpp@{Network.\+cpp}!I\+N\+I\+T\+I\+A\+L\+I\+Z\+E@{I\+N\+I\+T\+I\+A\+L\+I\+Z\+E}}
+\index{I\+N\+I\+T\+I\+A\+L\+I\+Z\+E@{I\+N\+I\+T\+I\+A\+L\+I\+Z\+E}!Network.\+cpp@{Network.\+cpp}}
+\subsubsection[{I\+N\+I\+T\+I\+A\+L\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+I\+T\+I\+A\+L\+I\+Z\+E(
+\begin{DoxyParamCaption}
+\item[{}]{object, }
+\item[{}]{dest}
+\end{DoxyParamCaption}
+)~object.\+Initialize(dest-\/$>$object)}}\label{_network_8cpp_a8823176d77e5119eb3b14f05a30f0466}

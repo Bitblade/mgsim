@@ -1,0 +1,212 @@
+\hypertarget{class_simulator_1_1drisc_1_1_network}{\section{Simulator\+:\+:drisc\+:\+:Network Class Reference}
+\label{class_simulator_1_1drisc_1_1_network}\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+}
+
+
+{\ttfamily \#include $<$Network.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:drisc\+:\+:Network\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_simulator_1_1drisc_1_1_network}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_simulator_1_1drisc_1_1_network_1_1_sync_info}{Sync\+Info}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_network_ad0c5ee05a56e03ef77e81f3545ffac12}{Network} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_d_r_i_s_c}{D\+R\+I\+S\+C} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock, const std\+::vector$<$ \hyperlink{class_simulator_1_1_d_r_i_s_c}{D\+R\+I\+S\+C} $\ast$ $>$ \&grid, \hyperlink{class_config}{Config} \&config)
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_network_a4b04f2c4add353c1b3eff781953069e9}{Network} (const \hyperlink{class_simulator_1_1drisc_1_1_network}{Network} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_network}{Network} \& \hyperlink{class_simulator_1_1drisc_1_1_network_a5e80e6d66e6f5228bf9b230a6b807187}{operator=} (const \hyperlink{class_simulator_1_1drisc_1_1_network}{Network} \&)=delete
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_network_a72420b5ab48a4bd4e60b4344977ae846}{Connect} (\hyperlink{class_simulator_1_1drisc_1_1_network}{Network} $\ast$prev, \hyperlink{class_simulator_1_1drisc_1_1_network}{Network} $\ast$next)
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_network_a53539f8b2f58c0632d8388ad9380d881}{Initialize} ()
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_network_ad9cd402efe12cb1facb76f4b145eae36}{Send\+Message} (const \hyperlink{struct_simulator_1_1drisc_1_1_remote_message}{Remote\+Message} \&msg)
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_network_a9aba8dfe68d95f90fd5bdae8e520009e}{Send\+Message} (const \hyperlink{struct_simulator_1_1drisc_1_1_link_message}{Link\+Message} \&msg)
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_network_a80051a740ca0c61e9b3d1f97ad8f8da7}{Send\+Alloc\+Response} (const \hyperlink{struct_simulator_1_1drisc_1_1_alloc_response}{Alloc\+Response} \&msg)
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_network_adadd99fac4046f3e0dd54d2f12d227c8}{Send\+Sync} (const \hyperlink{struct_simulator_1_1drisc_1_1_network_1_1_sync_info}{Sync\+Info} \&event)
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_network_ab09fd09ed632daf1cb2cd6461ed4b49d}{Cmd\+\_\+\+Info} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const 
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_network_a574560ff4003c74e013ab097fa6a8108}{Cmd\+\_\+\+Read} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Register$<$ Delegate\+Message $>$ \hyperlink{class_simulator_1_1drisc_1_1_network_a05f8e1a534e761cde43203c1ff12ffdc}{m\+\_\+delegate\+Out}
+\begin{DoxyCompactList}\small\item\em Outgoing delegation messages. \end{DoxyCompactList}\item 
+Register$<$ Delegate\+Message, \\*
+\hyperlink{class_simulator_1_1_cyclic_arbitrated_port}{Cyclic\+Arbitrated\+Port} $>$ \hyperlink{class_simulator_1_1drisc_1_1_network_ae0dd43a086bf345947dc0fdfaebe5da4}{m\+\_\+delegate\+In}
+\begin{DoxyCompactList}\small\item\em Incoming delegation messages. \end{DoxyCompactList}\item 
+Register\+Pair$<$ \hyperlink{struct_simulator_1_1drisc_1_1_link_message}{Link\+Message} $>$ \hyperlink{class_simulator_1_1drisc_1_1_network_ab1b03a347b36fa3b13dccb4b0de6ab32}{m\+\_\+link}
+\begin{DoxyCompactList}\small\item\em Forward link through the cores. \end{DoxyCompactList}\item 
+Register\+Pair$<$ \hyperlink{struct_simulator_1_1drisc_1_1_alloc_response}{Alloc\+Response} $>$ \hyperlink{class_simulator_1_1drisc_1_1_network_a642e45336ed4f3010df7413c072b5a16}{m\+\_\+alloc\+Response}
+\begin{DoxyCompactList}\small\item\em Backward link for allocation unroll/commit. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_1_1_buffer}{Buffer}$<$ \hyperlink{struct_simulator_1_1drisc_1_1_network_1_1_sync_info}{Sync\+Info} $>$ \hyperlink{class_simulator_1_1drisc_1_1_network_a521f924b9fe901334f5d31a909db55c9}{m\+\_\+syncs}
+\item 
+\hyperlink{class_simulator_1_1_process}{Process} \hyperlink{class_simulator_1_1drisc_1_1_network_afd0825555f2a46b32bcc32cc8b98edef}{p\+\_\+\+Delegation\+Out}
+\item 
+\hyperlink{class_simulator_1_1_process}{Process} \hyperlink{class_simulator_1_1drisc_1_1_network_ac09c8ecbaba5f3c19b44b606aedc94a2}{p\+\_\+\+Delegation\+In}
+\item 
+\hyperlink{class_simulator_1_1_process}{Process} \hyperlink{class_simulator_1_1drisc_1_1_network_a202fa6da0ed74edc4e2ad3853c13347b}{p\+\_\+\+Link}
+\item 
+\hyperlink{class_simulator_1_1_process}{Process} \hyperlink{class_simulator_1_1drisc_1_1_network_a4c57418fab4c9786d01c7263b715893b}{p\+\_\+\+Alloc\+Response}
+\item 
+\hyperlink{class_simulator_1_1_process}{Process} \hyperlink{class_simulator_1_1drisc_1_1_network_aea5b2bb71d1ebd56d9ae8ad6cf3c8066}{p\+\_\+\+Syncs}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_network_ad0c5ee05a56e03ef77e81f3545ffac12}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!Network@{Network}}
+\index{Network@{Network}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{Network}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+Network\+::\+Network (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf D\+R\+I\+S\+C} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock, }
+\item[{const std\+::vector$<$ {\bf D\+R\+I\+S\+C} $\ast$ $>$ \&}]{grid, }
+\item[{{\bf Config} \&}]{config}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_network_ad0c5ee05a56e03ef77e81f3545ffac12}
+\hypertarget{class_simulator_1_1drisc_1_1_network_a4b04f2c4add353c1b3eff781953069e9}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!Network@{Network}}
+\index{Network@{Network}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{Network}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+Network\+::\+Network (
+\begin{DoxyParamCaption}
+\item[{const {\bf Network} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1drisc_1_1_network_a4b04f2c4add353c1b3eff781953069e9}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_network_ab09fd09ed632daf1cb2cd6461ed4b49d}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}}
+\index{Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{Cmd\+\_\+\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+Network\+::\+Cmd\+\_\+\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_network_ab09fd09ed632daf1cb2cd6461ed4b49d}
+\hypertarget{class_simulator_1_1drisc_1_1_network_a574560ff4003c74e013ab097fa6a8108}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}}
+\index{Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{Cmd\+\_\+\+Read}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+Network\+::\+Cmd\+\_\+\+Read (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_network_a574560ff4003c74e013ab097fa6a8108}
+\hypertarget{class_simulator_1_1drisc_1_1_network_a72420b5ab48a4bd4e60b4344977ae846}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!Connect@{Connect}}
+\index{Connect@{Connect}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{Connect}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+Network\+::\+Connect (
+\begin{DoxyParamCaption}
+\item[{{\bf Network} $\ast$}]{prev, }
+\item[{{\bf Network} $\ast$}]{next}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_network_a72420b5ab48a4bd4e60b4344977ae846}
+\hypertarget{class_simulator_1_1drisc_1_1_network_a53539f8b2f58c0632d8388ad9380d881}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+Network\+::\+Initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_network_a53539f8b2f58c0632d8388ad9380d881}
+\hypertarget{class_simulator_1_1drisc_1_1_network_a5e80e6d66e6f5228bf9b230a6b807187}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!operator=@{operator=}}
+\index{operator=@{operator=}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Network}\& Simulator\+::drisc\+::\+Network\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Network} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1drisc_1_1_network_a5e80e6d66e6f5228bf9b230a6b807187}
+\hypertarget{class_simulator_1_1drisc_1_1_network_a80051a740ca0c61e9b3d1f97ad8f8da7}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!Send\+Alloc\+Response@{Send\+Alloc\+Response}}
+\index{Send\+Alloc\+Response@{Send\+Alloc\+Response}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{Send\+Alloc\+Response}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Network\+::\+Send\+Alloc\+Response (
+\begin{DoxyParamCaption}
+\item[{const {\bf Alloc\+Response} \&}]{msg}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_network_a80051a740ca0c61e9b3d1f97ad8f8da7}
+\hypertarget{class_simulator_1_1drisc_1_1_network_ad9cd402efe12cb1facb76f4b145eae36}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!Send\+Message@{Send\+Message}}
+\index{Send\+Message@{Send\+Message}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{Send\+Message}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Network\+::\+Send\+Message (
+\begin{DoxyParamCaption}
+\item[{const {\bf Remote\+Message} \&}]{msg}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_network_ad9cd402efe12cb1facb76f4b145eae36}
+\hypertarget{class_simulator_1_1drisc_1_1_network_a9aba8dfe68d95f90fd5bdae8e520009e}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!Send\+Message@{Send\+Message}}
+\index{Send\+Message@{Send\+Message}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{Send\+Message}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Network\+::\+Send\+Message (
+\begin{DoxyParamCaption}
+\item[{const {\bf Link\+Message} \&}]{msg}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_network_a9aba8dfe68d95f90fd5bdae8e520009e}
+\hypertarget{class_simulator_1_1drisc_1_1_network_adadd99fac4046f3e0dd54d2f12d227c8}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!Send\+Sync@{Send\+Sync}}
+\index{Send\+Sync@{Send\+Sync}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{Send\+Sync}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Network\+::\+Send\+Sync (
+\begin{DoxyParamCaption}
+\item[{const {\bf Sync\+Info} \&}]{event}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_network_adadd99fac4046f3e0dd54d2f12d227c8}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_network_a642e45336ed4f3010df7413c072b5a16}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!m\+\_\+alloc\+Response@{m\+\_\+alloc\+Response}}
+\index{m\+\_\+alloc\+Response@{m\+\_\+alloc\+Response}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{m\+\_\+alloc\+Response}]{\setlength{\rightskip}{0pt plus 5cm}Register\+Pair$<${\bf Alloc\+Response}$>$ Simulator\+::drisc\+::\+Network\+::m\+\_\+alloc\+Response}}\label{class_simulator_1_1drisc_1_1_network_a642e45336ed4f3010df7413c072b5a16}
+
+
+Backward link for allocation unroll/commit. 
+
+\hypertarget{class_simulator_1_1drisc_1_1_network_ae0dd43a086bf345947dc0fdfaebe5da4}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!m\+\_\+delegate\+In@{m\+\_\+delegate\+In}}
+\index{m\+\_\+delegate\+In@{m\+\_\+delegate\+In}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{m\+\_\+delegate\+In}]{\setlength{\rightskip}{0pt plus 5cm}Register$<$Delegate\+Message, {\bf Cyclic\+Arbitrated\+Port}$>$ Simulator\+::drisc\+::\+Network\+::m\+\_\+delegate\+In}}\label{class_simulator_1_1drisc_1_1_network_ae0dd43a086bf345947dc0fdfaebe5da4}
+
+
+Incoming delegation messages. 
+
+\hypertarget{class_simulator_1_1drisc_1_1_network_a05f8e1a534e761cde43203c1ff12ffdc}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!m\+\_\+delegate\+Out@{m\+\_\+delegate\+Out}}
+\index{m\+\_\+delegate\+Out@{m\+\_\+delegate\+Out}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{m\+\_\+delegate\+Out}]{\setlength{\rightskip}{0pt plus 5cm}Register$<$Delegate\+Message$>$ Simulator\+::drisc\+::\+Network\+::m\+\_\+delegate\+Out}}\label{class_simulator_1_1drisc_1_1_network_a05f8e1a534e761cde43203c1ff12ffdc}
+
+
+Outgoing delegation messages. 
+
+\hypertarget{class_simulator_1_1drisc_1_1_network_ab1b03a347b36fa3b13dccb4b0de6ab32}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!m\+\_\+link@{m\+\_\+link}}
+\index{m\+\_\+link@{m\+\_\+link}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{m\+\_\+link}]{\setlength{\rightskip}{0pt plus 5cm}Register\+Pair$<${\bf Link\+Message}$>$ Simulator\+::drisc\+::\+Network\+::m\+\_\+link}}\label{class_simulator_1_1drisc_1_1_network_ab1b03a347b36fa3b13dccb4b0de6ab32}
+
+
+Forward link through the cores. 
+
+\hypertarget{class_simulator_1_1drisc_1_1_network_a521f924b9fe901334f5d31a909db55c9}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!m\+\_\+syncs@{m\+\_\+syncs}}
+\index{m\+\_\+syncs@{m\+\_\+syncs}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{m\+\_\+syncs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Buffer}$<${\bf Sync\+Info}$>$ Simulator\+::drisc\+::\+Network\+::m\+\_\+syncs}}\label{class_simulator_1_1drisc_1_1_network_a521f924b9fe901334f5d31a909db55c9}
+\hypertarget{class_simulator_1_1drisc_1_1_network_a4c57418fab4c9786d01c7263b715893b}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!p\+\_\+\+Alloc\+Response@{p\+\_\+\+Alloc\+Response}}
+\index{p\+\_\+\+Alloc\+Response@{p\+\_\+\+Alloc\+Response}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{p\+\_\+\+Alloc\+Response}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process} Simulator\+::drisc\+::\+Network\+::p\+\_\+\+Alloc\+Response}}\label{class_simulator_1_1drisc_1_1_network_a4c57418fab4c9786d01c7263b715893b}
+\hypertarget{class_simulator_1_1drisc_1_1_network_ac09c8ecbaba5f3c19b44b606aedc94a2}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!p\+\_\+\+Delegation\+In@{p\+\_\+\+Delegation\+In}}
+\index{p\+\_\+\+Delegation\+In@{p\+\_\+\+Delegation\+In}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{p\+\_\+\+Delegation\+In}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process} Simulator\+::drisc\+::\+Network\+::p\+\_\+\+Delegation\+In}}\label{class_simulator_1_1drisc_1_1_network_ac09c8ecbaba5f3c19b44b606aedc94a2}
+\hypertarget{class_simulator_1_1drisc_1_1_network_afd0825555f2a46b32bcc32cc8b98edef}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!p\+\_\+\+Delegation\+Out@{p\+\_\+\+Delegation\+Out}}
+\index{p\+\_\+\+Delegation\+Out@{p\+\_\+\+Delegation\+Out}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{p\+\_\+\+Delegation\+Out}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process} Simulator\+::drisc\+::\+Network\+::p\+\_\+\+Delegation\+Out}}\label{class_simulator_1_1drisc_1_1_network_afd0825555f2a46b32bcc32cc8b98edef}
+\hypertarget{class_simulator_1_1drisc_1_1_network_a202fa6da0ed74edc4e2ad3853c13347b}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!p\+\_\+\+Link@{p\+\_\+\+Link}}
+\index{p\+\_\+\+Link@{p\+\_\+\+Link}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{p\+\_\+\+Link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process} Simulator\+::drisc\+::\+Network\+::p\+\_\+\+Link}}\label{class_simulator_1_1drisc_1_1_network_a202fa6da0ed74edc4e2ad3853c13347b}
+\hypertarget{class_simulator_1_1drisc_1_1_network_aea5b2bb71d1ebd56d9ae8ad6cf3c8066}{\index{Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}!p\+\_\+\+Syncs@{p\+\_\+\+Syncs}}
+\index{p\+\_\+\+Syncs@{p\+\_\+\+Syncs}!Simulator\+::drisc\+::\+Network@{Simulator\+::drisc\+::\+Network}}
+\subsubsection[{p\+\_\+\+Syncs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process} Simulator\+::drisc\+::\+Network\+::p\+\_\+\+Syncs}}\label{class_simulator_1_1drisc_1_1_network_aea5b2bb71d1ebd56d9ae8ad6cf3c8066}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/drisc/\hyperlink{_network_8h}{Network.\+h}\item 
+arch/drisc/\hyperlink{_network_8cpp}{Network.\+cpp}\end{DoxyCompactItemize}

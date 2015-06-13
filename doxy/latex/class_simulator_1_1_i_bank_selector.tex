@@ -1,0 +1,106 @@
+\hypertarget{class_simulator_1_1_i_bank_selector}{\section{Simulator\+:\+:I\+Bank\+Selector Class Reference}
+\label{class_simulator_1_1_i_bank_selector}\index{Simulator\+::\+I\+Bank\+Selector@{Simulator\+::\+I\+Bank\+Selector}}
+}
+
+
+{\ttfamily \#include $<$Bank\+Selector.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:I\+Bank\+Selector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.000000cm]{class_simulator_1_1_i_bank_selector}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_simulator_1_1_i_bank_selector_ad945160c483d88073b6e5572da5e4507}{Map} (Mem\+Addr address, Mem\+Addr \&tag, size\+\_\+t \&index)=0
+\item 
+virtual Mem\+Addr \hyperlink{class_simulator_1_1_i_bank_selector_a57c8b49e6439984ff40836e8c5992aba}{Unmap} (Mem\+Addr tag, size\+\_\+t index)=0
+\item 
+virtual std\+::string \hyperlink{class_simulator_1_1_i_bank_selector_afcc0edfb17b9390058a3732f8a8f9d67}{Get\+Name} () const =0
+\item 
+virtual size\+\_\+t \hyperlink{class_simulator_1_1_i_bank_selector_ac60b4a5485eff722861a1a0df7719340}{Get\+Num\+Banks} () const =0
+\item 
+virtual \hyperlink{class_simulator_1_1_i_bank_selector_a1c367af3c1f83c1aabc8bb72612efc90}{$\sim$\+I\+Bank\+Selector} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_simulator_1_1_i_bank_selector}{I\+Bank\+Selector} $\ast$ \hyperlink{class_simulator_1_1_i_bank_selector_a95c6263915797a92f7b96c5ae94a10e1}{make\+Selector} (\hyperlink{class_simulator_1_1_object}{Object} \&parent, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, size\+\_\+t num\+Banks)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_i_bank_selector_a1c367af3c1f83c1aabc8bb72612efc90}{\index{Simulator\+::\+I\+Bank\+Selector@{Simulator\+::\+I\+Bank\+Selector}!````~I\+Bank\+Selector@{$\sim$\+I\+Bank\+Selector}}
+\index{````~I\+Bank\+Selector@{$\sim$\+I\+Bank\+Selector}!Simulator\+::\+I\+Bank\+Selector@{Simulator\+::\+I\+Bank\+Selector}}
+\subsubsection[{$\sim$\+I\+Bank\+Selector}]{\setlength{\rightskip}{0pt plus 5cm}virtual Simulator\+::\+I\+Bank\+Selector\+::$\sim$\+I\+Bank\+Selector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_i_bank_selector_a1c367af3c1f83c1aabc8bb72612efc90}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_i_bank_selector_afcc0edfb17b9390058a3732f8a8f9d67}{\index{Simulator\+::\+I\+Bank\+Selector@{Simulator\+::\+I\+Bank\+Selector}!Get\+Name@{Get\+Name}}
+\index{Get\+Name@{Get\+Name}!Simulator\+::\+I\+Bank\+Selector@{Simulator\+::\+I\+Bank\+Selector}}
+\subsubsection[{Get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::string Simulator\+::\+I\+Bank\+Selector\+::\+Get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_simulator_1_1_i_bank_selector_afcc0edfb17b9390058a3732f8a8f9d67}
+
+
+Implemented in \hyperlink{class_simulator_1_1_selector_base_a4b629550677073368f8f6adf2217cb8c}{Simulator\+::\+Selector\+Base}.
+
+\hypertarget{class_simulator_1_1_i_bank_selector_ac60b4a5485eff722861a1a0df7719340}{\index{Simulator\+::\+I\+Bank\+Selector@{Simulator\+::\+I\+Bank\+Selector}!Get\+Num\+Banks@{Get\+Num\+Banks}}
+\index{Get\+Num\+Banks@{Get\+Num\+Banks}!Simulator\+::\+I\+Bank\+Selector@{Simulator\+::\+I\+Bank\+Selector}}
+\subsubsection[{Get\+Num\+Banks}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\+\_\+t Simulator\+::\+I\+Bank\+Selector\+::\+Get\+Num\+Banks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_simulator_1_1_i_bank_selector_ac60b4a5485eff722861a1a0df7719340}
+
+
+Implemented in \hyperlink{class_simulator_1_1_selector_base_ac12eca83b007d3a1b1b3c921e48f6d64}{Simulator\+::\+Selector\+Base}.
+
+\hypertarget{class_simulator_1_1_i_bank_selector_a95c6263915797a92f7b96c5ae94a10e1}{\index{Simulator\+::\+I\+Bank\+Selector@{Simulator\+::\+I\+Bank\+Selector}!make\+Selector@{make\+Selector}}
+\index{make\+Selector@{make\+Selector}!Simulator\+::\+I\+Bank\+Selector@{Simulator\+::\+I\+Bank\+Selector}}
+\subsubsection[{make\+Selector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Bank\+Selector} $\ast$ Simulator\+::\+I\+Bank\+Selector\+::make\+Selector (
+\begin{DoxyParamCaption}
+\item[{{\bf Object} \&}]{parent, }
+\item[{const std\+::string \&}]{name, }
+\item[{size\+\_\+t}]{num\+Banks}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_simulator_1_1_i_bank_selector_a95c6263915797a92f7b96c5ae94a10e1}
+\hypertarget{class_simulator_1_1_i_bank_selector_ad945160c483d88073b6e5572da5e4507}{\index{Simulator\+::\+I\+Bank\+Selector@{Simulator\+::\+I\+Bank\+Selector}!Map@{Map}}
+\index{Map@{Map}!Simulator\+::\+I\+Bank\+Selector@{Simulator\+::\+I\+Bank\+Selector}}
+\subsubsection[{Map}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Simulator\+::\+I\+Bank\+Selector\+::\+Map (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{Mem\+Addr \&}]{tag, }
+\item[{size\+\_\+t \&}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_simulator_1_1_i_bank_selector_ad945160c483d88073b6e5572da5e4507}
+
+
+Implemented in \hyperlink{class_simulator_1_1_add_fold_a8b06e012e21b17873647a21a25f9d0b9}{Simulator\+::\+Add\+Fold}, \hyperlink{class_simulator_1_1_x_o_r_fold_a05b1b2b1f8da6230d7b4529a918d9ace}{Simulator\+::\+X\+O\+R\+Fold}, \hyperlink{class_simulator_1_1_right_add_a271dc58bbae9ced6d66c6e15bb077414}{Simulator\+::\+Right\+Add}, \hyperlink{class_simulator_1_1_right_x_o_r_a8002d877e2efcd79fbe2ba1a1929a203}{Simulator\+::\+Right\+X\+O\+R}, \hyperlink{class_simulator_1_1_rotation_mix4_ae52d1a5bc6116ec8adc610f9d67ec71e}{Simulator\+::\+Rotation\+Mix4}, \hyperlink{class_simulator_1_1_direct_selector_binary_a94319702a48838522bc5972ef5a28727}{Simulator\+::\+Direct\+Selector\+Binary}, \hyperlink{class_simulator_1_1_direct_selector_aa1e89a7c1d907e1b47fe005af9368b8f}{Simulator\+::\+Direct\+Selector}, and \hyperlink{class_simulator_1_1_zero_selector_aeb7f36bcb195ea288525d4d4b55c6e85}{Simulator\+::\+Zero\+Selector}.
+
+\hypertarget{class_simulator_1_1_i_bank_selector_a57c8b49e6439984ff40836e8c5992aba}{\index{Simulator\+::\+I\+Bank\+Selector@{Simulator\+::\+I\+Bank\+Selector}!Unmap@{Unmap}}
+\index{Unmap@{Unmap}!Simulator\+::\+I\+Bank\+Selector@{Simulator\+::\+I\+Bank\+Selector}}
+\subsubsection[{Unmap}]{\setlength{\rightskip}{0pt plus 5cm}virtual Mem\+Addr Simulator\+::\+I\+Bank\+Selector\+::\+Unmap (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{tag, }
+\item[{size\+\_\+t}]{index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_simulator_1_1_i_bank_selector_a57c8b49e6439984ff40836e8c5992aba}
+
+
+Implemented in \hyperlink{class_simulator_1_1_add_fold_a020d74e9f256a128ea47d0fb6acd4eb7}{Simulator\+::\+Add\+Fold}, \hyperlink{class_simulator_1_1_x_o_r_fold_aa2cba6de60eb398e5da8f30d47a3eba1}{Simulator\+::\+X\+O\+R\+Fold}, \hyperlink{class_simulator_1_1_right_add_a02795f537e733cefb15b81aaad47482e}{Simulator\+::\+Right\+Add}, \hyperlink{class_simulator_1_1_right_x_o_r_afa74a84305adbf0fbdceebbfade3d26a}{Simulator\+::\+Right\+X\+O\+R}, \hyperlink{class_simulator_1_1_rotation_mix4_adc84ef656797f5a5c9265d68351e9459}{Simulator\+::\+Rotation\+Mix4}, \hyperlink{class_simulator_1_1_direct_selector_binary_a72fd9cee90911f43ebe3b293bb71ce98}{Simulator\+::\+Direct\+Selector\+Binary}, \hyperlink{class_simulator_1_1_direct_selector_a2b7aab1bf3bdcd0bc95d65d93b863583}{Simulator\+::\+Direct\+Selector}, and \hyperlink{class_simulator_1_1_zero_selector_a02bd494a5b4246fc491536b8b0ac9b03}{Simulator\+::\+Zero\+Selector}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/\hyperlink{_bank_selector_8h}{Bank\+Selector.\+h}\item 
+arch/\hyperlink{_bank_selector_8cpp}{Bank\+Selector.\+cpp}\end{DoxyCompactItemize}

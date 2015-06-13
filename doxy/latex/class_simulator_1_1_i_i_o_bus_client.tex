@@ -1,0 +1,241 @@
+\hypertarget{class_simulator_1_1_i_i_o_bus_client}{\section{Simulator\+:\+:I\+I\+O\+Bus\+Client Class Reference}
+\label{class_simulator_1_1_i_i_o_bus_client}\index{Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}}
+}
+
+
+{\ttfamily \#include $<$I\+O\+Bus.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:I\+I\+O\+Bus\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.952381cm]{class_simulator_1_1_i_i_o_bus_client}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_simulator_1_1_i_i_o_bus_client_afeb9155b104d868e9e6c2a3366a39b3e}{On\+Read\+Request\+Received} (\hyperlink{namespace_simulator_a3493d987c866ad6b8aaa704c42502db0}{I\+O\+Device\+I\+D} from, Mem\+Addr address, Mem\+Size size)
+\item 
+virtual bool \hyperlink{class_simulator_1_1_i_i_o_bus_client_a69d1908e4e0fb82c86834ed570a7d6c9}{On\+Write\+Request\+Received} (\hyperlink{namespace_simulator_a3493d987c866ad6b8aaa704c42502db0}{I\+O\+Device\+I\+D} from, Mem\+Addr address, const \hyperlink{struct_simulator_1_1_i_o_data}{I\+O\+Data} \&data)
+\item 
+virtual bool \hyperlink{class_simulator_1_1_i_i_o_bus_client_aabdb58549281acb31be5b3f4509bb614}{On\+Read\+Response\+Received} (\hyperlink{namespace_simulator_a3493d987c866ad6b8aaa704c42502db0}{I\+O\+Device\+I\+D} from, Mem\+Addr address, const \hyperlink{struct_simulator_1_1_i_o_data}{I\+O\+Data} \&data)
+\item 
+virtual bool \hyperlink{class_simulator_1_1_i_i_o_bus_client_a0db0fd1d1e39692b620e00078d98694a}{On\+Interrupt\+Request\+Received} (\hyperlink{namespace_simulator_a951e1bf3ee91c11c980382a7bcbba287}{I\+O\+Notification\+Channel\+I\+D} which)
+\item 
+virtual bool \hyperlink{class_simulator_1_1_i_i_o_bus_client_a644849b2eeba15404c990d1942a311e5}{On\+Notification\+Received} (\hyperlink{namespace_simulator_a951e1bf3ee91c11c980382a7bcbba287}{I\+O\+Notification\+Channel\+I\+D} which, Integer tag)
+\item 
+virtual bool \hyperlink{class_simulator_1_1_i_i_o_bus_client_aade76dc1252a795578c82e05a47fdf66}{On\+Active\+Message\+Received} (\hyperlink{namespace_simulator_a3493d987c866ad6b8aaa704c42502db0}{I\+O\+Device\+I\+D} from, Mem\+Addr pc, Integer arg)
+\item 
+virtual \hyperlink{class_simulator_1_1_storage_trace_set}{Storage\+Trace\+Set} \hyperlink{class_simulator_1_1_i_i_o_bus_client_a072812e7f032284934a9a302276b6f50}{Get\+Read\+Request\+Traces} () const 
+\item 
+virtual \hyperlink{class_simulator_1_1_storage_trace_set}{Storage\+Trace\+Set} \hyperlink{class_simulator_1_1_i_i_o_bus_client_a196ff28850f3cbefef216b4df9eb2116}{Get\+Write\+Request\+Traces} () const 
+\item 
+virtual \hyperlink{class_simulator_1_1_storage_trace_set}{Storage\+Trace\+Set} \hyperlink{class_simulator_1_1_i_i_o_bus_client_a7e1e646056743003374f8b3e1e95978f}{Get\+Read\+Response\+Traces} () const 
+\item 
+virtual \hyperlink{class_simulator_1_1_storage_trace_set}{Storage\+Trace\+Set} \hyperlink{class_simulator_1_1_i_i_o_bus_client_a05ccd4919785fc0b58e02b314a665ac4}{Get\+Interrupt\+Request\+Traces} () const 
+\item 
+virtual \hyperlink{class_simulator_1_1_storage_trace_set}{Storage\+Trace\+Set} \hyperlink{class_simulator_1_1_i_i_o_bus_client_a4367805039f2bf40fa726d5ad14d65b8}{Get\+Notification\+Traces} () const 
+\item 
+virtual \hyperlink{class_simulator_1_1_storage_trace_set}{Storage\+Trace\+Set} \hyperlink{class_simulator_1_1_i_i_o_bus_client_a8cab9808eb5c10089301d5ccf2162a02}{Get\+Active\+Message\+Traces} () const 
+\item 
+virtual void \hyperlink{class_simulator_1_1_i_i_o_bus_client_a1bd79fc9dca6b622afc5a1e23fe8428b}{Initialize} ()
+\item 
+virtual std\+::string \hyperlink{class_simulator_1_1_i_i_o_bus_client_aca857813bebf8a75b9a0b53097547755}{Get\+I\+O\+Device\+Name} () const =0
+\item 
+virtual void \hyperlink{class_simulator_1_1_i_i_o_bus_client_a8fb9e637f95dd2d4c9092461a76921df}{Get\+Device\+Identity} (\hyperlink{struct_simulator_1_1_i_o_device_identification}{I\+O\+Device\+Identification} \&\hyperlink{mtconf_8c_aa3185401f04d30bd505daebf48c39cc5}{id}) const =0
+\item 
+virtual \hyperlink{class_simulator_1_1_i_i_o_bus_client_a4c509a2a5e096c39cae5e9c8e15fcd73}{$\sim$\+I\+I\+O\+Bus\+Client} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_i_i_o_bus_client_a4c509a2a5e096c39cae5e9c8e15fcd73}{\index{Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}!````~I\+I\+O\+Bus\+Client@{$\sim$\+I\+I\+O\+Bus\+Client}}
+\index{````~I\+I\+O\+Bus\+Client@{$\sim$\+I\+I\+O\+Bus\+Client}!Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}}
+\subsubsection[{$\sim$\+I\+I\+O\+Bus\+Client}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+I\+I\+O\+Bus\+Client\+::$\sim$\+I\+I\+O\+Bus\+Client (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1_i_i_o_bus_client_a4c509a2a5e096c39cae5e9c8e15fcd73}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_i_i_o_bus_client_a8cab9808eb5c10089301d5ccf2162a02}{\index{Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}!Get\+Active\+Message\+Traces@{Get\+Active\+Message\+Traces}}
+\index{Get\+Active\+Message\+Traces@{Get\+Active\+Message\+Traces}!Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}}
+\subsubsection[{Get\+Active\+Message\+Traces}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Storage\+Trace\+Set} Simulator\+::\+I\+I\+O\+Bus\+Client\+::\+Get\+Active\+Message\+Traces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_i_i_o_bus_client_a8cab9808eb5c10089301d5ccf2162a02}
+
+
+Reimplemented in \hyperlink{class_simulator_1_1drisc_1_1_i_o_bus_interface_aac5675b021640383f652ac9a55ebd9cf}{Simulator\+::drisc\+::\+I\+O\+Bus\+Interface}.
+
+\hypertarget{class_simulator_1_1_i_i_o_bus_client_a8fb9e637f95dd2d4c9092461a76921df}{\index{Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}!Get\+Device\+Identity@{Get\+Device\+Identity}}
+\index{Get\+Device\+Identity@{Get\+Device\+Identity}!Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}}
+\subsubsection[{Get\+Device\+Identity}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Simulator\+::\+I\+I\+O\+Bus\+Client\+::\+Get\+Device\+Identity (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Device\+Identification} \&}]{id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_simulator_1_1_i_i_o_bus_client_a8fb9e637f95dd2d4c9092461a76921df}
+
+
+Implemented in \hyperlink{class_simulator_1_1_r_p_c_interface_ac2e9b8ebf7f37e984c5409f88f29193b}{Simulator\+::\+R\+P\+C\+Interface}, \hyperlink{class_simulator_1_1_active_r_o_m_ae204edea9cb465dcc8967d8a1cc1c411}{Simulator\+::\+Active\+R\+O\+M}, \hyperlink{class_simulator_1_1_u_a_r_t_a1011654eefba86dc63c4db25186b3ef9}{Simulator\+::\+U\+A\+R\+T}, \hyperlink{class_simulator_1_1drisc_1_1_i_o_bus_interface_af3fda88c51dfd7e9e253763b07c6e4bb}{Simulator\+::drisc\+::\+I\+O\+Bus\+Interface}, \hyperlink{class_simulator_1_1_l_c_d_a86e52e99e37c6d38847a24e4a9640871}{Simulator\+::\+L\+C\+D}, and \hyperlink{class_simulator_1_1_s_m_c_a21088de3e8e8e8c35b1bd066dd8a04ba}{Simulator\+::\+S\+M\+C}.
+
+\hypertarget{class_simulator_1_1_i_i_o_bus_client_a05ccd4919785fc0b58e02b314a665ac4}{\index{Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}!Get\+Interrupt\+Request\+Traces@{Get\+Interrupt\+Request\+Traces}}
+\index{Get\+Interrupt\+Request\+Traces@{Get\+Interrupt\+Request\+Traces}!Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}}
+\subsubsection[{Get\+Interrupt\+Request\+Traces}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Storage\+Trace\+Set} Simulator\+::\+I\+I\+O\+Bus\+Client\+::\+Get\+Interrupt\+Request\+Traces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_i_i_o_bus_client_a05ccd4919785fc0b58e02b314a665ac4}
+
+
+Reimplemented in \hyperlink{class_simulator_1_1drisc_1_1_i_o_bus_interface_a73c8473be6e417f094f89c70e43df37c}{Simulator\+::drisc\+::\+I\+O\+Bus\+Interface}.
+
+\hypertarget{class_simulator_1_1_i_i_o_bus_client_aca857813bebf8a75b9a0b53097547755}{\index{Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}!Get\+I\+O\+Device\+Name@{Get\+I\+O\+Device\+Name}}
+\index{Get\+I\+O\+Device\+Name@{Get\+I\+O\+Device\+Name}!Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}}
+\subsubsection[{Get\+I\+O\+Device\+Name}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::string Simulator\+::\+I\+I\+O\+Bus\+Client\+::\+Get\+I\+O\+Device\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_simulator_1_1_i_i_o_bus_client_aca857813bebf8a75b9a0b53097547755}
+
+
+Implemented in \hyperlink{class_simulator_1_1_r_p_c_interface_abb306b9b717c83519a828a7ae5270ceb}{Simulator\+::\+R\+P\+C\+Interface}, \hyperlink{class_simulator_1_1_active_r_o_m_a395f9d7d00fffcc56118ca27986ea5f1}{Simulator\+::\+Active\+R\+O\+M}, \hyperlink{class_simulator_1_1_u_a_r_t_ad2aa8670409b0be39d5e9aa517c05649}{Simulator\+::\+U\+A\+R\+T}, \hyperlink{class_simulator_1_1drisc_1_1_i_o_bus_interface_a1518e1cc93a3782515beac5c3cd13ca2}{Simulator\+::drisc\+::\+I\+O\+Bus\+Interface}, \hyperlink{class_simulator_1_1_l_c_d_a9dc6ccad26cf7867f52b881ada033012}{Simulator\+::\+L\+C\+D}, and \hyperlink{class_simulator_1_1_s_m_c_a3585763d046bf294b630977ce7ea4274}{Simulator\+::\+S\+M\+C}.
+
+\hypertarget{class_simulator_1_1_i_i_o_bus_client_a4367805039f2bf40fa726d5ad14d65b8}{\index{Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}!Get\+Notification\+Traces@{Get\+Notification\+Traces}}
+\index{Get\+Notification\+Traces@{Get\+Notification\+Traces}!Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}}
+\subsubsection[{Get\+Notification\+Traces}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Storage\+Trace\+Set} Simulator\+::\+I\+I\+O\+Bus\+Client\+::\+Get\+Notification\+Traces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_i_i_o_bus_client_a4367805039f2bf40fa726d5ad14d65b8}
+
+
+Reimplemented in \hyperlink{class_simulator_1_1drisc_1_1_i_o_bus_interface_a91f1c29c4baebd5db38fb72d9fa71022}{Simulator\+::drisc\+::\+I\+O\+Bus\+Interface}.
+
+\hypertarget{class_simulator_1_1_i_i_o_bus_client_a072812e7f032284934a9a302276b6f50}{\index{Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}!Get\+Read\+Request\+Traces@{Get\+Read\+Request\+Traces}}
+\index{Get\+Read\+Request\+Traces@{Get\+Read\+Request\+Traces}!Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}}
+\subsubsection[{Get\+Read\+Request\+Traces}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Storage\+Trace\+Set} Simulator\+::\+I\+I\+O\+Bus\+Client\+::\+Get\+Read\+Request\+Traces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_i_i_o_bus_client_a072812e7f032284934a9a302276b6f50}
+
+
+Reimplemented in \hyperlink{class_simulator_1_1drisc_1_1_i_o_bus_interface_ad6fb405074ccc2d41fb184cd5000ca47}{Simulator\+::drisc\+::\+I\+O\+Bus\+Interface}.
+
+\hypertarget{class_simulator_1_1_i_i_o_bus_client_a7e1e646056743003374f8b3e1e95978f}{\index{Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}!Get\+Read\+Response\+Traces@{Get\+Read\+Response\+Traces}}
+\index{Get\+Read\+Response\+Traces@{Get\+Read\+Response\+Traces}!Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}}
+\subsubsection[{Get\+Read\+Response\+Traces}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Storage\+Trace\+Set} Simulator\+::\+I\+I\+O\+Bus\+Client\+::\+Get\+Read\+Response\+Traces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_i_i_o_bus_client_a7e1e646056743003374f8b3e1e95978f}
+
+
+Reimplemented in \hyperlink{class_simulator_1_1_active_r_o_m_a8cdf2fcc5f552d6fec8fa0703b92746d}{Simulator\+::\+Active\+R\+O\+M}, and \hyperlink{class_simulator_1_1drisc_1_1_i_o_bus_interface_adc9b0a20c56cbb7c7dc88e0e82b625f0}{Simulator\+::drisc\+::\+I\+O\+Bus\+Interface}.
+
+\hypertarget{class_simulator_1_1_i_i_o_bus_client_a196ff28850f3cbefef216b4df9eb2116}{\index{Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}!Get\+Write\+Request\+Traces@{Get\+Write\+Request\+Traces}}
+\index{Get\+Write\+Request\+Traces@{Get\+Write\+Request\+Traces}!Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}}
+\subsubsection[{Get\+Write\+Request\+Traces}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Storage\+Trace\+Set} Simulator\+::\+I\+I\+O\+Bus\+Client\+::\+Get\+Write\+Request\+Traces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_i_i_o_bus_client_a196ff28850f3cbefef216b4df9eb2116}
+
+
+Reimplemented in \hyperlink{class_simulator_1_1_active_r_o_m_a3504469cf42d652f4f196de9b1eb5ba9}{Simulator\+::\+Active\+R\+O\+M}, and \hyperlink{class_simulator_1_1drisc_1_1_i_o_bus_interface_aeda485c4fe4113a3ffdb8f36d9adac5e}{Simulator\+::drisc\+::\+I\+O\+Bus\+Interface}.
+
+\hypertarget{class_simulator_1_1_i_i_o_bus_client_a1bd79fc9dca6b622afc5a1e23fe8428b}{\index{Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+I\+I\+O\+Bus\+Client\+::\+Initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1_i_i_o_bus_client_a1bd79fc9dca6b622afc5a1e23fe8428b}
+
+
+Reimplemented in \hyperlink{class_simulator_1_1_active_r_o_m_afc31072ac817e301dc15e0b05ab1ef2d}{Simulator\+::\+Active\+R\+O\+M}, and \hyperlink{class_simulator_1_1_s_m_c_a7f30745f487023e3e6d418929c3f1e5b}{Simulator\+::\+S\+M\+C}.
+
+\hypertarget{class_simulator_1_1_i_i_o_bus_client_aade76dc1252a795578c82e05a47fdf66}{\index{Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}!On\+Active\+Message\+Received@{On\+Active\+Message\+Received}}
+\index{On\+Active\+Message\+Received@{On\+Active\+Message\+Received}!Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}}
+\subsubsection[{On\+Active\+Message\+Received}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+I\+I\+O\+Bus\+Client\+::\+On\+Active\+Message\+Received (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Device\+I\+D}}]{from, }
+\item[{Mem\+Addr}]{pc, }
+\item[{Integer}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1_i_i_o_bus_client_aade76dc1252a795578c82e05a47fdf66}
+
+
+Reimplemented in \hyperlink{class_simulator_1_1drisc_1_1_i_o_bus_interface_a900682cdb9ef921811b727737a5b8f7e}{Simulator\+::drisc\+::\+I\+O\+Bus\+Interface}.
+
+\hypertarget{class_simulator_1_1_i_i_o_bus_client_a0db0fd1d1e39692b620e00078d98694a}{\index{Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}!On\+Interrupt\+Request\+Received@{On\+Interrupt\+Request\+Received}}
+\index{On\+Interrupt\+Request\+Received@{On\+Interrupt\+Request\+Received}!Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}}
+\subsubsection[{On\+Interrupt\+Request\+Received}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+I\+I\+O\+Bus\+Client\+::\+On\+Interrupt\+Request\+Received (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Notification\+Channel\+I\+D}}]{which}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1_i_i_o_bus_client_a0db0fd1d1e39692b620e00078d98694a}
+
+
+Reimplemented in \hyperlink{class_simulator_1_1drisc_1_1_i_o_bus_interface_a2288eb8cf7232286eaa52593e288cbc4}{Simulator\+::drisc\+::\+I\+O\+Bus\+Interface}.
+
+\hypertarget{class_simulator_1_1_i_i_o_bus_client_a644849b2eeba15404c990d1942a311e5}{\index{Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}!On\+Notification\+Received@{On\+Notification\+Received}}
+\index{On\+Notification\+Received@{On\+Notification\+Received}!Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}}
+\subsubsection[{On\+Notification\+Received}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+I\+I\+O\+Bus\+Client\+::\+On\+Notification\+Received (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Notification\+Channel\+I\+D}}]{which, }
+\item[{Integer}]{tag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1_i_i_o_bus_client_a644849b2eeba15404c990d1942a311e5}
+
+
+Reimplemented in \hyperlink{class_simulator_1_1drisc_1_1_i_o_bus_interface_a7ee069e41b07288f93e4bab362a76b14}{Simulator\+::drisc\+::\+I\+O\+Bus\+Interface}.
+
+\hypertarget{class_simulator_1_1_i_i_o_bus_client_afeb9155b104d868e9e6c2a3366a39b3e}{\index{Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}!On\+Read\+Request\+Received@{On\+Read\+Request\+Received}}
+\index{On\+Read\+Request\+Received@{On\+Read\+Request\+Received}!Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}}
+\subsubsection[{On\+Read\+Request\+Received}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+I\+I\+O\+Bus\+Client\+::\+On\+Read\+Request\+Received (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Device\+I\+D}}]{from, }
+\item[{Mem\+Addr}]{address, }
+\item[{Mem\+Size}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1_i_i_o_bus_client_afeb9155b104d868e9e6c2a3366a39b3e}
+
+
+Reimplemented in \hyperlink{class_simulator_1_1_r_p_c_interface_ab86a5172694b00af4c51c01fc83dd296}{Simulator\+::\+R\+P\+C\+Interface}, \hyperlink{class_simulator_1_1_active_r_o_m_ac6e900c295407b982f6678a3745af66c}{Simulator\+::\+Active\+R\+O\+M}, \hyperlink{class_simulator_1_1_u_a_r_t_a13c24fb3b38610ffaa6e10e591572f11}{Simulator\+::\+U\+A\+R\+T}, \hyperlink{class_simulator_1_1drisc_1_1_i_o_bus_interface_a8be0bd101dcd908e28aa200c211499e7}{Simulator\+::drisc\+::\+I\+O\+Bus\+Interface}, \hyperlink{class_simulator_1_1_l_c_d_ad9b0d6c641f7588f54c42b90d849b896}{Simulator\+::\+L\+C\+D}, and \hyperlink{class_simulator_1_1_s_m_c_a90ed00f2d4a6a4f5a91b4acf30a99b9d}{Simulator\+::\+S\+M\+C}.
+
+\hypertarget{class_simulator_1_1_i_i_o_bus_client_aabdb58549281acb31be5b3f4509bb614}{\index{Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}!On\+Read\+Response\+Received@{On\+Read\+Response\+Received}}
+\index{On\+Read\+Response\+Received@{On\+Read\+Response\+Received}!Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}}
+\subsubsection[{On\+Read\+Response\+Received}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+I\+I\+O\+Bus\+Client\+::\+On\+Read\+Response\+Received (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Device\+I\+D}}]{from, }
+\item[{Mem\+Addr}]{address, }
+\item[{const {\bf I\+O\+Data} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1_i_i_o_bus_client_aabdb58549281acb31be5b3f4509bb614}
+
+
+Reimplemented in \hyperlink{class_simulator_1_1_r_p_c_interface_ade9d048022f35e3a7a03d36f42ffab11}{Simulator\+::\+R\+P\+C\+Interface}, \hyperlink{class_simulator_1_1_active_r_o_m_a8630c7aaf85302843d0ff5027d0ada0e}{Simulator\+::\+Active\+R\+O\+M}, and \hyperlink{class_simulator_1_1drisc_1_1_i_o_bus_interface_a013a562fe3cd759b47615b00b5ae2ca0}{Simulator\+::drisc\+::\+I\+O\+Bus\+Interface}.
+
+\hypertarget{class_simulator_1_1_i_i_o_bus_client_a69d1908e4e0fb82c86834ed570a7d6c9}{\index{Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}!On\+Write\+Request\+Received@{On\+Write\+Request\+Received}}
+\index{On\+Write\+Request\+Received@{On\+Write\+Request\+Received}!Simulator\+::\+I\+I\+O\+Bus\+Client@{Simulator\+::\+I\+I\+O\+Bus\+Client}}
+\subsubsection[{On\+Write\+Request\+Received}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+I\+I\+O\+Bus\+Client\+::\+On\+Write\+Request\+Received (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Device\+I\+D}}]{from, }
+\item[{Mem\+Addr}]{address, }
+\item[{const {\bf I\+O\+Data} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1_i_i_o_bus_client_a69d1908e4e0fb82c86834ed570a7d6c9}
+
+
+Reimplemented in \hyperlink{class_simulator_1_1_r_p_c_interface_a7a8353765d3c916fbc539453c6a74ffa}{Simulator\+::\+R\+P\+C\+Interface}, \hyperlink{class_simulator_1_1_active_r_o_m_a43f9ab1bae1a8a67d44b97cc806f891b}{Simulator\+::\+Active\+R\+O\+M}, \hyperlink{class_simulator_1_1_u_a_r_t_a81469c8d923a6b5e8bcec83a865da803}{Simulator\+::\+U\+A\+R\+T}, \hyperlink{class_simulator_1_1drisc_1_1_i_o_bus_interface_a25f360b2ef5d9b9d55faa428184fe28a}{Simulator\+::drisc\+::\+I\+O\+Bus\+Interface}, and \hyperlink{class_simulator_1_1_l_c_d_af0e23f7f6d7c99cd011ff2260e5f5198}{Simulator\+::\+L\+C\+D}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/\hyperlink{_i_o_bus_8h}{I\+O\+Bus.\+h}\item 
+arch/\hyperlink{_i_o_bus_8cpp}{I\+O\+Bus.\+cpp}\end{DoxyCompactItemize}

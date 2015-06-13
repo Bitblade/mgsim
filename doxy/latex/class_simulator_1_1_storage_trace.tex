@@ -1,0 +1,112 @@
+\hypertarget{class_simulator_1_1_storage_trace}{\section{Simulator\+:\+:Storage\+Trace Class Reference}
+\label{class_simulator_1_1_storage_trace}\index{Simulator\+::\+Storage\+Trace@{Simulator\+::\+Storage\+Trace}}
+}
+
+
+List of a storage access trace.  
+
+
+
+
+{\ttfamily \#include $<$storagetrace.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_simulator_1_1_storage_trace_a25e6635f9c84392a033ef762291f1e4a}{Append} (const \hyperlink{class_simulator_1_1_storage}{Storage} \&s)
+\item 
+bool \hyperlink{class_simulator_1_1_storage_trace_ad4437a9f39a0a55c6547857b6309e77b}{operator$<$} (const \hyperlink{class_simulator_1_1_storage_trace}{Storage\+Trace} \&rhs) const 
+\item 
+\hyperlink{class_simulator_1_1_storage_trace_a50f555055d016df1f29c66c2b6b7f22f}{Storage\+Trace} ()
+\begin{DoxyCompactList}\small\item\em Constructs an empty trace. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_1_1_storage_trace_a310334869257e884743dd21812962458}{Storage\+Trace} (const \hyperlink{class_simulator_1_1_storage}{Storage} \&a)
+\begin{DoxyCompactList}\small\item\em Constructs a trace with one element. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_1_1_storage_trace_ab59ee50a5eb5df4b5d310bf983e58958}{Storage\+Trace} (const \hyperlink{class_simulator_1_1_storage_trace}{Storage\+Trace} \&a, const \hyperlink{class_simulator_1_1_storage_trace}{Storage\+Trace} \&b)
+\begin{DoxyCompactList}\small\item\em Constructs a trace from appending two traces. \end{DoxyCompactList}\item 
+bool \hyperlink{class_simulator_1_1_storage_trace_a6b0385f4f11d285ba0ade7c7490268b3}{empty} () const 
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{class_simulator_1_1_storage_trace_a916da1d464f3711201ac234ba72f88af}{operator$<$$<$} (std\+::ostream \&os, const \hyperlink{class_simulator_1_1_storage_trace}{Storage\+Trace} \&st)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+List of a storage access trace. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_storage_trace_a50f555055d016df1f29c66c2b6b7f22f}{\index{Simulator\+::\+Storage\+Trace@{Simulator\+::\+Storage\+Trace}!Storage\+Trace@{Storage\+Trace}}
+\index{Storage\+Trace@{Storage\+Trace}!Simulator\+::\+Storage\+Trace@{Simulator\+::\+Storage\+Trace}}
+\subsubsection[{Storage\+Trace}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Storage\+Trace\+::\+Storage\+Trace (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_storage_trace_a50f555055d016df1f29c66c2b6b7f22f}
+
+
+Constructs an empty trace. 
+
+\hypertarget{class_simulator_1_1_storage_trace_a310334869257e884743dd21812962458}{\index{Simulator\+::\+Storage\+Trace@{Simulator\+::\+Storage\+Trace}!Storage\+Trace@{Storage\+Trace}}
+\index{Storage\+Trace@{Storage\+Trace}!Simulator\+::\+Storage\+Trace@{Simulator\+::\+Storage\+Trace}}
+\subsubsection[{Storage\+Trace}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Storage\+Trace\+::\+Storage\+Trace (
+\begin{DoxyParamCaption}
+\item[{const {\bf Storage} \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_storage_trace_a310334869257e884743dd21812962458}
+
+
+Constructs a trace with one element. 
+
+\hypertarget{class_simulator_1_1_storage_trace_ab59ee50a5eb5df4b5d310bf983e58958}{\index{Simulator\+::\+Storage\+Trace@{Simulator\+::\+Storage\+Trace}!Storage\+Trace@{Storage\+Trace}}
+\index{Storage\+Trace@{Storage\+Trace}!Simulator\+::\+Storage\+Trace@{Simulator\+::\+Storage\+Trace}}
+\subsubsection[{Storage\+Trace}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Storage\+Trace\+::\+Storage\+Trace (
+\begin{DoxyParamCaption}
+\item[{const {\bf Storage\+Trace} \&}]{a, }
+\item[{const {\bf Storage\+Trace} \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_storage_trace_ab59ee50a5eb5df4b5d310bf983e58958}
+
+
+Constructs a trace from appending two traces. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_storage_trace_a25e6635f9c84392a033ef762291f1e4a}{\index{Simulator\+::\+Storage\+Trace@{Simulator\+::\+Storage\+Trace}!Append@{Append}}
+\index{Append@{Append}!Simulator\+::\+Storage\+Trace@{Simulator\+::\+Storage\+Trace}}
+\subsubsection[{Append}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Storage\+Trace\+::\+Append (
+\begin{DoxyParamCaption}
+\item[{const {\bf Storage} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_storage_trace_a25e6635f9c84392a033ef762291f1e4a}
+\hypertarget{class_simulator_1_1_storage_trace_a6b0385f4f11d285ba0ade7c7490268b3}{\index{Simulator\+::\+Storage\+Trace@{Simulator\+::\+Storage\+Trace}!empty@{empty}}
+\index{empty@{empty}!Simulator\+::\+Storage\+Trace@{Simulator\+::\+Storage\+Trace}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+Storage\+Trace\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_storage_trace_a6b0385f4f11d285ba0ade7c7490268b3}
+\hypertarget{class_simulator_1_1_storage_trace_ad4437a9f39a0a55c6547857b6309e77b}{\index{Simulator\+::\+Storage\+Trace@{Simulator\+::\+Storage\+Trace}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Simulator\+::\+Storage\+Trace@{Simulator\+::\+Storage\+Trace}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+Storage\+Trace\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Storage\+Trace} \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_storage_trace_ad4437a9f39a0a55c6547857b6309e77b}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_simulator_1_1_storage_trace_a916da1d464f3711201ac234ba72f88af}{\index{Simulator\+::\+Storage\+Trace@{Simulator\+::\+Storage\+Trace}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Simulator\+::\+Storage\+Trace@{Simulator\+::\+Storage\+Trace}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const {\bf Storage\+Trace} \&}]{st}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_simulator_1_1_storage_trace_a916da1d464f3711201ac234ba72f88af}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{storagetrace_8h}{storagetrace.\+h}\end{DoxyCompactItemize}

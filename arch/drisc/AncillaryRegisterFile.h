@@ -1,7 +1,7 @@
 #ifndef ANCILLARYREGISTERFILE_H
 #define ANCILLARYREGISTERFILE_H
 
-#include "IOMatchUnit.h"
+#include "mmu/MMIOComponent.h"
 
 namespace Simulator
 {

@@ -1,0 +1,28 @@
+var class_simulator_1_1drisc_1_1_i_cache =
+[
+    [ "ICache", "class_simulator_1_1drisc_1_1_i_cache.html#abccbf70d026fcd78e099fe46941ee1ef", null ],
+    [ "ICache", "class_simulator_1_1drisc_1_1_i_cache.html#a5da34e6e93ff85df68fef014b318792c", null ],
+    [ "~ICache", "class_simulator_1_1drisc_1_1_i_cache.html#a432627a76862df4755a991d5fe34a307", null ],
+    [ "Cmd_Info", "class_simulator_1_1drisc_1_1_i_cache.html#a64a13ee6d0ebcb28774f8443f140377c", null ],
+    [ "Cmd_Read", "class_simulator_1_1drisc_1_1_i_cache.html#a3da79bb809b6d825c00aac432ae0b8b0", null ],
+    [ "ConnectMemory", "class_simulator_1_1drisc_1_1_i_cache.html#a4d67069af1ac468ddc91e9b5eee096c8", null ],
+    [ "Fetch", "class_simulator_1_1drisc_1_1_i_cache.html#a662072b848e493954869c6cf35384368", null ],
+    [ "Fetch", "class_simulator_1_1drisc_1_1_i_cache.html#ad30934eac15d9722ad5947c33368d47b", null ],
+    [ "GetAssociativity", "class_simulator_1_1drisc_1_1_i_cache.html#a720cfa1806d5676ab282e9fe2eb78f36", null ],
+    [ "GetLineSize", "class_simulator_1_1drisc_1_1_i_cache.html#a30b7686fc0988c3e40706ba58f2e17d2", null ],
+    [ "GetMemoryPeer", "class_simulator_1_1drisc_1_1_i_cache.html#a389ebf0f8eec8d1f07752e97fda96176", null ],
+    [ "GetNumLines", "class_simulator_1_1drisc_1_1_i_cache.html#a46cb90cbdd79699ba749b91be730a5d8", null ],
+    [ "GetNumSets", "class_simulator_1_1drisc_1_1_i_cache.html#aaeb3d54075721320f8a553116c0b379f", null ],
+    [ "IsEmpty", "class_simulator_1_1drisc_1_1_i_cache.html#a235db7340ebe82220a35410cd61ce08c", null ],
+    [ "OnMemoryInvalidated", "class_simulator_1_1drisc_1_1_i_cache.html#a53d755323405ba6efab15371ba95a435", null ],
+    [ "OnMemoryReadCompleted", "class_simulator_1_1drisc_1_1_i_cache.html#aef4cb1f1456f90f644dd4697eeca2bb4", null ],
+    [ "OnMemorySnooped", "class_simulator_1_1drisc_1_1_i_cache.html#a8d4a3d21efa066f6d624ec2bc3a8b370", null ],
+    [ "OnMemoryWriteCompleted", "class_simulator_1_1drisc_1_1_i_cache.html#ad07b2819c8bdf6a286eb484647d75d98", null ],
+    [ "operator=", "class_simulator_1_1drisc_1_1_i_cache.html#a1c8adc5c5595fac4b6cdb00f9ae990cc", null ],
+    [ "Read", "class_simulator_1_1drisc_1_1_i_cache.html#a5e1200c1c47897335d9a492b6f4dd664", null ],
+    [ "ReleaseCacheLine", "class_simulator_1_1drisc_1_1_i_cache.html#ad92a2d648a3b0aa97baff394c1751944", null ],
+    [ "Simulator::DRISC", "class_simulator_1_1drisc_1_1_i_cache.html#a14f94eb83e17d9d8841f39b37431d673", null ],
+    [ "p_Incoming", "class_simulator_1_1drisc_1_1_i_cache.html#a8cb7be6c13ade7c94c86776ec50b8057", null ],
+    [ "p_Outgoing", "class_simulator_1_1drisc_1_1_i_cache.html#a42bdcd5c4c51aa0aa20ccfc1ee7fa8f4", null ],
+    [ "p_service", "class_simulator_1_1drisc_1_1_i_cache.html#a4dffa2890e3dcb4a447c3d3a108f9d2c", null ]
+];

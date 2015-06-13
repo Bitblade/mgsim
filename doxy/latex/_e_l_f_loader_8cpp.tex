@@ -1,0 +1,51 @@
+\hypertarget{_e_l_f_loader_8cpp}{\section{arch/dev/\+E\+L\+F\+Loader.cpp File Reference}
+\label{_e_l_f_loader_8cpp}\index{arch/dev/\+E\+L\+F\+Loader.\+cpp@{arch/dev/\+E\+L\+F\+Loader.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}E\+L\+F\+Loader.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}E\+L\+F.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$sim/except.\+h$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_e_l_f_loader_8cpp_a3549a1b067016a0db5b99de2da20adcd}{Verify}(Expr, Message)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::pair$<$ Mem\+Addr, bool $>$ \hyperlink{_e_l_f_loader_8cpp_adb64b334f5282d055cf17489942b33b1}{Load\+Program} (const std\+::string \&msg\+\_\+prefix, vector$<$ \hyperlink{struct_simulator_1_1_active_r_o_m_1_1_loadable_range}{Active\+R\+O\+M\+::\+Loadable\+Range} $>$ \&ranges, \hyperlink{class_simulator_1_1_i_memory_admin}{I\+Memory\+Admin} \&memory, char $\ast$data, Mem\+Size size, bool verbose)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_e_l_f_loader_8cpp_a3549a1b067016a0db5b99de2da20adcd}{\index{E\+L\+F\+Loader.\+cpp@{E\+L\+F\+Loader.\+cpp}!Verify@{Verify}}
+\index{Verify@{Verify}!E\+L\+F\+Loader.\+cpp@{E\+L\+F\+Loader.\+cpp}}
+\subsubsection[{Verify}]{\setlength{\rightskip}{0pt plus 5cm}\#define Verify(
+\begin{DoxyParamCaption}
+\item[{}]{Expr, }
+\item[{}]{Message}
+\end{DoxyParamCaption}
+)}}\label{_e_l_f_loader_8cpp_a3549a1b067016a0db5b99de2da20adcd}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} (!(Expr)) \{                                                 \(\backslash\)
+        throw runtime\_error(msg\_prefix + \textcolor{stringliteral}{": "} + (Message));        \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\hypertarget{_e_l_f_loader_8cpp_adb64b334f5282d055cf17489942b33b1}{\index{E\+L\+F\+Loader.\+cpp@{E\+L\+F\+Loader.\+cpp}!Load\+Program@{Load\+Program}}
+\index{Load\+Program@{Load\+Program}!E\+L\+F\+Loader.\+cpp@{E\+L\+F\+Loader.\+cpp}}
+\subsubsection[{Load\+Program}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$Mem\+Addr, bool$>$ Load\+Program (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{msg\+\_\+prefix, }
+\item[{vector$<$ {\bf Active\+R\+O\+M\+::\+Loadable\+Range} $>$ \&}]{ranges, }
+\item[{{\bf I\+Memory\+Admin} \&}]{memory, }
+\item[{char $\ast$}]{data, }
+\item[{Mem\+Size}]{size, }
+\item[{bool}]{verbose}
+\end{DoxyParamCaption}
+)}}\label{_e_l_f_loader_8cpp_adb64b334f5282d055cf17489942b33b1}

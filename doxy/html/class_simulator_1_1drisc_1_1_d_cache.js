@@ -1,0 +1,35 @@
+var class_simulator_1_1drisc_1_1_d_cache =
+[
+    [ "Line", "struct_simulator_1_1drisc_1_1_d_cache_1_1_line.html", "struct_simulator_1_1drisc_1_1_d_cache_1_1_line" ],
+    [ "LineState", "class_simulator_1_1drisc_1_1_d_cache.html#aab0700229ca4e63558dd73cb40ee0b71", [
+      [ "LINE_EMPTY", "class_simulator_1_1drisc_1_1_d_cache.html#aab0700229ca4e63558dd73cb40ee0b71a6492d0c4b09bbaf85d7848638e1b9e4a", null ],
+      [ "LINE_LOADING", "class_simulator_1_1drisc_1_1_d_cache.html#aab0700229ca4e63558dd73cb40ee0b71abf88e2ea7fe762928686a9b2b3c44f9a", null ],
+      [ "LINE_INVALID", "class_simulator_1_1drisc_1_1_d_cache.html#aab0700229ca4e63558dd73cb40ee0b71a46f24a3cab8cf50fd5e27e58d4b469f1", null ],
+      [ "LINE_FULL", "class_simulator_1_1drisc_1_1_d_cache.html#aab0700229ca4e63558dd73cb40ee0b71a9d8e8c623920edff8b10d6b07f5eee8a", null ]
+    ] ],
+    [ "DCache", "class_simulator_1_1drisc_1_1_d_cache.html#a8edd4655eb4e5343f43fc681538e7bdb", null ],
+    [ "DCache", "class_simulator_1_1drisc_1_1_d_cache.html#a06d937fa2b18e01cd656aa2da4aa7af3", null ],
+    [ "~DCache", "class_simulator_1_1drisc_1_1_d_cache.html#a6411ac3c301f537cd66740e4c8a68b1c", null ],
+    [ "Cmd_Info", "class_simulator_1_1drisc_1_1_d_cache.html#a9097106ad74a2a9198ce9caee47420cb", null ],
+    [ "Cmd_Read", "class_simulator_1_1drisc_1_1_d_cache.html#af68d132ebce737293e3678dcfa3b9fd8", null ],
+    [ "ConnectMemory", "class_simulator_1_1drisc_1_1_d_cache.html#a28e1cd7e81331638001925605fa80cc8", null ],
+    [ "GetAssociativity", "class_simulator_1_1drisc_1_1_d_cache.html#a0ab8548e496232a709b8c2a006be6aaa", null ],
+    [ "GetLine", "class_simulator_1_1drisc_1_1_d_cache.html#ac25b28535cc1742c7153995882c8f284", null ],
+    [ "GetLineSize", "class_simulator_1_1drisc_1_1_d_cache.html#a8007c040d65e09aac73021337b5d3323", null ],
+    [ "GetMemoryPeer", "class_simulator_1_1drisc_1_1_d_cache.html#a0ee619a4930f7b92e450fc1b6f9c08cd", null ],
+    [ "GetNumLines", "class_simulator_1_1drisc_1_1_d_cache.html#a7beb41cf505c2764e5da68d1ebc93794", null ],
+    [ "GetNumSets", "class_simulator_1_1drisc_1_1_d_cache.html#a45b14a4aad78c53e1d2a5f13f3e58cff", null ],
+    [ "OnMemoryInvalidated", "class_simulator_1_1drisc_1_1_d_cache.html#a583fdc1194fffefec8a12bcbc32e2fc3", null ],
+    [ "OnMemoryReadCompleted", "class_simulator_1_1drisc_1_1_d_cache.html#ae1cb74d2ac87cd7ffddd081c0da3ce15", null ],
+    [ "OnMemorySnooped", "class_simulator_1_1drisc_1_1_d_cache.html#a8229d5f73ccd678b27b2086168620f79", null ],
+    [ "OnMemoryWriteCompleted", "class_simulator_1_1drisc_1_1_d_cache.html#a5f642cb471c08f5056f7bc3a93b8312d", null ],
+    [ "operator=", "class_simulator_1_1drisc_1_1_d_cache.html#aa1615320c6877f87cf3383d7a3aa217b", null ],
+    [ "Read", "class_simulator_1_1drisc_1_1_d_cache.html#aae572308d04dc67956b110a034c1824c", null ],
+    [ "Write", "class_simulator_1_1drisc_1_1_d_cache.html#ad7d0e5b2ca9a2099cc727db2a3ddaaf9", null ],
+    [ "Simulator::DRISC", "class_simulator_1_1drisc_1_1_d_cache.html#a14f94eb83e17d9d8841f39b37431d673", null ],
+    [ "p_Outgoing", "class_simulator_1_1drisc_1_1_d_cache.html#a23700618e332cbeea5634f08f2c18521", null ],
+    [ "p_ReadResponses", "class_simulator_1_1drisc_1_1_d_cache.html#aa9b6ca8eebcaa56bc0c0f58c6a5e80c5", null ],
+    [ "p_ReadWritebacks", "class_simulator_1_1drisc_1_1_d_cache.html#ae91cc8d03d3b83d7ee241b9246dc32d5", null ],
+    [ "p_service", "class_simulator_1_1drisc_1_1_d_cache.html#a3f008676ba7517b2e9a3968c9be1d519", null ],
+    [ "p_WriteResponses", "class_simulator_1_1drisc_1_1_d_cache.html#aaf3fd21ca8cd24b70348ccd7452c7ce7", null ]
+];

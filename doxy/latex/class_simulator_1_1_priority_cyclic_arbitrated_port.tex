@@ -1,0 +1,89 @@
+\hypertarget{class_simulator_1_1_priority_cyclic_arbitrated_port}{\section{Simulator\+:\+:Priority\+Cyclic\+Arbitrated\+Port Class Reference}
+\label{class_simulator_1_1_priority_cyclic_arbitrated_port}\index{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port@{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port}}
+}
+
+
+{\ttfamily \#include $<$ports.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:Priority\+Cyclic\+Arbitrated\+Port\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_simulator_1_1_priority_cyclic_arbitrated_port}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_simulator_1_1_priority_cyclic_arbitrated_port_a6c3161850f07c3310d5b37bc9f323a0c}{Arbitrate} ()
+\item 
+void \hyperlink{class_simulator_1_1_priority_cyclic_arbitrated_port_ae5d941ef99e1a5615dd4f7975cfc0f49}{Add\+Priority\+Process} (const \hyperlink{class_simulator_1_1_process}{Process} \&process)
+\item 
+void \hyperlink{class_simulator_1_1_priority_cyclic_arbitrated_port_a6027f7e82e7e75150b6c647a3ca1b947}{Add\+Cyclic\+Process} (const \hyperlink{class_simulator_1_1_process}{Process} \&process)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_priority_cyclic_arbitrated_port_a7c146645281d288bdfff495d96d0a5c4}{Priority\+Cyclic\+Arbitrated\+Port} (const \hyperlink{class_simulator_1_1_object}{Object} \&object, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name})
+\item 
+bool \hyperlink{class_simulator_1_1_priority_cyclic_arbitrated_port_a31050398a67f5e5659e24741ea26241e}{Can\+Access} (const \hyperlink{class_simulator_1_1_process}{Process} \&process) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_simple_arbitrated_port_a279e689b99bb2c7b2b2b0605979c14de}{Process\+List} \hyperlink{class_simulator_1_1_priority_cyclic_arbitrated_port_a5dde8d0702bb4f3cfa8c7d36a12f5f7c}{m\+\_\+cyclicprocesses}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_priority_cyclic_arbitrated_port_a7c146645281d288bdfff495d96d0a5c4}{\index{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port@{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port}!Priority\+Cyclic\+Arbitrated\+Port@{Priority\+Cyclic\+Arbitrated\+Port}}
+\index{Priority\+Cyclic\+Arbitrated\+Port@{Priority\+Cyclic\+Arbitrated\+Port}!Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port@{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port}}
+\subsubsection[{Priority\+Cyclic\+Arbitrated\+Port}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port\+::\+Priority\+Cyclic\+Arbitrated\+Port (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object} \&}]{object, }
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_simulator_1_1_priority_cyclic_arbitrated_port_a7c146645281d288bdfff495d96d0a5c4}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_priority_cyclic_arbitrated_port_a6027f7e82e7e75150b6c647a3ca1b947}{\index{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port@{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port}!Add\+Cyclic\+Process@{Add\+Cyclic\+Process}}
+\index{Add\+Cyclic\+Process@{Add\+Cyclic\+Process}!Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port@{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port}}
+\subsubsection[{Add\+Cyclic\+Process}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port\+::\+Add\+Cyclic\+Process (
+\begin{DoxyParamCaption}
+\item[{const {\bf Process} \&}]{process}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_priority_cyclic_arbitrated_port_a6027f7e82e7e75150b6c647a3ca1b947}
+\hypertarget{class_simulator_1_1_priority_cyclic_arbitrated_port_ae5d941ef99e1a5615dd4f7975cfc0f49}{\index{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port@{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port}!Add\+Priority\+Process@{Add\+Priority\+Process}}
+\index{Add\+Priority\+Process@{Add\+Priority\+Process}!Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port@{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port}}
+\subsubsection[{Add\+Priority\+Process}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port\+::\+Add\+Priority\+Process (
+\begin{DoxyParamCaption}
+\item[{const {\bf Process} \&}]{process}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_priority_cyclic_arbitrated_port_ae5d941ef99e1a5615dd4f7975cfc0f49}
+\hypertarget{class_simulator_1_1_priority_cyclic_arbitrated_port_a6c3161850f07c3310d5b37bc9f323a0c}{\index{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port@{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port}!Arbitrate@{Arbitrate}}
+\index{Arbitrate@{Arbitrate}!Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port@{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port}}
+\subsubsection[{Arbitrate}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port\+::\+Arbitrate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_priority_cyclic_arbitrated_port_a6c3161850f07c3310d5b37bc9f323a0c}
+\hypertarget{class_simulator_1_1_priority_cyclic_arbitrated_port_a31050398a67f5e5659e24741ea26241e}{\index{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port@{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port}!Can\+Access@{Can\+Access}}
+\index{Can\+Access@{Can\+Access}!Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port@{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port}}
+\subsubsection[{Can\+Access}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port\+::\+Can\+Access (
+\begin{DoxyParamCaption}
+\item[{const {\bf Process} \&}]{process}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_simulator_1_1_priority_cyclic_arbitrated_port_a31050398a67f5e5659e24741ea26241e}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simulator_1_1_priority_cyclic_arbitrated_port_a5dde8d0702bb4f3cfa8c7d36a12f5f7c}{\index{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port@{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port}!m\+\_\+cyclicprocesses@{m\+\_\+cyclicprocesses}}
+\index{m\+\_\+cyclicprocesses@{m\+\_\+cyclicprocesses}!Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port@{Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port}}
+\subsubsection[{m\+\_\+cyclicprocesses}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process\+List} Simulator\+::\+Priority\+Cyclic\+Arbitrated\+Port\+::m\+\_\+cyclicprocesses\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_priority_cyclic_arbitrated_port_a5dde8d0702bb4f3cfa8c7d36a12f5f7c}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{ports_8h}{ports.\+h}\item 
+sim/\hyperlink{ports_8cpp}{ports.\+cpp}\end{DoxyCompactItemize}

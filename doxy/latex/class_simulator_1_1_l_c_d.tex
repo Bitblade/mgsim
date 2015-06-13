@@ -1,0 +1,124 @@
+\hypertarget{class_simulator_1_1_l_c_d}{\section{Simulator\+:\+:L\+C\+D Class Reference}
+\label{class_simulator_1_1_l_c_d}\index{Simulator\+::\+L\+C\+D@{Simulator\+::\+L\+C\+D}}
+}
+
+
+{\ttfamily \#include $<$L\+C\+D.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:L\+C\+D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_simulator_1_1_l_c_d}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_l_c_d_a09a006a9a3aef907ef3126eb70989592}{L\+C\+D} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent, \hyperlink{class_simulator_1_1_i_i_o_bus}{I\+I\+O\+Bus} \&iobus, \hyperlink{namespace_simulator_a3493d987c866ad6b8aaa704c42502db0}{I\+O\+Device\+I\+D} devid, \hyperlink{class_config}{Config} \&config)
+\item 
+\hyperlink{class_simulator_1_1_l_c_d_a93b1e18f8b6addc06234d07d08b42be2}{L\+C\+D} (const \hyperlink{class_simulator_1_1_l_c_d}{L\+C\+D} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1_l_c_d}{L\+C\+D} \& \hyperlink{class_simulator_1_1_l_c_d_a3c4785ccc9c3a7774a64f11f61572ea3}{operator=} (const \hyperlink{class_simulator_1_1_l_c_d}{L\+C\+D} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1_l_c_d_afe60ed9c66882ca71f377a2ae3eedbad}{$\sim$\+L\+C\+D} ()
+\item 
+bool \hyperlink{class_simulator_1_1_l_c_d_ad9b0d6c641f7588f54c42b90d849b896}{On\+Read\+Request\+Received} (\hyperlink{namespace_simulator_a3493d987c866ad6b8aaa704c42502db0}{I\+O\+Device\+I\+D} from, Mem\+Addr address, Mem\+Size size) override
+\item 
+bool \hyperlink{class_simulator_1_1_l_c_d_af0e23f7f6d7c99cd011ff2260e5f5198}{On\+Write\+Request\+Received} (\hyperlink{namespace_simulator_a3493d987c866ad6b8aaa704c42502db0}{I\+O\+Device\+I\+D} from, Mem\+Addr address, const \hyperlink{struct_simulator_1_1_i_o_data}{I\+O\+Data} \&data) override
+\item 
+void \hyperlink{class_simulator_1_1_l_c_d_a86e52e99e37c6d38847a24e4a9640871}{Get\+Device\+Identity} (\hyperlink{struct_simulator_1_1_i_o_device_identification}{I\+O\+Device\+Identification} \&\hyperlink{mtconf_8c_aa3185401f04d30bd505daebf48c39cc5}{id}) const override
+\item 
+std\+::string \hyperlink{class_simulator_1_1_l_c_d_a9dc6ccad26cf7867f52b881ada033012}{Get\+I\+O\+Device\+Name} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_l_c_d_a09a006a9a3aef907ef3126eb70989592}{\index{Simulator\+::\+L\+C\+D@{Simulator\+::\+L\+C\+D}!L\+C\+D@{L\+C\+D}}
+\index{L\+C\+D@{L\+C\+D}!Simulator\+::\+L\+C\+D@{Simulator\+::\+L\+C\+D}}
+\subsubsection[{L\+C\+D}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+L\+C\+D\+::\+L\+C\+D (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent, }
+\item[{{\bf I\+I\+O\+Bus} \&}]{iobus, }
+\item[{{\bf I\+O\+Device\+I\+D}}]{devid, }
+\item[{{\bf Config} \&}]{config}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_l_c_d_a09a006a9a3aef907ef3126eb70989592}
+\hypertarget{class_simulator_1_1_l_c_d_a93b1e18f8b6addc06234d07d08b42be2}{\index{Simulator\+::\+L\+C\+D@{Simulator\+::\+L\+C\+D}!L\+C\+D@{L\+C\+D}}
+\index{L\+C\+D@{L\+C\+D}!Simulator\+::\+L\+C\+D@{Simulator\+::\+L\+C\+D}}
+\subsubsection[{L\+C\+D}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+L\+C\+D\+::\+L\+C\+D (
+\begin{DoxyParamCaption}
+\item[{const {\bf L\+C\+D} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_l_c_d_a93b1e18f8b6addc06234d07d08b42be2}
+\hypertarget{class_simulator_1_1_l_c_d_afe60ed9c66882ca71f377a2ae3eedbad}{\index{Simulator\+::\+L\+C\+D@{Simulator\+::\+L\+C\+D}!````~L\+C\+D@{$\sim$\+L\+C\+D}}
+\index{````~L\+C\+D@{$\sim$\+L\+C\+D}!Simulator\+::\+L\+C\+D@{Simulator\+::\+L\+C\+D}}
+\subsubsection[{$\sim$\+L\+C\+D}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+L\+C\+D\+::$\sim$\+L\+C\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_l_c_d_afe60ed9c66882ca71f377a2ae3eedbad}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_l_c_d_a86e52e99e37c6d38847a24e4a9640871}{\index{Simulator\+::\+L\+C\+D@{Simulator\+::\+L\+C\+D}!Get\+Device\+Identity@{Get\+Device\+Identity}}
+\index{Get\+Device\+Identity@{Get\+Device\+Identity}!Simulator\+::\+L\+C\+D@{Simulator\+::\+L\+C\+D}}
+\subsubsection[{Get\+Device\+Identity}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+L\+C\+D\+::\+Get\+Device\+Identity (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Device\+Identification} \&}]{id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_l_c_d_a86e52e99e37c6d38847a24e4a9640871}
+
+
+Implements \hyperlink{class_simulator_1_1_i_i_o_bus_client_a8fb9e637f95dd2d4c9092461a76921df}{Simulator\+::\+I\+I\+O\+Bus\+Client}.
+
+\hypertarget{class_simulator_1_1_l_c_d_a9dc6ccad26cf7867f52b881ada033012}{\index{Simulator\+::\+L\+C\+D@{Simulator\+::\+L\+C\+D}!Get\+I\+O\+Device\+Name@{Get\+I\+O\+Device\+Name}}
+\index{Get\+I\+O\+Device\+Name@{Get\+I\+O\+Device\+Name}!Simulator\+::\+L\+C\+D@{Simulator\+::\+L\+C\+D}}
+\subsubsection[{Get\+I\+O\+Device\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Simulator\+::\+L\+C\+D\+::\+Get\+I\+O\+Device\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_l_c_d_a9dc6ccad26cf7867f52b881ada033012}
+
+
+Implements \hyperlink{class_simulator_1_1_i_i_o_bus_client_aca857813bebf8a75b9a0b53097547755}{Simulator\+::\+I\+I\+O\+Bus\+Client}.
+
+\hypertarget{class_simulator_1_1_l_c_d_ad9b0d6c641f7588f54c42b90d849b896}{\index{Simulator\+::\+L\+C\+D@{Simulator\+::\+L\+C\+D}!On\+Read\+Request\+Received@{On\+Read\+Request\+Received}}
+\index{On\+Read\+Request\+Received@{On\+Read\+Request\+Received}!Simulator\+::\+L\+C\+D@{Simulator\+::\+L\+C\+D}}
+\subsubsection[{On\+Read\+Request\+Received}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+L\+C\+D\+::\+On\+Read\+Request\+Received (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Device\+I\+D}}]{from, }
+\item[{Mem\+Addr}]{address, }
+\item[{Mem\+Size}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_l_c_d_ad9b0d6c641f7588f54c42b90d849b896}
+
+
+Reimplemented from \hyperlink{class_simulator_1_1_i_i_o_bus_client_afeb9155b104d868e9e6c2a3366a39b3e}{Simulator\+::\+I\+I\+O\+Bus\+Client}.
+
+\hypertarget{class_simulator_1_1_l_c_d_af0e23f7f6d7c99cd011ff2260e5f5198}{\index{Simulator\+::\+L\+C\+D@{Simulator\+::\+L\+C\+D}!On\+Write\+Request\+Received@{On\+Write\+Request\+Received}}
+\index{On\+Write\+Request\+Received@{On\+Write\+Request\+Received}!Simulator\+::\+L\+C\+D@{Simulator\+::\+L\+C\+D}}
+\subsubsection[{On\+Write\+Request\+Received}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+L\+C\+D\+::\+On\+Write\+Request\+Received (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Device\+I\+D}}]{from, }
+\item[{Mem\+Addr}]{address, }
+\item[{const {\bf I\+O\+Data} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_l_c_d_af0e23f7f6d7c99cd011ff2260e5f5198}
+
+
+Reimplemented from \hyperlink{class_simulator_1_1_i_i_o_bus_client_a69d1908e4e0fb82c86834ed570a7d6c9}{Simulator\+::\+I\+I\+O\+Bus\+Client}.
+
+\hypertarget{class_simulator_1_1_l_c_d_a3c4785ccc9c3a7774a64f11f61572ea3}{\index{Simulator\+::\+L\+C\+D@{Simulator\+::\+L\+C\+D}!operator=@{operator=}}
+\index{operator=@{operator=}!Simulator\+::\+L\+C\+D@{Simulator\+::\+L\+C\+D}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+C\+D}\& Simulator\+::\+L\+C\+D\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf L\+C\+D} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_l_c_d_a3c4785ccc9c3a7774a64f11f61572ea3}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/dev/\hyperlink{_l_c_d_8h}{L\+C\+D.\+h}\item 
+arch/dev/\hyperlink{_l_c_d_8cpp}{L\+C\+D.\+cpp}\end{DoxyCompactItemize}

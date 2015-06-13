@@ -1,0 +1,88 @@
+\hypertarget{struct_simulator_1_1_reg_value}{\section{Simulator\+:\+:Reg\+Value Struct Reference}
+\label{struct_simulator_1_1_reg_value}\index{Simulator\+::\+Reg\+Value@{Simulator\+::\+Reg\+Value}}
+}
+
+
+{\ttfamily \#include $<$simtypes.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{struct_simulator_1_1_reg_value_a6f20e44fb7e3689060d0a2c15a333576}{str} (\hyperlink{namespace_simulator_ab86b74f4b95732ea63178d829b189acb}{Reg\+Type} t) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>Float \hyperlink{struct_simulator_1_1_reg_value_a99faac8cd5c6234b8ad94aace23fe6be}{m\_float}\\
+\>\>{\em Value of the register, if it is an FP register. }\\
+\>Integer \hyperlink{struct_simulator_1_1_reg_value_ac0d7c8afa67f0063f58c44c41120c712}{m\_integer}\\
+\>\>{\em Value of the register, if it is an integer register. }\\
+\>struct \{\\
+\>\>\hyperlink{struct_simulator_1_1_thread_queue}{ThreadQueue} \hyperlink{struct_simulator_1_1_reg_value_a91b3b5d8a1bba0c86d960188275fb190}{m\_waiting}\\
+\>\>\>{\em List of the threads that are waiting on the register. }\\
+\>\>\hyperlink{struct_simulator_1_1_memory_request}{MemoryRequest} \hyperlink{struct_simulator_1_1_reg_value_ab612245b6f5c7b10e781068e30f2550b}{m\_memory}\\
+\>\>\>{\em Memory request information for pending registers. }\\
+\>\} \\
+\}; \\
+
+\end{tabbing}\item 
+\hyperlink{namespace_simulator_a0400735ff32412cb8ce9506b81492c69}{Reg\+State} \hyperlink{struct_simulator_1_1_reg_value_af75bf158fb9f748049a782213309f18b}{m\+\_\+state}
+\begin{DoxyCompactList}\small\item\em State of the register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_simulator_1_1_reg_value_a6f20e44fb7e3689060d0a2c15a333576}{\index{Simulator\+::\+Reg\+Value@{Simulator\+::\+Reg\+Value}!str@{str}}
+\index{str@{str}!Simulator\+::\+Reg\+Value@{Simulator\+::\+Reg\+Value}}
+\subsubsection[{str}]{\setlength{\rightskip}{0pt plus 5cm}string Simulator\+::\+Reg\+Value\+::str (
+\begin{DoxyParamCaption}
+\item[{{\bf Reg\+Type}}]{t}
+\end{DoxyParamCaption}
+) const}}\label{struct_simulator_1_1_reg_value_a6f20e44fb7e3689060d0a2c15a333576}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_simulator_1_1_reg_value_ad11cd91701e823c3e1f5b7308ccc7199}{\subsubsection[{"@76}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{struct_simulator_1_1_reg_value_ad11cd91701e823c3e1f5b7308ccc7199}
+\hypertarget{struct_simulator_1_1_reg_value_a99faac8cd5c6234b8ad94aace23fe6be}{\index{Simulator\+::\+Reg\+Value@{Simulator\+::\+Reg\+Value}!m\+\_\+float@{m\+\_\+float}}
+\index{m\+\_\+float@{m\+\_\+float}!Simulator\+::\+Reg\+Value@{Simulator\+::\+Reg\+Value}}
+\subsubsection[{m\+\_\+float}]{\setlength{\rightskip}{0pt plus 5cm}Float Simulator\+::\+Reg\+Value\+::m\+\_\+float}}\label{struct_simulator_1_1_reg_value_a99faac8cd5c6234b8ad94aace23fe6be}
+
+
+Value of the register, if it is an F\+P register. 
+
+\hypertarget{struct_simulator_1_1_reg_value_ac0d7c8afa67f0063f58c44c41120c712}{\index{Simulator\+::\+Reg\+Value@{Simulator\+::\+Reg\+Value}!m\+\_\+integer@{m\+\_\+integer}}
+\index{m\+\_\+integer@{m\+\_\+integer}!Simulator\+::\+Reg\+Value@{Simulator\+::\+Reg\+Value}}
+\subsubsection[{m\+\_\+integer}]{\setlength{\rightskip}{0pt plus 5cm}Integer Simulator\+::\+Reg\+Value\+::m\+\_\+integer}}\label{struct_simulator_1_1_reg_value_ac0d7c8afa67f0063f58c44c41120c712}
+
+
+Value of the register, if it is an integer register. 
+
+\hypertarget{struct_simulator_1_1_reg_value_ab612245b6f5c7b10e781068e30f2550b}{\index{Simulator\+::\+Reg\+Value@{Simulator\+::\+Reg\+Value}!m\+\_\+memory@{m\+\_\+memory}}
+\index{m\+\_\+memory@{m\+\_\+memory}!Simulator\+::\+Reg\+Value@{Simulator\+::\+Reg\+Value}}
+\subsubsection[{m\+\_\+memory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memory\+Request} Simulator\+::\+Reg\+Value\+::m\+\_\+memory}}\label{struct_simulator_1_1_reg_value_ab612245b6f5c7b10e781068e30f2550b}
+
+
+Memory request information for pending registers. 
+
+\hypertarget{struct_simulator_1_1_reg_value_af75bf158fb9f748049a782213309f18b}{\index{Simulator\+::\+Reg\+Value@{Simulator\+::\+Reg\+Value}!m\+\_\+state@{m\+\_\+state}}
+\index{m\+\_\+state@{m\+\_\+state}!Simulator\+::\+Reg\+Value@{Simulator\+::\+Reg\+Value}}
+\subsubsection[{m\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reg\+State} Simulator\+::\+Reg\+Value\+::m\+\_\+state}}\label{struct_simulator_1_1_reg_value_af75bf158fb9f748049a782213309f18b}
+
+
+State of the register. 
+
+\hypertarget{struct_simulator_1_1_reg_value_a91b3b5d8a1bba0c86d960188275fb190}{\index{Simulator\+::\+Reg\+Value@{Simulator\+::\+Reg\+Value}!m\+\_\+waiting@{m\+\_\+waiting}}
+\index{m\+\_\+waiting@{m\+\_\+waiting}!Simulator\+::\+Reg\+Value@{Simulator\+::\+Reg\+Value}}
+\subsubsection[{m\+\_\+waiting}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Thread\+Queue} Simulator\+::\+Reg\+Value\+::m\+\_\+waiting}}\label{struct_simulator_1_1_reg_value_a91b3b5d8a1bba0c86d960188275fb190}
+
+
+List of the threads that are waiting on the register. 
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/\hyperlink{simtypes_8h}{simtypes.\+h}\item 
+arch/\hyperlink{simtypes_8cpp}{simtypes.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,111 @@
+\hypertarget{cmd__breakpoint_8cpp}{\section{cli/cmd\+\_\+breakpoint.cpp File Reference}
+\label{cmd__breakpoint_8cpp}\index{cli/cmd\+\_\+breakpoint.\+cpp@{cli/cmd\+\_\+breakpoint.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}commands.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$cerrno$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{cmd__breakpoint_8cpp_af4856000f634389110ec3c31f28c3752}{cmd\+\_\+bp\+\_\+list} (const vector$<$ string $>$ \&, vector$<$ string $>$ \&, \hyperlink{structcli__context}{cli\+\_\+context} \&ctx)
+\item 
+bool \hyperlink{cmd__breakpoint_8cpp_aa7a8f01c12aa86cfb1496055b90187ba}{cmd\+\_\+bp\+\_\+state} (const vector$<$ string $>$ \&, vector$<$ string $>$ \&, \hyperlink{structcli__context}{cli\+\_\+context} \&ctx)
+\item 
+bool \hyperlink{cmd__breakpoint_8cpp_ad3d911dbe2679b191dff3765e637f3ef}{cmd\+\_\+bp\+\_\+on} (const vector$<$ string $>$ \&, vector$<$ string $>$ \&, \hyperlink{structcli__context}{cli\+\_\+context} \&ctx)
+\item 
+bool \hyperlink{cmd__breakpoint_8cpp_a15a23d76279f6e0e4fddd5ca7e424190}{cmd\+\_\+bp\+\_\+off} (const vector$<$ string $>$ \&, vector$<$ string $>$ \&, \hyperlink{structcli__context}{cli\+\_\+context} \&ctx)
+\item 
+bool \hyperlink{cmd__breakpoint_8cpp_a628ca5eeb29c583be830d7ea484303f0}{cmd\+\_\+bp\+\_\+clear} (const vector$<$ string $>$ \&, vector$<$ string $>$ \&, \hyperlink{structcli__context}{cli\+\_\+context} \&ctx)
+\item 
+bool \hyperlink{cmd__breakpoint_8cpp_af86ef7b1374b97211da83f3c73dc4620}{cmd\+\_\+bp\+\_\+del} (const vector$<$ string $>$ \&, vector$<$ string $>$ \&args, \hyperlink{structcli__context}{cli\+\_\+context} \&ctx)
+\item 
+bool \hyperlink{cmd__breakpoint_8cpp_a1e23937d0fcfb24b3b4ad3313024ebb2}{cmd\+\_\+bp\+\_\+enable} (const vector$<$ string $>$ \&, vector$<$ string $>$ \&args, \hyperlink{structcli__context}{cli\+\_\+context} \&ctx)
+\item 
+bool \hyperlink{cmd__breakpoint_8cpp_a49b23c2a93230ab54ddc10d5793faad0}{cmd\+\_\+bp\+\_\+disable} (const vector$<$ string $>$ \&, vector$<$ string $>$ \&args, \hyperlink{structcli__context}{cli\+\_\+context} \&ctx)
+\item 
+bool \hyperlink{cmd__breakpoint_8cpp_a3728d907f10d1784939e0749c76f3b37}{cmd\+\_\+bp\+\_\+add} (const vector$<$ string $>$ \&, vector$<$ string $>$ \&args, \hyperlink{structcli__context}{cli\+\_\+context} \&ctx)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{cmd__breakpoint_8cpp_a3728d907f10d1784939e0749c76f3b37}{\index{cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}!cmd\+\_\+bp\+\_\+add@{cmd\+\_\+bp\+\_\+add}}
+\index{cmd\+\_\+bp\+\_\+add@{cmd\+\_\+bp\+\_\+add}!cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}}
+\subsubsection[{cmd\+\_\+bp\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}bool cmd\+\_\+bp\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ string $>$ \&}]{, }
+\item[{vector$<$ string $>$ \&}]{args, }
+\item[{{\bf cli\+\_\+context} \&}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{cmd__breakpoint_8cpp_a3728d907f10d1784939e0749c76f3b37}
+\hypertarget{cmd__breakpoint_8cpp_a628ca5eeb29c583be830d7ea484303f0}{\index{cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}!cmd\+\_\+bp\+\_\+clear@{cmd\+\_\+bp\+\_\+clear}}
+\index{cmd\+\_\+bp\+\_\+clear@{cmd\+\_\+bp\+\_\+clear}!cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}}
+\subsubsection[{cmd\+\_\+bp\+\_\+clear}]{\setlength{\rightskip}{0pt plus 5cm}bool cmd\+\_\+bp\+\_\+clear (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ string $>$ \&}]{, }
+\item[{vector$<$ string $>$ \&}]{, }
+\item[{{\bf cli\+\_\+context} \&}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{cmd__breakpoint_8cpp_a628ca5eeb29c583be830d7ea484303f0}
+\hypertarget{cmd__breakpoint_8cpp_af86ef7b1374b97211da83f3c73dc4620}{\index{cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}!cmd\+\_\+bp\+\_\+del@{cmd\+\_\+bp\+\_\+del}}
+\index{cmd\+\_\+bp\+\_\+del@{cmd\+\_\+bp\+\_\+del}!cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}}
+\subsubsection[{cmd\+\_\+bp\+\_\+del}]{\setlength{\rightskip}{0pt plus 5cm}bool cmd\+\_\+bp\+\_\+del (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ string $>$ \&}]{, }
+\item[{vector$<$ string $>$ \&}]{args, }
+\item[{{\bf cli\+\_\+context} \&}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{cmd__breakpoint_8cpp_af86ef7b1374b97211da83f3c73dc4620}
+\hypertarget{cmd__breakpoint_8cpp_a49b23c2a93230ab54ddc10d5793faad0}{\index{cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}!cmd\+\_\+bp\+\_\+disable@{cmd\+\_\+bp\+\_\+disable}}
+\index{cmd\+\_\+bp\+\_\+disable@{cmd\+\_\+bp\+\_\+disable}!cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}}
+\subsubsection[{cmd\+\_\+bp\+\_\+disable}]{\setlength{\rightskip}{0pt plus 5cm}bool cmd\+\_\+bp\+\_\+disable (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ string $>$ \&}]{, }
+\item[{vector$<$ string $>$ \&}]{args, }
+\item[{{\bf cli\+\_\+context} \&}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{cmd__breakpoint_8cpp_a49b23c2a93230ab54ddc10d5793faad0}
+\hypertarget{cmd__breakpoint_8cpp_a1e23937d0fcfb24b3b4ad3313024ebb2}{\index{cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}!cmd\+\_\+bp\+\_\+enable@{cmd\+\_\+bp\+\_\+enable}}
+\index{cmd\+\_\+bp\+\_\+enable@{cmd\+\_\+bp\+\_\+enable}!cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}}
+\subsubsection[{cmd\+\_\+bp\+\_\+enable}]{\setlength{\rightskip}{0pt plus 5cm}bool cmd\+\_\+bp\+\_\+enable (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ string $>$ \&}]{, }
+\item[{vector$<$ string $>$ \&}]{args, }
+\item[{{\bf cli\+\_\+context} \&}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{cmd__breakpoint_8cpp_a1e23937d0fcfb24b3b4ad3313024ebb2}
+\hypertarget{cmd__breakpoint_8cpp_af4856000f634389110ec3c31f28c3752}{\index{cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}!cmd\+\_\+bp\+\_\+list@{cmd\+\_\+bp\+\_\+list}}
+\index{cmd\+\_\+bp\+\_\+list@{cmd\+\_\+bp\+\_\+list}!cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}}
+\subsubsection[{cmd\+\_\+bp\+\_\+list}]{\setlength{\rightskip}{0pt plus 5cm}bool cmd\+\_\+bp\+\_\+list (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ string $>$ \&}]{, }
+\item[{vector$<$ string $>$ \&}]{, }
+\item[{{\bf cli\+\_\+context} \&}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{cmd__breakpoint_8cpp_af4856000f634389110ec3c31f28c3752}
+\hypertarget{cmd__breakpoint_8cpp_a15a23d76279f6e0e4fddd5ca7e424190}{\index{cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}!cmd\+\_\+bp\+\_\+off@{cmd\+\_\+bp\+\_\+off}}
+\index{cmd\+\_\+bp\+\_\+off@{cmd\+\_\+bp\+\_\+off}!cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}}
+\subsubsection[{cmd\+\_\+bp\+\_\+off}]{\setlength{\rightskip}{0pt plus 5cm}bool cmd\+\_\+bp\+\_\+off (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ string $>$ \&}]{, }
+\item[{vector$<$ string $>$ \&}]{, }
+\item[{{\bf cli\+\_\+context} \&}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{cmd__breakpoint_8cpp_a15a23d76279f6e0e4fddd5ca7e424190}
+\hypertarget{cmd__breakpoint_8cpp_ad3d911dbe2679b191dff3765e637f3ef}{\index{cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}!cmd\+\_\+bp\+\_\+on@{cmd\+\_\+bp\+\_\+on}}
+\index{cmd\+\_\+bp\+\_\+on@{cmd\+\_\+bp\+\_\+on}!cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}}
+\subsubsection[{cmd\+\_\+bp\+\_\+on}]{\setlength{\rightskip}{0pt plus 5cm}bool cmd\+\_\+bp\+\_\+on (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ string $>$ \&}]{, }
+\item[{vector$<$ string $>$ \&}]{, }
+\item[{{\bf cli\+\_\+context} \&}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{cmd__breakpoint_8cpp_ad3d911dbe2679b191dff3765e637f3ef}
+\hypertarget{cmd__breakpoint_8cpp_aa7a8f01c12aa86cfb1496055b90187ba}{\index{cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}!cmd\+\_\+bp\+\_\+state@{cmd\+\_\+bp\+\_\+state}}
+\index{cmd\+\_\+bp\+\_\+state@{cmd\+\_\+bp\+\_\+state}!cmd\+\_\+breakpoint.\+cpp@{cmd\+\_\+breakpoint.\+cpp}}
+\subsubsection[{cmd\+\_\+bp\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}bool cmd\+\_\+bp\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ string $>$ \&}]{, }
+\item[{vector$<$ string $>$ \&}]{, }
+\item[{{\bf cli\+\_\+context} \&}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{cmd__breakpoint_8cpp_aa7a8f01c12aa86cfb1496055b90187ba}

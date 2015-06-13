@@ -1,0 +1,171 @@
+\hypertarget{class_simulator_1_1_z_l_c_d_m_a_1_1_node}{\section{Simulator\+:\+:Z\+L\+C\+D\+M\+A\+:\+:Node Class Reference}
+\label{class_simulator_1_1_z_l_c_d_m_a_1_1_node}\index{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}}
+}
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:Z\+L\+C\+D\+M\+A\+:\+:Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.093567cm]{class_simulator_1_1_z_l_c_d_m_a_1_1_node}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{union_simulator_1_1_z_l_c_d_m_a_1_1_node_1_1_message}{Message}
+\begin{DoxyCompactList}\small\item\em This is the message that gets sent around. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_simulator_1_1_z_l_c_d_m_a_1_1_node_aa463143bc67281a1e4c2d00f6351850a}{Initialize} (\hyperlink{class_simulator_1_1_z_l_c_d_m_a_1_1_node}{Node} $\ast$next, \hyperlink{class_simulator_1_1_z_l_c_d_m_a_1_1_node}{Node} $\ast$prev)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_storage_trace_set}{Storage\+Trace\+Set} \hyperlink{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a33ef1d732bbf78b8410480d910379d6e}{Get\+Outgoing\+Trace} () const 
+\item 
+bool \hyperlink{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a60f03c2ab0b687c9b1be3e65ef69c02a}{Send\+Message} (\hyperlink{union_simulator_1_1_z_l_c_d_m_a_1_1_node_1_1_message}{Message} $\ast$message, size\+\_\+t min\+\_\+space)
+\begin{DoxyCompactList}\small\item\em Send the message to the next node. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a5d6616251c752f42f6318d9f071fe65d}{Print} (std\+::ostream \&out) const 
+\begin{DoxyCompactList}\small\item\em Print the incoming and outgoing buffers of this node. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a298de98db685ed695b7e7eca9da3fd61}{Node} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_z_l_c_d_m_a}{Z\+L\+C\+D\+M\+A} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock)
+\begin{DoxyCompactList}\small\item\em Construct the node. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a399829f355a8abb46a903239d07abc01}{Node} (const \hyperlink{class_simulator_1_1_z_l_c_d_m_a_1_1_node}{Node} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1_z_l_c_d_m_a_1_1_node}{Node} \& \hyperlink{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a02e69a22860f0433ea0959c59676f2df}{operator=} (const \hyperlink{class_simulator_1_1_z_l_c_d_m_a_1_1_node}{Node} \&)=delete
+\item 
+virtual \hyperlink{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a3f5dc89d10434d13995252582adf0e6a}{$\sim$\+Node} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a1498e3ce63ebb31b62b321f9afb48f7b}{Print} (std\+::ostream \&out, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, const \hyperlink{class_simulator_1_1_buffer}{Buffer}$<$ \hyperlink{union_simulator_1_1_z_l_c_d_m_a_1_1_node_1_1_message}{Message} $\ast$ $>$ \&buffer)
+\begin{DoxyCompactList}\small\item\em Print a message queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_buffer}{Buffer}$<$ \hyperlink{union_simulator_1_1_z_l_c_d_m_a_1_1_node_1_1_message}{Message} $\ast$ $>$ \hyperlink{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a033d8f12b4fcb82e41b7dfe5dcb6b828}{m\+\_\+incoming}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_simulator_1_1_buffer}{Buffer} for incoming messages from the prev node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a1c8d2b869e248d4ee4a7b637c7252d62}{Z\+L\+C\+D\+M\+A\+::\+Directory}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class defines a generic ring node interface. Both directories and caches inherit from this. This way, a heterogeneous \hyperlink{class_simulator_1_1_c_d_m_a}{C\+D\+M\+A} hierarchy can be easily composed, since no element needs to know the exact type of its neighbour. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a298de98db685ed695b7e7eca9da3fd61}{\index{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}!Node@{Node}}
+\index{Node@{Node}!Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node\+::\+Node (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Z\+L\+C\+D\+M\+A} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a298de98db685ed695b7e7eca9da3fd61}
+
+
+Construct the node. 
+
+\hypertarget{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a399829f355a8abb46a903239d07abc01}{\index{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}!Node@{Node}}
+\index{Node@{Node}!Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}}
+\subsubsection[{Node}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node\+::\+Node (
+\begin{DoxyParamCaption}
+\item[{const {\bf Node} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [delete]}}}\label{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a399829f355a8abb46a903239d07abc01}
+\hypertarget{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a3f5dc89d10434d13995252582adf0e6a}{\index{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}!````~Node@{$\sim$\+Node}}
+\index{````~Node@{$\sim$\+Node}!Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}}
+\subsubsection[{$\sim$\+Node}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node\+::$\sim$\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a3f5dc89d10434d13995252582adf0e6a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a33ef1d732bbf78b8410480d910379d6e}{\index{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}!Get\+Outgoing\+Trace@{Get\+Outgoing\+Trace}}
+\index{Get\+Outgoing\+Trace@{Get\+Outgoing\+Trace}!Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}}
+\subsubsection[{Get\+Outgoing\+Trace}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Storage\+Trace\+Set} Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node\+::\+Get\+Outgoing\+Trace (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a33ef1d732bbf78b8410480d910379d6e}
+\hypertarget{class_simulator_1_1_z_l_c_d_m_a_1_1_node_aa463143bc67281a1e4c2d00f6351850a}{\index{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}}
+\subsubsection[{Initialize}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node\+::\+Initialize (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{next, }
+\item[{{\bf Node} $\ast$}]{prev}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_z_l_c_d_m_a_1_1_node_aa463143bc67281a1e4c2d00f6351850a}
+\hypertarget{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a02e69a22860f0433ea0959c59676f2df}{\index{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}!operator=@{operator=}}
+\index{operator=@{operator=}!Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}\& Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Node} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [delete]}}}\label{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a02e69a22860f0433ea0959c59676f2df}
+\hypertarget{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a1498e3ce63ebb31b62b321f9afb48f7b}{\index{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}!Print@{Print}}
+\index{Print@{Print}!Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node\+::\+Print (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::string \&}]{name, }
+\item[{const {\bf Buffer}$<$ {\bf Message} $\ast$ $>$ \&}]{buffer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a1498e3ce63ebb31b62b321f9afb48f7b}
+
+
+Print a message queue. 
+
+\hypertarget{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a5d6616251c752f42f6318d9f071fe65d}{\index{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}!Print@{Print}}
+\index{Print@{Print}!Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}}
+\subsubsection[{Print}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node\+::\+Print (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a5d6616251c752f42f6318d9f071fe65d}
+
+
+Print the incoming and outgoing buffers of this node. 
+
+\hypertarget{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a60f03c2ab0b687c9b1be3e65ef69c02a}{\index{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}!Send\+Message@{Send\+Message}}
+\index{Send\+Message@{Send\+Message}!Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}}
+\subsubsection[{Send\+Message}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node\+::\+Send\+Message (
+\begin{DoxyParamCaption}
+\item[{{\bf Message} $\ast$}]{message, }
+\item[{size\+\_\+t}]{min\+\_\+space}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a60f03c2ab0b687c9b1be3e65ef69c02a}
+
+
+Send the message to the next node. 
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a1c8d2b869e248d4ee4a7b637c7252d62}{\index{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}!Z\+L\+C\+D\+M\+A\+::\+Directory@{Z\+L\+C\+D\+M\+A\+::\+Directory}}
+\index{Z\+L\+C\+D\+M\+A\+::\+Directory@{Z\+L\+C\+D\+M\+A\+::\+Directory}!Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}}
+\subsubsection[{Z\+L\+C\+D\+M\+A\+::\+Directory}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Z\+L\+C\+D\+M\+A\+::\+Directory}\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a1c8d2b869e248d4ee4a7b637c7252d62}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a033d8f12b4fcb82e41b7dfe5dcb6b828}{\index{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}!m\+\_\+incoming@{m\+\_\+incoming}}
+\index{m\+\_\+incoming@{m\+\_\+incoming}!Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node@{Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node}}
+\subsubsection[{m\+\_\+incoming}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Buffer}$<${\bf Message}$\ast$$>$ Simulator\+::\+Z\+L\+C\+D\+M\+A\+::\+Node\+::m\+\_\+incoming\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_z_l_c_d_m_a_1_1_node_a033d8f12b4fcb82e41b7dfe5dcb6b828}
+
+
+\hyperlink{class_simulator_1_1_buffer}{Buffer} for incoming messages from the prev node. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/mem/zlcdma/\hyperlink{zlcdma_2_node_8h}{Node.\+h}\item 
+arch/mem/zlcdma/\hyperlink{zlcdma_2_node_8cpp}{Node.\+cpp}\end{DoxyCompactItemize}

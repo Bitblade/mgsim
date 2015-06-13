@@ -1,0 +1,184 @@
+\hypertarget{class_simulator_1_1_f_p_u}{\section{Simulator\+:\+:F\+P\+U Class Reference}
+\label{class_simulator_1_1_f_p_u}\index{Simulator\+::\+F\+P\+U@{Simulator\+::\+F\+P\+U}}
+}
+
+
+Floating Point Unit.  
+
+
+
+
+{\ttfamily \#include $<$F\+P\+U.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:F\+P\+U\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_simulator_1_1_f_p_u}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_simulator_1_1_f_p_u_1_1_i_f_p_u_client}{I\+F\+P\+U\+Client}
+\begin{DoxyCompactList}\small\item\em Represents a client for this \hyperlink{class_simulator_1_1_f_p_u}{F\+P\+U}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_f_p_u_ab6a08f9d6a3b169b44da3219684809ce}{F\+P\+U} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock, \hyperlink{class_config}{Config} \&config, size\+\_\+t num\+\_\+inputs)
+\begin{DoxyCompactList}\small\item\em Constructs the \hyperlink{class_simulator_1_1_f_p_u}{F\+P\+U}. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_1_1_f_p_u_a5adfb06a7e937780eb2e8e7c0a6ea5d4}{$\sim$\+F\+P\+U} ()
+\begin{DoxyCompactList}\small\item\em Destroys the \hyperlink{class_simulator_1_1_f_p_u}{F\+P\+U} object. \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{class_simulator_1_1_f_p_u_a4976a10751299a95bff865fe320cf4a0}{Register\+Source} (\hyperlink{class_simulator_1_1_f_p_u_1_1_i_f_p_u_client}{I\+F\+P\+U\+Client} \&client, const \hyperlink{class_simulator_1_1_storage_trace_set}{Storage\+Trace\+Set} \&output)
+\begin{DoxyCompactList}\small\item\em Registers a source to the \hyperlink{class_simulator_1_1_f_p_u}{F\+P\+U}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_simulator_1_1_f_p_u_a41ed29022d125ab496b15dfc77f089eb}{Queue\+Operation} (size\+\_\+t source, \hyperlink{namespace_simulator_ad8a1c084ddce210647e4867afc95b6e0}{F\+P\+U\+Operation} op, int size, double Rav, double Rbv, const \hyperlink{struct_simulator_1_1_reg_addr}{Reg\+Addr} \&Rc)
+\begin{DoxyCompactList}\small\item\em Queues an F\+P operation. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_1_1_storage_trace_set}{Storage\+Trace\+Set} \hyperlink{class_simulator_1_1_f_p_u_a3d652765df9a0b87456df559fd72605a}{Get\+Source\+Trace} (size\+\_\+t source) const 
+\item 
+void \hyperlink{class_simulator_1_1_f_p_u_a7a0dbba9ebb8ba40afdfa667d7bf7f2e}{Cmd\+\_\+\+Info} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const 
+\item 
+void \hyperlink{class_simulator_1_1_f_p_u_a838921d4b26611263f7d165b9d3fb68b}{Cmd\+\_\+\+Read} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_process}{Process} \hyperlink{class_simulator_1_1_f_p_u_a696de79c0d8e304961d3378a821ebb35}{p\+\_\+\+Pipeline}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Floating Point Unit. 
+
+This component accepts floating point operations, executes them asynchronously and writes them back once calculated. It has several pipelines, assuming every operation of equal delay can be pipelined. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_f_p_u_ab6a08f9d6a3b169b44da3219684809ce}{\index{Simulator\+::\+F\+P\+U@{Simulator\+::\+F\+P\+U}!F\+P\+U@{F\+P\+U}}
+\index{F\+P\+U@{F\+P\+U}!Simulator\+::\+F\+P\+U@{Simulator\+::\+F\+P\+U}}
+\subsubsection[{F\+P\+U}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+F\+P\+U\+::\+F\+P\+U (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock, }
+\item[{{\bf Config} \&}]{config, }
+\item[{size\+\_\+t}]{num\+\_\+inputs}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_f_p_u_ab6a08f9d6a3b169b44da3219684809ce}
+
+
+Constructs the \hyperlink{class_simulator_1_1_f_p_u}{F\+P\+U}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & reference to the parent object \\
+\hline
+{\em name} & name of the \hyperlink{class_simulator_1_1_f_p_u}{F\+P\+U}, irrelevant to simulation \\
+\hline
+{\em config} & reference to the configuration data \\
+\hline
+{\em num\+\_\+inputs} & number of inputs that will be connected to this \hyperlink{class_simulator_1_1_f_p_u}{F\+P\+U} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_simulator_1_1_f_p_u_a5adfb06a7e937780eb2e8e7c0a6ea5d4}{\index{Simulator\+::\+F\+P\+U@{Simulator\+::\+F\+P\+U}!````~F\+P\+U@{$\sim$\+F\+P\+U}}
+\index{````~F\+P\+U@{$\sim$\+F\+P\+U}!Simulator\+::\+F\+P\+U@{Simulator\+::\+F\+P\+U}}
+\subsubsection[{$\sim$\+F\+P\+U}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+F\+P\+U\+::$\sim$\+F\+P\+U (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_f_p_u_a5adfb06a7e937780eb2e8e7c0a6ea5d4}
+
+
+Destroys the \hyperlink{class_simulator_1_1_f_p_u}{F\+P\+U} object. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_f_p_u_a7a0dbba9ebb8ba40afdfa667d7bf7f2e}{\index{Simulator\+::\+F\+P\+U@{Simulator\+::\+F\+P\+U}!Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}}
+\index{Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}!Simulator\+::\+F\+P\+U@{Simulator\+::\+F\+P\+U}}
+\subsubsection[{Cmd\+\_\+\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+F\+P\+U\+::\+Cmd\+\_\+\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_f_p_u_a7a0dbba9ebb8ba40afdfa667d7bf7f2e}
+\hypertarget{class_simulator_1_1_f_p_u_a838921d4b26611263f7d165b9d3fb68b}{\index{Simulator\+::\+F\+P\+U@{Simulator\+::\+F\+P\+U}!Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}}
+\index{Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}!Simulator\+::\+F\+P\+U@{Simulator\+::\+F\+P\+U}}
+\subsubsection[{Cmd\+\_\+\+Read}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+F\+P\+U\+::\+Cmd\+\_\+\+Read (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_f_p_u_a838921d4b26611263f7d165b9d3fb68b}
+\hypertarget{class_simulator_1_1_f_p_u_a3d652765df9a0b87456df559fd72605a}{\index{Simulator\+::\+F\+P\+U@{Simulator\+::\+F\+P\+U}!Get\+Source\+Trace@{Get\+Source\+Trace}}
+\index{Get\+Source\+Trace@{Get\+Source\+Trace}!Simulator\+::\+F\+P\+U@{Simulator\+::\+F\+P\+U}}
+\subsubsection[{Get\+Source\+Trace}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Storage\+Trace\+Set} Simulator\+::\+F\+P\+U\+::\+Get\+Source\+Trace (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{source}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_f_p_u_a3d652765df9a0b87456df559fd72605a}
+\hypertarget{class_simulator_1_1_f_p_u_a41ed29022d125ab496b15dfc77f089eb}{\index{Simulator\+::\+F\+P\+U@{Simulator\+::\+F\+P\+U}!Queue\+Operation@{Queue\+Operation}}
+\index{Queue\+Operation@{Queue\+Operation}!Simulator\+::\+F\+P\+U@{Simulator\+::\+F\+P\+U}}
+\subsubsection[{Queue\+Operation}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+F\+P\+U\+::\+Queue\+Operation (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{source, }
+\item[{{\bf F\+P\+U\+Operation}}]{op, }
+\item[{int}]{size, }
+\item[{double}]{Rav, }
+\item[{double}]{Rbv, }
+\item[{const {\bf Reg\+Addr} \&}]{Rc}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_f_p_u_a41ed29022d125ab496b15dfc77f089eb}
+
+
+Queues an F\+P operation. 
+
+This function determines the length of the operation and queues the operation in the corresponding pipeline. When the operation has completed, the result is written back to the register file. 
+\begin{DoxyParams}{Parameters}
+{\em source} & the source input I\+D \\
+\hline
+{\em op} & the F\+P operation to perform \\
+\hline
+{\em size} & size of the F\+P operation (4 or 8) \\
+\hline
+{\em Rav} & first (or only) operand of the operation \\
+\hline
+{\em Rbv} & second operand of the operation \\
+\hline
+{\em Rc} & address of the destination register(s) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the operation could be queued. 
+\end{DoxyReturn}
+\hypertarget{class_simulator_1_1_f_p_u_a4976a10751299a95bff865fe320cf4a0}{\index{Simulator\+::\+F\+P\+U@{Simulator\+::\+F\+P\+U}!Register\+Source@{Register\+Source}}
+\index{Register\+Source@{Register\+Source}!Simulator\+::\+F\+P\+U@{Simulator\+::\+F\+P\+U}}
+\subsubsection[{Register\+Source}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Simulator\+::\+F\+P\+U\+::\+Register\+Source (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+F\+P\+U\+Client} \&}]{client, }
+\item[{const {\bf Storage\+Trace\+Set} \&}]{output}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_f_p_u_a4976a10751299a95bff865fe320cf4a0}
+
+
+Registers a source to the \hyperlink{class_simulator_1_1_f_p_u}{F\+P\+U}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em regfile} & \mbox{[}in\mbox{]} the register file to use to write back results for this source \\
+\hline
+{\em output} & \mbox{[}in\mbox{]} the storage traces that can be generated when writing the result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the unique for this source to be passed to Queue\+Operation 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simulator_1_1_f_p_u_a696de79c0d8e304961d3378a821ebb35}{\index{Simulator\+::\+F\+P\+U@{Simulator\+::\+F\+P\+U}!p\+\_\+\+Pipeline@{p\+\_\+\+Pipeline}}
+\index{p\+\_\+\+Pipeline@{p\+\_\+\+Pipeline}!Simulator\+::\+F\+P\+U@{Simulator\+::\+F\+P\+U}}
+\subsubsection[{p\+\_\+\+Pipeline}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process} Simulator\+::\+F\+P\+U\+::p\+\_\+\+Pipeline}}\label{class_simulator_1_1_f_p_u_a696de79c0d8e304961d3378a821ebb35}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/\hyperlink{_f_p_u_8h}{F\+P\+U.\+h}\item 
+arch/\hyperlink{_f_p_u_8cpp}{F\+P\+U.\+cpp}\end{DoxyCompactItemize}

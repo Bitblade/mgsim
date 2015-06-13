@@ -1,0 +1,178 @@
+\hypertarget{class_simulator_1_1_buffer}{\section{Simulator\+:\+:Buffer$<$ T $>$ Class Template Reference}
+\label{class_simulator_1_1_buffer}\index{Simulator\+::\+Buffer$<$ T $>$@{Simulator\+::\+Buffer$<$ T $>$}}
+}
+
+
+A F\+I\+F\+O storage queue.  
+
+
+
+
+{\ttfamily \#include $<$storage.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:Buffer$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_simulator_1_1_buffer}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::deque$<$ T $>$\\*
+\+::\hyperlink{class_simulator_1_1_buffer_a50ac4b556b0c93ce985359e10472923b}{const\+\_\+iterator} \hyperlink{class_simulator_1_1_buffer_a50ac4b556b0c93ce985359e10472923b}{const\+\_\+iterator}
+\item 
+typedef std\+::deque$<$ T $>$\\*
+\+::\hyperlink{class_simulator_1_1_buffer_aed79765ab3f5ebbcf7399c9402634607}{const\+\_\+reverse\+\_\+iterator} \hyperlink{class_simulator_1_1_buffer_aed79765ab3f5ebbcf7399c9402634607}{const\+\_\+reverse\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_buffer_a50ac4b556b0c93ce985359e10472923b}{const\+\_\+iterator} \hyperlink{class_simulator_1_1_buffer_ac2aa81120a60881adba4f5fb14b10681}{begin} () const 
+\item 
+\hyperlink{class_simulator_1_1_buffer_a50ac4b556b0c93ce985359e10472923b}{const\+\_\+iterator} \hyperlink{class_simulator_1_1_buffer_a15a1da6eca670910cbc99cd600dc9e7c}{end} () const 
+\item 
+\hyperlink{class_simulator_1_1_buffer_aed79765ab3f5ebbcf7399c9402634607}{const\+\_\+reverse\+\_\+iterator} \hyperlink{class_simulator_1_1_buffer_a0db82a924cbe771050a7a6ea9799450b}{rbegin} () const 
+\item 
+\hyperlink{class_simulator_1_1_buffer_aed79765ab3f5ebbcf7399c9402634607}{const\+\_\+reverse\+\_\+iterator} \hyperlink{class_simulator_1_1_buffer_ac27e86090b6412a1c8b061ead8d4c968}{rend} () const 
+\item 
+bool \hyperlink{class_simulator_1_1_buffer_a28d7761486184657ba108eeae25a6978}{Empty} () const 
+\item 
+const T \& \hyperlink{class_simulator_1_1_buffer_a5ad63aa8daa373a4a8fb2529f4127d8f}{Front} () const 
+\item 
+\hyperlink{namespace_simulator_a5ca279f926485be2d0554e41275a3305}{Buffer\+Size} \hyperlink{class_simulator_1_1_buffer_aa78d6091099540dfb846792c51926a56}{size} () const 
+\item 
+\hyperlink{namespace_simulator_a5ca279f926485be2d0554e41275a3305}{Buffer\+Size} \hyperlink{class_simulator_1_1_buffer_a7253d468055a0db9bc21e9e1d50a65fd}{Get\+Max\+Size} () const 
+\item 
+void \hyperlink{class_simulator_1_1_buffer_a1640dbaf585259908e88f0251624aeb2}{Pop} ()
+\item 
+bool \hyperlink{class_simulator_1_1_buffer_aad6a44e805c7d98d58f6afc35541597a}{Push} (const T \&item, size\+\_\+t min\+\_\+space=1)
+\item 
+\hyperlink{class_simulator_1_1_buffer_a346bb39cdb62dd787d873a648ae18308}{Buffer} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock, \hyperlink{namespace_simulator_a5ca279f926485be2d0554e41275a3305}{Buffer\+Size} max\+Size, size\+\_\+t max\+Pushes=1)
+\item 
+\hyperlink{class_simulator_1_1_buffer_a53a13bf07063fd1c691e954fe376f3e4}{Buffer} (const \hyperlink{class_simulator_1_1_buffer}{Buffer} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1_buffer}{Buffer} \& \hyperlink{class_simulator_1_1_buffer_a7c175139708831d820077c6f9804a91b}{operator=} (const \hyperlink{class_simulator_1_1_buffer}{Buffer} \&)=delete
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$class Simulator\+::\+Buffer$<$ T $>$}
+
+A F\+I\+F\+O storage queue. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_simulator_1_1_buffer_a50ac4b556b0c93ce985359e10472923b}{\index{Simulator\+::\+Buffer@{Simulator\+::\+Buffer}!const\+\_\+iterator@{const\+\_\+iterator}}
+\index{const\+\_\+iterator@{const\+\_\+iterator}!Simulator\+::\+Buffer@{Simulator\+::\+Buffer}}
+\subsubsection[{const\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ typedef std\+::deque$<$T$>$\+::{\bf const\+\_\+iterator} {\bf Simulator\+::\+Buffer}$<$ T $>$\+::{\bf const\+\_\+iterator}}}\label{class_simulator_1_1_buffer_a50ac4b556b0c93ce985359e10472923b}
+\hypertarget{class_simulator_1_1_buffer_aed79765ab3f5ebbcf7399c9402634607}{\index{Simulator\+::\+Buffer@{Simulator\+::\+Buffer}!const\+\_\+reverse\+\_\+iterator@{const\+\_\+reverse\+\_\+iterator}}
+\index{const\+\_\+reverse\+\_\+iterator@{const\+\_\+reverse\+\_\+iterator}!Simulator\+::\+Buffer@{Simulator\+::\+Buffer}}
+\subsubsection[{const\+\_\+reverse\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ typedef std\+::deque$<$T$>$\+::{\bf const\+\_\+reverse\+\_\+iterator} {\bf Simulator\+::\+Buffer}$<$ T $>$\+::{\bf const\+\_\+reverse\+\_\+iterator}}}\label{class_simulator_1_1_buffer_aed79765ab3f5ebbcf7399c9402634607}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_buffer_a346bb39cdb62dd787d873a648ae18308}{\index{Simulator\+::\+Buffer@{Simulator\+::\+Buffer}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!Simulator\+::\+Buffer@{Simulator\+::\+Buffer}}
+\subsubsection[{Buffer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Simulator\+::\+Buffer}$<$ T $>$\+::{\bf Buffer} (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock, }
+\item[{{\bf Buffer\+Size}}]{max\+Size, }
+\item[{size\+\_\+t}]{max\+Pushes = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_buffer_a346bb39cdb62dd787d873a648ae18308}
+\hypertarget{class_simulator_1_1_buffer_a53a13bf07063fd1c691e954fe376f3e4}{\index{Simulator\+::\+Buffer@{Simulator\+::\+Buffer}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!Simulator\+::\+Buffer@{Simulator\+::\+Buffer}}
+\subsubsection[{Buffer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Simulator\+::\+Buffer}$<$ T $>$\+::{\bf Buffer} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Buffer}$<$ T $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_buffer_a53a13bf07063fd1c691e954fe376f3e4}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_buffer_ac2aa81120a60881adba4f5fb14b10681}{\index{Simulator\+::\+Buffer@{Simulator\+::\+Buffer}!begin@{begin}}
+\index{begin@{begin}!Simulator\+::\+Buffer@{Simulator\+::\+Buffer}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf const\+\_\+iterator} {\bf Simulator\+::\+Buffer}$<$ T $>$\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_buffer_ac2aa81120a60881adba4f5fb14b10681}
+\hypertarget{class_simulator_1_1_buffer_a28d7761486184657ba108eeae25a6978}{\index{Simulator\+::\+Buffer@{Simulator\+::\+Buffer}!Empty@{Empty}}
+\index{Empty@{Empty}!Simulator\+::\+Buffer@{Simulator\+::\+Buffer}}
+\subsubsection[{Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf Simulator\+::\+Buffer}$<$ T $>$\+::Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_buffer_a28d7761486184657ba108eeae25a6978}
+\hypertarget{class_simulator_1_1_buffer_a15a1da6eca670910cbc99cd600dc9e7c}{\index{Simulator\+::\+Buffer@{Simulator\+::\+Buffer}!end@{end}}
+\index{end@{end}!Simulator\+::\+Buffer@{Simulator\+::\+Buffer}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf const\+\_\+iterator} {\bf Simulator\+::\+Buffer}$<$ T $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_buffer_a15a1da6eca670910cbc99cd600dc9e7c}
+\hypertarget{class_simulator_1_1_buffer_a5ad63aa8daa373a4a8fb2529f4127d8f}{\index{Simulator\+::\+Buffer@{Simulator\+::\+Buffer}!Front@{Front}}
+\index{Front@{Front}!Simulator\+::\+Buffer@{Simulator\+::\+Buffer}}
+\subsubsection[{Front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ const T\& {\bf Simulator\+::\+Buffer}$<$ T $>$\+::Front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_buffer_a5ad63aa8daa373a4a8fb2529f4127d8f}
+\hypertarget{class_simulator_1_1_buffer_a7253d468055a0db9bc21e9e1d50a65fd}{\index{Simulator\+::\+Buffer@{Simulator\+::\+Buffer}!Get\+Max\+Size@{Get\+Max\+Size}}
+\index{Get\+Max\+Size@{Get\+Max\+Size}!Simulator\+::\+Buffer@{Simulator\+::\+Buffer}}
+\subsubsection[{Get\+Max\+Size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Buffer\+Size} {\bf Simulator\+::\+Buffer}$<$ T $>$\+::Get\+Max\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_buffer_a7253d468055a0db9bc21e9e1d50a65fd}
+\hypertarget{class_simulator_1_1_buffer_a7c175139708831d820077c6f9804a91b}{\index{Simulator\+::\+Buffer@{Simulator\+::\+Buffer}!operator=@{operator=}}
+\index{operator=@{operator=}!Simulator\+::\+Buffer@{Simulator\+::\+Buffer}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Buffer}\& {\bf Simulator\+::\+Buffer}$<$ T $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Buffer}$<$ T $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_buffer_a7c175139708831d820077c6f9804a91b}
+\hypertarget{class_simulator_1_1_buffer_a1640dbaf585259908e88f0251624aeb2}{\index{Simulator\+::\+Buffer@{Simulator\+::\+Buffer}!Pop@{Pop}}
+\index{Pop@{Pop}!Simulator\+::\+Buffer@{Simulator\+::\+Buffer}}
+\subsubsection[{Pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Simulator\+::\+Buffer}$<$ T $>$\+::Pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_buffer_a1640dbaf585259908e88f0251624aeb2}
+\hypertarget{class_simulator_1_1_buffer_aad6a44e805c7d98d58f6afc35541597a}{\index{Simulator\+::\+Buffer@{Simulator\+::\+Buffer}!Push@{Push}}
+\index{Push@{Push}!Simulator\+::\+Buffer@{Simulator\+::\+Buffer}}
+\subsubsection[{Push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf Simulator\+::\+Buffer}$<$ T $>$\+::Push (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{item, }
+\item[{size\+\_\+t}]{min\+\_\+space = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_buffer_aad6a44e805c7d98d58f6afc35541597a}
+\hypertarget{class_simulator_1_1_buffer_a0db82a924cbe771050a7a6ea9799450b}{\index{Simulator\+::\+Buffer@{Simulator\+::\+Buffer}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!Simulator\+::\+Buffer@{Simulator\+::\+Buffer}}
+\subsubsection[{rbegin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf const\+\_\+reverse\+\_\+iterator} {\bf Simulator\+::\+Buffer}$<$ T $>$\+::rbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_buffer_a0db82a924cbe771050a7a6ea9799450b}
+\hypertarget{class_simulator_1_1_buffer_ac27e86090b6412a1c8b061ead8d4c968}{\index{Simulator\+::\+Buffer@{Simulator\+::\+Buffer}!rend@{rend}}
+\index{rend@{rend}!Simulator\+::\+Buffer@{Simulator\+::\+Buffer}}
+\subsubsection[{rend}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf const\+\_\+reverse\+\_\+iterator} {\bf Simulator\+::\+Buffer}$<$ T $>$\+::rend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_buffer_ac27e86090b6412a1c8b061ead8d4c968}
+\hypertarget{class_simulator_1_1_buffer_aa78d6091099540dfb846792c51926a56}{\index{Simulator\+::\+Buffer@{Simulator\+::\+Buffer}!size@{size}}
+\index{size@{size}!Simulator\+::\+Buffer@{Simulator\+::\+Buffer}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Buffer\+Size} {\bf Simulator\+::\+Buffer}$<$ T $>$\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_buffer_aa78d6091099540dfb846792c51926a56}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{storage_8h}{storage.\+h}\end{DoxyCompactItemize}

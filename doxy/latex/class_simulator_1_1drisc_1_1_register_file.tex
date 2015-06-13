@@ -1,0 +1,297 @@
+\hypertarget{class_simulator_1_1drisc_1_1_register_file}{\section{Simulator\+:\+:drisc\+:\+:Register\+File Class Reference}
+\label{class_simulator_1_1drisc_1_1_register_file}\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+}
+
+
+{\ttfamily \#include $<$Register\+File.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:drisc\+:\+:Register\+File\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.973568cm]{class_simulator_1_1drisc_1_1_register_file}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_register_file_a902eaa0956b6665c1fa87f11b2690063}{Register\+File} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_d_r_i_s_c}{D\+R\+I\+S\+C} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock, \hyperlink{class_config}{Config} \&config)
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_register_file_a1e5f8e22e1ca12407a88affcef842f9e}{$\sim$\+Register\+File} ()
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_register_file_a7d0be640b64e928e9d718795b728fb52}{Read\+Register} (const \hyperlink{struct_simulator_1_1_reg_addr}{Reg\+Addr} \&addr, \hyperlink{struct_simulator_1_1_reg_value}{Reg\+Value} \&data, bool quiet=false) const 
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_register_file_abc1cac113329975529f46b8553700055}{Write\+Register} (const \hyperlink{struct_simulator_1_1_reg_addr}{Reg\+Addr} \&addr, const \hyperlink{struct_simulator_1_1_reg_value}{Reg\+Value} \&data, bool from\+\_\+memory)
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_register_file_a668eef9557b1f1b1f2fc681fd9507366}{Clear} (const \hyperlink{struct_simulator_1_1_reg_addr}{Reg\+Addr} \&addr, \hyperlink{namespace_simulator_a7c5ca3b196c951c92b8159e54e76075f}{Reg\+Size} size)
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_register_file_aaf83ea9d0765ff83881ffb8e97bf4ac8}{Write\+Register} (const \hyperlink{struct_simulator_1_1_reg_addr}{Reg\+Addr} \&addr, const \hyperlink{struct_simulator_1_1_reg_value}{Reg\+Value} \&data)
+\item 
+const std\+::array$<$ \hyperlink{namespace_simulator_a7c5ca3b196c951c92b8159e54e76075f}{Reg\+Size}, \\*
+N\+U\+M\+\_\+\+R\+E\+G\+\_\+\+T\+Y\+P\+E\+S $>$ \& \hyperlink{class_simulator_1_1drisc_1_1_register_file_a71861b5faaf03e6ecceaeb9bfcaae10b}{Get\+Sizes} () const 
+\item 
+std\+::string \hyperlink{class_simulator_1_1drisc_1_1_register_file_a3588d3d9aaa9b01b5ff0eb85ab140c42}{Get\+Name} () const override
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_register_file_a86ac6b5b63a1a662b694c2a76e86ad04}{Check\+F\+P\+U\+Output\+Availability} (\hyperlink{struct_simulator_1_1_reg_addr}{Reg\+Addr} addr) override
+\item 
+bool \hyperlink{class_simulator_1_1drisc_1_1_register_file_a87e2d2856c9dd19a8b8b2dc9ebd7e937}{Write\+F\+P\+U\+Result} (\hyperlink{struct_simulator_1_1_reg_addr}{Reg\+Addr} addr, const \hyperlink{struct_simulator_1_1_reg_value}{Reg\+Value} \&value) override
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_register_file_a1b39897b56448e388ae4e0cadb846580}{Cmd\+\_\+\+Info} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const 
+\item 
+void \hyperlink{class_simulator_1_1drisc_1_1_register_file_a0313685824cc3a566309b5e3718bf92c}{Cmd\+\_\+\+Read} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const 
+\item 
+\hyperlink{class_simulator_1_1_object}{Object} $\ast$ \hyperlink{class_simulator_1_1drisc_1_1_register_file_a9fe65c5a3c9a8c92a0e9e451b841e608}{Get\+Parent} () const 
+\item 
+\hyperlink{class_simulator_1_1_object}{Object} \& \hyperlink{class_simulator_1_1drisc_1_1_register_file_a3046ae10d7494e0a1d7ba1de38ab428b}{Get\+D\+R\+I\+S\+C\+Parent} () const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_dedicated_read_port}{Dedicated\+Read\+Port} \hyperlink{class_simulator_1_1drisc_1_1_register_file_a27f622eaade2cd9091b373e4edb24e41}{p\+\_\+pipeline\+R1}
+\begin{DoxyCompactList}\small\item\em Read port \#1 for the pipeline. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_1_1_dedicated_read_port}{Dedicated\+Read\+Port} \hyperlink{class_simulator_1_1drisc_1_1_register_file_afd0962c8b4612df006247a1c6003a80f}{p\+\_\+pipeline\+R2}
+\begin{DoxyCompactList}\small\item\em Read port \#2 for the pipeline. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_1_1_dedicated_write_port}{Dedicated\+Write\+Port}$<$ \hyperlink{struct_simulator_1_1_reg_addr}{Reg\+Addr} $>$ \hyperlink{class_simulator_1_1drisc_1_1_register_file_a590c9d875284b49a33f44dec3c99422e}{p\+\_\+pipeline\+W}
+\begin{DoxyCompactList}\small\item\em Write port for the pipeline. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_1_1_arbitrated_read_port}{Arbitrated\+Read\+Port} \hyperlink{class_simulator_1_1drisc_1_1_register_file_ab5b6ece9e724537c995b59afa274967c}{p\+\_\+async\+R}
+\begin{DoxyCompactList}\small\item\em Read port for all other components. \end{DoxyCompactList}\item 
+\hyperlink{singleton_simulator_1_1_arbitrated_write_port}{Arbitrated\+Write\+Port}$<$ \hyperlink{struct_simulator_1_1_reg_addr}{Reg\+Addr} $>$ \hyperlink{class_simulator_1_1drisc_1_1_register_file_a7adb708606bceb4b22dffe33a0563278}{p\+\_\+async\+W}
+\begin{DoxyCompactList}\small\item\em Write port for all other components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_a902eaa0956b6665c1fa87f11b2690063}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!Register\+File@{Register\+File}}
+\index{Register\+File@{Register\+File}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{Register\+File}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+Register\+File\+::\+Register\+File (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf D\+R\+I\+S\+C} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock, }
+\item[{{\bf Config} \&}]{config}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_register_file_a902eaa0956b6665c1fa87f11b2690063}
+Constructs the \hyperlink{class_simulator_1_1_register}{Register} File. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & name of this register file. \\
+\hline
+\mbox{\tt in}  & {\em parent} & reference to parent processor. \\
+\hline
+\mbox{\tt in}  & {\em clock} & reference to the clock used to control updates. \\
+\hline
+\mbox{\tt in}  & {\em config} & reference to the configuration data. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_a1e5f8e22e1ca12407a88affcef842f9e}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!````~Register\+File@{$\sim$\+Register\+File}}
+\index{````~Register\+File@{$\sim$\+Register\+File}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{$\sim$\+Register\+File}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+Register\+File\+::$\sim$\+Register\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_register_file_a1e5f8e22e1ca12407a88affcef842f9e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_a86ac6b5b63a1a662b694c2a76e86ad04}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!Check\+F\+P\+U\+Output\+Availability@{Check\+F\+P\+U\+Output\+Availability}}
+\index{Check\+F\+P\+U\+Output\+Availability@{Check\+F\+P\+U\+Output\+Availability}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{Check\+F\+P\+U\+Output\+Availability}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Register\+File\+::\+Check\+F\+P\+U\+Output\+Availability (
+\begin{DoxyParamCaption}
+\item[{{\bf Reg\+Addr}}]{addr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1drisc_1_1_register_file_a86ac6b5b63a1a662b694c2a76e86ad04}
+
+
+Implements \hyperlink{class_simulator_1_1_f_p_u_1_1_i_f_p_u_client_a2e7336c7e6b0c9a33445c2312345b4ce}{Simulator\+::\+F\+P\+U\+::\+I\+F\+P\+U\+Client}.
+
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_a668eef9557b1f1b1f2fc681fd9507366}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!Clear@{Clear}}
+\index{Clear@{Clear}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Register\+File\+::\+Clear (
+\begin{DoxyParamCaption}
+\item[{const {\bf Reg\+Addr} \&}]{addr, }
+\item[{{\bf Reg\+Size}}]{size}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_register_file_a668eef9557b1f1b1f2fc681fd9507366}
+Clears a range of registers. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em addr} & the address of the first register to clear \\
+\hline
+\mbox{\tt in}  & {\em size} & the number of consecutive registers to clear \\
+\hline
+\mbox{\tt in}  & {\em value} & the value to clear the registers to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the registers could be cleared 
+\end{DoxyReturn}
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_a1b39897b56448e388ae4e0cadb846580}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}}
+\index{Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{Cmd\+\_\+\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+Register\+File\+::\+Cmd\+\_\+\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_register_file_a1b39897b56448e388ae4e0cadb846580}
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_a0313685824cc3a566309b5e3718bf92c}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}}
+\index{Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{Cmd\+\_\+\+Read}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::drisc\+::\+Register\+File\+::\+Cmd\+\_\+\+Read (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_register_file_a0313685824cc3a566309b5e3718bf92c}
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_a3046ae10d7494e0a1d7ba1de38ab428b}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!Get\+D\+R\+I\+S\+C\+Parent@{Get\+D\+R\+I\+S\+C\+Parent}}
+\index{Get\+D\+R\+I\+S\+C\+Parent@{Get\+D\+R\+I\+S\+C\+Parent}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{Get\+D\+R\+I\+S\+C\+Parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}\& Simulator\+::drisc\+::\+Register\+File\+::\+Get\+D\+R\+I\+S\+C\+Parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_register_file_a3046ae10d7494e0a1d7ba1de38ab428b}
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_a3588d3d9aaa9b01b5ff0eb85ab140c42}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!Get\+Name@{Get\+Name}}
+\index{Get\+Name@{Get\+Name}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{Get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Simulator\+::drisc\+::\+Register\+File\+::\+Get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1drisc_1_1_register_file_a3588d3d9aaa9b01b5ff0eb85ab140c42}
+
+
+Implements \hyperlink{class_simulator_1_1_f_p_u_1_1_i_f_p_u_client_a5588985669fd1772318c9b88e3f44869}{Simulator\+::\+F\+P\+U\+::\+I\+F\+P\+U\+Client}.
+
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_a9fe65c5a3c9a8c92a0e9e451b841e608}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!Get\+Parent@{Get\+Parent}}
+\index{Get\+Parent@{Get\+Parent}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{Get\+Parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object}$\ast$ Simulator\+::drisc\+::\+Register\+File\+::\+Get\+Parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_register_file_a9fe65c5a3c9a8c92a0e9e451b841e608}
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_a71861b5faaf03e6ecceaeb9bfcaae10b}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!Get\+Sizes@{Get\+Sizes}}
+\index{Get\+Sizes@{Get\+Sizes}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{Get\+Sizes}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::array$<${\bf Reg\+Size}, N\+U\+M\+\_\+\+R\+E\+G\+\_\+\+T\+Y\+P\+E\+S$>$\& Simulator\+::drisc\+::\+Register\+File\+::\+Get\+Sizes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1drisc_1_1_register_file_a71861b5faaf03e6ecceaeb9bfcaae10b}
+Returns the number of registers for each type. \hypertarget{class_simulator_1_1drisc_1_1_register_file_a7d0be640b64e928e9d718795b728fb52}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!Read\+Register@{Read\+Register}}
+\index{Read\+Register@{Read\+Register}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{Read\+Register}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Register\+File\+::\+Read\+Register (
+\begin{DoxyParamCaption}
+\item[{const {\bf Reg\+Addr} \&}]{addr, }
+\item[{{\bf Reg\+Value} \&}]{data, }
+\item[{bool}]{quiet = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1drisc_1_1_register_file_a7d0be640b64e928e9d718795b728fb52}
+Reads a register 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em addr} & the address of the register to read \\
+\hline
+\mbox{\tt out}  & {\em data} & the read data in the register \\
+\hline
+\mbox{\tt in}  & {\em quiet} & whether to hide debugging messages during the read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the register could be read 
+\end{DoxyReturn}
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_a87e2d2856c9dd19a8b8b2dc9ebd7e937}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!Write\+F\+P\+U\+Result@{Write\+F\+P\+U\+Result}}
+\index{Write\+F\+P\+U\+Result@{Write\+F\+P\+U\+Result}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{Write\+F\+P\+U\+Result}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Register\+File\+::\+Write\+F\+P\+U\+Result (
+\begin{DoxyParamCaption}
+\item[{{\bf Reg\+Addr}}]{addr, }
+\item[{const {\bf Reg\+Value} \&}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1drisc_1_1_register_file_a87e2d2856c9dd19a8b8b2dc9ebd7e937}
+
+
+Implements \hyperlink{class_simulator_1_1_f_p_u_1_1_i_f_p_u_client_acd84130d336c322969ea07948b6d0405}{Simulator\+::\+F\+P\+U\+::\+I\+F\+P\+U\+Client}.
+
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_abc1cac113329975529f46b8553700055}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!Write\+Register@{Write\+Register}}
+\index{Write\+Register@{Write\+Register}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{Write\+Register}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Register\+File\+::\+Write\+Register (
+\begin{DoxyParamCaption}
+\item[{const {\bf Reg\+Addr} \&}]{addr, }
+\item[{const {\bf Reg\+Value} \&}]{data, }
+\item[{bool}]{from\+\_\+memory}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_register_file_abc1cac113329975529f46b8553700055}
+Writes a register
+
+Writing a register may in some cases result in the data in the target register being placed in the data parameter. This happens when a waiting state is written back to a register which is full. The resulting state of the parameter will be full, such that the caller can reschedule the thread.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em addr} & the address of the register to write \\
+\hline
+\mbox{\tt in}  & {\em data} & the data to write to the register. \\
+\hline
+\mbox{\tt in}  & {\em from\+\_\+memory} & indicates if the write comes from memory. \\
+\hline
+\mbox{\tt in}  & {\em source} & the source of the write. This is used for arbitration in certain cases. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the register could be written 
+\end{DoxyReturn}
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_aaf83ea9d0765ff83881ffb8e97bf4ac8}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!Write\+Register@{Write\+Register}}
+\index{Write\+Register@{Write\+Register}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{Write\+Register}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Register\+File\+::\+Write\+Register (
+\begin{DoxyParamCaption}
+\item[{const {\bf Reg\+Addr} \&}]{addr, }
+\item[{const {\bf Reg\+Value} \&}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_register_file_aaf83ea9d0765ff83881ffb8e97bf4ac8}
+Writes a value into a register unconditionally This function performs no arbitration and has no wake-\/up semantics. \begin{DoxyWarning}{Warning}
+this is an admin function, do not use it from the simulation.
+\end{DoxyWarning}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em addr} & the address of the register to write \\
+\hline
+\mbox{\tt in}  & {\em data} & the value to write to the register \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the register could be written (i.\+e., addr was valid) 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_ab5b6ece9e724537c995b59afa274967c}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!p\+\_\+async\+R@{p\+\_\+async\+R}}
+\index{p\+\_\+async\+R@{p\+\_\+async\+R}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{p\+\_\+async\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Arbitrated\+Read\+Port} Simulator\+::drisc\+::\+Register\+File\+::p\+\_\+async\+R}}\label{class_simulator_1_1drisc_1_1_register_file_ab5b6ece9e724537c995b59afa274967c}
+
+
+Read port for all other components. 
+
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_a7adb708606bceb4b22dffe33a0563278}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!p\+\_\+async\+W@{p\+\_\+async\+W}}
+\index{p\+\_\+async\+W@{p\+\_\+async\+W}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{p\+\_\+async\+W}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Arbitrated\+Write\+Port}$<${\bf Reg\+Addr}$>$ Simulator\+::drisc\+::\+Register\+File\+::p\+\_\+async\+W}}\label{class_simulator_1_1drisc_1_1_register_file_a7adb708606bceb4b22dffe33a0563278}
+
+
+Write port for all other components. 
+
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_a27f622eaade2cd9091b373e4edb24e41}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!p\+\_\+pipeline\+R1@{p\+\_\+pipeline\+R1}}
+\index{p\+\_\+pipeline\+R1@{p\+\_\+pipeline\+R1}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{p\+\_\+pipeline\+R1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dedicated\+Read\+Port} Simulator\+::drisc\+::\+Register\+File\+::p\+\_\+pipeline\+R1}}\label{class_simulator_1_1drisc_1_1_register_file_a27f622eaade2cd9091b373e4edb24e41}
+
+
+Read port \#1 for the pipeline. 
+
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_afd0962c8b4612df006247a1c6003a80f}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!p\+\_\+pipeline\+R2@{p\+\_\+pipeline\+R2}}
+\index{p\+\_\+pipeline\+R2@{p\+\_\+pipeline\+R2}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{p\+\_\+pipeline\+R2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dedicated\+Read\+Port} Simulator\+::drisc\+::\+Register\+File\+::p\+\_\+pipeline\+R2}}\label{class_simulator_1_1drisc_1_1_register_file_afd0962c8b4612df006247a1c6003a80f}
+
+
+Read port \#2 for the pipeline. 
+
+\hypertarget{class_simulator_1_1drisc_1_1_register_file_a590c9d875284b49a33f44dec3c99422e}{\index{Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}!p\+\_\+pipeline\+W@{p\+\_\+pipeline\+W}}
+\index{p\+\_\+pipeline\+W@{p\+\_\+pipeline\+W}!Simulator\+::drisc\+::\+Register\+File@{Simulator\+::drisc\+::\+Register\+File}}
+\subsubsection[{p\+\_\+pipeline\+W}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dedicated\+Write\+Port}$<${\bf Reg\+Addr}$>$ Simulator\+::drisc\+::\+Register\+File\+::p\+\_\+pipeline\+W}}\label{class_simulator_1_1drisc_1_1_register_file_a590c9d875284b49a33f44dec3c99422e}
+
+
+Write port for the pipeline. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/drisc/\hyperlink{_register_file_8h}{Register\+File.\+h}\item 
+arch/drisc/\hyperlink{_register_file_8cpp}{Register\+File.\+cpp}\end{DoxyCompactItemize}

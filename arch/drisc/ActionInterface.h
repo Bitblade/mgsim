@@ -1,7 +1,7 @@
 #ifndef ACTIONINTERFACE_H
 #define ACTIONINTERFACE_H
 
-#include "IOMatchUnit.h"
+#include "mmu/MMIOComponent.h"
 
 namespace Simulator
 {

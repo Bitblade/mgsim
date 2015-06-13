@@ -1,0 +1,84 @@
+\hypertarget{singleton_simulator_1_1_structure}{\section{Simulator\+:\+:Structure$<$ I $>$ Class Template Reference}
+\label{singleton_simulator_1_1_structure}\index{Simulator\+::\+Structure$<$ I $>$@{Simulator\+::\+Structure$<$ I $>$}}
+}
+
+
+{\ttfamily \#include $<$ports.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:Structure$<$ I $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{singleton_simulator_1_1_structure}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{singleton_simulator_1_1_structure_a6119e2926c7c3166866de117c9a86895}{Structure} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock)
+\item 
+void \hyperlink{singleton_simulator_1_1_structure_aaf6c37cfac6bbdd2939c3b3d0f84da2d}{Add\+Port} (\hyperlink{class_simulator_1_1_write_port}{Write\+Port}$<$ I $>$ \&port)
+\item 
+void \hyperlink{singleton_simulator_1_1_structure_a2ff07405a046c8292bf1603060fb922b}{Register\+Write\+Port} (\hyperlink{class_simulator_1_1_write_port}{Write\+Port}$<$ I $>$ \&port)
+\item 
+void \hyperlink{singleton_simulator_1_1_structure_a1c8757302ae9548bb8f1d80a5b5ae96c}{Unregister\+Write\+Port} (\hyperlink{class_simulator_1_1_write_port}{Write\+Port}$<$ I $>$ \&port)
+\item 
+void \hyperlink{singleton_simulator_1_1_structure_abf97de2aaa57624cc52f399d55a67dd0}{Register\+Arbitrated\+Write\+Port} (\hyperlink{singleton_simulator_1_1_arbitrated_write_port}{Arbitrated\+Write\+Port}$<$ I $>$ \&port)
+\item 
+void \hyperlink{singleton_simulator_1_1_structure_a633daa04921dd0f08ff9781fb951bff4}{Unregister\+Arbitrated\+Write\+Port} (\hyperlink{singleton_simulator_1_1_arbitrated_write_port}{Arbitrated\+Write\+Port}$<$ I $>$ \&port)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{singleton_simulator_1_1_structure_a6119e2926c7c3166866de117c9a86895}{\index{Simulator\+::\+Structure@{Simulator\+::\+Structure}!Structure@{Structure}}
+\index{Structure@{Structure}!Simulator\+::\+Structure@{Simulator\+::\+Structure}}
+\subsubsection[{Structure}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename I$>$ {\bf Simulator\+::\+Structure}$<$ I $>$\+::{\bf Structure} (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{singleton_simulator_1_1_structure_a6119e2926c7c3166866de117c9a86895}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{singleton_simulator_1_1_structure_aaf6c37cfac6bbdd2939c3b3d0f84da2d}{\index{Simulator\+::\+Structure@{Simulator\+::\+Structure}!Add\+Port@{Add\+Port}}
+\index{Add\+Port@{Add\+Port}!Simulator\+::\+Structure@{Simulator\+::\+Structure}}
+\subsubsection[{Add\+Port}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename I$>$ void {\bf Simulator\+::\+Structure}$<$ I $>$\+::Add\+Port (
+\begin{DoxyParamCaption}
+\item[{{\bf Write\+Port}$<$ I $>$ \&}]{port}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{singleton_simulator_1_1_structure_aaf6c37cfac6bbdd2939c3b3d0f84da2d}
+\hypertarget{singleton_simulator_1_1_structure_abf97de2aaa57624cc52f399d55a67dd0}{\index{Simulator\+::\+Structure@{Simulator\+::\+Structure}!Register\+Arbitrated\+Write\+Port@{Register\+Arbitrated\+Write\+Port}}
+\index{Register\+Arbitrated\+Write\+Port@{Register\+Arbitrated\+Write\+Port}!Simulator\+::\+Structure@{Simulator\+::\+Structure}}
+\subsubsection[{Register\+Arbitrated\+Write\+Port}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename I$>$ void {\bf Simulator\+::\+Structure}$<$ I $>$\+::Register\+Arbitrated\+Write\+Port (
+\begin{DoxyParamCaption}
+\item[{{\bf Arbitrated\+Write\+Port}$<$ I $>$ \&}]{port}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{singleton_simulator_1_1_structure_abf97de2aaa57624cc52f399d55a67dd0}
+\hypertarget{singleton_simulator_1_1_structure_a2ff07405a046c8292bf1603060fb922b}{\index{Simulator\+::\+Structure@{Simulator\+::\+Structure}!Register\+Write\+Port@{Register\+Write\+Port}}
+\index{Register\+Write\+Port@{Register\+Write\+Port}!Simulator\+::\+Structure@{Simulator\+::\+Structure}}
+\subsubsection[{Register\+Write\+Port}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename I$>$ void {\bf Simulator\+::\+Structure}$<$ I $>$\+::Register\+Write\+Port (
+\begin{DoxyParamCaption}
+\item[{{\bf Write\+Port}$<$ I $>$ \&}]{port}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{singleton_simulator_1_1_structure_a2ff07405a046c8292bf1603060fb922b}
+\hypertarget{singleton_simulator_1_1_structure_a633daa04921dd0f08ff9781fb951bff4}{\index{Simulator\+::\+Structure@{Simulator\+::\+Structure}!Unregister\+Arbitrated\+Write\+Port@{Unregister\+Arbitrated\+Write\+Port}}
+\index{Unregister\+Arbitrated\+Write\+Port@{Unregister\+Arbitrated\+Write\+Port}!Simulator\+::\+Structure@{Simulator\+::\+Structure}}
+\subsubsection[{Unregister\+Arbitrated\+Write\+Port}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename I$>$ void {\bf Simulator\+::\+Structure}$<$ I $>$\+::Unregister\+Arbitrated\+Write\+Port (
+\begin{DoxyParamCaption}
+\item[{{\bf Arbitrated\+Write\+Port}$<$ I $>$ \&}]{port}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{singleton_simulator_1_1_structure_a633daa04921dd0f08ff9781fb951bff4}
+\hypertarget{singleton_simulator_1_1_structure_a1c8757302ae9548bb8f1d80a5b5ae96c}{\index{Simulator\+::\+Structure@{Simulator\+::\+Structure}!Unregister\+Write\+Port@{Unregister\+Write\+Port}}
+\index{Unregister\+Write\+Port@{Unregister\+Write\+Port}!Simulator\+::\+Structure@{Simulator\+::\+Structure}}
+\subsubsection[{Unregister\+Write\+Port}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename I$>$ void {\bf Simulator\+::\+Structure}$<$ I $>$\+::Unregister\+Write\+Port (
+\begin{DoxyParamCaption}
+\item[{{\bf Write\+Port}$<$ I $>$ \&}]{port}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{singleton_simulator_1_1_structure_a1c8757302ae9548bb8f1d80a5b5ae96c}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{ports_8h}{ports.\+h}\end{DoxyCompactItemize}

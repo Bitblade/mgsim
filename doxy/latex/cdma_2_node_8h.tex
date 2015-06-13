@@ -1,0 +1,48 @@
+\hypertarget{cdma_2_node_8h}{\section{arch/mem/cdma/\+Node.h File Reference}
+\label{cdma_2_node_8h}\index{arch/mem/cdma/\+Node.\+h@{arch/mem/cdma/\+Node.\+h}}
+}
+{\ttfamily \#include \char`\"{}C\+D\+M\+A.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_simulator_1_1_c_d_m_a_1_1_node}{Simulator\+::\+C\+D\+M\+A\+::\+Node}
+\item 
+union \hyperlink{union_simulator_1_1_c_d_m_a_1_1_node_1_1_message}{Simulator\+::\+C\+D\+M\+A\+::\+Node\+::\+Message}
+\begin{DoxyCompactList}\small\item\em This is the message that gets sent around. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_simulator}{Simulator}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cdma_2_node_8h_ad93de7c404d9e379ef5923c1635611e5}{Trace\+Write}(addr, fmt,...)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{cdma_2_node_8h_ad93de7c404d9e379ef5923c1635611e5}{\index{cdma/\+Node.\+h@{cdma/\+Node.\+h}!Trace\+Write@{Trace\+Write}}
+\index{Trace\+Write@{Trace\+Write}!cdma/\+Node.\+h@{cdma/\+Node.\+h}}
+\subsubsection[{Trace\+Write}]{\setlength{\rightskip}{0pt plus 5cm}\#define Trace\+Write(
+\begin{DoxyParamCaption}
+\item[{}]{addr, }
+\item[{}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{cdma_2_node_8h_ad93de7c404d9e379ef5923c1635611e5}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                 \(\backslash\)
+        if (                                                            \(\backslash\)
+            ((GetKernel()->GetDebugMode() & Kernel::DEBUG\_MEMNET) ||    \(\backslash\)
+             (m\_parent.GetTraces().find(addr) != m\_parent.GetTraces().end())) \(\backslash\)
+            && GetKernel()->GetCyclePhase() == \hyperlink{namespace_simulator_afd4b64cfd93793eb135bdb1a3c58c238a92a90e3acbd630e23d450e1bd4b2377d}{PHASE\_COMMIT})            \(\backslash\)
+            DebugSimWrite\_((\textcolor{stringliteral}{"0x%llx: "} fmt), (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} long)(addr), ##\_\_VA\_ARGS\_\_); \(\backslash\)
+    \} \textcolor{keywordflow}{while} (\textcolor{keyword}{false})
+\end{DoxyCode}
+void Trace\+Write(Mem\+Addr address, const char$\ast$ fmt, ...);
+
+Note\+: The argument for 'fmt' has to be a string literal.
+
+For use in C\+D\+M\+A\+::\+Object instances. Writes out a message if the specified address is being traced. 

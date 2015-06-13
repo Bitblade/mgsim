@@ -1,0 +1,100 @@
+\hypertarget{class_simulator_1_1_register}{\section{Simulator\+:\+:Register$<$ T $>$ Class Template Reference}
+\label{class_simulator_1_1_register}\index{Simulator\+::\+Register$<$ T $>$@{Simulator\+::\+Register$<$ T $>$}}
+}
+
+
+A full/empty single-\/value storage element.  
+
+
+
+
+{\ttfamily \#include $<$storage.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:Register$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_simulator_1_1_register}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_simulator_1_1_register_a2cb4753bc848ec69efea17d036720770}{Empty} () const 
+\item 
+const T \& \hyperlink{class_simulator_1_1_register_aad2dabfe1089f856726008a2526dfc75}{Read} () const 
+\item 
+void \hyperlink{class_simulator_1_1_register_a96aef64305b2ce4d726aa2c12cf07b41}{Clear} ()
+\item 
+void \hyperlink{class_simulator_1_1_register_af29086329d3bf6c4359415dc7150176d}{Write} (const T \&data)
+\item 
+\hyperlink{class_simulator_1_1_register_a48c519ec6f3b3176f6dfb80cdb2085cc}{Register} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_simulator_1_1_register_a7d424a1ce3822c36d63a0e4bb86c3730}{Update} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$class Simulator\+::\+Register$<$ T $>$}
+
+A full/empty single-\/value storage element. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_register_a48c519ec6f3b3176f6dfb80cdb2085cc}{\index{Simulator\+::\+Register@{Simulator\+::\+Register}!Register@{Register}}
+\index{Register@{Register}!Simulator\+::\+Register@{Simulator\+::\+Register}}
+\subsubsection[{Register}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf Simulator\+::\+Register}$<$ T $>$\+::{\bf Register} (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_register_a48c519ec6f3b3176f6dfb80cdb2085cc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_register_a96aef64305b2ce4d726aa2c12cf07b41}{\index{Simulator\+::\+Register@{Simulator\+::\+Register}!Clear@{Clear}}
+\index{Clear@{Clear}!Simulator\+::\+Register@{Simulator\+::\+Register}}
+\subsubsection[{Clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Simulator\+::\+Register}$<$ T $>$\+::Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_register_a96aef64305b2ce4d726aa2c12cf07b41}
+\hypertarget{class_simulator_1_1_register_a2cb4753bc848ec69efea17d036720770}{\index{Simulator\+::\+Register@{Simulator\+::\+Register}!Empty@{Empty}}
+\index{Empty@{Empty}!Simulator\+::\+Register@{Simulator\+::\+Register}}
+\subsubsection[{Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf Simulator\+::\+Register}$<$ T $>$\+::Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_register_a2cb4753bc848ec69efea17d036720770}
+\hypertarget{class_simulator_1_1_register_aad2dabfe1089f856726008a2526dfc75}{\index{Simulator\+::\+Register@{Simulator\+::\+Register}!Read@{Read}}
+\index{Read@{Read}!Simulator\+::\+Register@{Simulator\+::\+Register}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ const T\& {\bf Simulator\+::\+Register}$<$ T $>$\+::Read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_register_aad2dabfe1089f856726008a2526dfc75}
+\hypertarget{class_simulator_1_1_register_a7d424a1ce3822c36d63a0e4bb86c3730}{\index{Simulator\+::\+Register@{Simulator\+::\+Register}!Update@{Update}}
+\index{Update@{Update}!Simulator\+::\+Register@{Simulator\+::\+Register}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Simulator\+::\+Register}$<$ T $>$\+::Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_register_a7d424a1ce3822c36d63a0e4bb86c3730}
+
+
+Implements \hyperlink{class_simulator_1_1_storage_abea2bd330384970436228e1a759b9239}{Simulator\+::\+Storage}.
+
+\hypertarget{class_simulator_1_1_register_af29086329d3bf6c4359415dc7150176d}{\index{Simulator\+::\+Register@{Simulator\+::\+Register}!Write@{Write}}
+\index{Write@{Write}!Simulator\+::\+Register@{Simulator\+::\+Register}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf Simulator\+::\+Register}$<$ T $>$\+::Write (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_register_af29086329d3bf6c4359415dc7150176d}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{storage_8h}{storage.\+h}\end{DoxyCompactItemize}

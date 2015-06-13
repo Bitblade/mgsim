@@ -1,0 +1,82 @@
+\hypertarget{class_simulator_1_1_unix_interface}{\section{Simulator\+:\+:Unix\+Interface Class Reference}
+\label{class_simulator_1_1_unix_interface}\index{Simulator\+::\+Unix\+Interface@{Simulator\+::\+Unix\+Interface}}
+}
+
+
+{\ttfamily \#include $<$R\+P\+C\+\_\+unix.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:Unix\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.289281cm]{class_simulator_1_1_unix_interface}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_unix_interface_a0f1b04f32ffbe45f857b98e5d5213578}{Unix\+Interface} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent)
+\item 
+void \hyperlink{class_simulator_1_1_unix_interface_a106c0313f63e7ce5efe33b30de899414}{Service} (uint32\+\_\+t procedure\+\_\+id, std\+::vector$<$ char $>$ \&res1, size\+\_\+t res1\+\_\+maxsize, std\+::vector$<$ char $>$ \&res2, size\+\_\+t res2\+\_\+maxsize, const std\+::vector$<$ char $>$ \&arg1, const std\+::vector$<$ char $>$ \&arg2, uint32\+\_\+t arg3, uint32\+\_\+t arg4)
+\item 
+std\+::string \hyperlink{class_simulator_1_1_unix_interface_aaa535cdc1ec588c422a54394544a0ec5}{Get\+Name} ()
+\item 
+void \hyperlink{class_simulator_1_1_unix_interface_ac9fd78254225aed713d16e6390435a11}{Cmd\+\_\+\+Info} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_unix_interface_a0f1b04f32ffbe45f857b98e5d5213578}{\index{Simulator\+::\+Unix\+Interface@{Simulator\+::\+Unix\+Interface}!Unix\+Interface@{Unix\+Interface}}
+\index{Unix\+Interface@{Unix\+Interface}!Simulator\+::\+Unix\+Interface@{Simulator\+::\+Unix\+Interface}}
+\subsubsection[{Unix\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Unix\+Interface\+::\+Unix\+Interface (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_unix_interface_a0f1b04f32ffbe45f857b98e5d5213578}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_unix_interface_ac9fd78254225aed713d16e6390435a11}{\index{Simulator\+::\+Unix\+Interface@{Simulator\+::\+Unix\+Interface}!Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}}
+\index{Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}!Simulator\+::\+Unix\+Interface@{Simulator\+::\+Unix\+Interface}}
+\subsubsection[{Cmd\+\_\+\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Unix\+Interface\+::\+Cmd\+\_\+\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{}
+\end{DoxyParamCaption}
+) const}}\label{class_simulator_1_1_unix_interface_ac9fd78254225aed713d16e6390435a11}
+\hypertarget{class_simulator_1_1_unix_interface_aaa535cdc1ec588c422a54394544a0ec5}{\index{Simulator\+::\+Unix\+Interface@{Simulator\+::\+Unix\+Interface}!Get\+Name@{Get\+Name}}
+\index{Get\+Name@{Get\+Name}!Simulator\+::\+Unix\+Interface@{Simulator\+::\+Unix\+Interface}}
+\subsubsection[{Get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Simulator\+::\+Unix\+Interface\+::\+Get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_unix_interface_aaa535cdc1ec588c422a54394544a0ec5}
+
+
+Implements \hyperlink{class_simulator_1_1_i_r_p_c_service_provider_acd7dacc6b435c95a6534997420c75a7f}{Simulator\+::\+I\+R\+P\+C\+Service\+Provider}.
+
+\hypertarget{class_simulator_1_1_unix_interface_a106c0313f63e7ce5efe33b30de899414}{\index{Simulator\+::\+Unix\+Interface@{Simulator\+::\+Unix\+Interface}!Service@{Service}}
+\index{Service@{Service}!Simulator\+::\+Unix\+Interface@{Simulator\+::\+Unix\+Interface}}
+\subsubsection[{Service}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Unix\+Interface\+::\+Service (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{procedure\+\_\+id, }
+\item[{std\+::vector$<$ char $>$ \&}]{res1, }
+\item[{size\+\_\+t}]{res1\+\_\+maxsize, }
+\item[{std\+::vector$<$ char $>$ \&}]{res2, }
+\item[{size\+\_\+t}]{res2\+\_\+maxsize, }
+\item[{const std\+::vector$<$ char $>$ \&}]{arg1, }
+\item[{const std\+::vector$<$ char $>$ \&}]{arg2, }
+\item[{uint32\+\_\+t}]{arg3, }
+\item[{uint32\+\_\+t}]{arg4}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1_unix_interface_a106c0313f63e7ce5efe33b30de899414}
+
+
+Implements \hyperlink{class_simulator_1_1_i_r_p_c_service_provider_aa505319711a84aa58fbf544f31644b6d}{Simulator\+::\+I\+R\+P\+C\+Service\+Provider}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/dev/\hyperlink{_r_p_c__unix_8h}{R\+P\+C\+\_\+unix.\+h}\item 
+arch/dev/\hyperlink{_r_p_c__unix_8cpp}{R\+P\+C\+\_\+unix.\+cpp}\end{DoxyCompactItemize}

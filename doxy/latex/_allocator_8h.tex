@@ -1,0 +1,44 @@
+\hypertarget{_allocator_8h}{\section{arch/drisc/\+Allocator.h File Reference}
+\label{_allocator_8h}\index{arch/drisc/\+Allocator.\+h@{arch/drisc/\+Allocator.\+h}}
+}
+{\ttfamily \#include $<$sim/kernel.\+h$>$}\\*
+{\ttfamily \#include $<$sim/inspect.\+h$>$}\\*
+{\ttfamily \#include $<$sim/storage.\+h$>$}\\*
+{\ttfamily \#include $<$arch/simtypes.\+h$>$}\\*
+{\ttfamily \#include $<$arch/\+Memory.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}forward.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Thread\+Table.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_simulator_1_1drisc_1_1_allocator}{Simulator\+::drisc\+::\+Allocator}
+\item 
+struct \hyperlink{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request}{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}
+\item 
+struct \hyperlink{struct_simulator_1_1drisc_1_1_allocator_1_1_bundle_info}{Simulator\+::drisc\+::\+Allocator\+::\+Bundle\+Info}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_simulator}{Simulator}
+\item 
+ \hyperlink{namespace_simulator_1_1drisc}{Simulator\+::drisc}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespace_simulator_1_1drisc_ac6be077f11d2c5eb93b6ce2371bf67f4}{Simulator\+::drisc\+::\+Family\+Dependency} \{ \\*
+\hyperlink{namespace_simulator_1_1drisc_ac6be077f11d2c5eb93b6ce2371bf67f4aa7d68fb7afa5b11193ed6d2a860c4c3e}{Simulator\+::drisc\+::\+F\+A\+M\+D\+E\+P\+\_\+\+T\+H\+R\+E\+A\+D\+\_\+\+C\+O\+U\+N\+T}, 
+\hyperlink{namespace_simulator_1_1drisc_ac6be077f11d2c5eb93b6ce2371bf67f4a18465799d336613f56d5532ddf2fe792}{Simulator\+::drisc\+::\+F\+A\+M\+D\+E\+P\+\_\+\+O\+U\+T\+S\+T\+A\+N\+D\+I\+N\+G\+\_\+\+R\+E\+A\+D\+S}, 
+\hyperlink{namespace_simulator_1_1drisc_ac6be077f11d2c5eb93b6ce2371bf67f4a58ca122d85b666e048e5b80dd59d450d}{Simulator\+::drisc\+::\+F\+A\+M\+D\+E\+P\+\_\+\+P\+R\+E\+V\+\_\+\+S\+Y\+N\+C\+H\+R\+O\+N\+I\+Z\+E\+D}, 
+\hyperlink{namespace_simulator_1_1drisc_ac6be077f11d2c5eb93b6ce2371bf67f4a6959c4afd9b5cfdd998784ca8ec662c1}{Simulator\+::drisc\+::\+F\+A\+M\+D\+E\+P\+\_\+\+S\+Y\+N\+C\+\_\+\+S\+E\+N\+T}, 
+\\*
+\hyperlink{namespace_simulator_1_1drisc_ac6be077f11d2c5eb93b6ce2371bf67f4a59e54efc2dbccaf39ba0873dd20a7844}{Simulator\+::drisc\+::\+F\+A\+M\+D\+E\+P\+\_\+\+D\+E\+T\+A\+C\+H\+E\+D}, 
+\hyperlink{namespace_simulator_1_1drisc_ac6be077f11d2c5eb93b6ce2371bf67f4a91a4043b9131ea06b18b60ae5fc2d607}{Simulator\+::drisc\+::\+F\+A\+M\+D\+E\+P\+\_\+\+A\+L\+L\+O\+C\+A\+T\+I\+O\+N\+\_\+\+D\+O\+N\+E}
+ \}
+\item 
+enum \hyperlink{namespace_simulator_1_1drisc_ad6854da07c57895c7a56c85e725e9efa}{Simulator\+::drisc\+::\+Thread\+Dependency} \{ \hyperlink{namespace_simulator_1_1drisc_ad6854da07c57895c7a56c85e725e9efaac757f31f8c091b7f9364881a5b824ab2}{Simulator\+::drisc\+::\+T\+H\+R\+E\+A\+D\+D\+E\+P\+\_\+\+O\+U\+T\+S\+T\+A\+N\+D\+I\+N\+G\+\_\+\+W\+R\+I\+T\+E\+S}, 
+\hyperlink{namespace_simulator_1_1drisc_ad6854da07c57895c7a56c85e725e9efaafb6bf723553e6b7ccc5623b473537bca}{Simulator\+::drisc\+::\+T\+H\+R\+E\+A\+D\+D\+E\+P\+\_\+\+P\+R\+E\+V\+\_\+\+C\+L\+E\+A\+N\+E\+D\+\_\+\+U\+P}, 
+\hyperlink{namespace_simulator_1_1drisc_ad6854da07c57895c7a56c85e725e9efaaf3c34b87e4edcb3ae36b3da570568ba4}{Simulator\+::drisc\+::\+T\+H\+R\+E\+A\+D\+D\+E\+P\+\_\+\+T\+E\+R\+M\+I\+N\+A\+T\+E\+D}
+ \}
+\end{DoxyCompactItemize}

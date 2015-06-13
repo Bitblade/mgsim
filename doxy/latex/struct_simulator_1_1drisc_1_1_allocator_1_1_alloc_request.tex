@@ -1,0 +1,108 @@
+\hypertarget{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request}{\section{Simulator\+:\+:drisc\+:\+:Allocator\+:\+:Alloc\+Request Struct Reference}
+\label{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request}\index{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}}
+}
+
+
+{\ttfamily \#include $<$Allocator.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} \hyperlink{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a1957c8a6218a2bb4c7ac3aaf191d92d3}{first\+\_\+fid}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_simulator_1_1_f_i_d}{F\+I\+D} of the family on the first core. \end{DoxyCompactList}\item 
+\hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} \hyperlink{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a5a56c365cbf29936ac19b7c188856eab}{prev\+\_\+fid}
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_simulator_1_1_f_i_d}{F\+I\+D} of the family on the previous core. \end{DoxyCompactList}\item 
+\hyperlink{namespace_simulator_a4aa07bee2f34beac11abf48a8ccc47c4}{P\+Size} \hyperlink{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a1f6cc515ec7348788603310ab32ff47b}{place\+Size}
+\begin{DoxyCompactList}\small\item\em Number of cores to allocate on. \end{DoxyCompactList}\item 
+\hyperlink{namespace_simulator_a5c7d556007e11ed2e93f9fe53c60128b}{Allocation\+Type} \hyperlink{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a627f11c7a81aaf352cf2414886b9fda9}{type}
+\begin{DoxyCompactList}\small\item\em Type of the allocation. \end{DoxyCompactList}\item 
+\hyperlink{namespace_simulator_aa671021151c047ae2da6dce4e6303476}{P\+I\+D} \hyperlink{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_ad32cee2268de2b062c57e95e20e8fdb9}{completion\+\_\+pid}
+\begin{DoxyCompactList}\small\item\em Core that requested the allocation. \end{DoxyCompactList}\item 
+\hyperlink{namespace_simulator_ab00c9033de4c9a17db7b53d6c292515c}{Reg\+Index} \hyperlink{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a7d268fde8717658ef2f26fb95e9c4786}{completion\+\_\+reg}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_simulator_1_1_register}{Register} (on that core) that will receive the \hyperlink{struct_simulator_1_1_f_i_d}{F\+I\+D}. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_ab75db5e75f45658a27b8c4ea89043240}{bundle}
+\begin{DoxyCompactList}\small\item\em Whether the family parameters are already bundled. \end{DoxyCompactList}\item 
+Mem\+Addr \hyperlink{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_ac3d1fd55490ac20bf2d0a6ee06883952}{pc}
+\begin{DoxyCompactList}\small\item\em Bundled program counter. \end{DoxyCompactList}\item 
+Integer \hyperlink{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_ad6fa8a5ab6dc2c363ec2d6de2c1d2566}{parameter}
+\begin{DoxyCompactList}\small\item\em Bundled program-\/specified parameter. \end{DoxyCompactList}\item 
+S\+Integer \hyperlink{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a30e54ac67d3c145e6b57ac92ac7f306b}{index}
+\begin{DoxyCompactList}\small\item\em Bundled table-\/specified parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_ab75db5e75f45658a27b8c4ea89043240}{\index{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}!bundle@{bundle}}
+\index{bundle@{bundle}!Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}}
+\subsubsection[{bundle}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request\+::bundle}}\label{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_ab75db5e75f45658a27b8c4ea89043240}
+
+
+Whether the family parameters are already bundled. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_ad32cee2268de2b062c57e95e20e8fdb9}{\index{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}!completion\+\_\+pid@{completion\+\_\+pid}}
+\index{completion\+\_\+pid@{completion\+\_\+pid}!Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}}
+\subsubsection[{completion\+\_\+pid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+I\+D} Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request\+::completion\+\_\+pid}}\label{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_ad32cee2268de2b062c57e95e20e8fdb9}
+
+
+Core that requested the allocation. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a7d268fde8717658ef2f26fb95e9c4786}{\index{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}!completion\+\_\+reg@{completion\+\_\+reg}}
+\index{completion\+\_\+reg@{completion\+\_\+reg}!Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}}
+\subsubsection[{completion\+\_\+reg}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reg\+Index} Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request\+::completion\+\_\+reg}}\label{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a7d268fde8717658ef2f26fb95e9c4786}
+
+
+\hyperlink{class_simulator_1_1_register}{Register} (on that core) that will receive the \hyperlink{struct_simulator_1_1_f_i_d}{F\+I\+D}. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a1957c8a6218a2bb4c7ac3aaf191d92d3}{\index{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}!first\+\_\+fid@{first\+\_\+fid}}
+\index{first\+\_\+fid@{first\+\_\+fid}!Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}}
+\subsubsection[{first\+\_\+fid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+F\+I\+D} Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request\+::first\+\_\+fid}}\label{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a1957c8a6218a2bb4c7ac3aaf191d92d3}
+
+
+\hyperlink{struct_simulator_1_1_f_i_d}{F\+I\+D} of the family on the first core. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a30e54ac67d3c145e6b57ac92ac7f306b}{\index{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}!index@{index}}
+\index{index@{index}!Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}}
+\subsubsection[{index}]{\setlength{\rightskip}{0pt plus 5cm}S\+Integer Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request\+::index}}\label{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a30e54ac67d3c145e6b57ac92ac7f306b}
+
+
+Bundled table-\/specified parameter. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_ad6fa8a5ab6dc2c363ec2d6de2c1d2566}{\index{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}!parameter@{parameter}}
+\index{parameter@{parameter}!Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}}
+\subsubsection[{parameter}]{\setlength{\rightskip}{0pt plus 5cm}Integer Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request\+::parameter}}\label{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_ad6fa8a5ab6dc2c363ec2d6de2c1d2566}
+
+
+Bundled program-\/specified parameter. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_ac3d1fd55490ac20bf2d0a6ee06883952}{\index{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}!pc@{pc}}
+\index{pc@{pc}!Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}}
+\subsubsection[{pc}]{\setlength{\rightskip}{0pt plus 5cm}Mem\+Addr Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request\+::pc}}\label{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_ac3d1fd55490ac20bf2d0a6ee06883952}
+
+
+Bundled program counter. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a1f6cc515ec7348788603310ab32ff47b}{\index{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}!place\+Size@{place\+Size}}
+\index{place\+Size@{place\+Size}!Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}}
+\subsubsection[{place\+Size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+Size} Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request\+::place\+Size}}\label{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a1f6cc515ec7348788603310ab32ff47b}
+
+
+Number of cores to allocate on. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a5a56c365cbf29936ac19b7c188856eab}{\index{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}!prev\+\_\+fid@{prev\+\_\+fid}}
+\index{prev\+\_\+fid@{prev\+\_\+fid}!Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}}
+\subsubsection[{prev\+\_\+fid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf L\+F\+I\+D} Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request\+::prev\+\_\+fid}}\label{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a5a56c365cbf29936ac19b7c188856eab}
+
+
+\hyperlink{struct_simulator_1_1_f_i_d}{F\+I\+D} of the family on the previous core. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a627f11c7a81aaf352cf2414886b9fda9}{\index{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}!type@{type}}
+\index{type@{type}!Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request@{Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Allocation\+Type} Simulator\+::drisc\+::\+Allocator\+::\+Alloc\+Request\+::type}}\label{struct_simulator_1_1drisc_1_1_allocator_1_1_alloc_request_a627f11c7a81aaf352cf2414886b9fda9}
+
+
+Type of the allocation. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+arch/drisc/\hyperlink{_allocator_8h}{Allocator.\+h}\end{DoxyCompactItemize}

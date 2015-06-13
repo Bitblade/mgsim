@@ -1,0 +1,79 @@
+\hypertarget{struct_simulator_1_1_float32}{\section{Simulator\+:\+:Float32 Struct Reference}
+\label{struct_simulator_1_1_float32}\index{Simulator\+::\+Float32@{Simulator\+::\+Float32}}
+}
+
+
+32-\/bit I\+E\+E\+E-\/754 float  
+
+
+
+
+{\ttfamily \#include $<$simtypes.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{struct_simulator_1_1_float32_a7f5996e5d4312bf7941c88bc050c2533}{tofloat} () const 
+\item 
+void \hyperlink{struct_simulator_1_1_float32_a583b5c07150e467f0c9a6380f52167c0}{fromfloat} (double f)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>unsigned long long \hyperlink{struct_simulator_1_1_float32_a208abec59956bdaeb90fb70c5ec95a7c}{fraction}:23\\
+\>\>unsigned long long \hyperlink{struct_simulator_1_1_float32_a08b7aed86fa9a607dd2afaa429f9c59b}{exponent}:8\\
+\>\>unsigned long long \hyperlink{struct_simulator_1_1_float32_abf8bcfd04c3da1e1bcdb82d3b93caf42}{sign}:1\\
+\>\} \\
+\>float \hyperlink{struct_simulator_1_1_float32_a39b69e226a506e5149ec6cbfbcb21b6c}{floating}\\
+\>uint32\_t \hyperlink{struct_simulator_1_1_float32_a4592d2c05594f4cf9e3ad621c4c702bb}{integer}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+32-\/bit I\+E\+E\+E-\/754 float 
+
+\subsection{Member Function Documentation}
+\hypertarget{struct_simulator_1_1_float32_a583b5c07150e467f0c9a6380f52167c0}{\index{Simulator\+::\+Float32@{Simulator\+::\+Float32}!fromfloat@{fromfloat}}
+\index{fromfloat@{fromfloat}!Simulator\+::\+Float32@{Simulator\+::\+Float32}}
+\subsubsection[{fromfloat}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Float32\+::fromfloat (
+\begin{DoxyParamCaption}
+\item[{double}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_simulator_1_1_float32_a583b5c07150e467f0c9a6380f52167c0}
+\hypertarget{struct_simulator_1_1_float32_a7f5996e5d4312bf7941c88bc050c2533}{\index{Simulator\+::\+Float32@{Simulator\+::\+Float32}!tofloat@{tofloat}}
+\index{tofloat@{tofloat}!Simulator\+::\+Float32@{Simulator\+::\+Float32}}
+\subsubsection[{tofloat}]{\setlength{\rightskip}{0pt plus 5cm}double Simulator\+::\+Float32\+::tofloat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{struct_simulator_1_1_float32_a7f5996e5d4312bf7941c88bc050c2533}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_simulator_1_1_float32_ad319d98f86b161d69622713bf2c9a946}{\subsubsection[{"@64}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{struct_simulator_1_1_float32_ad319d98f86b161d69622713bf2c9a946}
+\hypertarget{struct_simulator_1_1_float32_a08b7aed86fa9a607dd2afaa429f9c59b}{\index{Simulator\+::\+Float32@{Simulator\+::\+Float32}!exponent@{exponent}}
+\index{exponent@{exponent}!Simulator\+::\+Float32@{Simulator\+::\+Float32}}
+\subsubsection[{exponent}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long long Simulator\+::\+Float32\+::exponent}}\label{struct_simulator_1_1_float32_a08b7aed86fa9a607dd2afaa429f9c59b}
+\hypertarget{struct_simulator_1_1_float32_a39b69e226a506e5149ec6cbfbcb21b6c}{\index{Simulator\+::\+Float32@{Simulator\+::\+Float32}!floating@{floating}}
+\index{floating@{floating}!Simulator\+::\+Float32@{Simulator\+::\+Float32}}
+\subsubsection[{floating}]{\setlength{\rightskip}{0pt plus 5cm}float Simulator\+::\+Float32\+::floating}}\label{struct_simulator_1_1_float32_a39b69e226a506e5149ec6cbfbcb21b6c}
+\hypertarget{struct_simulator_1_1_float32_a208abec59956bdaeb90fb70c5ec95a7c}{\index{Simulator\+::\+Float32@{Simulator\+::\+Float32}!fraction@{fraction}}
+\index{fraction@{fraction}!Simulator\+::\+Float32@{Simulator\+::\+Float32}}
+\subsubsection[{fraction}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long long Simulator\+::\+Float32\+::fraction}}\label{struct_simulator_1_1_float32_a208abec59956bdaeb90fb70c5ec95a7c}
+\hypertarget{struct_simulator_1_1_float32_a4592d2c05594f4cf9e3ad621c4c702bb}{\index{Simulator\+::\+Float32@{Simulator\+::\+Float32}!integer@{integer}}
+\index{integer@{integer}!Simulator\+::\+Float32@{Simulator\+::\+Float32}}
+\subsubsection[{integer}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Simulator\+::\+Float32\+::integer}}\label{struct_simulator_1_1_float32_a4592d2c05594f4cf9e3ad621c4c702bb}
+\hypertarget{struct_simulator_1_1_float32_abf8bcfd04c3da1e1bcdb82d3b93caf42}{\index{Simulator\+::\+Float32@{Simulator\+::\+Float32}!sign@{sign}}
+\index{sign@{sign}!Simulator\+::\+Float32@{Simulator\+::\+Float32}}
+\subsubsection[{sign}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long long Simulator\+::\+Float32\+::sign}}\label{struct_simulator_1_1_float32_abf8bcfd04c3da1e1bcdb82d3b93caf42}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+arch/\hyperlink{simtypes_8h}{simtypes.\+h}\end{DoxyCompactItemize}

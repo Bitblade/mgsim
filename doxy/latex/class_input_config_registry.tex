@@ -1,0 +1,181 @@
+\hypertarget{class_input_config_registry}{\section{Input\+Config\+Registry Class Reference}
+\label{class_input_config_registry}\index{Input\+Config\+Registry@{Input\+Config\+Registry}}
+}
+
+
+{\ttfamily \#include $<$config.\+h$>$}
+
+Inheritance diagram for Input\+Config\+Registry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_input_config_registry}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \hyperlink{class_input_config_registry_a9d84a5e441937e388b583daecf9173f4}{Get\+Argument\+Vector} () const 
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{class_input_config_registry_a97656799cd73a7ef8321d358665f3cfb}{get\+Value\+Or\+Default} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, const T \&def)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{class_input_config_registry_aeb3e30a1383f18c74c7b1d6d186b46f6}{get\+Value\+Or\+Default} (const \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} \&obj, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, const T \&def)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{class_input_config_registry_a716b4710d76875f5fc73bed87e5f3141}{get\+Value\+Or\+Default} (const \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} \&obj, const std\+::string \&prefix, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, const T \&def)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{class_input_config_registry_a7a62eb01437555f96c13f9d8eb214feb}{get\+Value} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name})
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{class_input_config_registry_a5811ed86c320bca6f09b9b8b06197414}{get\+Value} (const std\+::string \&prefix, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name})
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{class_input_config_registry_a499dcb45995e948d6cac9ea7de818839}{get\+Value} (const \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} \&obj, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name})
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{class_input_config_registry_a3aa63d5065221bf1555d0b577e80c597}{get\+Value} (const \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} \&obj, const std\+::string \&prefix, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name})
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{class_input_config_registry_aa99ad5c19384c39a87c6819d1be3ca39}{get\+Word\+List} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name})
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{class_input_config_registry_a0a75098d93d5fd18cbd87eed68b4b7e3}{get\+Word\+List} (const \hyperlink{class_simulator_1_1_object}{Simulator\+::\+Object} \&obj, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name})
+\item 
+void \hyperlink{class_input_config_registry_ae2e86533dd7a41f8adf30ff272f78a53}{dump\+Configuration} (std\+::ostream \&os, const std\+::string \&cf) const 
+\item 
+void \hyperlink{class_input_config_registry_ad2d5137210523e86e4ec8e058abcc188}{dump\+Configuration\+Cache} (std\+::ostream \&os) const 
+\item 
+std\+::vector$<$ std\+::pair\\*
+$<$ std\+::string, std\+::string $>$ $>$ \hyperlink{class_input_config_registry_a1944632e46ddeb28dfc4af747370a208}{get\+Raw\+Configuration} () const 
+\item 
+\hyperlink{class_input_config_registry_a5a6a79ed3085963ee2dd8556c9e83a50}{Input\+Config\+Registry} (const \hyperlink{class_config_map}{Config\+Map} \&defaults, const \hyperlink{class_config_map}{Config\+Map} \&overrides, const std\+::vector$<$ std\+::string $>$ \&argv)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_input_config_registry_ab5165ca7cc7458d924d8a309de4d5c36}{$\sim$\+Input\+Config\+Registry} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_input_config_registry_a5a6a79ed3085963ee2dd8556c9e83a50}{\index{Input\+Config\+Registry@{Input\+Config\+Registry}!Input\+Config\+Registry@{Input\+Config\+Registry}}
+\index{Input\+Config\+Registry@{Input\+Config\+Registry}!Input\+Config\+Registry@{Input\+Config\+Registry}}
+\subsubsection[{Input\+Config\+Registry}]{\setlength{\rightskip}{0pt plus 5cm}Input\+Config\+Registry\+::\+Input\+Config\+Registry (
+\begin{DoxyParamCaption}
+\item[{const {\bf Config\+Map} \&}]{defaults, }
+\item[{const {\bf Config\+Map} \&}]{overrides, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{argv}
+\end{DoxyParamCaption}
+)}}\label{class_input_config_registry_a5a6a79ed3085963ee2dd8556c9e83a50}
+\hypertarget{class_input_config_registry_ab5165ca7cc7458d924d8a309de4d5c36}{\index{Input\+Config\+Registry@{Input\+Config\+Registry}!````~Input\+Config\+Registry@{$\sim$\+Input\+Config\+Registry}}
+\index{````~Input\+Config\+Registry@{$\sim$\+Input\+Config\+Registry}!Input\+Config\+Registry@{Input\+Config\+Registry}}
+\subsubsection[{$\sim$\+Input\+Config\+Registry}]{\setlength{\rightskip}{0pt plus 5cm}virtual Input\+Config\+Registry\+::$\sim$\+Input\+Config\+Registry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_input_config_registry_ab5165ca7cc7458d924d8a309de4d5c36}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_input_config_registry_ae2e86533dd7a41f8adf30ff272f78a53}{\index{Input\+Config\+Registry@{Input\+Config\+Registry}!dump\+Configuration@{dump\+Configuration}}
+\index{dump\+Configuration@{dump\+Configuration}!Input\+Config\+Registry@{Input\+Config\+Registry}}
+\subsubsection[{dump\+Configuration}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Config\+Registry\+::dump\+Configuration (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os, }
+\item[{const std\+::string \&}]{cf}
+\end{DoxyParamCaption}
+) const}}\label{class_input_config_registry_ae2e86533dd7a41f8adf30ff272f78a53}
+\hypertarget{class_input_config_registry_ad2d5137210523e86e4ec8e058abcc188}{\index{Input\+Config\+Registry@{Input\+Config\+Registry}!dump\+Configuration\+Cache@{dump\+Configuration\+Cache}}
+\index{dump\+Configuration\+Cache@{dump\+Configuration\+Cache}!Input\+Config\+Registry@{Input\+Config\+Registry}}
+\subsubsection[{dump\+Configuration\+Cache}]{\setlength{\rightskip}{0pt plus 5cm}void Input\+Config\+Registry\+::dump\+Configuration\+Cache (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{os}
+\end{DoxyParamCaption}
+) const}}\label{class_input_config_registry_ad2d5137210523e86e4ec8e058abcc188}
+\hypertarget{class_input_config_registry_a9d84a5e441937e388b583daecf9173f4}{\index{Input\+Config\+Registry@{Input\+Config\+Registry}!Get\+Argument\+Vector@{Get\+Argument\+Vector}}
+\index{Get\+Argument\+Vector@{Get\+Argument\+Vector}!Input\+Config\+Registry@{Input\+Config\+Registry}}
+\subsubsection[{Get\+Argument\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::vector$<$std\+::string$>$\& Input\+Config\+Registry\+::\+Get\+Argument\+Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_input_config_registry_a9d84a5e441937e388b583daecf9173f4}
+\hypertarget{class_input_config_registry_a1944632e46ddeb28dfc4af747370a208}{\index{Input\+Config\+Registry@{Input\+Config\+Registry}!get\+Raw\+Configuration@{get\+Raw\+Configuration}}
+\index{get\+Raw\+Configuration@{get\+Raw\+Configuration}!Input\+Config\+Registry@{Input\+Config\+Registry}}
+\subsubsection[{get\+Raw\+Configuration}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ pair$<$ string, string $>$ $>$ Input\+Config\+Registry\+::get\+Raw\+Configuration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_input_config_registry_a1944632e46ddeb28dfc4af747370a208}
+\hypertarget{class_input_config_registry_a7a62eb01437555f96c13f9d8eb214feb}{\index{Input\+Config\+Registry@{Input\+Config\+Registry}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Input\+Config\+Registry@{Input\+Config\+Registry}}
+\subsubsection[{get\+Value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T Input\+Config\+Registry\+::get\+Value (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_input_config_registry_a7a62eb01437555f96c13f9d8eb214feb}
+\hypertarget{class_input_config_registry_a5811ed86c320bca6f09b9b8b06197414}{\index{Input\+Config\+Registry@{Input\+Config\+Registry}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Input\+Config\+Registry@{Input\+Config\+Registry}}
+\subsubsection[{get\+Value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T Input\+Config\+Registry\+::get\+Value (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{prefix, }
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_input_config_registry_a5811ed86c320bca6f09b9b8b06197414}
+\hypertarget{class_input_config_registry_a499dcb45995e948d6cac9ea7de818839}{\index{Input\+Config\+Registry@{Input\+Config\+Registry}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Input\+Config\+Registry@{Input\+Config\+Registry}}
+\subsubsection[{get\+Value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T Input\+Config\+Registry\+::get\+Value (
+\begin{DoxyParamCaption}
+\item[{const {\bf Simulator\+::\+Object} \&}]{obj, }
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_input_config_registry_a499dcb45995e948d6cac9ea7de818839}
+\hypertarget{class_input_config_registry_a3aa63d5065221bf1555d0b577e80c597}{\index{Input\+Config\+Registry@{Input\+Config\+Registry}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Input\+Config\+Registry@{Input\+Config\+Registry}}
+\subsubsection[{get\+Value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T Input\+Config\+Registry\+::get\+Value (
+\begin{DoxyParamCaption}
+\item[{const {\bf Simulator\+::\+Object} \&}]{obj, }
+\item[{const std\+::string \&}]{prefix, }
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_input_config_registry_a3aa63d5065221bf1555d0b577e80c597}
+\hypertarget{class_input_config_registry_a97656799cd73a7ef8321d358665f3cfb}{\index{Input\+Config\+Registry@{Input\+Config\+Registry}!get\+Value\+Or\+Default@{get\+Value\+Or\+Default}}
+\index{get\+Value\+Or\+Default@{get\+Value\+Or\+Default}!Input\+Config\+Registry@{Input\+Config\+Registry}}
+\subsubsection[{get\+Value\+Or\+Default}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T Input\+Config\+Registry\+::get\+Value\+Or\+Default (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{const T \&}]{def}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_input_config_registry_a97656799cd73a7ef8321d358665f3cfb}
+\hypertarget{class_input_config_registry_aeb3e30a1383f18c74c7b1d6d186b46f6}{\index{Input\+Config\+Registry@{Input\+Config\+Registry}!get\+Value\+Or\+Default@{get\+Value\+Or\+Default}}
+\index{get\+Value\+Or\+Default@{get\+Value\+Or\+Default}!Input\+Config\+Registry@{Input\+Config\+Registry}}
+\subsubsection[{get\+Value\+Or\+Default}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T Input\+Config\+Registry\+::get\+Value\+Or\+Default (
+\begin{DoxyParamCaption}
+\item[{const {\bf Simulator\+::\+Object} \&}]{obj, }
+\item[{const std\+::string \&}]{name, }
+\item[{const T \&}]{def}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_input_config_registry_aeb3e30a1383f18c74c7b1d6d186b46f6}
+\hypertarget{class_input_config_registry_a716b4710d76875f5fc73bed87e5f3141}{\index{Input\+Config\+Registry@{Input\+Config\+Registry}!get\+Value\+Or\+Default@{get\+Value\+Or\+Default}}
+\index{get\+Value\+Or\+Default@{get\+Value\+Or\+Default}!Input\+Config\+Registry@{Input\+Config\+Registry}}
+\subsubsection[{get\+Value\+Or\+Default}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T Input\+Config\+Registry\+::get\+Value\+Or\+Default (
+\begin{DoxyParamCaption}
+\item[{const {\bf Simulator\+::\+Object} \&}]{obj, }
+\item[{const std\+::string \&}]{prefix, }
+\item[{const std\+::string \&}]{name, }
+\item[{const T \&}]{def}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_input_config_registry_a716b4710d76875f5fc73bed87e5f3141}
+\hypertarget{class_input_config_registry_aa99ad5c19384c39a87c6819d1be3ca39}{\index{Input\+Config\+Registry@{Input\+Config\+Registry}!get\+Word\+List@{get\+Word\+List}}
+\index{get\+Word\+List@{get\+Word\+List}!Input\+Config\+Registry@{Input\+Config\+Registry}}
+\subsubsection[{get\+Word\+List}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ Input\+Config\+Registry\+::get\+Word\+List (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_input_config_registry_aa99ad5c19384c39a87c6819d1be3ca39}
+\hypertarget{class_input_config_registry_a0a75098d93d5fd18cbd87eed68b4b7e3}{\index{Input\+Config\+Registry@{Input\+Config\+Registry}!get\+Word\+List@{get\+Word\+List}}
+\index{get\+Word\+List@{get\+Word\+List}!Input\+Config\+Registry@{Input\+Config\+Registry}}
+\subsubsection[{get\+Word\+List}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ Input\+Config\+Registry\+::get\+Word\+List (
+\begin{DoxyParamCaption}
+\item[{const {\bf Simulator\+::\+Object} \&}]{obj, }
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_input_config_registry_a0a75098d93d5fd18cbd87eed68b4b7e3}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{config_8h}{config.\+h}\item 
+sim/\hyperlink{config_8cpp}{config.\+cpp}\end{DoxyCompactItemize}

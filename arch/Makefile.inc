@@ -89,8 +89,14 @@ PROCESSOR_SRC = \
 	arch/drisc/ISA.mips.h \
         arch/drisc/ISA.or1k.h \
 	arch/drisc/MemoryStage.cpp \
-	arch/drisc/MMUInterface.cpp \
-	arch/drisc/MMUInterface.h \
+	arch/drisc/mmu/MMIOComponent.cpp \
+	arch/drisc/mmu/MMIOComponent.h \
+	arch/drisc/mmu/MMU.cpp \
+	arch/drisc/mmu/MMU.h \
+	arch/drisc/mmu/old/IOMatchUnit.cpp \
+	arch/drisc/mmu/old/IOMatchUnit.h \
+	arch/drisc/mmu/old/MMUInterface.cpp \
+	arch/drisc/mmu/old/MMUInterface.h \
 	arch/drisc/Network.cpp \
 	arch/drisc/Network.h \
 	arch/drisc/Pipeline.cpp \

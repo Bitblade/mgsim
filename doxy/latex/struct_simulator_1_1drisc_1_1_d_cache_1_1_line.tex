@@ -1,0 +1,90 @@
+\hypertarget{struct_simulator_1_1drisc_1_1_d_cache_1_1_line}{\section{Simulator\+:\+:drisc\+:\+:D\+Cache\+:\+:Line Struct Reference}
+\label{struct_simulator_1_1drisc_1_1_d_cache_1_1_line}\index{Simulator\+::drisc\+::\+D\+Cache\+::\+Line@{Simulator\+::drisc\+::\+D\+Cache\+::\+Line}}
+}
+
+
+{\ttfamily \#include $<$D\+Cache.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Mem\+Addr \hyperlink{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_ae479013da253922204974b2bef006dee}{tag}
+\begin{DoxyCompactList}\small\item\em The address tag. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_ad7f38360a631034f0f593998abf0bc1b}{data}
+\begin{DoxyCompactList}\small\item\em The data in this line. \end{DoxyCompactList}\item 
+bool $\ast$ \hyperlink{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_aee0ce0d4a531af641df200d47178953a}{valid}
+\begin{DoxyCompactList}\small\item\em A bitmap of valid bytes in this line. \end{DoxyCompactList}\item 
+\hyperlink{namespace_simulator_a928f1e2101eba21bb0fe409e8c9ce573}{Cycle\+No} \hyperlink{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_a31cbd7df0f708bf01b5bf1a8a878b48c}{access}
+\begin{DoxyCompactList}\small\item\em Last access time of this line (for L\+R\+U). \end{DoxyCompactList}\item 
+\hyperlink{struct_simulator_1_1_reg_addr}{Reg\+Addr} \hyperlink{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_ad647618b60b3ee202afc191e1076f279}{waiting}
+\begin{DoxyCompactList}\small\item\em First register waiting on this line. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_1_1drisc_1_1_d_cache_aab0700229ca4e63558dd73cb40ee0b71}{Line\+State} \hyperlink{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_a3b56655fd184e5f02afddd91c9d6a378}{state}
+\begin{DoxyCompactList}\small\item\em The line state. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_acd3ee0a50fbab9ff4aee82cb4388db8c}{processing}
+\begin{DoxyCompactList}\small\item\em Has the line been added to m\+\_\+returned yet? \end{DoxyCompactList}\item 
+bool \hyperlink{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_af04922a255173d526651cf1b41c51f3f}{create}
+\begin{DoxyCompactList}\small\item\em Is the line expected by the create process (bundle)? \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_a31cbd7df0f708bf01b5bf1a8a878b48c}{\index{Simulator\+::drisc\+::\+D\+Cache\+::\+Line@{Simulator\+::drisc\+::\+D\+Cache\+::\+Line}!access@{access}}
+\index{access@{access}!Simulator\+::drisc\+::\+D\+Cache\+::\+Line@{Simulator\+::drisc\+::\+D\+Cache\+::\+Line}}
+\subsubsection[{access}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cycle\+No} Simulator\+::drisc\+::\+D\+Cache\+::\+Line\+::access}}\label{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_a31cbd7df0f708bf01b5bf1a8a878b48c}
+
+
+Last access time of this line (for L\+R\+U). 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_af04922a255173d526651cf1b41c51f3f}{\index{Simulator\+::drisc\+::\+D\+Cache\+::\+Line@{Simulator\+::drisc\+::\+D\+Cache\+::\+Line}!create@{create}}
+\index{create@{create}!Simulator\+::drisc\+::\+D\+Cache\+::\+Line@{Simulator\+::drisc\+::\+D\+Cache\+::\+Line}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+D\+Cache\+::\+Line\+::create}}\label{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_af04922a255173d526651cf1b41c51f3f}
+
+
+Is the line expected by the create process (bundle)? 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_ad7f38360a631034f0f593998abf0bc1b}{\index{Simulator\+::drisc\+::\+D\+Cache\+::\+Line@{Simulator\+::drisc\+::\+D\+Cache\+::\+Line}!data@{data}}
+\index{data@{data}!Simulator\+::drisc\+::\+D\+Cache\+::\+Line@{Simulator\+::drisc\+::\+D\+Cache\+::\+Line}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Simulator\+::drisc\+::\+D\+Cache\+::\+Line\+::data}}\label{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_ad7f38360a631034f0f593998abf0bc1b}
+
+
+The data in this line. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_acd3ee0a50fbab9ff4aee82cb4388db8c}{\index{Simulator\+::drisc\+::\+D\+Cache\+::\+Line@{Simulator\+::drisc\+::\+D\+Cache\+::\+Line}!processing@{processing}}
+\index{processing@{processing}!Simulator\+::drisc\+::\+D\+Cache\+::\+Line@{Simulator\+::drisc\+::\+D\+Cache\+::\+Line}}
+\subsubsection[{processing}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::drisc\+::\+D\+Cache\+::\+Line\+::processing}}\label{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_acd3ee0a50fbab9ff4aee82cb4388db8c}
+
+
+Has the line been added to m\+\_\+returned yet? 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_a3b56655fd184e5f02afddd91c9d6a378}{\index{Simulator\+::drisc\+::\+D\+Cache\+::\+Line@{Simulator\+::drisc\+::\+D\+Cache\+::\+Line}!state@{state}}
+\index{state@{state}!Simulator\+::drisc\+::\+D\+Cache\+::\+Line@{Simulator\+::drisc\+::\+D\+Cache\+::\+Line}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Line\+State} Simulator\+::drisc\+::\+D\+Cache\+::\+Line\+::state}}\label{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_a3b56655fd184e5f02afddd91c9d6a378}
+
+
+The line state. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_ae479013da253922204974b2bef006dee}{\index{Simulator\+::drisc\+::\+D\+Cache\+::\+Line@{Simulator\+::drisc\+::\+D\+Cache\+::\+Line}!tag@{tag}}
+\index{tag@{tag}!Simulator\+::drisc\+::\+D\+Cache\+::\+Line@{Simulator\+::drisc\+::\+D\+Cache\+::\+Line}}
+\subsubsection[{tag}]{\setlength{\rightskip}{0pt plus 5cm}Mem\+Addr Simulator\+::drisc\+::\+D\+Cache\+::\+Line\+::tag}}\label{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_ae479013da253922204974b2bef006dee}
+
+
+The address tag. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_aee0ce0d4a531af641df200d47178953a}{\index{Simulator\+::drisc\+::\+D\+Cache\+::\+Line@{Simulator\+::drisc\+::\+D\+Cache\+::\+Line}!valid@{valid}}
+\index{valid@{valid}!Simulator\+::drisc\+::\+D\+Cache\+::\+Line@{Simulator\+::drisc\+::\+D\+Cache\+::\+Line}}
+\subsubsection[{valid}]{\setlength{\rightskip}{0pt plus 5cm}bool$\ast$ Simulator\+::drisc\+::\+D\+Cache\+::\+Line\+::valid}}\label{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_aee0ce0d4a531af641df200d47178953a}
+
+
+A bitmap of valid bytes in this line. 
+
+\hypertarget{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_ad647618b60b3ee202afc191e1076f279}{\index{Simulator\+::drisc\+::\+D\+Cache\+::\+Line@{Simulator\+::drisc\+::\+D\+Cache\+::\+Line}!waiting@{waiting}}
+\index{waiting@{waiting}!Simulator\+::drisc\+::\+D\+Cache\+::\+Line@{Simulator\+::drisc\+::\+D\+Cache\+::\+Line}}
+\subsubsection[{waiting}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Reg\+Addr} Simulator\+::drisc\+::\+D\+Cache\+::\+Line\+::waiting}}\label{struct_simulator_1_1drisc_1_1_d_cache_1_1_line_ad647618b60b3ee202afc191e1076f279}
+
+
+First register waiting on this line. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+arch/drisc/\hyperlink{_d_cache_8h}{D\+Cache.\+h}\end{DoxyCompactItemize}

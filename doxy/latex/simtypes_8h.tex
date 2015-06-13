@@ -1,0 +1,183 @@
+\hypertarget{simtypes_8h}{\section{arch/simtypes.h File Reference}
+\label{simtypes_8h}\index{arch/simtypes.\+h@{arch/simtypes.\+h}}
+}
+{\ttfamily \#include \char`\"{}Archures.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$sim/types.\+h$>$}\\*
+{\ttfamily \#include $<$sim/unreachable.\+h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_simulator_1_1_float32}{Simulator\+::\+Float32}
+\begin{DoxyCompactList}\small\item\em 32-\/bit I\+E\+E\+E-\/754 float \end{DoxyCompactList}\item 
+struct \hyperlink{struct_simulator_1_1_float64}{Simulator\+::\+Float64}
+\begin{DoxyCompactList}\small\item\em 64-\/bit I\+E\+E\+E-\/754 float \end{DoxyCompactList}\item 
+struct \hyperlink{struct_simulator_1_1_place_i_d}{Simulator\+::\+Place\+I\+D}
+\begin{DoxyCompactList}\small\item\em Place identifier. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_simulator_1_1_f_i_d}{Simulator\+::\+F\+I\+D}
+\begin{DoxyCompactList}\small\item\em A globally unique family identifier. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_simulator_1_1_multi_float}{Simulator\+::\+Multi\+Float}
+\begin{DoxyCompactList}\small\item\em An F\+P value that can be of different sizes. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_simulator_1_1_multi_integer}{Simulator\+::\+Multi\+Integer}
+\begin{DoxyCompactList}\small\item\em An integer value that can be of different sizes. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_simulator_1_1_regs_no}{Simulator\+::\+Regs\+No}
+\item 
+struct \hyperlink{struct_simulator_1_1_reg_addr}{Simulator\+::\+Reg\+Addr}
+\item 
+struct \hyperlink{struct_simulator_1_1_memory_request}{Simulator\+::\+Memory\+Request}
+\begin{DoxyCompactList}\small\item\em This structure stores memory request information, to be used in \hyperlink{struct_simulator_1_1_reg_value}{Reg\+Value}. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_simulator_1_1_remote_reg_addr}{Simulator\+::\+Remote\+Reg\+Addr}
+\begin{DoxyCompactList}\small\item\em This structure represents a remote global or shared register. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_simulator_1_1_thread_queue}{Simulator\+::\+Thread\+Queue}
+\item 
+struct \hyperlink{struct_simulator_1_1_family_queue}{Simulator\+::\+Family\+Queue}
+\item 
+struct \hyperlink{struct_simulator_1_1_reg_value}{Simulator\+::\+Reg\+Value}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_simulator}{Simulator}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{simtypes_8h_a1c8ed4b72dac6929d882e2aeb0261081}{A\+R\+C\+H\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+A\+N}~1
+\item 
+\#define \hyperlink{simtypes_8h_a8bcaa5090cb4bb0d183a8ce22b5bca50}{A\+R\+C\+H\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+A\+N}~2
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned \hyperlink{namespace_simulator_aa671021151c047ae2da6dce4e6303476}{Simulator\+::\+P\+I\+D}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_simulator_1_1_d_r_i_s_c}{D\+R\+I\+S\+C} index. \end{DoxyCompactList}\item 
+typedef unsigned \hyperlink{namespace_simulator_a483cc4ecee1736e895054617672cded5}{Simulator\+::\+T\+I\+D}
+\begin{DoxyCompactList}\small\item\em Thread index. \end{DoxyCompactList}\item 
+typedef unsigned \hyperlink{namespace_simulator_a97f45fafcb1aafc0f269a19608b39d60}{Simulator\+::\+C\+I\+D}
+\begin{DoxyCompactList}\small\item\em Cache index. \end{DoxyCompactList}\item 
+typedef unsigned \hyperlink{namespace_simulator_a4aa07bee2f34beac11abf48a8ccc47c4}{Simulator\+::\+P\+Size}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_simulator_1_1_d_r_i_s_c}{D\+R\+I\+S\+C} list size. \end{DoxyCompactList}\item 
+typedef unsigned \hyperlink{namespace_simulator_aefe00209f3ea9f8e24874de522c3c3e7}{Simulator\+::\+T\+Size}
+\begin{DoxyCompactList}\small\item\em Thread list size. \end{DoxyCompactList}\item 
+typedef unsigned \hyperlink{namespace_simulator_ab00c9033de4c9a17db7b53d6c292515c}{Simulator\+::\+Reg\+Index}
+\begin{DoxyCompactList}\small\item\em Index into a register file. \end{DoxyCompactList}\item 
+typedef unsigned \hyperlink{namespace_simulator_a7c5ca3b196c951c92b8159e54e76075f}{Simulator\+::\+Reg\+Size}
+\begin{DoxyCompactList}\small\item\em Size of something in the register file. \end{DoxyCompactList}\item 
+typedef unsigned \hyperlink{namespace_simulator_a06544009313d7c13d411b1c074e5acff}{Simulator\+::\+F\+Size}
+\begin{DoxyCompactList}\small\item\em Family list size. \end{DoxyCompactList}\item 
+typedef unsigned \hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{Simulator\+::\+L\+F\+I\+D}
+\begin{DoxyCompactList}\small\item\em Local family index. \end{DoxyCompactList}\item 
+typedef unsigned \hyperlink{namespace_simulator_a0de605c35951a450d074222efcef6359}{Simulator\+::\+W\+Client\+I\+D}
+\begin{DoxyCompactList}\small\item\em Entity I\+D to match memory writes (either T\+I\+D or L\+F\+I\+D depending on config) \end{DoxyCompactList}\item 
+typedef Integer \hyperlink{namespace_simulator_a607aa9969bfe2711861ae21f42c37c59}{Simulator\+::\+F\+Capability}
+\begin{DoxyCompactList}\small\item\em Capability for a family. \end{DoxyCompactList}\item 
+typedef Integer \hyperlink{namespace_simulator_a6b57ad19b5768f31acd2aaf9fe53bcd9}{Simulator\+::\+P\+Capability}
+\begin{DoxyCompactList}\small\item\em Capability for a place. \end{DoxyCompactList}\item 
+typedef Integer \hyperlink{namespace_simulator_a62ef2d2c77bd54a16c39881f6266875e}{Simulator\+::\+Process\+I\+D}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_simulator_1_1_process}{Process} I\+D bits for M\+M\+U (virtual memory) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespace_simulator_ab3233bd11b43e37322a8111dc7eec133}{Simulator\+::\+Context\+Type} \{ \hyperlink{namespace_simulator_ab3233bd11b43e37322a8111dc7eec133aff98641fc2161b4e3a10a926ed9c2aa8}{Simulator\+::\+C\+O\+N\+T\+E\+X\+T\+\_\+\+N\+O\+R\+M\+A\+L} = 0, 
+\hyperlink{namespace_simulator_ab3233bd11b43e37322a8111dc7eec133aa804b4669b4ca3af3effb6198372f23b}{Simulator\+::\+C\+O\+N\+T\+E\+X\+T\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D}, 
+\hyperlink{namespace_simulator_ab3233bd11b43e37322a8111dc7eec133a568b9f5f56327c49e640f555b23f9825}{Simulator\+::\+C\+O\+N\+T\+E\+X\+T\+\_\+\+E\+X\+C\+L\+U\+S\+I\+V\+E}, 
+\hyperlink{namespace_simulator_ab3233bd11b43e37322a8111dc7eec133af183b295f25b22866d4e5df782637331}{Simulator\+::\+N\+U\+M\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+T\+Y\+P\+E\+S}
+ \}
+\item 
+enum \hyperlink{namespace_simulator_a5c7d556007e11ed2e93f9fe53c60128b}{Simulator\+::\+Allocation\+Type} \{ \hyperlink{namespace_simulator_a5c7d556007e11ed2e93f9fe53c60128bacff61eb0457167846e8f8c35dd44cde5}{Simulator\+::\+A\+L\+L\+O\+C\+A\+T\+E\+\_\+\+N\+O\+R\+M\+A\+L} = 0, 
+\hyperlink{namespace_simulator_a5c7d556007e11ed2e93f9fe53c60128ba712440be7c170f069cf4b36f481caeb3}{Simulator\+::\+A\+L\+L\+O\+C\+A\+T\+E\+\_\+\+E\+X\+A\+C\+T}, 
+\hyperlink{namespace_simulator_a5c7d556007e11ed2e93f9fe53c60128bab202a52782220141f09080d71082e763}{Simulator\+::\+A\+L\+L\+O\+C\+A\+T\+E\+\_\+\+B\+A\+L\+A\+N\+C\+E\+D}, 
+\hyperlink{namespace_simulator_a5c7d556007e11ed2e93f9fe53c60128bab1f8fb5b3c2ec03bfc770c4c6d193eaf}{Simulator\+::\+A\+L\+L\+O\+C\+A\+T\+E\+\_\+\+S\+I\+N\+G\+L\+E}
+ \}
+\begin{DoxyCompactList}\small\item\em Program-\/specified allocation type for a place allocation. \end{DoxyCompactList}\item 
+enum \hyperlink{namespace_simulator_ab86b74f4b95732ea63178d829b189acb}{Simulator\+::\+Reg\+Type} \{ \hyperlink{namespace_simulator_ab86b74f4b95732ea63178d829b189acba557665e6948ff1ebea8f5355e8eb4a8c}{Simulator\+::\+R\+T\+\_\+\+I\+N\+T\+E\+G\+E\+R} = 0, 
+\hyperlink{namespace_simulator_ab86b74f4b95732ea63178d829b189acba6cb518f9d261aaf5d8b911ba75c4b439}{Simulator\+::\+R\+T\+\_\+\+F\+L\+O\+A\+T} = 1
+ \}
+\item 
+enum \hyperlink{namespace_simulator_aed8a64878dc9a85785a9289468470a77}{Simulator\+::\+Reg\+Class} \{ \\*
+\hyperlink{namespace_simulator_aed8a64878dc9a85785a9289468470a77a3d4cd852648f8a0f13f43a0f8ce95ab2}{Simulator\+::\+R\+C\+\_\+\+G\+L\+O\+B\+A\+L}, 
+\hyperlink{namespace_simulator_aed8a64878dc9a85785a9289468470a77a72e5e995c0b802f2af9d5150c9875744}{Simulator\+::\+R\+C\+\_\+\+S\+H\+A\+R\+E\+D}, 
+\hyperlink{namespace_simulator_aed8a64878dc9a85785a9289468470a77a0fa1b8779eaada5f63c63dbfdc4db5a3}{Simulator\+::\+R\+C\+\_\+\+L\+O\+C\+A\+L}, 
+\hyperlink{namespace_simulator_aed8a64878dc9a85785a9289468470a77a76b633fc644b47a536c6337db16a7d02}{Simulator\+::\+R\+C\+\_\+\+D\+E\+P\+E\+N\+D\+E\+N\+T}, 
+\\*
+\hyperlink{namespace_simulator_aed8a64878dc9a85785a9289468470a77aa931e6d1c527f46cea3725255769ade7}{Simulator\+::\+R\+C\+\_\+\+R\+A\+Z}
+ \}
+\begin{DoxyCompactList}\small\item\em Register classes. \end{DoxyCompactList}\item 
+enum \hyperlink{namespace_simulator_a5450f6fb4b10ec16b290049311b8d5d0}{Simulator\+::\+Thread\+State} \{ \\*
+\hyperlink{namespace_simulator_a5450f6fb4b10ec16b290049311b8d5d0a469070fe24f069b6a1c9de970796da5d}{Simulator\+::\+T\+S\+T\+\_\+\+E\+M\+P\+T\+Y}, 
+\hyperlink{namespace_simulator_a5450f6fb4b10ec16b290049311b8d5d0afd02e2a2f78cb736e1b865ad6879bc1c}{Simulator\+::\+T\+S\+T\+\_\+\+W\+A\+I\+T\+I\+N\+G}, 
+\hyperlink{namespace_simulator_a5450f6fb4b10ec16b290049311b8d5d0a33ca5e5d8f177d0bf6cd2149696f4e5b}{Simulator\+::\+T\+S\+T\+\_\+\+R\+E\+A\+D\+Y}, 
+\hyperlink{namespace_simulator_a5450f6fb4b10ec16b290049311b8d5d0a903a7095a1b477dffef3df079aca470d}{Simulator\+::\+T\+S\+T\+\_\+\+A\+C\+T\+I\+V\+E}, 
+\\*
+\hyperlink{namespace_simulator_a5450f6fb4b10ec16b290049311b8d5d0acb7c5a872a7bf5512586efc5e152466b}{Simulator\+::\+T\+S\+T\+\_\+\+R\+U\+N\+N\+I\+N\+G}, 
+\hyperlink{namespace_simulator_a5450f6fb4b10ec16b290049311b8d5d0a3b2f48474c57127c42405ab9c056b76e}{Simulator\+::\+T\+S\+T\+\_\+\+S\+U\+S\+P\+E\+N\+D\+E\+D}, 
+\hyperlink{namespace_simulator_a5450f6fb4b10ec16b290049311b8d5d0a08db9966f5b21c979d58f5aa5dd06a69}{Simulator\+::\+T\+S\+T\+\_\+\+U\+N\+U\+S\+E\+D}, 
+\hyperlink{namespace_simulator_a5450f6fb4b10ec16b290049311b8d5d0a9f9a3bbe8c0fc03190485535053d3303}{Simulator\+::\+T\+S\+T\+\_\+\+T\+E\+R\+M\+I\+N\+A\+T\+E\+D}, 
+\\*
+\hyperlink{namespace_simulator_a5450f6fb4b10ec16b290049311b8d5d0a78a2fff5d83cad45629b181024323bdf}{Simulator\+::\+T\+S\+T\+\_\+\+N\+U\+M\+S\+T\+A\+T\+E\+S}
+ \}
+\item 
+enum \hyperlink{namespace_simulator_a28ee5cadcf435f6869c4e9c158b14c78}{Simulator\+::\+Family\+State} \{ \\*
+\hyperlink{namespace_simulator_a28ee5cadcf435f6869c4e9c158b14c78ac0c24def425122c77ad067fe64dc9881}{Simulator\+::\+F\+S\+T\+\_\+\+E\+M\+P\+T\+Y}, 
+\hyperlink{namespace_simulator_a28ee5cadcf435f6869c4e9c158b14c78ac5f1658895547087bf72d7220f22d15f}{Simulator\+::\+F\+S\+T\+\_\+\+A\+L\+L\+O\+C\+A\+T\+E\+D}, 
+\hyperlink{namespace_simulator_a28ee5cadcf435f6869c4e9c158b14c78a999dde3c17d513f54532c88bef7660d7}{Simulator\+::\+F\+S\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+Q\+U\+E\+U\+E\+D}, 
+\hyperlink{namespace_simulator_a28ee5cadcf435f6869c4e9c158b14c78aa9e513ed363152d507c2394a13f3c58c}{Simulator\+::\+F\+S\+T\+\_\+\+C\+R\+E\+A\+T\+I\+N\+G}, 
+\\*
+\hyperlink{namespace_simulator_a28ee5cadcf435f6869c4e9c158b14c78a7757828308553d4ab6e5a0836f503754}{Simulator\+::\+F\+S\+T\+\_\+\+A\+C\+T\+I\+V\+E}, 
+\hyperlink{namespace_simulator_a28ee5cadcf435f6869c4e9c158b14c78aeb3042c2df59b25c6458bea06b8bd12a}{Simulator\+::\+F\+S\+T\+\_\+\+T\+E\+R\+M\+I\+N\+A\+T\+E\+D}
+ \}
+\item 
+enum \hyperlink{namespace_simulator_a94bbe0e8e8afd888d0d3a1f6ee04d60e}{Simulator\+::\+Exit\+Code} \{ \hyperlink{namespace_simulator_a94bbe0e8e8afd888d0d3a1f6ee04d60eaf69bcbeefcee40019580634edde12207}{Simulator\+::\+E\+X\+I\+T\+C\+O\+D\+E\+\_\+\+N\+O\+R\+M\+A\+L}, 
+\hyperlink{namespace_simulator_a94bbe0e8e8afd888d0d3a1f6ee04d60ea1b8c42cd075be04608de0fc766588dc4}{Simulator\+::\+E\+X\+I\+T\+C\+O\+D\+E\+\_\+\+K\+I\+L\+L\+E\+D}, 
+\hyperlink{namespace_simulator_a94bbe0e8e8afd888d0d3a1f6ee04d60ea16349f0c5db2cd1a1b2bee95f82d93d8}{Simulator\+::\+E\+X\+I\+T\+C\+O\+D\+E\+\_\+\+B\+R\+O\+K\+E\+N}, 
+\hyperlink{namespace_simulator_a94bbe0e8e8afd888d0d3a1f6ee04d60eae767485ea2c6e9cb3fb56900bcf7f8fd}{Simulator\+::\+E\+X\+I\+T\+C\+O\+D\+E\+\_\+\+N\+O\+N\+E}
+ \}
+\item 
+enum \hyperlink{namespace_simulator_aac96aab43eac55fb7f08383889feb2d8}{Simulator\+::\+Remote\+Reg\+Type} \{ \\*
+\hyperlink{namespace_simulator_aac96aab43eac55fb7f08383889feb2d8ad5c91d175213341ab6933dd2c7ff3d49}{Simulator\+::\+R\+R\+T\+\_\+\+R\+A\+W}, 
+\hyperlink{namespace_simulator_aac96aab43eac55fb7f08383889feb2d8a3f9713d75b579e2eae9813b4d985cbe7}{Simulator\+::\+R\+R\+T\+\_\+\+G\+L\+O\+B\+A\+L}, 
+\hyperlink{namespace_simulator_aac96aab43eac55fb7f08383889feb2d8ad8087e7b255c33ef7ddc1edd68e14671}{Simulator\+::\+R\+R\+T\+\_\+\+F\+I\+R\+S\+T\+\_\+\+D\+E\+P\+E\+N\+D\+E\+N\+T}, 
+\hyperlink{namespace_simulator_aac96aab43eac55fb7f08383889feb2d8a38fc328c7e02ae59bd03e104359134b6}{Simulator\+::\+R\+R\+T\+\_\+\+L\+A\+S\+T\+\_\+\+S\+H\+A\+R\+E\+D}, 
+\\*
+\hyperlink{namespace_simulator_aac96aab43eac55fb7f08383889feb2d8a03df261473e5c30c3b6bd5fada5409ee}{Simulator\+::\+R\+R\+T\+\_\+\+D\+E\+T\+A\+C\+H}, 
+\hyperlink{namespace_simulator_aac96aab43eac55fb7f08383889feb2d8a7cf4e104bb5caca8d04cf5ce6ccdb4f4}{Simulator\+::\+R\+R\+T\+\_\+\+B\+R\+K}
+ \}
+\begin{DoxyCompactList}\small\item\em Different types of shared classes. \end{DoxyCompactList}\item 
+enum \hyperlink{namespace_simulator_a5fbe5f4a5800f7bb940fa2fa4c737d99}{Simulator\+::\+Family\+Property} \{ \hyperlink{namespace_simulator_a5fbe5f4a5800f7bb940fa2fa4c737d99a989d47ab31da8d15c79c45355e05c13c}{Simulator\+::\+F\+A\+M\+P\+R\+O\+P\+\_\+\+S\+T\+A\+R\+T}, 
+\hyperlink{namespace_simulator_a5fbe5f4a5800f7bb940fa2fa4c737d99a89c2fa167fb77a0d1cdd1d8d56178c9f}{Simulator\+::\+F\+A\+M\+P\+R\+O\+P\+\_\+\+L\+I\+M\+I\+T}, 
+\hyperlink{namespace_simulator_a5fbe5f4a5800f7bb940fa2fa4c737d99a9ac2fce7c1309de34770a79d898b2b8e}{Simulator\+::\+F\+A\+M\+P\+R\+O\+P\+\_\+\+S\+T\+E\+P}, 
+\hyperlink{namespace_simulator_a5fbe5f4a5800f7bb940fa2fa4c737d99a28bda070794116318516f55c333340d4}{Simulator\+::\+F\+A\+M\+P\+R\+O\+P\+\_\+\+B\+L\+O\+C\+K}
+ \}
+\item 
+enum \hyperlink{namespace_simulator_a0400735ff32412cb8ce9506b81492c69}{Simulator\+::\+Reg\+State} \{ \\*
+\hyperlink{namespace_simulator_a0400735ff32412cb8ce9506b81492c69a42e997c833fe312628c04a6cf206ddd0}{Simulator\+::\+R\+S\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D}, 
+\hyperlink{namespace_simulator_a0400735ff32412cb8ce9506b81492c69af1cef041f354ff2128eb9b32658bfbde}{Simulator\+::\+R\+S\+T\+\_\+\+E\+M\+P\+T\+Y}, 
+\hyperlink{namespace_simulator_a0400735ff32412cb8ce9506b81492c69a82502612503fec1ab43f388d6e232446}{Simulator\+::\+R\+S\+T\+\_\+\+P\+E\+N\+D\+I\+N\+G}, 
+\hyperlink{namespace_simulator_a0400735ff32412cb8ce9506b81492c69a27357391091761599d1856be68eb5947}{Simulator\+::\+R\+S\+T\+\_\+\+W\+A\+I\+T\+I\+N\+G}, 
+\\*
+\hyperlink{namespace_simulator_a0400735ff32412cb8ce9506b81492c69ab3341e2175253ca89ba079a5d93b4d55}{Simulator\+::\+R\+S\+T\+\_\+\+F\+U\+L\+L}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{namespace_simulator_ae44ac35f4fed2fdc26eacc8b20d70e49}{Simulator\+::operator$<$$<$} (std\+::ostream \&output, const Reg\+Addr \&reg)
+\item 
+const char $\ast$ \hyperlink{namespace_simulator_a9c970ee2ae9969dc3cd1b6aa88916b5d}{Simulator\+::\+Get\+Remote\+Register\+Type\+String} (Remote\+Reg\+Type type)
+\item 
+void \hyperlink{namespace_simulator_a0807c908a0aab9a01b6d03d530dc53bf}{Simulator\+::\+Serialize\+Register} (Reg\+Type type, uint64\+\_\+t value, void $\ast$data, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Serialize a register Serializes a register by writing the integer value to memory in an architecture-\/dependent encoding. \end{DoxyCompactList}\item 
+uint64\+\_\+t \hyperlink{namespace_simulator_afb231dc2ba9490c5439c1c13719ffda6}{Simulator\+::\+Unserialize\+Register} (Reg\+Type type, const void $\ast$data, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Unserialize a register Unserializes a register by reading the integer value from memory with an architecture-\/dependent decoding. \end{DoxyCompactList}\item 
+Instruction \hyperlink{namespace_simulator_a62ae125de2c67d20338442f34d782ce8}{Simulator\+::\+Unserialize\+Instruction} (const void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Unserialize an instruction Unserializes an instruction by reading the integer value from memory with an architecture-\/dependent decoding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{simtypes_8h_a8bcaa5090cb4bb0d183a8ce22b5bca50}{\index{simtypes.\+h@{simtypes.\+h}!A\+R\+C\+H\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+A\+N@{A\+R\+C\+H\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+A\+N}}
+\index{A\+R\+C\+H\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+A\+N@{A\+R\+C\+H\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+A\+N}!simtypes.\+h@{simtypes.\+h}}
+\subsubsection[{A\+R\+C\+H\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+A\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+R\+C\+H\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+A\+N~2}}\label{simtypes_8h_a8bcaa5090cb4bb0d183a8ce22b5bca50}
+\hypertarget{simtypes_8h_a1c8ed4b72dac6929d882e2aeb0261081}{\index{simtypes.\+h@{simtypes.\+h}!A\+R\+C\+H\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+A\+N@{A\+R\+C\+H\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+A\+N}}
+\index{A\+R\+C\+H\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+A\+N@{A\+R\+C\+H\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+A\+N}!simtypes.\+h@{simtypes.\+h}}
+\subsubsection[{A\+R\+C\+H\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+A\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+R\+C\+H\+\_\+\+L\+I\+T\+T\+L\+E\+\_\+\+E\+N\+D\+I\+A\+N~1}}\label{simtypes_8h_a1c8ed4b72dac6929d882e2aeb0261081}

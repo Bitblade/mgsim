@@ -1,0 +1,189 @@
+\hypertarget{class_simulator_1_1_r_p_c_interface}{\section{Simulator\+:\+:R\+P\+C\+Interface Class Reference}
+\label{class_simulator_1_1_r_p_c_interface}\index{Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}}
+}
+
+
+{\ttfamily \#include $<$R\+P\+C.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:R\+P\+C\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_simulator_1_1_r_p_c_interface}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_r_p_c_interface_aceaac49e6185652e6885838d5174f47d}{R\+P\+C\+Interface} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent, \hyperlink{class_simulator_1_1_i_i_o_bus}{I\+I\+O\+Bus} \&iobus, \hyperlink{namespace_simulator_a3493d987c866ad6b8aaa704c42502db0}{I\+O\+Device\+I\+D} devid, \hyperlink{class_config}{Config} \&config, \hyperlink{class_simulator_1_1_i_r_p_c_service_provider}{I\+R\+P\+C\+Service\+Provider} \&provider)
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1_r_p_c_interface_adbc35fdda8475a7ae93aa9211783b8f2}{Do\+Queue} ()
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1_r_p_c_interface_a1af6ff267a390c90a2a0a616cb5f2e5f}{Do\+Argument\+Fetch} ()
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1_r_p_c_interface_a2184b38eb093586dcef716d0d2848588}{Do\+Process\+Requests} ()
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1_r_p_c_interface_a5fdacade9b8695fd3136c8ff9039eb2d}{Do\+Write\+Response} ()
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1_r_p_c_interface_ac603db61b25d64ada40000c9048d750c}{Do\+Send\+Completion\+Notifications} ()
+\item 
+bool \hyperlink{class_simulator_1_1_r_p_c_interface_ab86a5172694b00af4c51c01fc83dd296}{On\+Read\+Request\+Received} (\hyperlink{namespace_simulator_a3493d987c866ad6b8aaa704c42502db0}{I\+O\+Device\+I\+D} from, Mem\+Addr address, Mem\+Size size)
+\item 
+bool \hyperlink{class_simulator_1_1_r_p_c_interface_a7a8353765d3c916fbc539453c6a74ffa}{On\+Write\+Request\+Received} (\hyperlink{namespace_simulator_a3493d987c866ad6b8aaa704c42502db0}{I\+O\+Device\+I\+D} from, Mem\+Addr address, const \hyperlink{struct_simulator_1_1_i_o_data}{I\+O\+Data} \&iodata)
+\item 
+bool \hyperlink{class_simulator_1_1_r_p_c_interface_ade9d048022f35e3a7a03d36f42ffab11}{On\+Read\+Response\+Received} (\hyperlink{namespace_simulator_a3493d987c866ad6b8aaa704c42502db0}{I\+O\+Device\+I\+D} from, Mem\+Addr address, const \hyperlink{struct_simulator_1_1_i_o_data}{I\+O\+Data} \&iodata)
+\item 
+void \hyperlink{class_simulator_1_1_r_p_c_interface_ac2e9b8ebf7f37e984c5409f88f29193b}{Get\+Device\+Identity} (\hyperlink{struct_simulator_1_1_i_o_device_identification}{I\+O\+Device\+Identification} \&\hyperlink{mtconf_8c_aa3185401f04d30bd505daebf48c39cc5}{id}) const 
+\item 
+std\+::string \hyperlink{class_simulator_1_1_r_p_c_interface_abb306b9b717c83519a828a7ae5270ceb}{Get\+I\+O\+Device\+Name} () const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_process}{Process} \hyperlink{class_simulator_1_1_r_p_c_interface_aa494a0522ef64eea34e6f19df5fd440d}{p\+\_\+queue}
+\item 
+\hyperlink{class_simulator_1_1_process}{Process} \hyperlink{class_simulator_1_1_r_p_c_interface_a10feb8760457103276db81eb4eeda849}{p\+\_\+argument\+Fetch}
+\item 
+\hyperlink{class_simulator_1_1_process}{Process} \hyperlink{class_simulator_1_1_r_p_c_interface_a5939893eeb8f04cc81084e2739cb5899}{p\+\_\+process\+Requests}
+\item 
+\hyperlink{class_simulator_1_1_process}{Process} \hyperlink{class_simulator_1_1_r_p_c_interface_a30ee8b18387a9c7cec8a5becedb73f01}{p\+\_\+write\+Response}
+\item 
+\hyperlink{class_simulator_1_1_process}{Process} \hyperlink{class_simulator_1_1_r_p_c_interface_a60dbd5ba0a05311b93263be883a62c82}{p\+\_\+send\+Completion\+Notifications}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_r_p_c_interface_aceaac49e6185652e6885838d5174f47d}{\index{Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}!R\+P\+C\+Interface@{R\+P\+C\+Interface}}
+\index{R\+P\+C\+Interface@{R\+P\+C\+Interface}!Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}}
+\subsubsection[{R\+P\+C\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+R\+P\+C\+Interface\+::\+R\+P\+C\+Interface (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent, }
+\item[{{\bf I\+I\+O\+Bus} \&}]{iobus, }
+\item[{{\bf I\+O\+Device\+I\+D}}]{devid, }
+\item[{{\bf Config} \&}]{config, }
+\item[{{\bf I\+R\+P\+C\+Service\+Provider} \&}]{provider}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_r_p_c_interface_aceaac49e6185652e6885838d5174f47d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_r_p_c_interface_a1af6ff267a390c90a2a0a616cb5f2e5f}{\index{Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}!Do\+Argument\+Fetch@{Do\+Argument\+Fetch}}
+\index{Do\+Argument\+Fetch@{Do\+Argument\+Fetch}!Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}}
+\subsubsection[{Do\+Argument\+Fetch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::\+R\+P\+C\+Interface\+::\+Do\+Argument\+Fetch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_r_p_c_interface_a1af6ff267a390c90a2a0a616cb5f2e5f}
+\hypertarget{class_simulator_1_1_r_p_c_interface_a2184b38eb093586dcef716d0d2848588}{\index{Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}!Do\+Process\+Requests@{Do\+Process\+Requests}}
+\index{Do\+Process\+Requests@{Do\+Process\+Requests}!Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}}
+\subsubsection[{Do\+Process\+Requests}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::\+R\+P\+C\+Interface\+::\+Do\+Process\+Requests (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_r_p_c_interface_a2184b38eb093586dcef716d0d2848588}
+\hypertarget{class_simulator_1_1_r_p_c_interface_adbc35fdda8475a7ae93aa9211783b8f2}{\index{Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}!Do\+Queue@{Do\+Queue}}
+\index{Do\+Queue@{Do\+Queue}!Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}}
+\subsubsection[{Do\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::\+R\+P\+C\+Interface\+::\+Do\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_r_p_c_interface_adbc35fdda8475a7ae93aa9211783b8f2}
+\hypertarget{class_simulator_1_1_r_p_c_interface_ac603db61b25d64ada40000c9048d750c}{\index{Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}!Do\+Send\+Completion\+Notifications@{Do\+Send\+Completion\+Notifications}}
+\index{Do\+Send\+Completion\+Notifications@{Do\+Send\+Completion\+Notifications}!Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}}
+\subsubsection[{Do\+Send\+Completion\+Notifications}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::\+R\+P\+C\+Interface\+::\+Do\+Send\+Completion\+Notifications (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_r_p_c_interface_ac603db61b25d64ada40000c9048d750c}
+\hypertarget{class_simulator_1_1_r_p_c_interface_a5fdacade9b8695fd3136c8ff9039eb2d}{\index{Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}!Do\+Write\+Response@{Do\+Write\+Response}}
+\index{Do\+Write\+Response@{Do\+Write\+Response}!Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}}
+\subsubsection[{Do\+Write\+Response}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::\+R\+P\+C\+Interface\+::\+Do\+Write\+Response (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_r_p_c_interface_a5fdacade9b8695fd3136c8ff9039eb2d}
+\hypertarget{class_simulator_1_1_r_p_c_interface_ac2e9b8ebf7f37e984c5409f88f29193b}{\index{Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}!Get\+Device\+Identity@{Get\+Device\+Identity}}
+\index{Get\+Device\+Identity@{Get\+Device\+Identity}!Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}}
+\subsubsection[{Get\+Device\+Identity}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+R\+P\+C\+Interface\+::\+Get\+Device\+Identity (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Device\+Identification} \&}]{id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1_r_p_c_interface_ac2e9b8ebf7f37e984c5409f88f29193b}
+
+
+Implements \hyperlink{class_simulator_1_1_i_i_o_bus_client_a8fb9e637f95dd2d4c9092461a76921df}{Simulator\+::\+I\+I\+O\+Bus\+Client}.
+
+\hypertarget{class_simulator_1_1_r_p_c_interface_abb306b9b717c83519a828a7ae5270ceb}{\index{Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}!Get\+I\+O\+Device\+Name@{Get\+I\+O\+Device\+Name}}
+\index{Get\+I\+O\+Device\+Name@{Get\+I\+O\+Device\+Name}!Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}}
+\subsubsection[{Get\+I\+O\+Device\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Simulator\+::\+R\+P\+C\+Interface\+::\+Get\+I\+O\+Device\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_r_p_c_interface_abb306b9b717c83519a828a7ae5270ceb}
+
+
+Implements \hyperlink{class_simulator_1_1_i_i_o_bus_client_aca857813bebf8a75b9a0b53097547755}{Simulator\+::\+I\+I\+O\+Bus\+Client}.
+
+\hypertarget{class_simulator_1_1_r_p_c_interface_ab86a5172694b00af4c51c01fc83dd296}{\index{Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}!On\+Read\+Request\+Received@{On\+Read\+Request\+Received}}
+\index{On\+Read\+Request\+Received@{On\+Read\+Request\+Received}!Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}}
+\subsubsection[{On\+Read\+Request\+Received}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+R\+P\+C\+Interface\+::\+On\+Read\+Request\+Received (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Device\+I\+D}}]{from, }
+\item[{Mem\+Addr}]{address, }
+\item[{Mem\+Size}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1_r_p_c_interface_ab86a5172694b00af4c51c01fc83dd296}
+
+
+Reimplemented from \hyperlink{class_simulator_1_1_i_i_o_bus_client_afeb9155b104d868e9e6c2a3366a39b3e}{Simulator\+::\+I\+I\+O\+Bus\+Client}.
+
+\hypertarget{class_simulator_1_1_r_p_c_interface_ade9d048022f35e3a7a03d36f42ffab11}{\index{Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}!On\+Read\+Response\+Received@{On\+Read\+Response\+Received}}
+\index{On\+Read\+Response\+Received@{On\+Read\+Response\+Received}!Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}}
+\subsubsection[{On\+Read\+Response\+Received}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+R\+P\+C\+Interface\+::\+On\+Read\+Response\+Received (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Device\+I\+D}}]{from, }
+\item[{Mem\+Addr}]{address, }
+\item[{const {\bf I\+O\+Data} \&}]{iodata}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1_r_p_c_interface_ade9d048022f35e3a7a03d36f42ffab11}
+
+
+Reimplemented from \hyperlink{class_simulator_1_1_i_i_o_bus_client_aabdb58549281acb31be5b3f4509bb614}{Simulator\+::\+I\+I\+O\+Bus\+Client}.
+
+\hypertarget{class_simulator_1_1_r_p_c_interface_a7a8353765d3c916fbc539453c6a74ffa}{\index{Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}!On\+Write\+Request\+Received@{On\+Write\+Request\+Received}}
+\index{On\+Write\+Request\+Received@{On\+Write\+Request\+Received}!Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}}
+\subsubsection[{On\+Write\+Request\+Received}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+R\+P\+C\+Interface\+::\+On\+Write\+Request\+Received (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+Device\+I\+D}}]{from, }
+\item[{Mem\+Addr}]{address, }
+\item[{const {\bf I\+O\+Data} \&}]{iodata}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1_r_p_c_interface_a7a8353765d3c916fbc539453c6a74ffa}
+
+
+Reimplemented from \hyperlink{class_simulator_1_1_i_i_o_bus_client_a69d1908e4e0fb82c86834ed570a7d6c9}{Simulator\+::\+I\+I\+O\+Bus\+Client}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simulator_1_1_r_p_c_interface_a10feb8760457103276db81eb4eeda849}{\index{Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}!p\+\_\+argument\+Fetch@{p\+\_\+argument\+Fetch}}
+\index{p\+\_\+argument\+Fetch@{p\+\_\+argument\+Fetch}!Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}}
+\subsubsection[{p\+\_\+argument\+Fetch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process} Simulator\+::\+R\+P\+C\+Interface\+::p\+\_\+argument\+Fetch}}\label{class_simulator_1_1_r_p_c_interface_a10feb8760457103276db81eb4eeda849}
+\hypertarget{class_simulator_1_1_r_p_c_interface_a5939893eeb8f04cc81084e2739cb5899}{\index{Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}!p\+\_\+process\+Requests@{p\+\_\+process\+Requests}}
+\index{p\+\_\+process\+Requests@{p\+\_\+process\+Requests}!Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}}
+\subsubsection[{p\+\_\+process\+Requests}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process} Simulator\+::\+R\+P\+C\+Interface\+::p\+\_\+process\+Requests}}\label{class_simulator_1_1_r_p_c_interface_a5939893eeb8f04cc81084e2739cb5899}
+\hypertarget{class_simulator_1_1_r_p_c_interface_aa494a0522ef64eea34e6f19df5fd440d}{\index{Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}!p\+\_\+queue@{p\+\_\+queue}}
+\index{p\+\_\+queue@{p\+\_\+queue}!Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}}
+\subsubsection[{p\+\_\+queue}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process} Simulator\+::\+R\+P\+C\+Interface\+::p\+\_\+queue}}\label{class_simulator_1_1_r_p_c_interface_aa494a0522ef64eea34e6f19df5fd440d}
+\hypertarget{class_simulator_1_1_r_p_c_interface_a60dbd5ba0a05311b93263be883a62c82}{\index{Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}!p\+\_\+send\+Completion\+Notifications@{p\+\_\+send\+Completion\+Notifications}}
+\index{p\+\_\+send\+Completion\+Notifications@{p\+\_\+send\+Completion\+Notifications}!Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}}
+\subsubsection[{p\+\_\+send\+Completion\+Notifications}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process} Simulator\+::\+R\+P\+C\+Interface\+::p\+\_\+send\+Completion\+Notifications}}\label{class_simulator_1_1_r_p_c_interface_a60dbd5ba0a05311b93263be883a62c82}
+\hypertarget{class_simulator_1_1_r_p_c_interface_a30ee8b18387a9c7cec8a5becedb73f01}{\index{Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}!p\+\_\+write\+Response@{p\+\_\+write\+Response}}
+\index{p\+\_\+write\+Response@{p\+\_\+write\+Response}!Simulator\+::\+R\+P\+C\+Interface@{Simulator\+::\+R\+P\+C\+Interface}}
+\subsubsection[{p\+\_\+write\+Response}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process} Simulator\+::\+R\+P\+C\+Interface\+::p\+\_\+write\+Response}}\label{class_simulator_1_1_r_p_c_interface_a30ee8b18387a9c7cec8a5becedb73f01}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/dev/\hyperlink{_r_p_c_8h}{R\+P\+C.\+h}\item 
+arch/dev/\hyperlink{_r_p_c_8cpp}{R\+P\+C.\+cpp}\end{DoxyCompactItemize}

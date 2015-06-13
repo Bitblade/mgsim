@@ -1,0 +1,169 @@
+\hypertarget{class_simulator_1_1_banked_memory}{\section{Simulator\+:\+:Banked\+Memory Class Reference}
+\label{class_simulator_1_1_banked_memory}\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+}
+
+
+{\ttfamily \#include $<$Banked\+Memory.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:Banked\+Memory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.456140cm]{class_simulator_1_1_banked_memory}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_simulator_1_1_banked_memory_1_1_bank}{Bank}
+\item 
+struct \hyperlink{struct_simulator_1_1_banked_memory_1_1_client_info}{Client\+Info}
+\item 
+struct \hyperlink{struct_simulator_1_1_banked_memory_1_1_request}{Request}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1_banked_memory_a9e39b89e5156eac508430609c0ce7431}{Banked\+Memory} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock, \hyperlink{class_config}{Config} \&config, const std\+::string \&default\+Bank\+Selector\+Type)
+\item 
+\hyperlink{class_simulator_1_1_banked_memory_a1bd4b309f7e1115bab535d2bcad7ab9a}{Banked\+Memory} (const \hyperlink{class_simulator_1_1_banked_memory}{Banked\+Memory} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1_banked_memory}{Banked\+Memory} \& \hyperlink{class_simulator_1_1_banked_memory_a2cd07d8ecd185069520454ccbb863226}{operator=} (const \hyperlink{class_simulator_1_1_banked_memory}{Banked\+Memory} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1_banked_memory_a3e6d7eb6e0c0be8c79c07f50be5bb48a}{$\sim$\+Banked\+Memory} ()
+\item 
+void \hyperlink{class_simulator_1_1_banked_memory_af7759c840b89a7ac6184a8f3de02d8df}{Cmd\+\_\+\+Info} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const override
+\item 
+void \hyperlink{class_simulator_1_1_banked_memory_a9cb8bc9b89c13e478e661b8672f79377}{Cmd\+\_\+\+Read} (std\+::ostream \&out, const std\+::vector$<$ std\+::string $>$ \&arguments) const override
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_component_model_registry}{Component\+Model\+Registry} \& \hyperlink{class_simulator_1_1_banked_memory_a5db228870f5f9d6023cc7d6b06af31b9}{m\+\_\+registry}
+\item 
+\hyperlink{class_simulator_1_1_clock}{Clock} \& \hyperlink{class_simulator_1_1_banked_memory_af6ef3e3fc49d479b727b883185ab303a}{m\+\_\+clock}
+\item 
+std\+::vector$<$ \hyperlink{struct_simulator_1_1_banked_memory_1_1_client_info}{Client\+Info} $>$ \hyperlink{class_simulator_1_1_banked_memory_a6a910047ff99466efe5dee7b7ec80543}{m\+\_\+clients}
+\item 
+\hyperlink{class_simulator_1_1_storage_trace_set}{Storage\+Trace\+Set} \hyperlink{class_simulator_1_1_banked_memory_a362c6639b1570b91f696ac5da28c735a}{m\+\_\+storages}
+\item 
+std\+::vector$<$ \hyperlink{class_simulator_1_1_banked_memory_1_1_bank}{Bank} $\ast$ $>$ \hyperlink{class_simulator_1_1_banked_memory_af0b36c6af11111fc50cbd4316d241b11}{m\+\_\+banks}
+\item 
+\hyperlink{namespace_simulator_a928f1e2101eba21bb0fe409e8c9ce573}{Cycle\+No} \hyperlink{class_simulator_1_1_banked_memory_aa9790fb4f615ddcf46b83df4a32036c8}{m\+\_\+base\+Request\+Time}
+\item 
+\hyperlink{namespace_simulator_a928f1e2101eba21bb0fe409e8c9ce573}{Cycle\+No} \hyperlink{class_simulator_1_1_banked_memory_a23e5b01a0d29de297c3137e51c1349c6}{m\+\_\+time\+Per\+Line}
+\item 
+size\+\_\+t \hyperlink{class_simulator_1_1_banked_memory_aa8f9ecc5e0ee2035c884b95795f5e0a4}{m\+\_\+line\+Size}
+\item 
+\hyperlink{class_simulator_1_1_i_bank_selector}{I\+Bank\+Selector} $\ast$ \hyperlink{class_simulator_1_1_banked_memory_a4f9e131866f9b27a8b1c628fb3f98427}{m\+\_\+selector}
+\item 
+uint64\+\_\+t \hyperlink{class_simulator_1_1_banked_memory_a1c2168b2983e4b756a473d1953b8b6a3}{m\+\_\+nreads}
+\item 
+uint64\+\_\+t \hyperlink{class_simulator_1_1_banked_memory_a92a71a7aaee6d7d0e6dedba3b3264064}{m\+\_\+nread\+\_\+bytes}
+\item 
+uint64\+\_\+t \hyperlink{class_simulator_1_1_banked_memory_a55d4955b89dc77c553462c9edd8c9d55}{m\+\_\+nwrites}
+\item 
+uint64\+\_\+t \hyperlink{class_simulator_1_1_banked_memory_aa930c2c5581bc9f8823b940574124c9a}{m\+\_\+nwrite\+\_\+bytes}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_banked_memory_a9e39b89e5156eac508430609c0ce7431}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!Banked\+Memory@{Banked\+Memory}}
+\index{Banked\+Memory@{Banked\+Memory}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{Banked\+Memory}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Banked\+Memory\+::\+Banked\+Memory (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock, }
+\item[{{\bf Config} \&}]{config, }
+\item[{const std\+::string \&}]{default\+Bank\+Selector\+Type}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_banked_memory_a9e39b89e5156eac508430609c0ce7431}
+\hypertarget{class_simulator_1_1_banked_memory_a1bd4b309f7e1115bab535d2bcad7ab9a}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!Banked\+Memory@{Banked\+Memory}}
+\index{Banked\+Memory@{Banked\+Memory}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{Banked\+Memory}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Banked\+Memory\+::\+Banked\+Memory (
+\begin{DoxyParamCaption}
+\item[{const {\bf Banked\+Memory} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_banked_memory_a1bd4b309f7e1115bab535d2bcad7ab9a}
+\hypertarget{class_simulator_1_1_banked_memory_a3e6d7eb6e0c0be8c79c07f50be5bb48a}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!````~Banked\+Memory@{$\sim$\+Banked\+Memory}}
+\index{````~Banked\+Memory@{$\sim$\+Banked\+Memory}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{$\sim$\+Banked\+Memory}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Banked\+Memory\+::$\sim$\+Banked\+Memory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1_banked_memory_a3e6d7eb6e0c0be8c79c07f50be5bb48a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_banked_memory_af7759c840b89a7ac6184a8f3de02d8df}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}}
+\index{Cmd\+\_\+\+Info@{Cmd\+\_\+\+Info}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{Cmd\+\_\+\+Info}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Banked\+Memory\+::\+Cmd\+\_\+\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}}}\label{class_simulator_1_1_banked_memory_af7759c840b89a7ac6184a8f3de02d8df}
+\hypertarget{class_simulator_1_1_banked_memory_a9cb8bc9b89c13e478e661b8672f79377}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}}
+\index{Cmd\+\_\+\+Read@{Cmd\+\_\+\+Read}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{Cmd\+\_\+\+Read}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::\+Banked\+Memory\+::\+Cmd\+\_\+\+Read (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const std\+::vector$<$ std\+::string $>$ \&}]{arguments}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}}}\label{class_simulator_1_1_banked_memory_a9cb8bc9b89c13e478e661b8672f79377}
+\hypertarget{class_simulator_1_1_banked_memory_a2cd07d8ecd185069520454ccbb863226}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!operator=@{operator=}}
+\index{operator=@{operator=}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Banked\+Memory}\& Simulator\+::\+Banked\+Memory\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Banked\+Memory} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}}\label{class_simulator_1_1_banked_memory_a2cd07d8ecd185069520454ccbb863226}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simulator_1_1_banked_memory_af0b36c6af11111fc50cbd4316d241b11}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!m\+\_\+banks@{m\+\_\+banks}}
+\index{m\+\_\+banks@{m\+\_\+banks}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{m\+\_\+banks}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Bank}$\ast$$>$ Simulator\+::\+Banked\+Memory\+::m\+\_\+banks\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_banked_memory_af0b36c6af11111fc50cbd4316d241b11}
+\hypertarget{class_simulator_1_1_banked_memory_aa9790fb4f615ddcf46b83df4a32036c8}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!m\+\_\+base\+Request\+Time@{m\+\_\+base\+Request\+Time}}
+\index{m\+\_\+base\+Request\+Time@{m\+\_\+base\+Request\+Time}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{m\+\_\+base\+Request\+Time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cycle\+No} Simulator\+::\+Banked\+Memory\+::m\+\_\+base\+Request\+Time\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_banked_memory_aa9790fb4f615ddcf46b83df4a32036c8}
+\hypertarget{class_simulator_1_1_banked_memory_a6a910047ff99466efe5dee7b7ec80543}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!m\+\_\+clients@{m\+\_\+clients}}
+\index{m\+\_\+clients@{m\+\_\+clients}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{m\+\_\+clients}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Client\+Info}$>$ Simulator\+::\+Banked\+Memory\+::m\+\_\+clients\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_banked_memory_a6a910047ff99466efe5dee7b7ec80543}
+\hypertarget{class_simulator_1_1_banked_memory_af6ef3e3fc49d479b727b883185ab303a}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!m\+\_\+clock@{m\+\_\+clock}}
+\index{m\+\_\+clock@{m\+\_\+clock}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{m\+\_\+clock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Clock}\& Simulator\+::\+Banked\+Memory\+::m\+\_\+clock\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_banked_memory_af6ef3e3fc49d479b727b883185ab303a}
+\hypertarget{class_simulator_1_1_banked_memory_aa8f9ecc5e0ee2035c884b95795f5e0a4}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!m\+\_\+line\+Size@{m\+\_\+line\+Size}}
+\index{m\+\_\+line\+Size@{m\+\_\+line\+Size}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{m\+\_\+line\+Size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Simulator\+::\+Banked\+Memory\+::m\+\_\+line\+Size\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_banked_memory_aa8f9ecc5e0ee2035c884b95795f5e0a4}
+\hypertarget{class_simulator_1_1_banked_memory_a92a71a7aaee6d7d0e6dedba3b3264064}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!m\+\_\+nread\+\_\+bytes@{m\+\_\+nread\+\_\+bytes}}
+\index{m\+\_\+nread\+\_\+bytes@{m\+\_\+nread\+\_\+bytes}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{m\+\_\+nread\+\_\+bytes}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Simulator\+::\+Banked\+Memory\+::m\+\_\+nread\+\_\+bytes\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_banked_memory_a92a71a7aaee6d7d0e6dedba3b3264064}
+\hypertarget{class_simulator_1_1_banked_memory_a1c2168b2983e4b756a473d1953b8b6a3}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!m\+\_\+nreads@{m\+\_\+nreads}}
+\index{m\+\_\+nreads@{m\+\_\+nreads}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{m\+\_\+nreads}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Simulator\+::\+Banked\+Memory\+::m\+\_\+nreads\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_banked_memory_a1c2168b2983e4b756a473d1953b8b6a3}
+\hypertarget{class_simulator_1_1_banked_memory_aa930c2c5581bc9f8823b940574124c9a}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!m\+\_\+nwrite\+\_\+bytes@{m\+\_\+nwrite\+\_\+bytes}}
+\index{m\+\_\+nwrite\+\_\+bytes@{m\+\_\+nwrite\+\_\+bytes}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{m\+\_\+nwrite\+\_\+bytes}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Simulator\+::\+Banked\+Memory\+::m\+\_\+nwrite\+\_\+bytes\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_banked_memory_aa930c2c5581bc9f8823b940574124c9a}
+\hypertarget{class_simulator_1_1_banked_memory_a55d4955b89dc77c553462c9edd8c9d55}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!m\+\_\+nwrites@{m\+\_\+nwrites}}
+\index{m\+\_\+nwrites@{m\+\_\+nwrites}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{m\+\_\+nwrites}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Simulator\+::\+Banked\+Memory\+::m\+\_\+nwrites\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_banked_memory_a55d4955b89dc77c553462c9edd8c9d55}
+\hypertarget{class_simulator_1_1_banked_memory_a5db228870f5f9d6023cc7d6b06af31b9}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!m\+\_\+registry@{m\+\_\+registry}}
+\index{m\+\_\+registry@{m\+\_\+registry}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{m\+\_\+registry}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component\+Model\+Registry}\& Simulator\+::\+Banked\+Memory\+::m\+\_\+registry\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_banked_memory_a5db228870f5f9d6023cc7d6b06af31b9}
+\hypertarget{class_simulator_1_1_banked_memory_a4f9e131866f9b27a8b1c628fb3f98427}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!m\+\_\+selector@{m\+\_\+selector}}
+\index{m\+\_\+selector@{m\+\_\+selector}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{m\+\_\+selector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+Bank\+Selector}$\ast$ Simulator\+::\+Banked\+Memory\+::m\+\_\+selector\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_banked_memory_a4f9e131866f9b27a8b1c628fb3f98427}
+\hypertarget{class_simulator_1_1_banked_memory_a362c6639b1570b91f696ac5da28c735a}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!m\+\_\+storages@{m\+\_\+storages}}
+\index{m\+\_\+storages@{m\+\_\+storages}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{m\+\_\+storages}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Storage\+Trace\+Set} Simulator\+::\+Banked\+Memory\+::m\+\_\+storages\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_banked_memory_a362c6639b1570b91f696ac5da28c735a}
+\hypertarget{class_simulator_1_1_banked_memory_a23e5b01a0d29de297c3137e51c1349c6}{\index{Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}!m\+\_\+time\+Per\+Line@{m\+\_\+time\+Per\+Line}}
+\index{m\+\_\+time\+Per\+Line@{m\+\_\+time\+Per\+Line}!Simulator\+::\+Banked\+Memory@{Simulator\+::\+Banked\+Memory}}
+\subsubsection[{m\+\_\+time\+Per\+Line}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cycle\+No} Simulator\+::\+Banked\+Memory\+::m\+\_\+time\+Per\+Line\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_banked_memory_a23e5b01a0d29de297c3137e51c1349c6}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/mem/\hyperlink{_banked_memory_8h}{Banked\+Memory.\+h}\item 
+arch/mem/\hyperlink{_banked_memory_8cpp}{Banked\+Memory.\+cpp}\end{DoxyCompactItemize}

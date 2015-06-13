@@ -1,0 +1,87 @@
+\hypertarget{class_simulator_1_1drisc_1_1_debug_channel}{\section{Simulator\+:\+:drisc\+:\+:Debug\+Channel Class Reference}
+\label{class_simulator_1_1drisc_1_1_debug_channel}\index{Simulator\+::drisc\+::\+Debug\+Channel@{Simulator\+::drisc\+::\+Debug\+Channel}}
+}
+
+
+{\ttfamily \#include $<$Debug\+Channel.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:drisc\+:\+:Debug\+Channel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_simulator_1_1drisc_1_1_debug_channel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_debug_channel_aaeca18839cded092f43be7dce8c5112d}{Debug\+Channel} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent, std\+::ostream \&output)
+\item 
+size\+\_\+t \hyperlink{class_simulator_1_1drisc_1_1_debug_channel_abd636bf58c008ee82af796b6a0091801}{Get\+Size} () const 
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1drisc_1_1_debug_channel_af772c686411b277669040f139d684fb7}{Read} (Mem\+Addr address, void $\ast$data, Mem\+Size size, \hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} fid, \hyperlink{namespace_simulator_a483cc4ecee1736e895054617672cded5}{T\+I\+D} tid, const \hyperlink{struct_simulator_1_1_reg_addr}{Reg\+Addr} \&writeback)
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1drisc_1_1_debug_channel_aea26d20ae29dcf23154ef4072a108bfe}{Write} (Mem\+Addr address, const void $\ast$data, Mem\+Size size, \hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} fid, \hyperlink{namespace_simulator_a483cc4ecee1736e895054617672cded5}{T\+I\+D} tid)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_debug_channel_aaeca18839cded092f43be7dce8c5112d}{\index{Simulator\+::drisc\+::\+Debug\+Channel@{Simulator\+::drisc\+::\+Debug\+Channel}!Debug\+Channel@{Debug\+Channel}}
+\index{Debug\+Channel@{Debug\+Channel}!Simulator\+::drisc\+::\+Debug\+Channel@{Simulator\+::drisc\+::\+Debug\+Channel}}
+\subsubsection[{Debug\+Channel}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+Debug\+Channel\+::\+Debug\+Channel (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent, }
+\item[{std\+::ostream \&}]{output}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_debug_channel_aaeca18839cded092f43be7dce8c5112d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_debug_channel_abd636bf58c008ee82af796b6a0091801}{\index{Simulator\+::drisc\+::\+Debug\+Channel@{Simulator\+::drisc\+::\+Debug\+Channel}!Get\+Size@{Get\+Size}}
+\index{Get\+Size@{Get\+Size}!Simulator\+::drisc\+::\+Debug\+Channel@{Simulator\+::drisc\+::\+Debug\+Channel}}
+\subsubsection[{Get\+Size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Simulator\+::drisc\+::\+Debug\+Channel\+::\+Get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1drisc_1_1_debug_channel_abd636bf58c008ee82af796b6a0091801}
+
+
+Implements \hyperlink{class_simulator_1_1drisc_1_1_m_m_i_o_component_ad8f1a93b445f287895949bfe52972346}{Simulator\+::drisc\+::\+M\+M\+I\+O\+Component}.
+
+\hypertarget{class_simulator_1_1drisc_1_1_debug_channel_af772c686411b277669040f139d684fb7}{\index{Simulator\+::drisc\+::\+Debug\+Channel@{Simulator\+::drisc\+::\+Debug\+Channel}!Read@{Read}}
+\index{Read@{Read}!Simulator\+::drisc\+::\+Debug\+Channel@{Simulator\+::drisc\+::\+Debug\+Channel}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::drisc\+::\+Debug\+Channel\+::\+Read (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{void $\ast$}]{data, }
+\item[{Mem\+Size}]{size, }
+\item[{{\bf L\+F\+I\+D}}]{fid, }
+\item[{{\bf T\+I\+D}}]{tid, }
+\item[{const {\bf Reg\+Addr} \&}]{writeback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1drisc_1_1_debug_channel_af772c686411b277669040f139d684fb7}
+
+
+Implements \hyperlink{class_simulator_1_1drisc_1_1_m_m_i_o_component_af07e2f3e1280d8d56cab7a59815e7eeb}{Simulator\+::drisc\+::\+M\+M\+I\+O\+Component}.
+
+\hypertarget{class_simulator_1_1drisc_1_1_debug_channel_aea26d20ae29dcf23154ef4072a108bfe}{\index{Simulator\+::drisc\+::\+Debug\+Channel@{Simulator\+::drisc\+::\+Debug\+Channel}!Write@{Write}}
+\index{Write@{Write}!Simulator\+::drisc\+::\+Debug\+Channel@{Simulator\+::drisc\+::\+Debug\+Channel}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::drisc\+::\+Debug\+Channel\+::\+Write (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{const void $\ast$}]{data, }
+\item[{Mem\+Size}]{size, }
+\item[{{\bf L\+F\+I\+D}}]{fid, }
+\item[{{\bf T\+I\+D}}]{tid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1drisc_1_1_debug_channel_aea26d20ae29dcf23154ef4072a108bfe}
+
+
+Implements \hyperlink{class_simulator_1_1drisc_1_1_m_m_i_o_component_aab3662058e7a00109b122a1460188a8b}{Simulator\+::drisc\+::\+M\+M\+I\+O\+Component}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/drisc/mmu/\hyperlink{_debug_channel_8h}{Debug\+Channel.\+h}\item 
+arch/drisc/mmu/\hyperlink{_debug_channel_8cpp}{Debug\+Channel.\+cpp}\end{DoxyCompactItemize}

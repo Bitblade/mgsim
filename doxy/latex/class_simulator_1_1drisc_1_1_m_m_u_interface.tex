@@ -1,0 +1,86 @@
+\hypertarget{class_simulator_1_1drisc_1_1_m_m_u_interface}{\section{Simulator\+:\+:drisc\+:\+:M\+M\+U\+Interface Class Reference}
+\label{class_simulator_1_1drisc_1_1_m_m_u_interface}\index{Simulator\+::drisc\+::\+M\+M\+U\+Interface@{Simulator\+::drisc\+::\+M\+M\+U\+Interface}}
+}
+
+
+{\ttfamily \#include $<$M\+M\+U\+Interface.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:drisc\+:\+:M\+M\+U\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_simulator_1_1drisc_1_1_m_m_u_interface}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simulator_1_1drisc_1_1_m_m_u_interface_ad681ed5e952e007a18c6abeec1dc56df}{M\+M\+U\+Interface} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent)
+\item 
+size\+\_\+t \hyperlink{class_simulator_1_1drisc_1_1_m_m_u_interface_a6f8591d1c93f15664788356e14a53d1d}{Get\+Size} () const 
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1drisc_1_1_m_m_u_interface_ac5a73e4db3acde7054a14cb93fc4a5c5}{Read} (Mem\+Addr address, void $\ast$data, Mem\+Size size, \hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} fid, \hyperlink{namespace_simulator_a483cc4ecee1736e895054617672cded5}{T\+I\+D} tid, const \hyperlink{struct_simulator_1_1_reg_addr}{Reg\+Addr} \&writeback)
+\item 
+\hyperlink{namespace_simulator_a4b6b5616e7236c0c131516a441776805}{Result} \hyperlink{class_simulator_1_1drisc_1_1_m_m_u_interface_a8a85bcdf081e404d1803c12602e98859}{Write} (Mem\+Addr address, const void $\ast$data, Mem\+Size size, \hyperlink{namespace_simulator_aaccbc706b2d6c99085f52f6dfc2333e4}{L\+F\+I\+D} fid, \hyperlink{namespace_simulator_a483cc4ecee1736e895054617672cded5}{T\+I\+D} tid)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_m_m_u_interface_ad681ed5e952e007a18c6abeec1dc56df}{\index{Simulator\+::drisc\+::\+M\+M\+U\+Interface@{Simulator\+::drisc\+::\+M\+M\+U\+Interface}!M\+M\+U\+Interface@{M\+M\+U\+Interface}}
+\index{M\+M\+U\+Interface@{M\+M\+U\+Interface}!Simulator\+::drisc\+::\+M\+M\+U\+Interface@{Simulator\+::drisc\+::\+M\+M\+U\+Interface}}
+\subsubsection[{M\+M\+U\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::drisc\+::\+M\+M\+U\+Interface\+::\+M\+M\+U\+Interface (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_1_1drisc_1_1_m_m_u_interface_ad681ed5e952e007a18c6abeec1dc56df}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1drisc_1_1_m_m_u_interface_a6f8591d1c93f15664788356e14a53d1d}{\index{Simulator\+::drisc\+::\+M\+M\+U\+Interface@{Simulator\+::drisc\+::\+M\+M\+U\+Interface}!Get\+Size@{Get\+Size}}
+\index{Get\+Size@{Get\+Size}!Simulator\+::drisc\+::\+M\+M\+U\+Interface@{Simulator\+::drisc\+::\+M\+M\+U\+Interface}}
+\subsubsection[{Get\+Size}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Simulator\+::drisc\+::\+M\+M\+U\+Interface\+::\+Get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1drisc_1_1_m_m_u_interface_a6f8591d1c93f15664788356e14a53d1d}
+
+
+Implements \hyperlink{class_simulator_1_1drisc_1_1_m_m_i_o_component_ad8f1a93b445f287895949bfe52972346}{Simulator\+::drisc\+::\+M\+M\+I\+O\+Component}.
+
+\hypertarget{class_simulator_1_1drisc_1_1_m_m_u_interface_ac5a73e4db3acde7054a14cb93fc4a5c5}{\index{Simulator\+::drisc\+::\+M\+M\+U\+Interface@{Simulator\+::drisc\+::\+M\+M\+U\+Interface}!Read@{Read}}
+\index{Read@{Read}!Simulator\+::drisc\+::\+M\+M\+U\+Interface@{Simulator\+::drisc\+::\+M\+M\+U\+Interface}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::drisc\+::\+M\+M\+U\+Interface\+::\+Read (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{void $\ast$}]{data, }
+\item[{Mem\+Size}]{size, }
+\item[{{\bf L\+F\+I\+D}}]{fid, }
+\item[{{\bf T\+I\+D}}]{tid, }
+\item[{const {\bf Reg\+Addr} \&}]{writeback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1drisc_1_1_m_m_u_interface_ac5a73e4db3acde7054a14cb93fc4a5c5}
+
+
+Implements \hyperlink{class_simulator_1_1drisc_1_1_m_m_i_o_component_af07e2f3e1280d8d56cab7a59815e7eeb}{Simulator\+::drisc\+::\+M\+M\+I\+O\+Component}.
+
+\hypertarget{class_simulator_1_1drisc_1_1_m_m_u_interface_a8a85bcdf081e404d1803c12602e98859}{\index{Simulator\+::drisc\+::\+M\+M\+U\+Interface@{Simulator\+::drisc\+::\+M\+M\+U\+Interface}!Write@{Write}}
+\index{Write@{Write}!Simulator\+::drisc\+::\+M\+M\+U\+Interface@{Simulator\+::drisc\+::\+M\+M\+U\+Interface}}
+\subsubsection[{Write}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Simulator\+::drisc\+::\+M\+M\+U\+Interface\+::\+Write (
+\begin{DoxyParamCaption}
+\item[{Mem\+Addr}]{address, }
+\item[{const void $\ast$}]{data, }
+\item[{Mem\+Size}]{size, }
+\item[{{\bf L\+F\+I\+D}}]{fid, }
+\item[{{\bf T\+I\+D}}]{tid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_simulator_1_1drisc_1_1_m_m_u_interface_a8a85bcdf081e404d1803c12602e98859}
+
+
+Implements \hyperlink{class_simulator_1_1drisc_1_1_m_m_i_o_component_aab3662058e7a00109b122a1460188a8b}{Simulator\+::drisc\+::\+M\+M\+I\+O\+Component}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+arch/drisc/mmu/\hyperlink{_m_m_u_interface_8h}{M\+M\+U\+Interface.\+h}\item 
+arch/drisc/mmu/\hyperlink{_m_m_u_interface_8cpp}{M\+M\+U\+Interface.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,902 @@
+.\" Man page generated from reStructuredText.
+.
+.TH MGSIMDEV-RPC 7 "August 2012" "3.4.90-5937" ""
+.SH NAME
+mgsimdev-rpc \- Host-simulation RPC interface in MGSim
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.SH DESCRIPTION
+.sp
+The RPC pseudo\-device provides access to the filesystem of the
+simulation environment to programs running on the platform.
+.sp
+An I/O device of this type can be specified in MGSim using the device
+type \fBRPC\fP\&.
+.SH CONFIGURATION
+.INDENT 0.0
+.TP
+.B \fBRPCBufferSize1\fP, \fBRPCBufferSize2\fP
+Maximum size for the 1st and 2nd RPC procedure arguments fetched
+from shared memory.
+.TP
+.B \fBRPCIncomingQueueSize\fP, \fBRPCReadyQueueSize\fP, \fBRPCCompletedQueueSize\fP, \fBRPCNotificationQueueSize\fP
+Size of the request queues.
+.UNINDENT
+.SH PROTOCOL
+.sp
+The RPC device acts as a service provider: software running on the
+platform issues \fIrequests\fP to the RPC interface by writing to its
+control words; the requests are processed by the RPC device, and their
+completion is eventually \fIsignalled\fP back to the originating core(s).
+.sp
+The RPC device is pipelined.
+.sp
+The input to the pipeline is a tuple:
+.INDENT 0.0
+.IP \(bu 2
+device ID for DCA (ID of requestor); channel ID for completion notification;
+.IP \(bu 2
+service procedure ID (read/open/write/seek...);
+.IP \(bu 2
+completion writeback value (payload in the completion notification);
+.IP \(bu 2
+address in memory where the arguments are to be fetched from;
+.IP \(bu 2
+memory size for the argument data;
+.IP \(bu 2
+address in memory where the results are to be stored.
+.UNINDENT
+.sp
+The completion writeback and memory addresses are passive registers;
+the request is issued with their current value when control word 0 is
+written to.
+.sp
+Internally; for each request issued:
+.INDENT 0.0
+.IP 1. 3
+the argument data is fetched from the I/O core\(aqs memory via DCA;
+.IP 2. 3
+the request is served;
+.IP 3. 3
+the results are sent back to memory via DCA;
+.IP 4. 3
+the notification is sent back to signal completion.
+.UNINDENT
+.sp
+The device maintains the following queues:
+.INDENT 0.0
+.IP \(bu 2
+incoming queue: commands issued via the device interface;
+.IP \(bu 2
+ready queue: commands after the argument data has been fetched;
+.IP \(bu 2
+completed queue: results that need to be communicated back to memory;
+.IP \(bu 2
+notification queue: for completion notifications.
+.UNINDENT
+.SS Supported requests
+.sp
+The procedure IDs are listed as symbolic constants in the file
+\fBRPCServiceDatabase.h\fP shipped together with MGSim\(aqs source code.
+.sp
+The following are currently in use:
+.TS
+center;
+|l|l|l|l|l|l|l|l|.
+_
+T{
+Procedure ID
+T}	T{
+Description
+T}	T{
+Arg. 1
+T}	T{
+Arg. 2
+T}	T{
+Arg. 3
+T}	T{
+Arg. 4
+T}	T{
+Res. 1
+T}	T{
+Res. 2
+T}
+_
+T{
+\fBRPC_nop\fP
+T}	T{
+"Do nothing", used for testing
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_open\fP
+T}	T{
+Open file
+T}	T{
+path
+T}	T{
+N/A
+T}	T{
+flags
+T}	T{
+mode
+T}	T{
+vfd+errno
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_read\fP
+T}	T{
+Read from file
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+vfd
+T}	T{
+size (bytes)
+T}	T{
+status+errno
+T}	T{
+read data
+T}
+_
+T{
+\fBRPC_pread\fP
+T}	T{
+Read from file at offset
+T}	T{
+offset
+T}	T{
+N/A
+T}	T{
+vfd
+T}	T{
+size (bytes)
+T}	T{
+status+errno
+T}	T{
+read data
+T}
+_
+T{
+\fBRPC_write\fP
+T}	T{
+Write to file
+T}	T{
+data to write
+T}	T{
+N/A
+T}	T{
+vfd
+T}	T{
+size (bytes)
+T}	T{
+status+errno
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_pwrite\fP
+T}	T{
+Write to file at offset
+T}	T{
+offset
+T}	T{
+data to write
+T}	T{
+vfd
+T}	T{
+size (bytes)
+T}	T{
+status+errno
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_lseek\fP
+T}	T{
+Seek in file
+T}	T{
+offset (low 32 bits, then high 32 bits)
+T}	T{
+N/A
+T}	T{
+vfd
+T}	T{
+whence
+T}	T{
+status+errno
+T}	T{
+new offset
+T}
+_
+T{
+\fBRPC_close\fP
+T}	T{
+Close file
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+vfd
+T}	T{
+N/A
+T}	T{
+status+errno
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_sync\fP
+T}	T{
+Synchronize storage
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_fsync\fP
+T}	T{
+Synchronize storage for file
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+vfd
+T}	T{
+N/A
+T}	T{
+status+errno
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_dup\fP
+T}	T{
+Duplicate vfd.
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+vfd
+T}	T{
+N/A
+T}	T{
+new vfd+errno
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_dup2\fP
+T}	T{
+Duplicate vfd.
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+vfd
+T}	T{
+desired vfd
+T}	T{
+vfd/status+errno
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_getdtablesize\fP
+T}	T{
+Get max nr. of fds.
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+dtable size
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_link\fP
+T}	T{
+Hard link file
+T}	T{
+source path
+T}	T{
+dest. path
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+status+errno
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_unlink\fP
+T}	T{
+Remove link / delete
+T}	T{
+path
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+status+errno
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_rename\fP
+T}	T{
+Rename file/dir
+T}	T{
+src path
+T}	T{
+dst path
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+status+errno
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_mkdir\fP
+T}	T{
+Create directory
+T}	T{
+path
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+status+errno
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_rmdir\fP
+T}	T{
+Remove directory
+T}	T{
+path
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+status+errno
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_fstat\fP
+T}	T{
+Stat file by fd
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+vfd
+T}	T{
+N/A
+T}	T{
+status+errno
+T}	T{
+struct vstat
+T}
+_
+T{
+\fBRPC_stat\fP / \fBRPC_lstat\fP
+T}	T{
+Stat file
+T}	T{
+path
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+status+errno
+T}	T{
+struct vstat
+T}
+_
+T{
+\fBRPC_opendir\fP
+T}	T{
+Open directory
+T}	T{
+path
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+vdd+errno
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_fdopendir\fP
+T}	T{
+Open directory by fd
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+vfd
+T}	T{
+N/A
+T}	T{
+vdd+errno
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_readdir\fP
+T}	T{
+Read directory entry
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+vdd
+T}	T{
+N/A
+T}	T{
+status+errno
+T}	T{
+struct vdirent
+T}
+_
+T{
+\fBRPC_rewinddir\fP
+T}	T{
+Rewind directory
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+vdd
+T}	T{
+N/A
+T}	T{
+errno
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_telldir\fP
+T}	T{
+Tell position in directory
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+vdd
+T}	T{
+N/A
+T}	T{
+pos+errno
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_seekdir\fP
+T}	T{
+Seek in directory
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+vdd
+T}	T{
+offset
+T}	T{
+errno
+T}	T{
+N/A
+T}
+_
+T{
+\fBRPC_closedir\fP
+T}	T{
+Close directory
+T}	T{
+N/A
+T}	T{
+N/A
+T}	T{
+vdd
+T}	T{
+N/A
+T}	T{
+status+errno
+T}	T{
+N/A
+T}
+_
+.TE
+.sp
+The status+errno field reported in the 1st response block always follows the following format:
+.INDENT 0.0
+.IP \(bu 2
+bytes 0\-3: low 32 bits of the procedure\(aqs return value
+.IP \(bu 2
+bytes 4\-7: high 32 bits of the procedure\(aqs return value
+.IP \(bu 2
+butes 8\-12: errno value
+.UNINDENT
+.sp
+The \fBstruct vstat\fP returned by the \fBRPC_*stat\fP request responses,
+as well as the \fBstruct vdirent\fP returned by the \fBRPC_readdir\fP
+request responses, are also defined in \fBRPCServiceDatabase.h\fP\&.
+.SH INTERFACE
+.sp
+The RPC device presents itself to the I/O bus as a single device. It
+must be accessed using 32\-bit I/O operations. Its device address space
+is as follows:
+.TS
+center;
+|l|l|l|.
+_
+T{
+Word
+T}	T{
+Mode
+T}	T{
+Description
+T}
+_
+T{
+0
+T}	T{
+R
+T}	T{
+0 = idle; 1 = busy/queuing
+T}
+_
+T{
+0
+T}	T{
+W
+T}	T{
+start queuing current command
+T}
+_
+T{
+1
+T}	T{
+R/W
+T}	T{
+Device ID for DCA (bits 0\-15), notification channel (bits 16\-31)
+T}
+_
+T{
+2
+T}	T{
+R/W
+T}	T{
+Service procedure ID
+T}
+_
+T{
+4
+T}	T{
+R/W
+T}	T{
+Low 32 bits of the completion payload value
+T}
+_
+T{
+5
+T}	T{
+R/W
+T}	T{
+High 32 bits of the completion payload value
+T}
+_
+T{
+6
+T}	T{
+R/W
+T}	T{
+Size in bytes of the 1st procedure argument
+T}
+_
+T{
+7
+T}	T{
+R/W
+T}	T{
+Size in bytes of the 2nd procedure argument
+T}
+_
+T{
+8
+T}	T{
+R/W
+T}	T{
+Low 32 bits of the 1st procedure argument base address
+T}
+_
+T{
+9
+T}	T{
+R/W
+T}	T{
+High 32 bits of the 1st procedure argument base address
+T}
+_
+T{
+10
+T}	T{
+R/W
+T}	T{
+Low 32 bits of the 2nd procedure argument base address
+T}
+_
+T{
+11
+T}	T{
+R/W
+T}	T{
+High 32 bits of the 2nd procedure argument base address
+T}
+_
+T{
+12
+T}	T{
+R/W
+T}	T{
+3rd argument (passed by value)
+T}
+_
+T{
+13
+T}	T{
+R/W
+T}	T{
+4th argument (passed by value)
+T}
+_
+T{
+14
+T}	T{
+R/W
+T}	T{
+Low 32 bits of the address where to write the 1st result value
+T}
+_
+T{
+15
+T}	T{
+R/W
+T}	T{
+High 32 bits of the address where to write the 1st result value
+T}
+_
+T{
+16
+T}	T{
+R/W
+T}	T{
+Low 32 bits of the address where to write the 2nd result value
+T}
+_
+T{
+17
+T}	T{
+R/W
+T}	T{
+High 32 bits of the address where to write the 2nd result value
+T}
+_
+T{
+64
+T}	T{
+R
+T}	T{
+Maximum size for the 1st argument
+T}
+_
+T{
+65
+T}	T{
+R
+T}	T{
+Maximum size for the 2nd argument
+T}
+_
+T{
+66
+T}	T{
+R
+T}	T{
+Maximum size for the 1st result value
+T}
+_
+T{
+67
+T}	T{
+R
+T}	T{
+Maximum size for the 2nd result value
+T}
+_
+T{
+68
+T}	T{
+R
+T}	T{
+Current number of requests in the incoming queue
+T}
+_
+T{
+69
+T}	T{
+R
+T}	T{
+Capacity of the incoming queue
+T}
+_
+T{
+70
+T}	T{
+R
+T}	T{
+Current number of requests in the ready queue
+T}
+_
+T{
+71
+T}	T{
+R
+T}	T{
+Capacity of the ready queue
+T}
+_
+T{
+72
+T}	T{
+R
+T}	T{
+Current number of responses in the completed queue
+T}
+_
+T{
+73
+T}	T{
+R
+T}	T{
+Capacity of the completed queue
+T}
+_
+T{
+74
+T}	T{
+R
+T}	T{
+Current number of responses in the notification queue
+T}
+_
+T{
+75
+T}	T{
+R
+T}	T{
+Capacity of the notification queue
+T}
+_
+.TE
+.SH SEE ALSO
+.sp
+mgsim(1), mgsimdoc(7)
+.SH BUGS
+.sp
+Report bugs & suggest improvements to \fI\%microgrids@svp\-home.org\fP\&.
+.SH AUTHOR
+MGSim was created by Mike Lankamp. MGSim is now under
+stewardship of the Microgrid project. This manual page was written
+by Raphael 'kena' Poss.
+.SH COPYRIGHT
+Copyright (C) 2008-2012 the Microgrid project.
+.\" Generated by docutils manpage writer.
+.

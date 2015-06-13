@@ -1,0 +1,146 @@
+\hypertarget{class_simulator_1_1_linked_list}{\section{Simulator\+:\+:Linked\+List$<$ T, L, N $>$ Class Template Reference}
+\label{class_simulator_1_1_linked_list}\index{Simulator\+::\+Linked\+List$<$ T, L, N $>$@{Simulator\+::\+Linked\+List$<$ T, L, N $>$}}
+}
+
+
+{\ttfamily \#include $<$storage.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:Linked\+List$<$ T, L, N $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_simulator_1_1_linked_list}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_simulator_1_1_linked_list_1_1const__iterator}{const\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_simulator_1_1_linked_list_1_1const__iterator}{const\+\_\+iterator} \hyperlink{class_simulator_1_1_linked_list_a04e58fe78575a003af98e260074dc1c2}{begin} () const 
+\item 
+\hyperlink{struct_simulator_1_1_linked_list_1_1const__iterator}{const\+\_\+iterator} \hyperlink{class_simulator_1_1_linked_list_a1db0ff2837096157dd2f4760f56403f1}{end} () const 
+\item 
+bool \hyperlink{class_simulator_1_1_linked_list_af99b6273ee92fea4893b3ec1489da1b4}{Empty} () const 
+\begin{DoxyCompactList}\small\item\em Is the list empty? \end{DoxyCompactList}\item 
+bool \hyperlink{class_simulator_1_1_linked_list_a028131ae012a077c7f4254798fa618d8}{Singular} () const 
+\begin{DoxyCompactList}\small\item\em Does the list contain only one item? \end{DoxyCompactList}\item 
+const T \& \hyperlink{class_simulator_1_1_linked_list_a72352135ae1f5d455a14bb9c61f7d8a4}{Front} () const 
+\begin{DoxyCompactList}\small\item\em Returns the front index on the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulator_1_1_linked_list_a2bb01160e996b0610c47c12a7ff3ee38}{Push} (const T \&item)
+\begin{DoxyCompactList}\small\item\em Pushes the item on the back of the list. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulator_1_1_linked_list_afa817691100ea5c8289cf8454c7cf3d2}{Append} (const T \&first, const T \&last)
+\begin{DoxyCompactList}\small\item\em Appends the passed list to this list. \end{DoxyCompactList}\item 
+void \hyperlink{class_simulator_1_1_linked_list_a0af0e0bf635d56658d463e34b61be69f}{Pop} ()
+\begin{DoxyCompactList}\small\item\em Removes the front item from this list. \end{DoxyCompactList}\item 
+\hyperlink{class_simulator_1_1_linked_list_aeaaecbd5a170121c47ed89790b5077a3}{Linked\+List} (const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name}, \hyperlink{class_simulator_1_1_object}{Object} \&parent, \hyperlink{class_simulator_1_1_clock}{Clock} \&clock, L \&table)
+\begin{DoxyCompactList}\small\item\em Construct an empty list with a sensitive component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_linked_list_aeaaecbd5a170121c47ed89790b5077a3}{\index{Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}!Linked\+List@{Linked\+List}}
+\index{Linked\+List@{Linked\+List}!Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}}
+\subsubsection[{Linked\+List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename L, T L\+::value\+\_\+type\+::$\ast$ N$>$ {\bf Simulator\+::\+Linked\+List}$<$ T, L, N $>$\+::{\bf Linked\+List} (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Object} \&}]{parent, }
+\item[{{\bf Clock} \&}]{clock, }
+\item[{L \&}]{table}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_linked_list_aeaaecbd5a170121c47ed89790b5077a3}
+
+
+Construct an empty list with a sensitive component. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_linked_list_afa817691100ea5c8289cf8454c7cf3d2}{\index{Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}!Append@{Append}}
+\index{Append@{Append}!Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}}
+\subsubsection[{Append}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename L, T L\+::value\+\_\+type\+::$\ast$ N$>$ void {\bf Simulator\+::\+Linked\+List}$<$ T, L, N $>$\+::Append (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{first, }
+\item[{const T \&}]{last}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_linked_list_afa817691100ea5c8289cf8454c7cf3d2}
+
+
+Appends the passed list to this list. 
+
+\hypertarget{class_simulator_1_1_linked_list_a04e58fe78575a003af98e260074dc1c2}{\index{Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}!begin@{begin}}
+\index{begin@{begin}!Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename L, T L\+::value\+\_\+type\+::$\ast$ N$>$ {\bf const\+\_\+iterator} {\bf Simulator\+::\+Linked\+List}$<$ T, L, N $>$\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_linked_list_a04e58fe78575a003af98e260074dc1c2}
+\hypertarget{class_simulator_1_1_linked_list_af99b6273ee92fea4893b3ec1489da1b4}{\index{Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}!Empty@{Empty}}
+\index{Empty@{Empty}!Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}}
+\subsubsection[{Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename L, T L\+::value\+\_\+type\+::$\ast$ N$>$ bool {\bf Simulator\+::\+Linked\+List}$<$ T, L, N $>$\+::Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_linked_list_af99b6273ee92fea4893b3ec1489da1b4}
+
+
+Is the list empty? 
+
+\hypertarget{class_simulator_1_1_linked_list_a1db0ff2837096157dd2f4760f56403f1}{\index{Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}!end@{end}}
+\index{end@{end}!Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename L, T L\+::value\+\_\+type\+::$\ast$ N$>$ {\bf const\+\_\+iterator} {\bf Simulator\+::\+Linked\+List}$<$ T, L, N $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_linked_list_a1db0ff2837096157dd2f4760f56403f1}
+\hypertarget{class_simulator_1_1_linked_list_a72352135ae1f5d455a14bb9c61f7d8a4}{\index{Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}!Front@{Front}}
+\index{Front@{Front}!Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}}
+\subsubsection[{Front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename L, T L\+::value\+\_\+type\+::$\ast$ N$>$ const T\& {\bf Simulator\+::\+Linked\+List}$<$ T, L, N $>$\+::Front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_linked_list_a72352135ae1f5d455a14bb9c61f7d8a4}
+
+
+Returns the front index on the list. 
+
+\hypertarget{class_simulator_1_1_linked_list_a0af0e0bf635d56658d463e34b61be69f}{\index{Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}!Pop@{Pop}}
+\index{Pop@{Pop}!Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}}
+\subsubsection[{Pop}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename L, T L\+::value\+\_\+type\+::$\ast$ N$>$ void {\bf Simulator\+::\+Linked\+List}$<$ T, L, N $>$\+::Pop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_linked_list_a0af0e0bf635d56658d463e34b61be69f}
+
+
+Removes the front item from this list. 
+
+\hypertarget{class_simulator_1_1_linked_list_a2bb01160e996b0610c47c12a7ff3ee38}{\index{Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}!Push@{Push}}
+\index{Push@{Push}!Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}}
+\subsubsection[{Push}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename L, T L\+::value\+\_\+type\+::$\ast$ N$>$ void {\bf Simulator\+::\+Linked\+List}$<$ T, L, N $>$\+::Push (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{item}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_linked_list_a2bb01160e996b0610c47c12a7ff3ee38}
+
+
+Pushes the item on the back of the list. 
+
+\hypertarget{class_simulator_1_1_linked_list_a028131ae012a077c7f4254798fa618d8}{\index{Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}!Singular@{Singular}}
+\index{Singular@{Singular}!Simulator\+::\+Linked\+List@{Simulator\+::\+Linked\+List}}
+\subsubsection[{Singular}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T, typename L, T L\+::value\+\_\+type\+::$\ast$ N$>$ bool {\bf Simulator\+::\+Linked\+List}$<$ T, L, N $>$\+::Singular (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_linked_list_a028131ae012a077c7f4254798fa618d8}
+
+
+Does the list contain only one item? 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{storage_8h}{storage.\+h}\end{DoxyCompactItemize}

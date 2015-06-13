@@ -1,0 +1,124 @@
+\hypertarget{class_simulator_1_1_arbitrated_port}{\section{Simulator\+:\+:Arbitrated\+Port Class Reference}
+\label{class_simulator_1_1_arbitrated_port}\index{Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}}
+}
+
+
+{\ttfamily \#include $<$ports.\+h$>$}
+
+Inheritance diagram for Simulator\+:\+:Arbitrated\+Port\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.346154cm]{class_simulator_1_1_arbitrated_port}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \hyperlink{class_simulator_1_1_arbitrated_port_a93358ad39066fe450e91648867c907ea}{Get\+Busy\+Cycles} () const 
+\item 
+std\+::string \hyperlink{class_simulator_1_1_arbitrated_port_a286527112fe9bbdb1f4468acc3efca0e}{Get\+F\+Q\+N} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_simulator_1_1_arbitrated_port_ad6c149235194bb222005db4ea0352993}{Has\+Acquired} (const \hyperlink{class_simulator_1_1_process}{Process} \&process) const 
+\item 
+const \hyperlink{class_simulator_1_1_process}{Process} $\ast$ \hyperlink{class_simulator_1_1_arbitrated_port_af666b307417955fb5ac4657986fea2ab}{Get\+Selected\+Process} () const 
+\item 
+\hyperlink{class_simulator_1_1_arbitrated_port_a1720c2c4547412047aca58dd3ec64d96}{Arbitrated\+Port} (const \hyperlink{class_simulator_1_1_object}{Object} \&object, const std\+::string \&\hyperlink{mtconf_8c_a8f8f80d37794cde9472343e4487ba3eb}{name})
+\item 
+virtual \hyperlink{class_simulator_1_1_arbitrated_port_a81321f2d8f5db456bb2f0e1710128ea1}{$\sim$\+Arbitrated\+Port} ()
+\item 
+\hyperlink{class_simulator_1_1_arbitrated_port_a717b1baf7f49444319d47556d26a8608}{Arbitrated\+Port} (const \hyperlink{class_simulator_1_1_arbitrated_port}{Arbitrated\+Port} \&)=delete
+\item 
+\hyperlink{class_simulator_1_1_arbitrated_port}{Arbitrated\+Port} \& \hyperlink{class_simulator_1_1_arbitrated_port_a5ec4bcf9c7f4dedcb220d56750219c7e}{operator=} (const \hyperlink{class_simulator_1_1_arbitrated_port}{Arbitrated\+Port} \&)=delete
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{class_simulator_1_1_process}{Process} $\ast$ \hyperlink{class_simulator_1_1_arbitrated_port_a4530ac48737b148a87a44a6641d2979b}{m\+\_\+selected}
+\item 
+uint64\+\_\+t \hyperlink{class_simulator_1_1_arbitrated_port_a3fcbb4be3ab62853713ae33f5b3ca8b3}{m\+\_\+busy\+Cycles}
+\item 
+const \hyperlink{class_simulator_1_1_object}{Object} \& \hyperlink{class_simulator_1_1_arbitrated_port_a1ad6a8b7489f7adbdf487d5e00c86c4d}{m\+\_\+object}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_simulator_1_1_arbitrated_port_a1720c2c4547412047aca58dd3ec64d96}{\index{Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}!Arbitrated\+Port@{Arbitrated\+Port}}
+\index{Arbitrated\+Port@{Arbitrated\+Port}!Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}}
+\subsubsection[{Arbitrated\+Port}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Arbitrated\+Port\+::\+Arbitrated\+Port (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object} \&}]{object, }
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_arbitrated_port_a1720c2c4547412047aca58dd3ec64d96}
+\hypertarget{class_simulator_1_1_arbitrated_port_a81321f2d8f5db456bb2f0e1710128ea1}{\index{Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}!````~Arbitrated\+Port@{$\sim$\+Arbitrated\+Port}}
+\index{````~Arbitrated\+Port@{$\sim$\+Arbitrated\+Port}!Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}}
+\subsubsection[{$\sim$\+Arbitrated\+Port}]{\setlength{\rightskip}{0pt plus 5cm}virtual Simulator\+::\+Arbitrated\+Port\+::$\sim$\+Arbitrated\+Port (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{class_simulator_1_1_arbitrated_port_a81321f2d8f5db456bb2f0e1710128ea1}
+\hypertarget{class_simulator_1_1_arbitrated_port_a717b1baf7f49444319d47556d26a8608}{\index{Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}!Arbitrated\+Port@{Arbitrated\+Port}}
+\index{Arbitrated\+Port@{Arbitrated\+Port}!Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}}
+\subsubsection[{Arbitrated\+Port}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Arbitrated\+Port\+::\+Arbitrated\+Port (
+\begin{DoxyParamCaption}
+\item[{const {\bf Arbitrated\+Port} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [delete]}}}\label{class_simulator_1_1_arbitrated_port_a717b1baf7f49444319d47556d26a8608}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_simulator_1_1_arbitrated_port_a93358ad39066fe450e91648867c907ea}{\index{Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}!Get\+Busy\+Cycles@{Get\+Busy\+Cycles}}
+\index{Get\+Busy\+Cycles@{Get\+Busy\+Cycles}!Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}}
+\subsubsection[{Get\+Busy\+Cycles}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Simulator\+::\+Arbitrated\+Port\+::\+Get\+Busy\+Cycles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_arbitrated_port_a93358ad39066fe450e91648867c907ea}
+\hypertarget{class_simulator_1_1_arbitrated_port_a286527112fe9bbdb1f4468acc3efca0e}{\index{Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}!Get\+F\+Q\+N@{Get\+F\+Q\+N}}
+\index{Get\+F\+Q\+N@{Get\+F\+Q\+N}!Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}}
+\subsubsection[{Get\+F\+Q\+N}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Simulator\+::\+Arbitrated\+Port\+::\+Get\+F\+Q\+N (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_simulator_1_1_arbitrated_port_a286527112fe9bbdb1f4468acc3efca0e}
+\hypertarget{class_simulator_1_1_arbitrated_port_af666b307417955fb5ac4657986fea2ab}{\index{Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}!Get\+Selected\+Process@{Get\+Selected\+Process}}
+\index{Get\+Selected\+Process@{Get\+Selected\+Process}!Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}}
+\subsubsection[{Get\+Selected\+Process}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Process}$\ast$ Simulator\+::\+Arbitrated\+Port\+::\+Get\+Selected\+Process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_simulator_1_1_arbitrated_port_af666b307417955fb5ac4657986fea2ab}
+\hypertarget{class_simulator_1_1_arbitrated_port_ad6c149235194bb222005db4ea0352993}{\index{Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}!Has\+Acquired@{Has\+Acquired}}
+\index{Has\+Acquired@{Has\+Acquired}!Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}}
+\subsubsection[{Has\+Acquired}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::\+Arbitrated\+Port\+::\+Has\+Acquired (
+\begin{DoxyParamCaption}
+\item[{const {\bf Process} \&}]{process}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_simulator_1_1_arbitrated_port_ad6c149235194bb222005db4ea0352993}
+\hypertarget{class_simulator_1_1_arbitrated_port_a5ec4bcf9c7f4dedcb220d56750219c7e}{\index{Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}!operator=@{operator=}}
+\index{operator=@{operator=}!Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Arbitrated\+Port}\& Simulator\+::\+Arbitrated\+Port\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Arbitrated\+Port} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [delete]}}}\label{class_simulator_1_1_arbitrated_port_a5ec4bcf9c7f4dedcb220d56750219c7e}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_simulator_1_1_arbitrated_port_a3fcbb4be3ab62853713ae33f5b3ca8b3}{\index{Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}!m\+\_\+busy\+Cycles@{m\+\_\+busy\+Cycles}}
+\index{m\+\_\+busy\+Cycles@{m\+\_\+busy\+Cycles}!Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}}
+\subsubsection[{m\+\_\+busy\+Cycles}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t Simulator\+::\+Arbitrated\+Port\+::m\+\_\+busy\+Cycles\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_arbitrated_port_a3fcbb4be3ab62853713ae33f5b3ca8b3}
+\hypertarget{class_simulator_1_1_arbitrated_port_a1ad6a8b7489f7adbdf487d5e00c86c4d}{\index{Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}!m\+\_\+object@{m\+\_\+object}}
+\index{m\+\_\+object@{m\+\_\+object}!Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}}
+\subsubsection[{m\+\_\+object}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Object}\& Simulator\+::\+Arbitrated\+Port\+::m\+\_\+object\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_arbitrated_port_a1ad6a8b7489f7adbdf487d5e00c86c4d}
+\hypertarget{class_simulator_1_1_arbitrated_port_a4530ac48737b148a87a44a6641d2979b}{\index{Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}!m\+\_\+selected@{m\+\_\+selected}}
+\index{m\+\_\+selected@{m\+\_\+selected}!Simulator\+::\+Arbitrated\+Port@{Simulator\+::\+Arbitrated\+Port}}
+\subsubsection[{m\+\_\+selected}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Process}$\ast$ Simulator\+::\+Arbitrated\+Port\+::m\+\_\+selected\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_simulator_1_1_arbitrated_port_a4530ac48737b148a87a44a6641d2979b}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sim/\hyperlink{ports_8h}{ports.\+h}\end{DoxyCompactItemize}

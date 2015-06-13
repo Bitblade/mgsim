@@ -1,4 +1,6 @@
 #include "ActiveROM.h"
+
+//MLDQUESTION Including other files in .cpp. Bug or feature?
 #include "ELFLoader.h"
 #include <iostream>
 #include <fstream>
@@ -8,6 +10,7 @@ using namespace std;
 
 namespace Simulator
 {
+	//MLDNOTE Can steal config stuff from here
     void ActiveROM::LoadConfig(Config& config)
     {
         vector<uint32_t> db = config.GetConfWords();
